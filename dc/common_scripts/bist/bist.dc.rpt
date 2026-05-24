@@ -1,0 +1,2650 @@
+1
+ 
+****************************************
+Report : area
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+Number of ports:                           35
+Number of nets:                           359
+Number of cells:                          253
+Number of combinational cells:            207
+Number of sequential cells:                46
+Number of macros/black boxes:               0
+Number of buf/inv:                         60
+Number of references:                      27
+
+Combinational area:                702.360003
+Buf/Inv area:                       68.040003
+Noncombinational area:             359.279989
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  1061.639992
+Total area:                 undefined
+1
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+bist                   ZeroWireload      tcbn65gplustc_ccs
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+bist                                   1.86e-02    0.283 5.79e+03    0.307 100.0
+1
+ 
+****************************************
+Report : design
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+Local Link Library:
+
+    {tcbn65gplustc_ccs.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : NCCOM
+    Library : tcbn65gplustc_ccs
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected automatically from the total cell area.
+
+Name           :   ZeroWireload
+Location       :   tcbn65gplustc_ccs
+Resistance     :   1e-05
+Capacitance    :   1
+Area           :   0
+Slope          :   0
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.00
+     2     0.00
+     3     0.00
+     4     0.00
+     5     0.00
+     6     0.00
+     7     0.00
+     8     0.00
+     9     0.00
+    10     0.00
+    11     0.00
+    12     0.00
+    13     0.00
+    14     0.00
+    15     0.00
+    16     0.00
+    17     0.00
+    18     0.00
+    19     0.00
+    20     0.00
+
+
+
+Wire Loading Model Mode: segmented.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : cell
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+   mo - map_only
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U80                       TIEH            tcbn65gplustc_ccs
+                                                          1.080000  
+U81                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U82                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U83                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U84                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U85                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U86                       CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U87                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U88                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U89                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U90                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U91                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U92                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U93                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U94                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U95                       NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U96                       XOR3D0          tcbn65gplustc_ccs
+                                                          6.120000  
+U97                       OAI31D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U98                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U99                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U100                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U101                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U102                      AOI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U103                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U104                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U105                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U106                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U107                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U108                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U109                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U110                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U111                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U112                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U113                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U114                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U115                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U116                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U117                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U118                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U119                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U120                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U121                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U122                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U123                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U124                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U125                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U126                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U127                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U128                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U129                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U130                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U131                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U132                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U133                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U134                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U135                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U136                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U137                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U138                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U139                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U140                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U141                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U142                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U143                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U144                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U145                      OR2D1           tcbn65gplustc_ccs
+                                                          2.160000  
+U146                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U147                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U148                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U149                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U150                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U151                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U152                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U153                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U154                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U155                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U156                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U157                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U158                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U159                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U160                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U161                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U162                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U163                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U164                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U165                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U166                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U167                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U168                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U169                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U170                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U171                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U172                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U173                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U174                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U175                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U176                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U177                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U178                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U179                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U180                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U181                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U182                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U183                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U184                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U185                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U186                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U187                      TIEL            tcbn65gplustc_ccs
+                                                          1.080000  
+U188                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U189                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U190                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U191                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U192                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U193                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U194                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U195                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U196                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U197                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U198                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U199                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U200                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U201                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U202                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U203                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U204                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U205                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U206                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U207                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U208                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U209                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U210                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U211                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U212                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U213                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U214                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U215                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U216                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U217                      NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U218                      NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U219                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U220                      ND2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U221                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U222                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U223                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U224                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U225                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U226                      AOI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U227                      AOI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U228                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U229                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U230                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U231                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U232                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U233                      XOR2D0          tcbn65gplustc_ccs
+                                                          3.600000  
+U234                      FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  r
+U235                      FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  r
+U236                      FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  r
+U237                      FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  r
+U238                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U239                      FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  r
+U240                      NR4D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U241                      NR3D0           tcbn65gplustc_ccs
+                                                          2.160000  
+U242                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U243                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U244                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U245                      FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  r
+U246                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U247                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U248                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U249                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U250                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U251                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U252                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U253                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U254                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U255                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U256                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U257                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U258                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U259                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U260                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+intadd_0_U2               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U3               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U4               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U5               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U6               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U7               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U8               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U9               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U10              FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U11              FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U12              FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U13              FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+lfsr1_inst_lfsr_out_reg_0_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_1_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_2_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_3_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_4_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_5_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_6_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_7_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_8_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_9_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_10_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_11_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_12_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_13_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_14_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+lfsr1_inst_lfsr_out_reg_15_
+                          DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+mult_inst_out_reg_reg_0_  DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+mult_inst_out_reg_reg_1_  DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+mult_inst_out_reg_reg_2_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_3_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_4_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_5_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_6_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_7_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_8_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_9_  DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_10_ DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_11_ DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_12_ DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_13_ DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+mult_inst_out_reg_reg_14_ DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+mult_x_2_U17              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U18              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U20              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U21              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U22              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U23              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U25              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U26              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U29              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U30              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U33              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U34              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U36              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+mult_x_2_U39              CMPE42D1        tcbn65gplustc_ccs
+                                                          16.559999 r
+sign_inst_sign_reg_1_     DFKCSND1        tcbn65gplustc_ccs
+                                                          9.360000  n
+sign_inst_sign_reg_2_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_3_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_4_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_5_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_6_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_7_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_8_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_9_     DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_10_    DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_11_    DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_12_    DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_13_    DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_14_    DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+sign_inst_sign_reg_15_    DFD1            tcbn65gplustc_ccs
+                                                          7.200000  n
+--------------------------------------------------------------------------------
+Total 253 cells                                           1061.639992
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+    i - ideal_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000    0.39    0.00   --         d, i
+rstn           in      0.0000   0.0000    0.39    0.00   --         
+seed[0]        in      0.0000   0.0000    0.39    0.00   --         
+seed[1]        in      0.0000   0.0000    0.39    0.00   --         
+seed[2]        in      0.0000   0.0000    0.39    0.00   --         
+seed[3]        in      0.0000   0.0000    0.39    0.00   --         
+seed[4]        in      0.0000   0.0000    0.39    0.00   --         
+seed[5]        in      0.0000   0.0000    0.39    0.00   --         
+seed[6]        in      0.0000   0.0000    0.39    0.00   --         
+seed[7]        in      0.0000   0.0000    0.39    0.00   --         
+seed[8]        in      0.0000   0.0000    0.39    0.00   --         
+seed[9]        in      0.0000   0.0000    0.39    0.00   --         
+seed[10]       in      0.0000   0.0000    0.39    0.00   --         
+seed[11]       in      0.0000   0.0000    0.39    0.00   --         
+seed[12]       in      0.0000   0.0000    0.39    0.00   --         
+seed[13]       in      0.0000   0.0000    0.39    0.00   --         
+seed[14]       in      0.0000   0.0000    0.39    0.00   --         
+seed[15]       in      0.0000   0.0000    0.39    0.00   --         
+wen            in      0.0000   0.0000    0.39    0.00   --         
+sign[0]        out     0.0050   0.0000   --      --      --         
+sign[1]        out     0.0050   0.0000   --      --      --         
+sign[2]        out     0.0050   0.0000   --      --      --         
+sign[3]        out     0.0050   0.0000   --      --      --         
+sign[4]        out     0.0050   0.0000   --      --      --         
+sign[5]        out     0.0050   0.0000   --      --      --         
+sign[6]        out     0.0050   0.0000   --      --      --         
+sign[7]        out     0.0050   0.0000   --      --      --         
+sign[8]        out     0.0050   0.0000   --      --      --         
+sign[9]        out     0.0050   0.0000   --      --      --         
+sign[10]       out     0.0050   0.0000   --      --      --         
+sign[11]       out     0.0050   0.0000   --      --      --         
+sign[12]       out     0.0050   0.0000   --      --      --         
+sign[13]       out     0.0050   0.0000   --      --      --         
+sign[14]       out     0.0050   0.0000   --      --      --         
+sign[15]       out     0.0050   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+clk                1      --              --              --        -- 
+rstn               1      --              --              --        -- 
+seed[0]            1      --              --              --        -- 
+seed[1]            1      --              --              --        -- 
+seed[2]            1      --              --              --        -- 
+seed[3]            1      --              --              --        -- 
+seed[4]            1      --              --              --        -- 
+seed[5]            1      --              --              --        -- 
+seed[6]            1      --              --              --        -- 
+seed[7]            1      --              --              --        -- 
+seed[8]            1      --              --              --        -- 
+seed[9]            1      --              --              --        -- 
+seed[10]           1      --              --              --        -- 
+seed[11]           1      --              --              --        -- 
+seed[12]           1      --              --              --        -- 
+seed[13]           1      --              --              --        -- 
+seed[14]           1      --              --              --        -- 
+seed[15]           1      --              --              --        -- 
+wen                1      --              --              --        -- 
+sign[0]            1      --              --              --        -- 
+sign[1]            1      --              --              --        -- 
+sign[2]            1      --              --              --        -- 
+sign[3]            1      --              --              --        -- 
+sign[4]            1      --              --              --        -- 
+sign[5]            1      --              --              --        -- 
+sign[6]            1      --              --              --        -- 
+sign[7]            1      --              --              --        -- 
+sign[8]            1      --              --              --        -- 
+sign[9]            1      --              --              --        -- 
+sign[10]           1      --              --              --        -- 
+sign[11]           1      --              --              --        -- 
+sign[12]           1      --              --              --        -- 
+sign[13]           1      --              --              --        -- 
+sign[14]           1      --              --              --        -- 
+sign[15]           1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+clk           --      --      --      --      --      4.00
+rstn          0.05    0.05    0.05    0.05  clk       4.00  
+seed[0]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[1]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[2]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[3]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[4]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[5]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[6]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[7]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[8]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[9]       0.05    0.05    0.05    0.05  clk       4.00  
+seed[10]      0.05    0.05    0.05    0.05  clk       4.00  
+seed[11]      0.05    0.05    0.05    0.05  clk       4.00  
+seed[12]      0.05    0.05    0.05    0.05  clk       4.00  
+seed[13]      0.05    0.05    0.05    0.05  clk       4.00  
+seed[14]      0.05    0.05    0.05    0.05  clk       4.00  
+seed[15]      0.05    0.05    0.05    0.05  clk       4.00  
+wen           0.05    0.05    0.05    0.05  clk       4.00  
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+clk          INVD0              INVD0                -- /  --     
+rstn         INVD0              INVD0                -- /  --     
+seed[0]      INVD0              INVD0                -- /  --     
+seed[1]      INVD0              INVD0                -- /  --     
+seed[2]      INVD0              INVD0                -- /  --     
+seed[3]      INVD0              INVD0                -- /  --     
+seed[4]      INVD0              INVD0                -- /  --     
+seed[5]      INVD0              INVD0                -- /  --     
+seed[6]      INVD0              INVD0                -- /  --     
+seed[7]      INVD0              INVD0                -- /  --     
+seed[8]      INVD0              INVD0                -- /  --     
+seed[9]      INVD0              INVD0                -- /  --     
+seed[10]     INVD0              INVD0                -- /  --     
+seed[11]     INVD0              INVD0                -- /  --     
+seed[12]     INVD0              INVD0                -- /  --     
+seed[13]     INVD0              INVD0                -- /  --     
+seed[14]     INVD0              INVD0                -- /  --     
+seed[15]     INVD0              INVD0                -- /  --     
+wen          INVD0              INVD0                -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+clk           --      --     --      --     --      --     --     --        -- 
+rstn          --      --     --      --     --      --     --     --        -- 
+seed[0]       --      --     --      --     --      --     --     --        -- 
+seed[1]       --      --     --      --     --      --     --     --        -- 
+seed[2]       --      --     --      --     --      --     --     --        -- 
+seed[3]       --      --     --      --     --      --     --     --        -- 
+seed[4]       --      --     --      --     --      --     --     --        -- 
+seed[5]       --      --     --      --     --      --     --     --        -- 
+seed[6]       --      --     --      --     --      --     --     --        -- 
+seed[7]       --      --     --      --     --      --     --     --        -- 
+seed[8]       --      --     --      --     --      --     --     --        -- 
+seed[9]       --      --     --      --     --      --     --     --        -- 
+seed[10]      --      --     --      --     --      --     --     --        -- 
+seed[11]      --      --     --      --     --      --     --     --        -- 
+seed[12]      --      --     --      --     --      --     --     --        -- 
+seed[13]      --      --     --      --     --      --     --     --        -- 
+seed[14]      --      --     --      --     --      --     --     --        -- 
+seed[15]      --      --     --      --     --      --     --     --        -- 
+wen           --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+clk           --      --      --      -- 
+rstn          --      --      --      -- 
+seed[0]       --      --      --      -- 
+seed[1]       --      --      --      -- 
+seed[2]       --      --      --      -- 
+seed[3]       --      --      --      -- 
+seed[4]       --      --      --      -- 
+seed[5]       --      --      --      -- 
+seed[6]       --      --      --      -- 
+seed[7]       --      --      --      -- 
+seed[8]       --      --      --      -- 
+seed[9]       --      --      --      -- 
+seed[10]      --      --      --      -- 
+seed[11]      --      --      --      -- 
+seed[12]      --      --      --      -- 
+seed[13]      --      --      --      -- 
+seed[14]      --      --      --      -- 
+seed[15]      --      --      --      -- 
+wen           --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+sign[0]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[1]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[2]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[3]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[4]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[5]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[6]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[7]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[8]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[9]       0.05    0.05    0.05    0.05  clk       0.00  
+sign[10]      0.05    0.05    0.05    0.05  clk       0.00  
+sign[11]      0.05    0.05    0.05    0.05  clk       0.00  
+sign[12]      0.05    0.05    0.05    0.05  clk       0.00  
+sign[13]      0.05    0.05    0.05    0.05  clk       0.00  
+sign[14]      0.05    0.05    0.05    0.05  clk       0.00  
+sign[15]      0.05    0.05    0.05    0.05  clk       0.00  
+
+1
+ 
+****************************************
+Report : compile_options
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+bist                                     flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+This design has no violated constraints.
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)                    0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)                    0.11       0.11 r
+  U87/ZN (INVD0)                                          0.02       0.13 f
+  U151/ZN (INVD0)                                         0.03       0.17 r
+  U221/ZN (NR4D0)                                         0.03       0.20 f
+  U242/ZN (AOI221D0)                                      0.11       0.31 r
+  intadd_0_U13/CO (FA1D0)                                 0.10       0.42 r
+  intadd_0_U12/CO (FA1D0)                                 0.05       0.47 r
+  intadd_0_U11/CO (FA1D0)                                 0.05       0.52 r
+  intadd_0_U10/CO (FA1D0)                                 0.05       0.57 r
+  intadd_0_U9/CO (FA1D0)                                  0.05       0.62 r
+  intadd_0_U8/CO (FA1D0)                                  0.05       0.67 r
+  intadd_0_U7/CO (FA1D0)                                  0.05       0.72 r
+  intadd_0_U6/CO (FA1D0)                                  0.05       0.77 r
+  intadd_0_U5/CO (FA1D0)                                  0.05       0.82 r
+  intadd_0_U4/CO (FA1D0)                                  0.05       0.87 r
+  intadd_0_U3/CO (FA1D0)                                  0.05       0.93 r
+  intadd_0_U2/CO (FA1D0)                                  0.05       0.97 r
+  U96/Z (XOR3D0)                                          0.11       1.09 f
+  U95/ZN (NR2XD0)                                         0.02       1.11 r
+  mult_inst_out_reg_reg_14_/D (DFD1)                      0.00       1.11 r
+  data arrival time                                                  1.11
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)                     0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 100
+        -max_paths 20
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: seed[0] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[0] (in)                             0.00       0.05 f
+  U230/ZN (IOA21D0)                        0.04       0.09 f
+  lfsr1_inst_lfsr_out_reg_0_/D (DFD1)      0.00       0.09 f
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_0_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.07
+
+
+  Startpoint: seed[1] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[1] (in)                             0.00       0.05 f
+  U260/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_1_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_1_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[2] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[2] (in)                             0.00       0.05 f
+  U259/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_2_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_2_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[3] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[3] (in)                             0.00       0.05 f
+  U258/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_3_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_3_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[5] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[5] (in)                             0.00       0.05 f
+  U256/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_5_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_5_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[6] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[6] (in)                             0.00       0.05 f
+  U255/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_6_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_6_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[7] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[7] (in)                             0.00       0.05 f
+  U254/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_7_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_7_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[9] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[9] (in)                             0.00       0.05 f
+  U252/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_9_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[10] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.05       0.05 f
+  seed[10] (in)                                           0.00       0.05 f
+  U251/Z (AO22D0)                                         0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_10_/D (DFD1)                    0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_10_/CP (DFD1)                   0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: seed[11] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.05       0.05 f
+  seed[11] (in)                                           0.00       0.05 f
+  U250/Z (AO22D0)                                         0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_11_/D (DFD1)                    0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_11_/CP (DFD1)                   0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: seed[13] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.05       0.05 f
+  seed[13] (in)                                           0.00       0.05 f
+  U248/Z (AO22D0)                                         0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_13_/D (DFD1)                    0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_13_/CP (DFD1)                   0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: seed[14] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.05       0.05 f
+  seed[14] (in)                                           0.00       0.05 f
+  U247/Z (AO22D0)                                         0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_14_/D (DFD1)                    0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_14_/CP (DFD1)                   0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: seed[15] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.05       0.05 f
+  seed[15] (in)                                           0.00       0.05 f
+  U246/Z (AO22D0)                                         0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_15_/D (DFD1)                    0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_15_/CP (DFD1)                   0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: seed[4] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[4] (in)                             0.00       0.05 f
+  U257/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_4_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_4_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[8] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[8] (in)                             0.00       0.05 f
+  U253/Z (AO22D0)                          0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_8_/D (DFD1)      0.00       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_8_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[12] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.05       0.05 f
+  seed[12] (in)                                           0.00       0.05 f
+  U249/Z (AO22D0)                                         0.05       0.10 f
+  lfsr1_inst_lfsr_out_reg_12_/D (DFD1)                    0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lfsr1_inst_lfsr_out_reg_12_/CP (DFD1)                   0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  mult_inst_out_reg_reg_0_/CP (DFD1)       0.00       0.00 r
+  mult_inst_out_reg_reg_0_/Q (DFD1)        0.09       0.09 f
+  sign_inst_sign_reg_1_/CN (DFKCSND1)      0.00       0.09 f
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_1_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                        0.01       0.01
+  data required time                                  0.01
+  -----------------------------------------------------------
+  data required time                                  0.01
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  mult_inst_out_reg_reg_2_/CP (DFKCSND1)                  0.00       0.00 r
+  mult_inst_out_reg_reg_2_/Q (DFKCSND1)                   0.08       0.08 r
+  U199/ZN (AOI221D0)                                      0.03       0.10 f
+  sign_inst_sign_reg_3_/D (DFD1)                          0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sign_inst_sign_reg_3_/CP (DFD1)                         0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  mult_inst_out_reg_reg_5_/CP (DFKCSND1)                  0.00       0.00 r
+  mult_inst_out_reg_reg_5_/Q (DFKCSND1)                   0.08       0.08 r
+  U200/ZN (AOI221D0)                                      0.03       0.10 f
+  sign_inst_sign_reg_6_/D (DFD1)                          0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sign_inst_sign_reg_6_/CP (DFD1)                         0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  mult_inst_out_reg_reg_6_/CP (DFKCSND1)                  0.00       0.00 r
+  mult_inst_out_reg_reg_6_/Q (DFKCSND1)                   0.08       0.08 r
+  U198/ZN (AOI221D0)                                      0.03       0.10 f
+  sign_inst_sign_reg_7_/D (DFD1)                          0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sign_inst_sign_reg_7_/CP (DFD1)                         0.00       0.00 r
+  library hold time                                       0.02       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+1
+ 
+****************************************
+Report : timing_requirements
+        -attributes
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+1

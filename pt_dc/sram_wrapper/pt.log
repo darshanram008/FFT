@@ -1,0 +1,286 @@
+
+                                 PrimeTime (R)
+
+               Version U-2022.12-SP5 for linux64 - Jul 14, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+#################################################
+# PrimeTime script for static timing analysis   #
+# MS 7/2015                                     #
+#################################################
+# Display long reports one page at a time
+set sh_enable_page_mode true
+false
+# Enable or Disable PrimePower, which provides power analysis
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+##################################################
+# Set files and paths
+##################################################
+# Set the top_level name
+set top_level sram_wrapper
+sram_wrapper
+# Set library paths
+set search_path [list "." "/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a" "/home/cad/installs/synopsys/syn/O-2018.06-SP5-1/libraries/syn" "../../memory_compiler/single_port_sram/sram00_libs"]
+. /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a /home/cad/installs/synopsys/syn/O-2018.06-SP5-1/libraries/syn ../../memory_compiler/single_port_sram/sram00_libs
+# Specify a list of libraries, design files, and library files used during linking
+set link_path [list "*" "tcbn65gplustc_ccs.db" "sram00_nldm_tt_1p00v_1p00v_25c_syn.db"]
+* tcbn65gplustc_ccs.db sram00_nldm_tt_1p00v_1p00v_25c_syn.db
+# Read design or library files
+read_db [list "tcbn65gplustc_ccs.db"]
+Loading db file '/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db'
+1
+# Read verilog files
+set svr_enable_vpp true
+true
+read_verilog "../../dc/$top_level/$top_level.nl.v"
+1
+# Resolve references in a design
+# Note: It resolves all references between different modules in the hierarchy
+#       and builds an internal representation of the design for timing analysis
+link_design $top_level
+Loading db file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_4/memory_compiler/single_port_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db'
+
+INFO: No verilog pre-processor constructs found. Skipping pre-processing for file /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_4/dc/sram_wrapper/sram_wrapper.nl.v
+Loading verilog file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_4/dc/sram_wrapper/sram_wrapper.nl.v'
+Linking design sram_wrapper...
+Information: 810 (99.26%) library cells are unused in library tcbn65gplustc_ccs..... (LNK-045)
+Information: total 810 library cells are unused (LNK-046)
+Design 'sram_wrapper' was successfully linked.
+Information: There are 72 leaf cells, ports, hiers and 190 nets in the design (LNK-047)
+1
+##################################################
+# Define timing constraints
+##################################################
+# Timing constraints
+source ./timing.tcl
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+###############################################################
+# Clock Period Sweep: 0.1 ns to 2.0 ns
+###############################################################
+set sweep_report "freq_sweep.rpt"
+freq_sweep.rpt
+file delete -force $sweep_report
+set fp [open $sweep_report w]
+file34
+# 0.1, 0.2, ..., 2.0 ns
+for {set per 0.1} {$per <= 2.0001} {set per [expr {$per + 0.1}]} {
+
+    # remove old clock and create new one
+    remove_clock [all_clocks]
+    create_clock -name clk -period $per [get_ports clk]
+
+    # re-apply clock-related constraints
+    set clk_obj [get_clocks clk]
+    set_clock_uncertainty $clk_uncertainty $clk_obj
+    set_clock_transition  $clk_transition  $clk_obj
+
+    # re-apply I/O delays relative to the new clock
+    set_input_delay  $typical_input_delay  -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
+    set_output_delay $typical_output_delay -clock clk [all_outputs]
+
+    update_timing
+
+    # get worst max-delay path slack
+    set path_obj [lindex [get_timing_paths -max_paths 1 -nworst 1 -delay_type max] 0]
+
+    if {$path_obj eq ""} {
+        set slack "NO_PATH"
+        puts "Period = $per ns   Slack = $slack"
+        puts $fp "Period = $per ns   Slack = $slack"
+    } else {
+        set slack [get_attribute $path_obj slack]
+        puts "Period = $per ns   Slack = $slack"
+        puts $fp "Period = $per ns   Slack = $slack"
+    }
+
+    # full timing report for this period
+    puts $fp "----- Timing report for period = $per ns -----"
+    redirect -append $sweep_report {
+        report_timing -delay_type max -nworst 10 -significant_digits 4
+    }
+    puts $fp "----------------------------------------------"
+}
+Information: Using automatic max wire load selection group 'WireAreaForZero'. (ENV-003)
+Information: Using automatic min wire load selection group 'WireAreaForZero'. (ENV-003)
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Period = 0.1 ns   Slack = -0.738875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.2 ns   Slack = -0.638875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.3 ns   Slack = -0.538875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.4 ns   Slack = -0.438875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.5 ns   Slack = -0.338875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.6 ns   Slack = -0.238875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.7 ns   Slack = -0.138875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.8 ns   Slack = -0.038875
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 0.9 ns   Slack = 0.061125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.0 ns   Slack = 0.161125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.1 ns   Slack = 0.261125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.2 ns   Slack = 0.361125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.3 ns   Slack = 0.461125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.4 ns   Slack = 0.561125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.5 ns   Slack = 0.661125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.6 ns   Slack = 0.761125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.7 ns   Slack = 0.861125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.8 ns   Slack = 0.961125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 1.9 ns   Slack = 1.061125
+Information: Invalidating logical update. (PTE-139)
+Information: Building multi voltage information for entire design. (MV-022)
+Period = 2.0 ns   Slack = 1.161125
+close $fp
+##################################################
+# Run PrimeTime 
+##################################################
+# Generate a report file
+set rpt_file "${top_level}.pt.rpt"
+sram_wrapper.pt.rpt
+check_timing
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+Information: Checking 'voltage_level'.
+check_timing succeeded.
+1
+report_design >> ${rpt_file}
+report_reference >> ${rpt_file}
+report_constraint >> ${rpt_file}
+report_constraint -all_violators -significant_digits 4 >> ${rpt_file}
+report_timing -significant_digits 4 -delay_type min_max -nworst 120 >> ${rpt_file}
+report_timing -significant_digits 4 -delay_type min -nworst 120 -slack_greater_than 0 >> ${rpt_file}
+report_timing -significant_digits 4 -delay_type max -nworst 5 -slack_greater_than 0 >> ${rpt_file}
+# Do power analysis
+set power_analysis_mode "time_based"
+time_based
+#read_vcd "/vlsidl/projects4/riscv2024/riscv/qsim_dc/tb_ibex_basic_v4_b/ibex_top.vcd" -time {9000000 9200000} -strip_path "testbench/ibex_top"
+read_vcd "../../qsim_dc/tb_sram_wrapper/sram_wrapper.vcd" -time {0 9000000} -strip_path "testbench/sram_wrapper_inst"
+
+======================================================================
+Summary:
+Total number of nets = 190
+Number of annotated nets = 190 (100.00%)
+Total number of leaf cells = 41
+Number of fully annotated leaf cells = 41 (100.00%)
+======================================================================
+
+1
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_4/qsim_dc/tb_sram_wrapper/sram_wrapper.vcd'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	0.001ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+
+Information: analysis is done for time window (0ns - 9e+06ns)
+
+Information: Total simulation time = 9000000.000000 ns
+1
+report_switching_activity >> ${rpt_file}
+report_switching_activity -list_not_annotated >> ${rpt_file}
+report_power >> ${rpt_file}
+report_power -hierarchy >> ${rpt_file}
+write_sdf -context verilog "./${top_level}.pt.sdf"
+****************************************
+Report : write_sdf ./sram_wrapper.pt.sdf
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:57 2026
+****************************************
+
+1
+#Finish PrimeTime
+quit
+Information: Defining new variable 'clk_name'. (CMD-041)
+Information: Defining new variable 'fp'. (CMD-041)
+Information: Defining new variable 'fo4'. (CMD-041)
+Information: Defining new variable 'rpt_file'. (CMD-041)
+Information: Defining new variable 'rst_port'. (CMD-041)
+Information: Defining new variable 'clk_uncertainty'. (CMD-041)
+Information: Defining new variable 'per'. (CMD-041)
+Information: Defining new variable 'clk_period'. (CMD-041)
+Information: Defining new variable 'clk_obj'. (CMD-041)
+Information: Defining new variable 'slack'. (CMD-041)
+Information: Defining new variable 'clk_port'. (CMD-041)
+Information: Defining new variable 'rst_name'. (CMD-041)
+Information: Defining new variable 'typical_wire_load'. (CMD-041)
+Information: Defining new variable 'typical_output_delay'. (CMD-041)
+Information: Defining new variable 'top_level'. (CMD-041)
+Information: Defining new variable 'typical_input_delay'. (CMD-041)
+Information: Defining new variable 'clk_transition'. (CMD-041)
+Information: Defining new variable 'path_obj'. (CMD-041)
+Information: Defining new variable 'sweep_report'. (CMD-041)
+
+Timing updates: 20 (0 implicit, 20 explicit) (19 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 3851.19 MB
+CPU usage for this session: 5 seconds 
+Elapsed time for this session: 6 seconds
+Diagnostics summary: 11 warnings, 65 informationals
+
+Thank you for using pt_shell!

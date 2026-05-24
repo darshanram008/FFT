@@ -1,0 +1,32 @@
+
+                             Library Compiler (TM)
+
+             Version P-2019.03-SP2 for linux64 - Jun 02, 2019 -SLE
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Initializing...
+read_lib ./sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.lib
+Reading '/home/vlsidl/projects4/riscv2024/riscv/sram/sram_v2/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.lib' ...
+Warning: Line 64, The 'internal_power_calculation' attribute in char_config group is required for NLPM library. 
+	No default can be applied to this attribute. (LBDB-366)
+Warning: Line 1430, Cell 'sram00', pin 'EMA[2]', The pin 'EMA[2]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1575, Cell 'sram00', pin 'RETN', The pin 'RETN' does not have a internal_power group. (LBDB-607)
+Technology library 'USERLIB_nldm_tt_1p00v_1p00v_25c' read successfully
+1
+write_lib USERLIB_nldm_tt_1p00v_1p00v_25c -format db -output ./sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db
+Wrote the 'USERLIB_nldm_tt_1p00v_1p00v_25c' library to '/home/vlsidl/projects4/riscv2024/riscv/sram/sram_v2/./sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db' successfully
+1
+exit
+Maximum memory usage for this session: 71.96 MB
+CPU usage for this session:      3 seconds (  0.00 hours)
+Elapsed time for this session:      3 seconds (  0.00 hours)
+Thank you for using Library Compiler.
+Memory usage for this session 71 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+
+Thank you...

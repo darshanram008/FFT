@@ -1,0 +1,92 @@
+[04/23 11:15:50      0s] 
+[04/23 11:15:50      0s] Cadence Innovus(TM) Implementation System.
+[04/23 11:15:50      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/23 11:15:50      0s] 
+[04/23 11:15:50      0s] Version:	v21.16-s078_1, built Wed Dec 7 12:07:06 PST 2022
+[04/23 11:15:50      0s] Options:	
+[04/23 11:15:50      0s] Date:		Thu Apr 23 11:15:50 2026
+[04/23 11:15:50      0s] Host:		cadpc15 (x86_64 w/Linux 4.18.0-553.120.1.el8_10.x86_64) (8cores*16cpus*11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz 16384KB)
+[04/23 11:15:50      0s] OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+[04/23 11:15:50      0s] 
+[04/23 11:15:50      0s] License:
+[04/23 11:15:50      0s] 		[11:15:50.022377] Configured Lic search path (21.01-s002): 5280@bioeelincad.ee.columbia.edu
+
+[04/23 11:15:50      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[04/23 11:15:50      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/23 11:16:10      8s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.16-s078_1 (64bit) 12/07/2022 12:07 (Linux 3.10.0-693.el7.x86_64)
+[04/23 11:16:15      9s] @(#)CDS: NanoRoute 21.16-s078_1 NR221206-1807/21_16-UB (database version 18.20.600) {superthreading v2.17}
+[04/23 11:16:15      9s] @(#)CDS: AAE 21.16-s035 (64bit) 12/07/2022 (Linux 3.10.0-693.el7.x86_64)
+[04/23 11:16:15      9s] @(#)CDS: CTE 21.16-s024_1 () Dec  5 2022 05:41:45 ( )
+[04/23 11:16:15      9s] @(#)CDS: SYNTECH 21.16-s009_1 () Nov  9 2022 03:47:50 ( )
+[04/23 11:16:15      9s] @(#)CDS: CPE v21.16-s066
+[04/23 11:16:15      9s] @(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+[04/23 11:16:15      9s] @(#)CDS: OA 22.60-p076 Wed May 18 13:45:29 2022
+[04/23 11:16:15      9s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[04/23 11:16:15      9s] @(#)CDS: RCDB 11.15.0
+[04/23 11:16:15      9s] @(#)CDS: STYLUS 21.12-s016_1 (10/12/2022 04:51 PDT)
+[04/23 11:16:15      9s] @(#)CDS: SystemPlanner-21.16Rel-9566 (21.16) (2022-11-01 15:06:10+0800)
+[04/23 11:16:15      9s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_1075969_cadpc15_dr3412_Pk8Yz0.
+
+[04/23 11:16:16      9s] Change the soft stacksize limit to 0.2%RAM (127 mbytes). Set global soft_stack_size_limit to change the value.
+[04/23 11:16:18     10s] 
+[04/23 11:16:18     10s] **INFO:  MMMC transition support version v31-84 
+[04/23 11:16:18     10s] 
+[04/23 11:16:18     10s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/23 11:16:18     10s] <CMD> suppressMessage ENCEXT-2799
+[04/23 11:16:18     10s] <CMD> win
+[04/23 11:16:58     12s] couldn't read file "./config.globals": no such file or directory
+[04/23 11:16:58     12s] <CMD> set_message -no_limit
+[04/23 11:16:58     12s] <CMD> set_message -id TECHLIB-1467 -limit 10
+[04/23 11:16:58     12s] <CMD> setMultiCpuUsage -localCpu max -acquireLicense 8
+[04/23 11:16:58     12s] <CMD> init_design
+[04/23 11:16:58     12s] **ERROR: (IMPIMEX-3):	There is no verilog netlist found in init_verilog. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+[04/23 11:16:58     12s] 
+[04/23 11:17:09     13s] <CMD> floorPlan -s 468 468.0 4.5 4.5 4.5 4.5
+[04/23 11:17:09     13s] **ERROR: Design must be in memory before running "floorPlan"
+[04/23 11:17:09     13s] Design must be in memory before running "floorPlan"
+[04/23 11:17:14     13s] <CMD> redraw
+[04/23 11:17:19     13s] <CMD> fit
+[04/23 11:17:25     13s] <CMD> zoomBox -0.04100 -0.02300 0.13600 0.14700
+[04/23 11:17:26     13s] <CMD> zoomBox -0.06300 -0.03800 0.14600 0.16300
+[04/23 11:17:26     13s] <CMD> zoomBox -0.08900 -0.05500 0.15800 0.18200
+[04/23 11:17:26     13s] <CMD> zoomBox -0.00700 -0.00300 0.12200 0.12100
+[04/23 11:17:57     14s] <CMD> placeInstance sram00_inst 4.4 17.8 R0 -fixed
+[04/23 11:17:57     14s] **ERROR: (IMPTCM-162):	"sram00_inst" does not match any object in design for specified type "inst " object in command "placeInstance".
+
+[04/23 11:17:57     14s] Usage: placeInstance [-help] <inst> <location> [{R0 R90 R180 R270 MX MX90 MY MY90}] [{ -fixed  | -placed  | -softFixed  }]
+[04/23 11:17:57     14s] 
+[04/23 11:17:57     14s] **ERROR: (IMPTCM-3):	"sram00_inst" is not a valid object value for the 1th argument.
+
+[04/23 11:21:11     21s] <CMD> placeInstance u_sram 4.4 17.8 R0 -fixed
+[04/23 11:21:11     21s] **ERROR: (IMPTCM-162):	"u_sram" does not match any object in design for specified type "inst " object in command "placeInstance".
+
+[04/23 11:21:11     21s] Usage: placeInstance [-help] <inst> <location> [{R0 R90 R180 R270 MX MX90 MY MY90}] [{ -fixed  | -placed  | -softFixed  }]
+[04/23 11:21:11     21s] 
+[04/23 11:21:11     21s] **ERROR: (IMPTCM-3):	"u_sram" is not a valid object value for the 1th argument.
+
+[04/23 11:23:38     27s] couldn't read file "./config.globals": no such file or directory
+[04/23 11:23:38     27s] <CMD> set_message -no_limit
+[04/23 11:23:38     27s] <CMD> set_message -id TECHLIB-1467 -limit 10
+[04/23 11:23:38     27s] <CMD> setMultiCpuUsage -localCpu max -acquireLicense 8
+[04/23 11:23:40     27s] <CMD> init_design
+[04/23 11:23:40     27s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/23 11:23:40     27s] **ERROR: (IMPIMEX-3):	There is no verilog netlist found in init_verilog. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+[04/23 11:23:40     27s] 
+[04/23 11:24:49     29s] <CMD> set init_verilog ../../dc/sram_wrapper/sram_wrapper.nl.PG.v
+[04/23 11:25:21     30s] couldn't read file "./config.globals": no such file or directory
+[04/23 11:26:08     32s] couldn't read file "./config.globals": no such file or directory
+[04/23 11:26:08     32s] <CMD> set_message -no_limit
+[04/23 11:26:08     32s] <CMD> set_message -id TECHLIB-1467 -limit 10
+[04/23 11:26:08     32s] <CMD> setMultiCpuUsage -localCpu max -acquireLicense 8
+[04/23 11:26:41     33s] couldn't read file "config.globals": no such file or directory
+[04/23 11:26:56     34s] 
+[04/23 11:26:56     34s] *** Memory Usage v#1 (Current mem = 1044.297M, initial mem = 484.914M) ***
+[04/23 11:26:56     34s] 
+[04/23 11:26:56     34s] *** Summary of all messages that are not suppressed in this session:
+[04/23 11:26:56     34s] Severity  ID               Count  Summary                                  
+[04/23 11:26:56     34s] ERROR     IMPTCM-3             2  "%s" is not a valid %s value for the %dt...
+[04/23 11:26:56     34s] ERROR     IMPTCM-162           2  "%s" does not match any object in design...
+[04/23 11:26:56     34s] ERROR     IMPIMEX-3            2  There is no verilog netlist found in ini...
+[04/23 11:26:56     34s] *** Message Summary: 0 warning(s), 6 error(s)
+[04/23 11:26:56     34s] 
+[04/23 11:26:56     34s] --- Ending "Innovus" (totcpu=0:00:34.3, real=0:11:06, mem=1044.3M) ---

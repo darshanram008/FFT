@@ -1,0 +1,2073 @@
+****************************************
+Report : design
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:56 2026
+****************************************
+
+Design Attribute                         Value
+---------------------------------------------------------------------------
+Operating Conditions:
+  analysis_type                          on_chip_variation
+  operating_condition_min_name           NCCOM
+  process_min                            1
+  temperature_min                        25
+  voltage_min                            1
+  tree_type_min                          balanced_case
+
+  operating_condition_max_name           NCCOM
+  process_max                            1
+  temperature_max                        25
+  voltage_max                            1
+  tree_type_max                          balanced_case
+
+Wire Load:                               (use report_wire_load for more information)
+  wire_load_mode                         segmented
+  wire_load_model_max                    ZeroWireload
+  wire_load_model_library_max            tcbn65gplustc_ccs
+  wire_load_selection_type_max           automatic-by-area
+  wire_load_model_min                    ZeroWireload
+  wire_load_model_library_min            tcbn65gplustc_ccs
+  wire_load_selection_type_min           automatic-by-area
+  wire_load_selection_group_max          WireAreaForZero
+  wire_load_selection_group_min          WireAreaForZero
+  wire_load_min_block_size               0
+
+Design Rules:
+  max_capacitance                        --
+  min_capacitance                        --
+  max_fanout                             --
+  max_transition                         --
+  static_integrity                       --
+  dynamic_integrity                      --
+  max_coupled_transition                 --
+  max_area                               --
+
+Timing Ranges:
+  early_factor                           --
+  late_factor                            --
+
+Pin Input Delays:
+None specified.
+
+Pin Output Delays:
+None specified.
+Fast Analysis:                           disabled
+
+1
+****************************************
+Report : reference
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:56 2026
+****************************************
+
+
+Attributes:
+    b - black-box (unknown)
+    h - hierarchical
+    n - noncombinational
+    u - contains unmapped logic
+    A - abstracted timing model
+    E - extracted timing model
+    S - Stamp timing model
+    Q - Quick timing model (QTM)
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+--------------------------------------------------------------------------------
+CKBD1              tcbn65gplustc_ccs
+                                    1.44     1           1.44      
+CKND0              tcbn65gplustc_ccs
+                                    1.08     20         21.60      
+DEL005             tcbn65gplustc_ccs
+                                    2.16     10         21.60      
+DEL01              tcbn65gplustc_ccs
+                                    3.96     9          35.64      
+TIEH               tcbn65gplustc_ccs
+                                    1.08     1           1.08      
+TIEL               tcbn65gplustc_ccs
+                                    1.08     1           1.08      
+sram00             USERLIB_nldm_tt_1p00v_1p00v_25c
+                                 74820.19    1        74820.19     b,n,A
+--------------------------------------------------------------------------------
+Total 7 references                                    74902.62
+1
+****************************************
+Report : constraint
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:56 2026
+****************************************
+
+                                                   Weighted
+    Group (max_delay/setup)      Cost     Weight     Cost
+    -----------------------------------------------------
+    clk                          0.00      1.00      0.00
+    -----------------------------------------------------
+    max_delay/setup                                  0.00
+
+                                                   Weighted
+    Group (min_delay/hold)       Cost     Weight     Cost
+    -----------------------------------------------------
+    clk                          0.79      1.00      0.79
+    -----------------------------------------------------
+    min_delay/hold                                   0.79
+
+    Constraint                                       Cost
+    -----------------------------------------------------
+    max_delay/setup                                  0.00  (MET)
+    min_delay/hold                                   0.79  (VIOLATED)
+    sequential_clock_pulse_width                     0.00  (MET)
+    sequential_clock_min_period                      0.00  (MET)
+    max_capacitance                                  0.00  (MET)
+    max_transition                                   0.00  (MET)
+
+1
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:56 2026
+****************************************
+
+
+
+   min_delay/hold ('clk' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   sram00_inst/A[0]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[1]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[2]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[3]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[4]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[5]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[6]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[7]                                        -0.0530  (VIOLATED)
+   sram00_inst/A[8]                                        -0.0530  (VIOLATED)
+   sram00_inst/GWEN                                        -0.0411  (VIOLATED)
+   sram00_inst/D[0]                                        -0.0317  (VIOLATED)
+   sram00_inst/D[1]                                        -0.0317  (VIOLATED)
+   sram00_inst/D[2]                                        -0.0317  (VIOLATED)
+   sram00_inst/D[3]                                        -0.0317  (VIOLATED)
+   sram00_inst/D[4]                                        -0.0317  (VIOLATED)
+   sram00_inst/D[5]                                        -0.0317  (VIOLATED)
+   sram00_inst/D[6]                                        -0.0317  (VIOLATED)
+   sram00_inst/D[7]                                        -0.0317  (VIOLATED)
+   sram00_inst/CEN                                         -0.0182  (VIOLATED)
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min_max
+	-nworst 120
+	-slack_lesser_than 0.0000
+	-max_paths 120
+	-sort_by slack
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:56 2026
+****************************************
+
+
+  Startpoint: addr[0] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[0] (in)                           0.0000     0.0070 r
+  U12/Z (DEL005)                         0.0276     0.0346 r
+  U23/ZN (CKND0)                         0.0121     0.0466 f
+  U24/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[0] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[1] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[1] (in)                           0.0000     0.0070 r
+  U11/Z (DEL005)                         0.0276     0.0346 r
+  U25/ZN (CKND0)                         0.0121     0.0466 f
+  U26/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[1] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[2] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[2] (in)                           0.0000     0.0070 r
+  U10/Z (DEL005)                         0.0276     0.0346 r
+  U27/ZN (CKND0)                         0.0121     0.0466 f
+  U28/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[2] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[3] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[3] (in)                           0.0000     0.0070 r
+  U9/Z (DEL005)                          0.0276     0.0346 r
+  U29/ZN (CKND0)                         0.0121     0.0466 f
+  U30/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[3] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[4] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[4] (in)                           0.0000     0.0070 r
+  U8/Z (DEL005)                          0.0276     0.0346 r
+  U31/ZN (CKND0)                         0.0121     0.0466 f
+  U32/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[4] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[5] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[5] (in)                           0.0000     0.0070 r
+  U7/Z (DEL005)                          0.0276     0.0346 r
+  U33/ZN (CKND0)                         0.0121     0.0466 f
+  U34/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[5] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[6] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[6] (in)                           0.0000     0.0070 r
+  U6/Z (DEL005)                          0.0276     0.0346 r
+  U35/ZN (CKND0)                         0.0121     0.0466 f
+  U36/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[6] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[7] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[7] (in)                           0.0000     0.0070 r
+  U5/Z (DEL005)                          0.0276     0.0346 r
+  U37/ZN (CKND0)                         0.0121     0.0466 f
+  U38/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[7] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: addr[8] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  addr[8] (in)                           0.0000     0.0070 r
+  U4/Z (DEL005)                          0.0276     0.0346 r
+  U39/ZN (CKND0)                         0.0121     0.0466 f
+  U40/ZN (CKND0)                         0.0426     0.0892 r
+  sram00_inst/A[8] (sram00)              0.0000     0.0892 r
+  data arrival time                                 0.0892
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1422     0.1422
+  data required time                                0.1422
+  ---------------------------------------------------------------
+  data required time                                0.1422
+  data arrival time                                -0.0892
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0530
+
+
+  Startpoint: gwen (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  gwen (in)                              0.0000     0.0070 f
+  U21/Z (DEL005)                         0.0389     0.0459 f
+  U22/Z (CKBD1)                          0.0221     0.0680 f
+  U41/ZN (CKND0)                         0.0133     0.0813 r
+  U42/ZN (CKND0)                         0.0382     0.1196 f
+  sram00_inst/GWEN (sram00)              0.0000     0.1196 f
+  data arrival time                                 0.1196
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1606     0.1606
+  data required time                                0.1606
+  ---------------------------------------------------------------
+  data required time                                0.1606
+  data arrival time                                -0.1196
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0411
+
+
+  Startpoint: addr[0] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[0] (in)                           0.0000     0.0070 f
+  U12/Z (DEL005)                         0.0371     0.0441 f
+  U23/ZN (CKND0)                         0.0141     0.0582 r
+  U24/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[0] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[1] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[1] (in)                           0.0000     0.0070 f
+  U11/Z (DEL005)                         0.0371     0.0441 f
+  U25/ZN (CKND0)                         0.0141     0.0582 r
+  U26/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[1] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[2] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[2] (in)                           0.0000     0.0070 f
+  U10/Z (DEL005)                         0.0371     0.0441 f
+  U27/ZN (CKND0)                         0.0141     0.0582 r
+  U28/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[2] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[3] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[3] (in)                           0.0000     0.0070 f
+  U9/Z (DEL005)                          0.0371     0.0441 f
+  U29/ZN (CKND0)                         0.0141     0.0582 r
+  U30/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[3] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[4] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[4] (in)                           0.0000     0.0070 f
+  U8/Z (DEL005)                          0.0371     0.0441 f
+  U31/ZN (CKND0)                         0.0141     0.0582 r
+  U32/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[4] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[5] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[5] (in)                           0.0000     0.0070 f
+  U7/Z (DEL005)                          0.0371     0.0441 f
+  U33/ZN (CKND0)                         0.0141     0.0582 r
+  U34/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[5] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[6] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[6] (in)                           0.0000     0.0070 f
+  U6/Z (DEL005)                          0.0371     0.0441 f
+  U35/ZN (CKND0)                         0.0141     0.0582 r
+  U36/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[6] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[7] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[7] (in)                           0.0000     0.0070 f
+  U5/Z (DEL005)                          0.0371     0.0441 f
+  U37/ZN (CKND0)                         0.0141     0.0582 r
+  U38/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[7] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: addr[8] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  addr[8] (in)                           0.0000     0.0070 f
+  U4/Z (DEL005)                          0.0371     0.0441 f
+  U39/ZN (CKND0)                         0.0141     0.0582 r
+  U40/ZN (CKND0)                         0.0360     0.0942 f
+  sram00_inst/A[8] (sram00)              0.0000     0.0942 f
+  data arrival time                                 0.0942
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1271     0.1271
+  data required time                                0.1271
+  ---------------------------------------------------------------
+  data required time                                0.1271
+  data arrival time                                -0.0942
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0329
+
+
+  Startpoint: din[0] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[0] (in)                            0.0000     0.0070 r
+  U20/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[0] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: din[1] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[1] (in)                            0.0000     0.0070 r
+  U19/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[1] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: din[2] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[2] (in)                            0.0000     0.0070 r
+  U18/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[2] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: din[3] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[3] (in)                            0.0000     0.0070 r
+  U17/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[3] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: din[4] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[4] (in)                            0.0000     0.0070 r
+  U16/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[4] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: din[5] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[5] (in)                            0.0000     0.0070 r
+  U15/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[5] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: din[6] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[6] (in)                            0.0000     0.0070 r
+  U14/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[6] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: din[7] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  din[7] (in)                            0.0000     0.0070 r
+  U13/Z (DEL01)                          0.0971     0.1041 r
+  sram00_inst/D[7] (sram00)              0.0000     0.1041 r
+  data arrival time                                 0.1041
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1359     0.1359
+  data required time                                0.1359
+  ---------------------------------------------------------------
+  data required time                                0.1359
+  data arrival time                                -0.1041
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0317
+
+
+  Startpoint: gwen (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  gwen (in)                              0.0000     0.0070 r
+  U21/Z (DEL005)                         0.0297     0.0367 r
+  U22/Z (CKBD1)                          0.0212     0.0579 r
+  U41/ZN (CKND0)                         0.0116     0.0695 f
+  U42/ZN (CKND0)                         0.0454     0.1149 r
+  sram00_inst/GWEN (sram00)              0.0000     0.1149 r
+  data arrival time                                 0.1149
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1409     0.1409
+  data required time                                0.1409
+  ---------------------------------------------------------------
+  data required time                                0.1409
+  data arrival time                                -0.1149
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0260
+
+
+  Startpoint: cen (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  cen (in)                               0.0000     0.0070 f
+  U3/Z (DEL01)                           0.0933     0.1003 f
+  sram00_inst/CEN (sram00)               0.0000     0.1003 f
+  data arrival time                                 0.1003
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1185     0.1185
+  data required time                                0.1185
+  ---------------------------------------------------------------
+  data required time                                0.1185
+  data arrival time                                -0.1003
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0182
+
+
+  Startpoint: din[0] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[0] (in)                            0.0000     0.0070 f
+  U20/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[0] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+  Startpoint: din[1] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[1] (in)                            0.0000     0.0070 f
+  U19/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[1] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+  Startpoint: din[2] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[2] (in)                            0.0000     0.0070 f
+  U18/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[2] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+  Startpoint: din[3] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[3] (in)                            0.0000     0.0070 f
+  U17/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[3] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+  Startpoint: din[4] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[4] (in)                            0.0000     0.0070 f
+  U16/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[4] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+  Startpoint: din[5] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[5] (in)                            0.0000     0.0070 f
+  U15/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[5] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+  Startpoint: din[6] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[6] (in)                            0.0000     0.0070 f
+  U14/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[6] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+  Startpoint: din[7] (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 f
+  din[7] (in)                            0.0000     0.0070 f
+  U13/Z (DEL01)                          0.0937     0.1007 f
+  sram00_inst/D[7] (sram00)              0.0000     0.1007 f
+  data arrival time                                 0.1007
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1067     0.1067
+  data required time                                0.1067
+  ---------------------------------------------------------------
+  data required time                                0.1067
+  data arrival time                                -0.1007
+  ---------------------------------------------------------------
+  slack (VIOLATED)                                 -0.0060
+
+
+No paths with slack less than 0.0000.
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-nworst 120
+	-slack_greater_than 0.0000
+	-max_paths 120
+	-sort_by slack
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:56 2026
+****************************************
+
+
+  Startpoint: cen (input port clocked by clk)
+  Endpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0070     0.0070 r
+  cen (in)                               0.0000     0.0070 r
+  U3/Z (DEL01)                           0.0967     0.1037 r
+  sram00_inst/CEN (sram00)               0.0000     0.1037 r
+  data arrival time                                 0.1037
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  sram00_inst/CLK (sram00)                          0.0000 r
+  library hold time                      0.1027     0.1027
+  data required time                                0.1027
+  ---------------------------------------------------------------
+  data required time                                0.1027
+  data arrival time                                -0.1037
+  ---------------------------------------------------------------
+  slack (MET)                                       0.0010
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[7] (sram00)              0.8205     0.8205 r
+  dout[7] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[6] (sram00)              0.8205     0.8205 r
+  dout[6] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[5] (sram00)              0.8205     0.8205 r
+  dout[5] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[4] (sram00)              0.8205     0.8205 r
+  dout[4] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[3] (sram00)              0.8205     0.8205 r
+  dout[3] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[2] (sram00)              0.8205     0.8205 r
+  dout[2] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[1] (sram00)              0.8205     0.8205 r
+  dout[1] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[0] (sram00)              0.8205     0.8205 r
+  dout[0] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8275
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[7] (sram00)              0.8319     0.8319 f
+  dout[7] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[6] (sram00)              0.8319     0.8319 f
+  dout[6] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[5] (sram00)              0.8319     0.8319 f
+  dout[5] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[4] (sram00)              0.8319     0.8319 f
+  dout[4] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[3] (sram00)              0.8319     0.8319 f
+  dout[3] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[2] (sram00)              0.8319     0.8319 f
+  dout[2] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[1] (sram00)              0.8319     0.8319 f
+  dout[1] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[0] (sram00)              0.8319     0.8319 f
+  dout[0] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock reconvergence pessimism          0.0000     0.0000
+  output external delay                 -0.0070    -0.0070
+  data required time                               -0.0070
+  ---------------------------------------------------------------
+  data required time                               -0.0070
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       0.8389
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-nworst 5
+	-slack_greater_than 0.0000
+	-max_paths 5
+	-sort_by slack
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:56 2026
+****************************************
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[7] (sram00)              0.8319     0.8319 f
+  dout[7] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  2.0000     2.0000
+  clock network delay (ideal)            0.0000     2.0000
+  clock reconvergence pessimism          0.0000     2.0000
+  output external delay                 -0.0070     1.9930
+  data required time                                1.9930
+  ---------------------------------------------------------------
+  data required time                                1.9930
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       1.1611
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[6] (sram00)              0.8319     0.8319 f
+  dout[6] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  2.0000     2.0000
+  clock network delay (ideal)            0.0000     2.0000
+  clock reconvergence pessimism          0.0000     2.0000
+  output external delay                 -0.0070     1.9930
+  data required time                                1.9930
+  ---------------------------------------------------------------
+  data required time                                1.9930
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       1.1611
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[5] (sram00)              0.8319     0.8319 f
+  dout[5] (out)                          0.0000     0.8319 f
+  data arrival time                                 0.8319
+
+  clock clk (rise edge)                  2.0000     2.0000
+  clock network delay (ideal)            0.0000     2.0000
+  clock reconvergence pessimism          0.0000     2.0000
+  output external delay                 -0.0070     1.9930
+  data required time                                1.9930
+  ---------------------------------------------------------------
+  data required time                                1.9930
+  data arrival time                                -0.8319
+  ---------------------------------------------------------------
+  slack (MET)                                       1.1611
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[7] (sram00)              0.8205     0.8205 r
+  dout[7] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  2.0000     2.0000
+  clock network delay (ideal)            0.0000     2.0000
+  clock reconvergence pessimism          0.0000     2.0000
+  output external delay                 -0.0070     1.9930
+  data required time                                1.9930
+  ---------------------------------------------------------------
+  data required time                                1.9930
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       1.1725
+
+
+  Startpoint: sram00_inst
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  sram00_inst/CLK (sram00)               0.0000     0.0000 r
+  sram00_inst/Q[6] (sram00)              0.8205     0.8205 r
+  dout[6] (out)                          0.0000     0.8205 r
+  data arrival time                                 0.8205
+
+  clock clk (rise edge)                  2.0000     2.0000
+  clock network delay (ideal)            0.0000     2.0000
+  clock reconvergence pessimism          0.0000     2.0000
+  output external delay                 -0.0070     1.9930
+  data required time                                1.9930
+  ---------------------------------------------------------------
+  data required time                                1.9930
+  data arrival time                                -0.8205
+  ---------------------------------------------------------------
+  slack (MET)                                       1.1725
+
+Warning: report_timing has satisfied the max_paths criteria. There are 24 further endpoints which have paths of interest with slack less than uninit that were not considered when generating this report. (UITE-502)
+
+1
+****************************************
+Report : Switching Activity
+	
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:57 2026
+****************************************
+
+ Switching Activity Overview Statistics for "sram_wrapper"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  From Activity     From         From         From             From            From                                                            Not
+Object Type       File (%)          SSA (%)      SSA Force (%) SSA Force (%)   SCA (%)         Clock (%)       Default (%)     Propagated(%)   Implied(%)      Annotated(%)  Total
+                                                 Annotated    Implied                                                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nets             190(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      190
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nets Driven by
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Primary Input     20(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      20
+Tri-State         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Black Box         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Sequential        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Combinational     42(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      42
+Memory            128(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      128
+Clock Gate        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Static Probability Overview Statistics for "sram_wrapper"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  From Activity     From         From         From             From            From                                                            Not
+Object Type       File (%)          SSA (%)      SSA Force (%) SSA Force (%)   SCA (%)         Clock (%)       Default (%)     Propagated(%)   Implied(%)      Annotated(%)  Total
+                                                 Annotated    Implied                                                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nets             190(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      190
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nets Driven by
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Primary Input     20(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      20
+Tri-State         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Black Box         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Sequential        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Combinational     42(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      42
+Memory            128(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      128
+Clock Gate        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1
+****************************************
+Report : Switching Activity
+	-list_not_annotated
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:57 2026
+****************************************
+
+ Switching Activity Overview Statistics for "sram_wrapper"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  From Activity     From         From         From             From            From                                                            Not
+Object Type       File (%)          SSA (%)      SSA Force (%) SSA Force (%)   SCA (%)         Clock (%)       Default (%)     Propagated(%)   Implied(%)      Annotated(%)  Total
+                                                 Annotated    Implied                                                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nets             190(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      190
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nets Driven by
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Primary Input     20(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      20
+Tri-State         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Black Box         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Sequential        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Combinational     42(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      42
+Memory            128(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      128
+Clock Gate        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Static Probability Overview Statistics for "sram_wrapper"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  From Activity     From         From         From             From            From                                                            Not
+Object Type       File (%)          SSA (%)      SSA Force (%) SSA Force (%)   SCA (%)         Clock (%)       Default (%)     Propagated(%)   Implied(%)      Annotated(%)  Total
+                                                 Annotated    Implied                                                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nets             190(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      190
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nets Driven by
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Primary Input     20(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      20
+Tri-State         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Black Box         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Sequential        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+Combinational     42(100.00%)       0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      42
+Memory            128(100.00%)      0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      128
+Clock Gate        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+List of nonannotated nets :
+1
+****************************************
+Report : Time Based Power
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:57 2026
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  i
+register                   0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+combinational           9.268e-10 4.642e-10 5.000e-07 5.014e-07 ( 0.14%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                  1.691e-06 1.151e-10 3.595e-04 3.612e-04 (99.86%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 5.793e-10   ( 0.00%)
+  Cell Internal Power  = 1.692e-06   ( 0.47%)
+  Cell Leakage Power   = 3.600e-04   (99.53%)
+                         ---------
+Total Power            = 3.617e-04  (100.00%)
+
+X Transition Power     = 1.329e-10
+Glitching Power        =    0.0000
+
+Peak Power             =    6.4821
+Peak Time              =   364.700
+
+1
+****************************************
+Report : Time Based Power
+	-hierarchy
+Design : sram_wrapper
+Version: U-2022.12-SP5
+Date   : Fri Mar  6 21:54:57 2026
+****************************************
+
+
+
+                                      Int      Switch   Leak     Total
+Hierarchy                             Power    Power    Power    Power    %
+----------------------------------------------------------------------------------
+sram_wrapper                          1.69e-06 5.79e-10 3.60e-04 3.62e-04 100.0
+
+
+                                      Peak     Peak            Glitch   X-tran
+Hierarchy                             Power    Time            Power    Power
+--------------------------------------------------------------------------------
+sram_wrapper                             6.482 364.700-364.701    0.000 1.33e-10
+1

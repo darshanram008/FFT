@@ -1,0 +1,33 @@
+7:42:36 PM - 
+7:42:36 PM - *** Warning *** An instance name ("sram_sp_hdc_svt_rvt_hvt") of more than 16 characters may create cellnames 
+7:42:36 PM - *** Warning *** that exceed the number of characters supported by some tools.7:42:36 PM - 
+Unable to determine location of corners directory from program name
+7:42:40 PM -   /vlsidl/dk/ARM/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/linux/lang
+7:42:40 PM - Could not find
+7:42:40 PM - /vlsidl/dk/ARM/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/linux/../../corners
+7:42:40 PM - '/arm/pipd/tools/software/memfecomp/2.4.24-PG/bin/shared/datatable/datatable.lang 1064: doGeomAndTemp(string header=UNDEFINED, int i=0)
+7:42:40 PM - '/arm/pipd/tools/software/memfecomp/2.4.24-PG/bin/shared/datatable/datatable.lang 391: OpenVscm(int i=0, string bootfilesDir=/vlsidl/dk/ARM/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/linux/../../corners, int st[]={ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1}, string vscm_executable=UNDEFINED, 
+7:42:40 PM - string files[]={}, string fileName=UNDEFINED, string baseName=UNDEFINED, string rdbName=UNDEFINED)
+7:42:40 PM - 
+7:42:40 PM - *** Warning *** couldn't run spreadsheet generator to fetch results
+7:42:43 PM - ARM Physical IP, Inc.
+7:42:43 PM - Linux vlsidl4 3.10.0-1160.15.2.el7.x86_64 #1 SMP Wed Feb 3 15:06:38 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+7:42:43 PM - Version r0p0-00eac0
+7:42:43 PM - GUI version 7.0.10
+7:42:43 PM - 
+7:42:43 PM - CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+7:42:43 PM - 
+7:42:43 PM - Copyright (c) 1993 - 2024 ARM Physical IP, Inc.  All Rights Reserved.
+7:42:43 PM - 
+7:42:43 PM - Use of this Software is subject to the terms and conditions of the
+7:42:43 PM - applicable license agreement with ARM Physical IP, Inc. 
+7:42:43 PM - In addition, this Software is protected by patents, copyright law 
+7:42:43 PM - and international treaties.
+7:42:43 PM - 
+7:42:43 PM - The copyright notice(s) in this Software does not indicate actual or
+7:42:43 PM - intended publication of this Software.
+7:42:43 PM - 
+7:42:43 PM - sram_sp_hdc_svt_rvt_hvt Compiler, TSMC cln65gplus 65nm Process, 0.525um2 Bitcell
+7:42:43 PM - 
+7:42:43 PM - Log file is ACI.log
+7:42:43 PM - 

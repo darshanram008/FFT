@@ -1,0 +1,2382 @@
+ 
+****************************************
+Report : timing
+        -path short
+        -delay min
+        -max_paths 10000
+        -sort_by slack
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: seed[0] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[0] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_0_/D (DFD1)      0.04       0.09 f
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_0_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.07
+
+
+  Startpoint: seed[1] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[1] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_1_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_1_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[2] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[2] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_2_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_2_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[3] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[3] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_3_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_3_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[5] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[5] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_5_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_5_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[6] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[6] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_6_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_6_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[7] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[7] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_7_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_7_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[9] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[9] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_9_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[10] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  input external delay                      0.05       0.05 f
+  seed[10] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_10_/D (DFD1)      0.05       0.10 f
+  data arrival time                                    0.10
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_10_/CP (DFD1)     0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.10
+  ------------------------------------------------------------
+  slack (MET)                                          0.08
+
+
+  Startpoint: seed[11] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  input external delay                      0.05       0.05 f
+  seed[11] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_11_/D (DFD1)      0.05       0.10 f
+  data arrival time                                    0.10
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_11_/CP (DFD1)     0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.10
+  ------------------------------------------------------------
+  slack (MET)                                          0.08
+
+
+  Startpoint: seed[13] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  input external delay                      0.05       0.05 f
+  seed[13] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_13_/D (DFD1)      0.05       0.10 f
+  data arrival time                                    0.10
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_13_/CP (DFD1)     0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.10
+  ------------------------------------------------------------
+  slack (MET)                                          0.08
+
+
+  Startpoint: seed[14] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  input external delay                      0.05       0.05 f
+  seed[14] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_14_/D (DFD1)      0.05       0.10 f
+  data arrival time                                    0.10
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_14_/CP (DFD1)     0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.10
+  ------------------------------------------------------------
+  slack (MET)                                          0.08
+
+
+  Startpoint: seed[15] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  input external delay                      0.05       0.05 f
+  seed[15] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_15_/D (DFD1)      0.05       0.10 f
+  data arrival time                                    0.10
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_15_/CP (DFD1)     0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.10
+  ------------------------------------------------------------
+  slack (MET)                                          0.08
+
+
+  Startpoint: seed[4] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[4] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_4_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_4_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[8] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  seed[8] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_8_/D (DFD1)      0.05       0.10 f
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  lfsr1_inst_lfsr_out_reg_8_/CP (DFD1)     0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: seed[12] (input port clocked by clk)
+  Endpoint: lfsr1_inst_lfsr_out_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  input external delay                      0.05       0.05 f
+  seed[12] (in)                             0.00       0.05 f
+  ...
+  lfsr1_inst_lfsr_out_reg_12_/D (DFD1)      0.05       0.10 f
+  data arrival time                                    0.10
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_12_/CP (DFD1)     0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.10
+  ------------------------------------------------------------
+  slack (MET)                                          0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  mult_inst_out_reg_reg_0_/CP (DFD1)       0.00       0.00 r
+  mult_inst_out_reg_reg_0_/Q (DFD1)        0.09       0.09 f
+  sign_inst_sign_reg_1_/CN (DFKCSND1)      0.00       0.09 f
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_1_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                        0.01       0.01
+  data required time                                  0.01
+  -----------------------------------------------------------
+  data required time                                  0.01
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_2_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_2_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_3_/D (DFD1)              0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_3_/CP (DFD1)             0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_5_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_5_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_6_/D (DFD1)              0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_6_/CP (DFD1)             0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_6_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_6_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_7_/D (DFD1)              0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_7_/CP (DFD1)             0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_7_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_7_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_8_/D (DFD1)              0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_8_/CP (DFD1)             0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_3_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_3_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_4_/D (DFD1)              0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_4_/CP (DFD1)             0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_4_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_4_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_5_/D (DFD1)              0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_5_/CP (DFD1)             0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_12_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_12_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_12_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_13_/D (DFD1)              0.03       0.10 f
+  data arrival time                                       0.10
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  sign_inst_sign_reg_13_/CP (DFD1)             0.00       0.00 r
+  library hold time                            0.02       0.02
+  data required time                                      0.02
+  ---------------------------------------------------------------
+  data required time                                      0.02
+  data arrival time                                      -0.10
+  ---------------------------------------------------------------
+  slack (MET)                                             0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_13_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_13_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_13_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_14_/D (DFD1)              0.03       0.10 f
+  data arrival time                                       0.10
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  sign_inst_sign_reg_14_/CP (DFD1)             0.00       0.00 r
+  library hold time                            0.02       0.02
+  data required time                                      0.02
+  ---------------------------------------------------------------
+  data required time                                      0.02
+  data arrival time                                      -0.10
+  ---------------------------------------------------------------
+  slack (MET)                                             0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_8_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_8_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_9_/D (DFD1)              0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_9_/CP (DFD1)             0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_9_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_9_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_10_/D (DFD1)             0.03       0.10 f
+  data arrival time                                      0.10
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  sign_inst_sign_reg_10_/CP (DFD1)            0.00       0.00 r
+  library hold time                           0.02       0.02
+  data required time                                     0.02
+  --------------------------------------------------------------
+  data required time                                     0.02
+  data arrival time                                     -0.10
+  --------------------------------------------------------------
+  slack (MET)                                            0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_10_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_10_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_11_/D (DFD1)              0.03       0.10 f
+  data arrival time                                       0.10
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  sign_inst_sign_reg_11_/CP (DFD1)             0.00       0.00 r
+  library hold time                            0.02       0.02
+  data required time                                      0.02
+  ---------------------------------------------------------------
+  data required time                                      0.02
+  data arrival time                                      -0.10
+  ---------------------------------------------------------------
+  slack (MET)                                             0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_11_/CP (DFKCSND1)      0.00       0.00 r
+  mult_inst_out_reg_reg_11_/Q (DFKCSND1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_12_/D (DFD1)              0.03       0.10 f
+  data arrival time                                       0.10
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  sign_inst_sign_reg_12_/CP (DFD1)             0.00       0.00 r
+  library hold time                            0.02       0.02
+  data required time                                      0.02
+  ---------------------------------------------------------------
+  data required time                                      0.02
+  data arrival time                                      -0.10
+  ---------------------------------------------------------------
+  slack (MET)                                             0.08
+
+
+  Startpoint: mult_inst_out_reg_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  mult_inst_out_reg_reg_1_/CP (DFD1)       0.00       0.00 r
+  mult_inst_out_reg_reg_1_/Q (DFD1)        0.08       0.08 r
+  ...
+  sign_inst_sign_reg_2_/D (DFD1)           0.03       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_2_/CP (DFD1)          0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.09
+
+
+  Startpoint: mult_inst_out_reg_reg_14_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign_inst_sign_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)      0.00       0.00 r
+  mult_inst_out_reg_reg_14_/Q (DFD1)       0.08       0.08 r
+  ...
+  sign_inst_sign_reg_15_/D (DFD1)          0.03       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_15_/CP (DFD1)         0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.09
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_7_/SN (DFKCSND1)      0.02       0.08 r
+  data arrival time                                      0.08
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_7_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.08
+  --------------------------------------------------------------
+  slack (MET)                                            0.10
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_0_/CP (DFD1)      0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_0_/QN (DFD1)      0.12       0.12 r
+  ...
+  mult_inst_out_reg_reg_0_/D (DFD1)         0.02       0.14 f
+  data arrival time                                    0.14
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  mult_inst_out_reg_reg_0_/CP (DFD1)        0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.14
+  ------------------------------------------------------------
+  slack (MET)                                          0.12
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                     Incr       Path
+  ------------------------------------------------------------
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  lfsr1_inst_lfsr_out_reg_0_/CP (DFD1)      0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_0_/Q (DFD1)       0.09       0.09 f
+  ...
+  mult_inst_out_reg_reg_1_/D (DFD1)         0.05       0.14 f
+  data arrival time                                    0.14
+
+  clock clk (rise edge)                     0.00       0.00
+  clock network delay (ideal)               0.00       0.00
+  mult_inst_out_reg_reg_1_/CP (DFD1)        0.00       0.00 r
+  library hold time                         0.02       0.02
+  data required time                                   0.02
+  ------------------------------------------------------------
+  data required time                                   0.02
+  data arrival time                                   -0.14
+  ------------------------------------------------------------
+  slack (MET)                                          0.12
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_6_/SN (DFKCSND1)      0.06       0.12 r
+  data arrival time                                      0.12
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_6_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.12
+  --------------------------------------------------------------
+  slack (MET)                                            0.14
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_8_/SN (DFKCSND1)      0.06       0.12 r
+  data arrival time                                      0.12
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_8_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.12
+  --------------------------------------------------------------
+  slack (MET)                                            0.14
+
+
+  Startpoint: sign_inst_sign_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_1_/CP (DFKCSND1)      0.00       0.00 r
+  sign_inst_sign_reg_1_/Q (DFKCSND1)       0.09       0.09 r
+  sign[1] (out)                            0.00       0.09 r
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.14
+
+
+  Startpoint: sign_inst_sign_reg_15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[15] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_15_/CP (DFD1)         0.00       0.00 r
+  sign_inst_sign_reg_15_/Q (DFD1)          0.09       0.09 r
+  sign[15] (out)                           0.00       0.09 r
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.14
+
+
+  Startpoint: sign_inst_sign_reg_14_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[14] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_14_/CP (DFD1)         0.00       0.00 r
+  sign_inst_sign_reg_14_/Q (DFD1)          0.10       0.10 r
+  sign[14] (out)                           0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_13_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[13] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_13_/CP (DFD1)         0.00       0.00 r
+  sign_inst_sign_reg_13_/Q (DFD1)          0.10       0.10 r
+  sign[13] (out)                           0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_12_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[12] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_12_/CP (DFD1)         0.00       0.00 r
+  sign_inst_sign_reg_12_/Q (DFD1)          0.10       0.10 r
+  sign[12] (out)                           0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_11_/CP (DFD1)         0.00       0.00 r
+  sign_inst_sign_reg_11_/Q (DFD1)          0.10       0.10 r
+  sign[11] (out)                           0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_10_/CP (DFD1)         0.00       0.00 r
+  sign_inst_sign_reg_10_/Q (DFD1)          0.10       0.10 r
+  sign[10] (out)                           0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_9_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_9_/Q (DFD1)           0.10       0.10 r
+  sign[9] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_8_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_8_/Q (DFD1)           0.10       0.10 r
+  sign[8] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_7_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_7_/Q (DFD1)           0.10       0.10 r
+  sign[7] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_6_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_6_/Q (DFD1)           0.10       0.10 r
+  sign[6] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_5_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_5_/Q (DFD1)           0.10       0.10 r
+  sign[5] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_4_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_4_/Q (DFD1)           0.10       0.10 r
+  sign[4] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_3_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_3_/Q (DFD1)           0.10       0.10 r
+  sign[3] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: sign_inst_sign_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sign[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_2_/CP (DFD1)          0.00       0.00 r
+  sign_inst_sign_reg_2_/Q (DFD1)           0.10       0.10 r
+  sign[2] (out)                            0.00       0.10 r
+  data arrival time                                   0.10
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  rstn (in)                                0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_14_/D (DFD1)       0.12       0.18 f
+  data arrival time                                   0.18
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  mult_inst_out_reg_reg_14_/CP (DFD1)      0.00       0.00 r
+  library hold time                        0.02       0.02
+  data required time                                  0.02
+  -----------------------------------------------------------
+  data required time                                  0.02
+  data arrival time                                  -0.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.16
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_2_/CP (DFD1)        0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_2_/QN (DFD1)        0.11       0.11 r
+  ...
+  mult_inst_out_reg_reg_2_/CN (DFKCSND1)      0.07       0.18 f
+  data arrival time                                      0.18
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_2_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.18
+  --------------------------------------------------------------
+  slack (MET)                                            0.17
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_5_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                      0.16
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_5_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.16
+  --------------------------------------------------------------
+  slack (MET)                                            0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_9_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                      0.16
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_9_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.16
+  --------------------------------------------------------------
+  slack (MET)                                            0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: sign_inst_sign_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.05       0.05 f
+  rstn (in)                                0.01       0.06 f
+  ...
+  sign_inst_sign_reg_1_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                   0.16
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sign_inst_sign_reg_1_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                       -0.02      -0.02
+  data required time                                 -0.02
+  -----------------------------------------------------------
+  data required time                                 -0.02
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_2_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                      0.16
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_2_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.16
+  --------------------------------------------------------------
+  slack (MET)                                            0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_3_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                      0.16
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_3_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.16
+  --------------------------------------------------------------
+  slack (MET)                                            0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  input external delay                        0.05       0.05 f
+  rstn (in)                                   0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_4_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                      0.16
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_4_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                          -0.02      -0.02
+  data required time                                    -0.02
+  --------------------------------------------------------------
+  data required time                                    -0.02
+  data arrival time                                     -0.16
+  --------------------------------------------------------------
+  slack (MET)                                            0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  input external delay                         0.05       0.05 f
+  rstn (in)                                    0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_10_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                       0.16
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_10_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           -0.02      -0.02
+  data required time                                     -0.02
+  ---------------------------------------------------------------
+  data required time                                     -0.02
+  data arrival time                                      -0.16
+  ---------------------------------------------------------------
+  slack (MET)                                             0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  input external delay                         0.05       0.05 f
+  rstn (in)                                    0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_11_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                       0.16
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_11_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           -0.02      -0.02
+  data required time                                     -0.02
+  ---------------------------------------------------------------
+  data required time                                     -0.02
+  data arrival time                                      -0.16
+  ---------------------------------------------------------------
+  slack (MET)                                             0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  input external delay                         0.05       0.05 f
+  rstn (in)                                    0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_12_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                       0.16
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_12_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           -0.02      -0.02
+  data required time                                     -0.02
+  ---------------------------------------------------------------
+  data required time                                     -0.02
+  data arrival time                                      -0.16
+  ---------------------------------------------------------------
+  slack (MET)                                             0.18
+
+
+  Startpoint: rstn (input port clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  input external delay                         0.05       0.05 f
+  rstn (in)                                    0.01       0.06 f
+  ...
+  mult_inst_out_reg_reg_13_/SN (DFKCSND1)      0.10       0.16 r
+  data arrival time                                       0.16
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_13_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           -0.02      -0.02
+  data required time                                     -0.02
+  ---------------------------------------------------------------
+  data required time                                     -0.02
+  data arrival time                                      -0.16
+  ---------------------------------------------------------------
+  slack (MET)                                             0.18
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_9_/CP (DFD1)        0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_9_/QN (DFD1)        0.11       0.11 r
+  ...
+  mult_inst_out_reg_reg_3_/CN (DFKCSND1)      0.12       0.23 f
+  data arrival time                                      0.23
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_3_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.23
+  --------------------------------------------------------------
+  slack (MET)                                            0.23
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_0_/CP (DFD1)        0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_0_/Q (DFD1)         0.09       0.09 f
+  ...
+  mult_inst_out_reg_reg_4_/CN (DFKCSND1)      0.14       0.23 f
+  data arrival time                                      0.23
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_4_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.23
+  --------------------------------------------------------------
+  slack (MET)                                            0.23
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_14_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  lfsr1_inst_lfsr_out_reg_14_/CP (DFD1)        0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_14_/Q (DFD1)         0.09       0.09 r
+  ...
+  mult_inst_out_reg_reg_13_/CN (DFKCSND1)      0.17       0.26 f
+  data arrival time                                       0.26
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_13_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                            0.01       0.01
+  data required time                                      0.01
+  ---------------------------------------------------------------
+  data required time                                      0.01
+  data arrival time                                      -0.26
+  ---------------------------------------------------------------
+  slack (MET)                                             0.26
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_0_/CP (DFD1)        0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_0_/Q (DFD1)         0.09       0.09 f
+  ...
+  mult_inst_out_reg_reg_5_/CN (DFKCSND1)      0.19       0.28 f
+  data arrival time                                      0.28
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_5_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.28
+  --------------------------------------------------------------
+  slack (MET)                                            0.28
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_11_/CP (DFD1)       0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_11_/QN (DFD1)       0.10       0.10 f
+  ...
+  mult_inst_out_reg_reg_6_/CN (DFKCSND1)      0.20       0.30 f
+  data arrival time                                      0.30
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_6_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.30
+  --------------------------------------------------------------
+  slack (MET)                                            0.30
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_14_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  lfsr1_inst_lfsr_out_reg_14_/CP (DFD1)        0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_14_/Q (DFD1)         0.09       0.09 r
+  ...
+  mult_inst_out_reg_reg_12_/CN (DFKCSND1)      0.22       0.31 f
+  data arrival time                                       0.31
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_12_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                            0.01       0.01
+  data required time                                      0.01
+  ---------------------------------------------------------------
+  data required time                                      0.01
+  data arrival time                                      -0.31
+  ---------------------------------------------------------------
+  slack (MET)                                             0.30
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_11_/CP (DFD1)       0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_11_/Q (DFD1)        0.09       0.09 r
+  ...
+  mult_inst_out_reg_reg_7_/CN (DFKCSND1)      0.23       0.31 f
+  data arrival time                                      0.31
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_7_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.31
+  --------------------------------------------------------------
+  slack (MET)                                            0.31
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_11_/CP (DFD1)       0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_11_/Q (DFD1)        0.09       0.09 r
+  ...
+  mult_inst_out_reg_reg_8_/CN (DFKCSND1)      0.23       0.32 f
+  data arrival time                                      0.32
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_8_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.32
+  --------------------------------------------------------------
+  slack (MET)                                            0.31
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_12_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  lfsr1_inst_lfsr_out_reg_12_/CP (DFD1)        0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_12_/Q (DFD1)         0.09       0.09 r
+  ...
+  mult_inst_out_reg_reg_11_/CN (DFKCSND1)      0.24       0.33 f
+  data arrival time                                       0.33
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_11_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                            0.01       0.01
+  data required time                                      0.01
+  ---------------------------------------------------------------
+  data required time                                      0.01
+  data arrival time                                      -0.33
+  ---------------------------------------------------------------
+  slack (MET)                                             0.32
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                        Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  lfsr1_inst_lfsr_out_reg_2_/CP (DFD1)         0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_2_/Q (DFD1)          0.09       0.09 r
+  ...
+  mult_inst_out_reg_reg_10_/CN (DFKCSND1)      0.26       0.35 f
+  data arrival time                                       0.35
+
+  clock clk (rise edge)                        0.00       0.00
+  clock network delay (ideal)                  0.00       0.00
+  mult_inst_out_reg_reg_10_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                            0.01       0.01
+  data required time                                      0.01
+  ---------------------------------------------------------------
+  data required time                                      0.01
+  data arrival time                                      -0.35
+  ---------------------------------------------------------------
+  slack (MET)                                             0.34
+
+
+  Startpoint: lfsr1_inst_lfsr_out_reg_10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mult_inst_out_reg_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  bist               ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                       Incr       Path
+  --------------------------------------------------------------
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  lfsr1_inst_lfsr_out_reg_10_/CP (DFD1)       0.00       0.00 r
+  lfsr1_inst_lfsr_out_reg_10_/Q (DFD1)        0.09       0.09 f
+  ...
+  mult_inst_out_reg_reg_9_/CN (DFKCSND1)      0.26       0.35 f
+  data arrival time                                      0.35
+
+  clock clk (rise edge)                       0.00       0.00
+  clock network delay (ideal)                 0.00       0.00
+  mult_inst_out_reg_reg_9_/CP (DFKCSND1)      0.00       0.00 r
+  library hold time                           0.01       0.01
+  data required time                                     0.01
+  --------------------------------------------------------------
+  data required time                                     0.01
+  data arrival time                                     -0.35
+  --------------------------------------------------------------
+  slack (MET)                                            0.35
+
+
+1

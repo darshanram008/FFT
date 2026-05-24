@@ -1,0 +1,34 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+sign[14] (out)                      0.10 f            1.95         1.85
+sign[13] (out)                      0.10 f            1.95         1.85
+sign[12] (out)                      0.10 f            1.95         1.85
+sign[11] (out)                      0.10 f            1.95         1.85
+sign[10] (out)                      0.10 f            1.95         1.85
+sign[9] (out)                       0.10 f            1.95         1.85
+sign[8] (out)                       0.10 f            1.95         1.85
+sign[7] (out)                       0.10 f            1.95         1.85
+sign[6] (out)                       0.10 f            1.95         1.85
+sign[5] (out)                       0.10 f            1.95         1.85
+sign[4] (out)                       0.10 f            1.95         1.85
+sign[3] (out)                       0.10 f            1.95         1.85
+sign[2] (out)                       0.10 f            1.95         1.85
+sign[1] (out)                       0.10 f            1.95         1.85
+sign[15] (out)                      0.10 f            1.95         1.85
+
+1

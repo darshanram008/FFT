@@ -1,0 +1,131 @@
+3:53:26 PM - 
+3:53:26 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:53:26 PM - *** Warning *** that exceed the number of characters supported by some tools.3:53:26 PM - 
+3:53:28 PM - ARM Physical IP, Inc.
+3:53:28 PM - Linux cadpc38 4.18.0-553.107.1.el8_10.x86_64 #1 SMP Tue Feb 17 05:52:05 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+3:53:28 PM - Version r0p2-00eac0
+3:53:28 PM - GUI version 7.0.10
+3:53:28 PM - 
+3:53:28 PM - CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+3:53:28 PM - 
+3:53:28 PM - Copyright (c) 1993 - 2026 ARM Physical IP, Inc.  All Rights Reserved.
+3:53:28 PM - 
+3:53:28 PM - Use of this Software is subject to the terms and conditions of the
+3:53:28 PM - applicable license agreement with ARM Physical IP, Inc. 
+3:53:28 PM - In addition, this Software is protected by patents, copyright law 
+3:53:28 PM - and international treaties.
+3:53:28 PM - 
+3:53:28 PM - The copyright notice(s) in this Software does not indicate actual or
+3:53:28 PM - intended publication of this Software.
+3:53:28 PM - 
+3:53:28 PM - rf_2p_hde_svt_rvt_hvt Compiler, TSMC cln65gplus 65nm Process, 0.974um2 Bitcell
+3:53:28 PM - 
+3:53:28 PM - Log file is ACI.log
+3:53:28 PM - 
+
+3:58:34 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:58:34 PM - *** Warning *** that exceed the number of characters supported by some tools.3:58:34 PM - 
+3:58:35 PM - ASCII Datatable updated
+
+3:59:09 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:09 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:09 PM - 
+3:59:09 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt postscript -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:11 PM - PostScript Datasheet generator succeeded, created:
+3:59:11 PM -    rf_2p_hde_svt_rvt_hvt_tt_1p00v_1p00v_25c.ps
+3:59:11 PM -    rf_2p_hde_svt_rvt_hvt_ss_0p90v_0p90v_m40c.ps
+3:59:11 PM -    rf_2p_hde_svt_rvt_hvt_ss_0p90v_0p90v_125c.ps
+3:59:11 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_m40c.ps
+3:59:11 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_125c.ps
+3:59:11 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_0c.ps
+
+3:59:12 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:12 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:12 PM - 
+3:59:12 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt ascii -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:14 PM - ASCII Datatable generator succeeded, created:
+3:59:14 PM -    rf_2p_hde_svt_rvt_hvt_tt_1p00v_1p00v_25c.dat
+3:59:14 PM -    rf_2p_hde_svt_rvt_hvt_ss_0p90v_0p90v_m40c.dat
+3:59:14 PM -    rf_2p_hde_svt_rvt_hvt_ss_0p90v_0p90v_125c.dat
+3:59:14 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_m40c.dat
+3:59:14 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_125c.dat
+3:59:14 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_0c.dat
+
+3:59:14 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:14 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:14 PM - 
+3:59:14 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt verilog -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:14 PM - Verilog Model generator succeeded, created: rf_2p_hde_svt_rvt_hvt.v
+
+3:59:15 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:15 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:15 PM - 
+3:59:15 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt synopsys -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -libname USERLIB -nldm on -ccs off -ecsm off -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:25 PM - Synopsys Model generator succeeded, created:
+3:59:25 PM -    rf_2p_hde_svt_rvt_hvt_nldm_tt_1p00v_1p00v_25c_syn.lib
+3:59:25 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ss_0p90v_0p90v_m40c_syn.lib
+3:59:25 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ss_0p90v_0p90v_125c_syn.lib
+3:59:25 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ff_1p10v_1p10v_m40c_syn.lib
+3:59:25 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ff_1p10v_1p10v_125c_syn.lib
+3:59:25 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ff_1p10v_1p10v_0c_syn.lib
+
+3:59:26 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:26 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:26 PM - 
+3:59:26 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt vclef-fp -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -site_def off -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:28 PM - VCLEF Footprint generator succeeded, created: rf_2p_hde_svt_rvt_hvt.vclef
+
+3:59:28 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:28 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:28 PM - 
+3:59:28 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt gds2 -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:29 PM - ARM PIPD physical GDS tool, version 2.3.7
+3:59:29 PM - GDSII Layout generator succeeded, created: rf_2p_hde_svt_rvt_hvt.gds2
+
+3:59:30 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:30 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:30 PM - 
+3:59:30 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt lvs -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:31 PM - LVS Netlist generator succeeded, created: rf_2p_hde_svt_rvt_hvt.cdl
+
+3:59:31 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+3:59:31 PM - *** Warning *** that exceed the number of characters supported by some tools.3:59:31 PM - 
+3:59:31 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt tmax -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+3:59:31 PM - TetraMax Model generator succeeded, created: rf_2p_hde_svt_rvt_hvt.tv
+
+4:07:23 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+4:07:23 PM - *** Warning *** that exceed the number of characters supported by some tools.4:07:23 PM - 
+4:07:23 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt postscript -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+4:07:25 PM - PostScript Datasheet generator succeeded, created:
+4:07:25 PM -    rf_2p_hde_svt_rvt_hvt_tt_1p00v_1p00v_25c.ps
+4:07:25 PM -    rf_2p_hde_svt_rvt_hvt_ss_0p90v_0p90v_m40c.ps
+4:07:25 PM -    rf_2p_hde_svt_rvt_hvt_ss_0p90v_0p90v_125c.ps
+4:07:25 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_m40c.ps
+4:07:25 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_125c.ps
+4:07:25 PM -    rf_2p_hde_svt_rvt_hvt_ff_1p10v_1p10v_0c.ps
+
+4:07:25 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+4:07:25 PM - *** Warning *** that exceed the number of characters supported by some tools.4:07:25 PM - 
+4:07:25 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt verilog -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+4:07:26 PM - Verilog Model generator succeeded, created: rf_2p_hde_svt_rvt_hvt.v
+
+4:07:26 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+4:07:26 PM - *** Warning *** that exceed the number of characters supported by some tools.4:07:26 PM - 
+4:07:26 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt synopsys -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -libname USERLIB -nldm on -ccs off -ecsm off -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+4:07:37 PM - Synopsys Model generator succeeded, created:
+4:07:37 PM -    rf_2p_hde_svt_rvt_hvt_nldm_tt_1p00v_1p00v_25c_syn.lib
+4:07:37 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ss_0p90v_0p90v_m40c_syn.lib
+4:07:37 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ss_0p90v_0p90v_125c_syn.lib
+4:07:37 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ff_1p10v_1p10v_m40c_syn.lib
+4:07:37 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ff_1p10v_1p10v_125c_syn.lib
+4:07:37 PM -    rf_2p_hde_svt_rvt_hvt_nldm_ff_1p10v_1p10v_0c_syn.lib
+
+4:07:37 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+4:07:37 PM - *** Warning *** that exceed the number of characters supported by some tools.4:07:37 PM - 
+4:07:37 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt vclef-fp -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -site_def off -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+4:07:39 PM - VCLEF Footprint generator succeeded, created: rf_2p_hde_svt_rvt_hvt.vclef
+
+4:07:39 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+4:07:39 PM - *** Warning *** that exceed the number of characters supported by some tools.4:07:39 PM - 
+4:07:39 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt gds2 -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+4:07:40 PM - ARM PIPD physical GDS tool, version 2.3.7
+4:07:40 PM - GDSII Layout generator succeeded, created: rf_2p_hde_svt_rvt_hvt.gds2
+
+4:07:41 PM - *** Warning *** An instance name ("rf_2p_hde_svt_rvt_hvt") of more than 16 characters may create cellnames 
+4:07:41 PM - *** Warning *** that exceed the number of characters supported by some tools.4:07:41 PM - 
+4:07:41 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/rf_2p_hde_svt_rvt_hvt/r0p2-00eac0/bin/rf_2p_hde_svt_rvt_hvt lvs -instname "rf_2p_hde_svt_rvt_hvt" -words 128 -bits 128 -frequency 100 -mux 1 -pipeline off -write_mask off -wp_size 8 -write_thru off -top_layer "m5-m9" -power_type otc -redundancy off -rcols 1 -rrows 0 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -pin_space 0.0 -name_case upper -check_instname off -diodes on -dpccm on -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+4:07:41 PM - LVS Netlist generator succeeded, created: rf_2p_hde_svt_rvt_hvt.cdl
+4:09:44 PM - Created spec file: rf_2p_hde_svt_rvt_hvt.spec

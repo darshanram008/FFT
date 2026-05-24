@@ -1,0 +1,224 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_4/qsim_dc/tb_sram_wrapper
+vCKBD1
+Z1 2dc_stubs.v
+Z2 !s110 1772851575
+!i10b 1
+!s100 5CRZ3FVAKgGS0IfJ3hn=j1
+I3gZHAC579Nf_X<Xf9j;zB3
+R0
+Z3 w1772845706
+Z4 8dc_stubs.v
+Z5 Fdc_stubs.v
+!i122 1
+L0 16 6
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OP;L;2024.2;79
+r1
+!s85 0
+31
+Z8 !s108 1772851575.000000
+Z9 !s107 dc_stubs.v|
+Z10 !s90 -reportprogress|300|+acc|-incr|dc_stubs.v|
+!i113 1
+Z11 o+acc
+Z12 tCvgOpt 0
+n@c@k@b@d1
+vCKND0
+R1
+R2
+!i10b 1
+!s100 KhHbGSRf`aMH[3lAhdOA93
+I<T?eSm1Gh18iZTHal961M1
+R0
+R3
+R4
+R5
+!i122 1
+L0 23 6
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@c@k@n@d0
+vDEL005
+R1
+R2
+!i10b 1
+!s100 3_T;LfOjZR]ghKSa>fMaU1
+I4h@?Y=D1ViPQ_ld]WF5ON1
+R0
+R3
+R4
+R5
+!i122 1
+L0 9 6
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@d@e@l005
+vDEL01
+R1
+R2
+!i10b 1
+!s100 6Sn@[FIcAOW6cE_P757Qh2
+ISc:l07=kz^bSLBS^iSz<=3
+R0
+R3
+R4
+R5
+!i122 1
+L0 2 6
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@d@e@l01
+vsram00
+2../../memory_compiler/single_port_sram/sram00.v
+R2
+!i10b 1
+!s100 <e4G7LiI[[^DPa>zz8AFX1
+IAFe:VWERe?:b?R8?fWAWH3
+R0
+w1772838620
+8../../memory_compiler/single_port_sram/sram00.v
+F../../memory_compiler/single_port_sram/sram00.v
+!i122 3
+L0 734 4138
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 ../../memory_compiler/single_port_sram/sram00.v|
+!s90 -reportprogress|300|+acc|-incr|../../memory_compiler/single_port_sram/sram00.v|
+!i113 1
+R11
+R12
+vsram_wrapper
+2../../dc/sram_wrapper/sram_wrapper.nl.v
+R2
+!i10b 1
+!s100 M5cjC4Fged0^C>ALmW23A2
+I08a4Bb;@RJdbj6@>097AG1
+R0
+w1772844237
+8../../dc/sram_wrapper/sram_wrapper.nl.v
+F../../dc/sram_wrapper/sram_wrapper.nl.v
+!i122 2
+L0 8 199
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 ../../dc/sram_wrapper/sram_wrapper.nl.v|
+!s90 -reportprogress|300|+acc|-incr|../../dc/sram_wrapper/sram_wrapper.nl.v|
+!i113 1
+R11
+R12
+vtestbench
+2tb_sram_wrapper.v
+R2
+!i10b 1
+!s100 d_kboXLY<LV:`M?`OjENl0
+IjJHzdJUb1h7i<RJz]M9zY2
+R0
+w1772851562
+8tb_sram_wrapper.v
+Ftb_sram_wrapper.v
+!i122 0
+L0 3 86
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 tb_sram_wrapper.v|
+!s90 -reportprogress|300|+acc|-incr|tb_sram_wrapper.v|
+!i113 1
+R11
+R12
+vTIEH
+R1
+R2
+!i10b 1
+!s100 b]ne>Iji5bZ;6ioF3i2571
+I]djzjNBOTY1^=<G@a7m^C3
+R0
+R3
+R4
+R5
+!i122 1
+L0 30 3
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@t@i@e@h
+vTIEL
+R1
+R2
+!i10b 1
+!s100 >PEY3NE3Kl4C0Tl^R<CUl3
+ITQO8IHXWKz=^[ijLGMFFm0
+R0
+R3
+R4
+R5
+!i122 1
+L0 34 3
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@t@i@e@l
