@@ -1,0 +1,122 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version U-2022.12-SP7 for linux64 - Oct 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Thu Dec 12 13:02:47 2024
+Hostname:           cadpc19
+CPU Model:          11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 3.50 GHz
+OS:                 Linux 4.18.0-553.27.1.el8_10.x86_64
+RAM:                 62 GB (Free  13 GB)
+Swap:                31 GB (Free  31 GB)
+Work Filesystem:    /courses mounted to auto.courses
+Tmp Filesystem:     /tmp mounted to tmpfs
+Work Disk:          760 GB (Free 277 GB)
+Tmp Disk:            31 GB (Free  30 GB)
+
+CPU Load: 55%, Ram Free: 13 GB, Swap Free: 31 GB, Work Disk Free: 277 GB, Tmp Disk Free: 30 GB
+#########################################
+# TCL script for Design Compiler        #
+# MS 2015                               #
+#########################################
+##################################################
+# Read design and library
+##################################################
+# Set top_level name
+set top_level dut
+dut
+# Read system verilog files
+analyze -format verilog "../../rtl/dut/dut.v"
+Running PRESTO HDLC
+Compiling source file ../../rtl/dut/dut.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+1
+elaborate ${top_level}
+Loading db file '/tools/synopsys/syn/U-2022.12-SP7/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys/syn/U-2022.12-SP7/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Running PRESTO HDLC
+Presto compilation completed successfully. (dut)
+Elaborated 1 design.
+Current design is now 'dut'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Building the design 'down_counter'. (HDL-193)
+Warning: Cannot find the design 'down_counter' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_controller'. (HDL-193)
+Warning: Cannot find the design 'sram_controller' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_wrapper'. (HDL-193)
+Warning: Cannot find the design 'sram_wrapper' in the library 'WORK'. (LBR-1)
+Warning: Design 'dut' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# List the names of the designs
+list_designs
+dut (*)
+1
+# Check error
+if { [check_error -v] == 1 } { exit 1 }
+# Set current design
+current_design $top_level
+Current design is 'dut'.
+{dut}
+# Link the design
+link
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+
+  Linking design 'dut'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  dut                         /courses/ee6350/proj_2025Spring/ref/dc/dut/dut.db
+
+Information: Building the design 'down_counter'. (HDL-193)
+Warning: Cannot find the design 'down_counter' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_controller'. (HDL-193)
+Warning: Cannot find the design 'sram_controller' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_wrapper'. (HDL-193)
+Warning: Cannot find the design 'sram_wrapper' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'down_counter' in 'dut'. (LINK-5)
+Warning: Unable to resolve reference 'sram_controller' in 'dut'. (LINK-5)
+Warning: Unable to resolve reference 'sram_wrapper' in 'dut'. (LINK-5)
+0
+# Generate structural verilog netlist
+write -hierarchy -format verilog -output "${top_level}.nl.v"
+Warning: Design 'dut' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/courses/ee6350/proj_2025Spring/ref/dc/dut/dut.nl.v'.
+1
+# Finish synthesis
+quit
+
+Memory usage for this session 84 Mbytes.
+Memory usage for this session including child processes 84 Mbytes.
+CPU usage for this session 4 seconds ( 0.00 hours ).
+Elapsed time for this session 6 seconds ( 0.00 hours ).
+
+Thank you...

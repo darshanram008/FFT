@@ -1,0 +1,78 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : bist
+Version: U-2022.12-SP7
+Date   : Sat Mar 14 02:58:03 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+mult_inst_out_reg_reg_14_/D (DFD1)     1.11 r         1.99         0.88
+mult_inst_out_reg_reg_13_/CN (DFKCSND1)     1.00 r     1.94        0.94
+mult_inst_out_reg_reg_12_/CN (DFKCSND1)     0.94 r     1.94        0.99
+mult_inst_out_reg_reg_11_/CN (DFKCSND1)     0.89 r     1.94        1.04
+mult_inst_out_reg_reg_10_/CN (DFKCSND1)     0.84 r     1.94        1.09
+mult_inst_out_reg_reg_9_/CN (DFKCSND1)     0.79 r     1.94         1.14
+mult_inst_out_reg_reg_8_/CN (DFKCSND1)     0.74 r     1.94         1.20
+mult_inst_out_reg_reg_7_/CN (DFKCSND1)     0.69 r     1.94         1.25
+mult_inst_out_reg_reg_6_/CN (DFKCSND1)     0.64 r     1.94         1.30
+mult_inst_out_reg_reg_5_/CN (DFKCSND1)     0.59 r     1.94         1.35
+mult_inst_out_reg_reg_4_/CN (DFKCSND1)     0.54 r     1.94         1.40
+mult_inst_out_reg_reg_3_/CN (DFKCSND1)     0.49 r     1.94         1.45
+mult_inst_out_reg_reg_2_/CN (DFKCSND1)     0.42 r     1.94         1.51
+lfsr1_inst_lfsr_out_reg_0_/D (DFD1)     0.33 f        2.00         1.67
+mult_inst_out_reg_reg_1_/D (DFD1)     0.28 r          1.98         1.70
+lfsr1_inst_lfsr_out_reg_1_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_2_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_3_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_5_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_6_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_7_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_9_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_10_/D (DFD1)     0.28 r       1.99         1.71
+lfsr1_inst_lfsr_out_reg_11_/D (DFD1)     0.28 r       1.99         1.71
+lfsr1_inst_lfsr_out_reg_13_/D (DFD1)     0.28 r       1.99         1.71
+lfsr1_inst_lfsr_out_reg_14_/D (DFD1)     0.28 r       1.99         1.71
+lfsr1_inst_lfsr_out_reg_15_/D (DFD1)     0.28 r       1.99         1.71
+lfsr1_inst_lfsr_out_reg_4_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_8_/D (DFD1)     0.28 r        1.99         1.71
+lfsr1_inst_lfsr_out_reg_12_/D (DFD1)     0.28 r       1.99         1.71
+sign_inst_sign_reg_4_/D (DFD1)      0.24 r            1.98         1.74
+sign_inst_sign_reg_5_/D (DFD1)      0.24 r            1.98         1.74
+sign_inst_sign_reg_2_/D (DFD1)      0.24 r            1.98         1.74
+sign_inst_sign_reg_13_/D (DFD1)     0.24 r            1.98         1.74
+sign_inst_sign_reg_14_/D (DFD1)     0.24 r            1.98         1.74
+sign_inst_sign_reg_15_/D (DFD1)     0.24 r            1.98         1.74
+sign_inst_sign_reg_3_/D (DFD1)      0.24 r            1.98         1.74
+sign_inst_sign_reg_6_/D (DFD1)      0.24 r            1.98         1.74
+sign_inst_sign_reg_7_/D (DFD1)      0.24 r            1.98         1.74
+sign_inst_sign_reg_8_/D (DFD1)      0.24 r            1.98         1.74
+mult_inst_out_reg_reg_10_/SN (DFKCSND1)     0.16 f     1.92        1.77
+mult_inst_out_reg_reg_11_/SN (DFKCSND1)     0.16 f     1.92        1.77
+mult_inst_out_reg_reg_12_/SN (DFKCSND1)     0.16 f     1.92        1.77
+mult_inst_out_reg_reg_13_/SN (DFKCSND1)     0.16 f     1.92        1.77
+sign_inst_sign_reg_1_/SN (DFKCSND1)     0.16 f        1.92         1.77
+mult_inst_out_reg_reg_2_/SN (DFKCSND1)     0.16 f     1.92         1.77
+mult_inst_out_reg_reg_3_/SN (DFKCSND1)     0.16 f     1.92         1.77
+mult_inst_out_reg_reg_4_/SN (DFKCSND1)     0.16 f     1.92         1.77
+mult_inst_out_reg_reg_9_/SN (DFKCSND1)     0.16 f     1.92         1.77
+mult_inst_out_reg_reg_5_/SN (DFKCSND1)     0.16 f     1.92         1.77
+sign_inst_sign_reg_9_/D (DFD1)      0.21 r            1.98         1.77
+sign_inst_sign_reg_10_/D (DFD1)     0.21 r            1.98         1.77
+sign_inst_sign_reg_11_/D (DFD1)     0.21 r            1.98         1.77
+sign_inst_sign_reg_12_/D (DFD1)     0.21 r            1.98         1.77
+mult_inst_out_reg_reg_0_/D (DFD1)     0.19 r          1.99         1.80
+mult_inst_out_reg_reg_6_/SN (DFKCSND1)     0.12 f     1.92         1.81
+mult_inst_out_reg_reg_8_/SN (DFKCSND1)     0.12 f     1.92         1.81
+mult_inst_out_reg_reg_7_/SN (DFKCSND1)     0.08 f     1.92         1.84
+sign_inst_sign_reg_1_/CN (DFKCSND1)     0.08 r        1.94         1.86
+
+1

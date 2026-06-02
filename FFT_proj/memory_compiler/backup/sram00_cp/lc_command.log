@@ -1,0 +1,7 @@
+#@ # 
+#@ # Running lc_shell Version P-2019.03-SP2 for linux64 -- Jun 02, 2019
+#@ # Date:   Mon Apr  8 21:37:34 2024
+#@ # Run by: vpanous@vlsidl4
+#@ 
+
+source -echo -verbose lc.command

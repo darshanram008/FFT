@@ -1,0 +1,812 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version U-2022.12-SP7 for linux64 - Oct 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Sat Mar 14 02:56:59 2026
+Hostname:           cadpc16
+CPU Model:          11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 2.50 GHz
+OS:                 Linux 4.18.0-553.107.1.el8_10.x86_64
+RAM:                 62 GB (Free  14 GB)
+Swap:                31 GB (Free  31 GB)
+Work Filesystem:    /homes mounted to auto.homes
+Tmp Filesystem:     /tmp mounted to tmpfs
+Work Disk:          16773 GB (Free 6680 GB)
+Tmp Disk:            31 GB (Free  31 GB)
+
+CPU Load: 13%, Ram Free: 14 GB, Swap Free: 31 GB, Work Disk Free: 6680 GB, Tmp Disk Free: 31 GB
+#########################################
+# TCL script for Design Compiler        #
+# MS 2015                               #
+#########################################
+##################################################
+# Read design and library
+##################################################
+# Set the top_level name
+set top_level bist
+bist
+# In this file, libray path and libraries which are used are defined
+source -verbose "../common_scripts/common.tcl" 
+. /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a /tools/synopsys/syn/U-2022.12-SP7/libraries/syn
+dw_foundation.sldb
+* tcbn65gplustc_ccs.db dw_foundation.sldb
+tcbn65gplustc_ccs.db
+tcbn65gplustc_ccs.db
+# Read verilog files
+#read_verilog {../../rtl/$top_level/$top_level.v}
+analyze -format verilog "../../rtl/$top_level/$top_level.v"
+Running PRESTO HDLC
+Compiling source file ../../rtl/bist/bist.v
+Presto compilation completed successfully.
+Loading db file '/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb'
+1
+analyze -format verilog "../../rtl/$top_level/sign.v"
+Running PRESTO HDLC
+Compiling source file ../../rtl/bist/sign.v
+Presto compilation completed successfully.
+1
+analyze -format verilog "../../rtl/mult/mult.v"
+Running PRESTO HDLC
+Compiling source file ../../rtl/mult/mult.v
+Presto compilation completed successfully.
+1
+analyze -format verilog "../../rtl/lfsr1/lfsr1.v"
+Running PRESTO HDLC
+Compiling source file ../../rtl/lfsr1/lfsr1.v
+Presto compilation completed successfully.
+1
+elaborate $top_level
+Loading db file '/tools/synopsys/syn/current/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys/syn/current/libraries/syn/standard.sldb'
+  Loading link library 'tcbn65gplustc_ccs'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (bist)
+Elaborated 1 design.
+Current design is now 'bist'.
+Information: Building the design 'lfsr1'. (HDL-193)
+
+Inferred memory devices in process
+	in routine lfsr1 line 11 in file
+		'../../rtl/lfsr1/lfsr1.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lfsr_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (lfsr1)
+Information: Building the design 'mult'. (HDL-193)
+
+Inferred memory devices in process
+	in routine mult line 23 in file
+		'../../rtl/mult/mult.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     out_reg_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (mult)
+Information: Building the design 'sign'. (HDL-193)
+
+Inferred memory devices in process
+	in routine sign line 13 in file
+		'../../rtl/bist/sign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      sign_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (sign)
+1
+# List the names of the designs loaded in memory
+# Note: This command don't have any functionality for synthesis
+#       This is for debugging
+list_designs
+bist (*)        lfsr1           mult            sign
+1
+# Check errors
+if { [check_error -v] == 1 } { exit 1 }
+# Set the current design
+# Note: The active design is called the current design
+#       Most commands are specific to the current design
+current_design $top_level
+Current design is 'bist'.
+{bist}
+# Link the design
+# Note: The design must be connected to all the library components and designs if references
+#       For each subdesign, a reference and a link must exist between the subdesign and a design or component
+#       in the link libraries
+link
+
+  Linking design 'bist'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_5/dc/bist/bist.db, etc
+  tcbn65gplustc_ccs (library) /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db
+  dw_foundation.sldb (library) /tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb
+
+1
+##################################################
+# Define design rule constraints                    
+##################################################
+# Set maximum fanout of gates
+# Note: This command sets the maximum allowable fanout load for the listed input ports
+#       The object lists specifies a list of input ports and/or designs on which the max_fanout attribute is to be set
+set_max_fanout 4 $top_level
+1
+set_max_fanout 4 [all_inputs]
+1
+# Set a maximum capacitance for the nets attached to named ports or to all the nets in a design
+set_max_capacitance 0.005 [all_inputs]
+1
+# Verify the design consistency
+# Note: This command reports an error that DC cannot resolve or a warning
+check_design
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Sat Mar 14 02:57:05 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Unconnected ports (LINT-28)                                     1
+
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'mult', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'sign', port 'in[15]' is not connected to any nets. (LINT-28)
+1
+##################################################
+# Define design optimization constraints
+##################################################
+# Set timing environment through another .tcl file
+source -verbose "./timing.tcl"
+0.02
+2.0
+0
+0.040
+0.05
+0.05
+0.005
+clk
+clk
+rstn
+rstn
+1
+1
+1
+1
+1
+1
+Warning: Design rule attributes from the driving cell will be set on the port 'clk'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'wen'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'rstn'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[15]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[14]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[13]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[12]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[11]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[10]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[9]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[8]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[7]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[6]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'seed[0]'. (UID-401)
+1
+1
+1
+1
+1
+1
+# Set the fix_multiple_port_nets attribute to a specified value on the current design or a list of designs
+# Note: '-all' option inserts buffers to the ports
+#       '-buffer_constants' option inserts buffers to logic constants instead of duplicating them
+set_fix_multiple_port_nets -all -buffer_constants
+1
+##################################################
+# Optimize the design
+##################################################
+# Verify the design consistency
+check_design
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Sat Mar 14 02:57:05 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Unconnected ports (LINT-28)                                     1
+
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'mult', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'sign', port 'in[15]' is not connected to any nets. (LINT-28)
+1
+# Set the current design
+current_design $top_level
+Current design is 'bist'.
+{bist}
+# Link the design
+link
+
+  Linking design 'bist'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_5/dc/bist/bist.db, etc
+  tcbn65gplustc_ccs (library) /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db
+  dw_foundation.sldb (library)
+                              /tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb
+
+1
+# Synthesize the design
+# Note : This command performs a high-effort compile on the current design for better quality of results (QoR)
+compile_ultra
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 13%, Ram Free: 12 GB, Swap Free: 31 GB, Work Disk Free: 6680 GB, Tmp Disk Free: 31 GB
+Analyzing: "/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.5 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.5 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 82                                     |
+| Number of User Hierarchies                              | 3                                      |
+| Sequential Cell Count                                   | 48                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 9                                      |
+| Number of Dont Touch Nets                               | 4                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'bist'
+Information: The register 'mult_inst/out_reg_reg[15]' will be removed. (OPT-1207)
+
+Loaded alib file './alib-52/tcbn65gplustc_ccs.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy lfsr1_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy mult_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy sign_inst before Pass 1 (OPT-776)
+Information: Ungrouping 3 of 4 hierarchies before Pass 1 (OPT-775)
+CPU Load: 9%, Ram Free: 12 GB, Swap Free: 31 GB, Work Disk Free: 6680 GB, Tmp Disk Free: 31 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'bist'
+Information: The register 'sign_inst/sign_reg[0]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'bist'.
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+CPU Load: 9%, Ram Free: 12 GB, Swap Free: 31 GB, Work Disk Free: 6680 GB, Tmp Disk Free: 31 GB
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIEL' in the library 'tcbn65gplustc_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEH' in the library 'tcbn65gplustc_ccs' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'bist'. (DDB-72)
+Information: There is no timing violation in design bist. Delay-based auto_ungroup will not be performed. (OPT-780)
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:04    1160.3      0.00       0.0     110.4                           7385.8530      0.00  
+    0:00:04    1160.3      0.00       0.0     110.4                           7385.8530      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:04    1160.3      0.00       0.0     110.4                           7385.8530      0.00  
+    0:00:04    1160.3      0.00       0.0     110.4                           7385.8530      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:05    1038.6      0.00       0.0     109.0                           6068.7168      0.00  
+    0:00:05    1038.6      0.00       0.0     109.0                           6068.7168      0.00  
+    0:00:05    1038.6      0.00       0.0     109.0                           6068.7168      0.00  
+    0:00:05    1007.6      0.00       0.0     106.0                           6052.5376      0.00  
+    0:00:05    1006.6      0.00       0.0     106.0                           6050.8970      0.00  
+    0:00:05    1006.6      0.00       0.0     106.0                           6050.8970      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+
+
+  Beginning Design Rule Fixing  (max_fanout)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:05    1021.7      0.00       0.0     106.0                           6073.8647      0.00  
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:05    1096.6      0.00       0.0       0.0                           6481.0444      0.00  
+    0:00:05    1096.6      0.00       0.0       0.0                           6481.0444      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:05    1096.6      0.00       0.0       0.0                           6481.0444      0.00  
+    0:00:05    1096.6      0.00       0.0       0.0                           6481.0444      0.00  
+    0:00:05    1096.6      0.00       0.0       0.0                           6481.0444      0.00  
+    0:00:05    1096.6      0.00       0.0       0.0                           6481.0444      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+    0:00:06    1096.6      0.00       0.0       0.0                           6336.5625      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    1084.7      0.00       0.0       0.0                           6319.7681      0.00  
+    0:00:06    1084.3      0.00       0.0       0.0                           6225.0454      0.00  
+    0:00:06    1084.3      0.00       0.0       0.0                           6225.0454      0.00  
+    0:00:06    1084.3      0.00       0.0       0.0                           6225.0454      0.00  
+    0:00:06    1084.3      0.00       0.0       0.0                           6193.0361      0.00  
+    0:00:06    1060.6      0.00       0.0       0.0                           6043.1362      0.00  
+    0:00:06    1060.6      0.00       0.0       0.0                           6043.1362      0.00  
+    0:00:06    1060.6      0.00       0.0       0.0                           6043.1362      0.00  
+    0:00:06    1060.6      0.00       0.0       0.0                           6043.1362      0.00  
+    0:00:06    1061.6      0.00       0.0       0.0                           6048.8188      0.00  
+    0:00:06    1061.6      0.00       0.0       0.0                           6048.8188      0.00  
+CPU Load: 9%, Ram Free: 12 GB, Swap Free: 31 GB, Work Disk Free: 6680 GB, Tmp Disk Free: 31 GB
+Loading db file '/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 9%, Ram Free: 12 GB, Swap Free: 31 GB, Work Disk Free: 6680 GB, Tmp Disk Free: 31 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+##################################################
+# Analyze and resolve design problems
+##################################################
+# Verify the design consistency
+check_design
+1
+# Rename modules, signals according to the naming rules
+source -verbose "../common_scripts/namingrules.tcl"
+1
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+bist            cell    mult_x_2/U39            mult_x_2_U39
+bist            cell    mult_x_2/U36            mult_x_2_U36
+bist            cell    mult_x_2/U34            mult_x_2_U34
+bist            cell    mult_x_2/U33            mult_x_2_U33
+bist            cell    mult_x_2/U30            mult_x_2_U30
+bist            cell    mult_x_2/U29            mult_x_2_U29
+bist            cell    mult_x_2/U26            mult_x_2_U26
+bist            cell    mult_x_2/U25            mult_x_2_U25
+bist            cell    mult_x_2/U23            mult_x_2_U23
+bist            cell    mult_x_2/U22            mult_x_2_U22
+bist            cell    mult_x_2/U21            mult_x_2_U21
+bist            cell    mult_x_2/U20            mult_x_2_U20
+bist            cell    mult_x_2/U18            mult_x_2_U18
+bist            cell    mult_x_2/U17            mult_x_2_U17
+bist            cell    intadd_0/U13            intadd_0_U13
+bist            cell    intadd_0/U12            intadd_0_U12
+bist            cell    intadd_0/U11            intadd_0_U11
+bist            cell    intadd_0/U10            intadd_0_U10
+bist            cell    intadd_0/U9             intadd_0_U9
+bist            cell    intadd_0/U8             intadd_0_U8
+bist            cell    intadd_0/U7             intadd_0_U7
+bist            cell    intadd_0/U6             intadd_0_U6
+bist            cell    intadd_0/U5             intadd_0_U5
+bist            cell    intadd_0/U4             intadd_0_U4
+bist            cell    intadd_0/U3             intadd_0_U3
+bist            cell    intadd_0/U2             intadd_0_U2
+bist            cell    sign_inst/sign_reg[1]   sign_inst_sign_reg_1_
+bist            cell    mult_inst/out_reg_reg[2] mult_inst_out_reg_reg_2_
+bist            cell    mult_inst/out_reg_reg[3] mult_inst_out_reg_reg_3_
+bist            cell    mult_inst/out_reg_reg[4] mult_inst_out_reg_reg_4_
+bist            cell    mult_inst/out_reg_reg[5] mult_inst_out_reg_reg_5_
+bist            cell    mult_inst/out_reg_reg[6] mult_inst_out_reg_reg_6_
+bist            cell    mult_inst/out_reg_reg[7] mult_inst_out_reg_reg_7_
+bist            cell    mult_inst/out_reg_reg[8] mult_inst_out_reg_reg_8_
+bist            cell    mult_inst/out_reg_reg[9] mult_inst_out_reg_reg_9_
+bist            cell    mult_inst/out_reg_reg[10] mult_inst_out_reg_reg_10_
+bist            cell    mult_inst/out_reg_reg[11] mult_inst_out_reg_reg_11_
+bist            cell    mult_inst/out_reg_reg[12] mult_inst_out_reg_reg_12_
+bist            cell    mult_inst/out_reg_reg[13] mult_inst_out_reg_reg_13_
+bist            cell    mult_inst/out_reg_reg[14] mult_inst_out_reg_reg_14_
+bist            cell    lfsr1_inst/lfsr_out_reg[0] lfsr1_inst_lfsr_out_reg_0_
+bist            cell    lfsr1_inst/lfsr_out_reg[1] lfsr1_inst_lfsr_out_reg_1_
+bist            cell    lfsr1_inst/lfsr_out_reg[2] lfsr1_inst_lfsr_out_reg_2_
+bist            cell    lfsr1_inst/lfsr_out_reg[3] lfsr1_inst_lfsr_out_reg_3_
+bist            cell    lfsr1_inst/lfsr_out_reg[4] lfsr1_inst_lfsr_out_reg_4_
+bist            cell    lfsr1_inst/lfsr_out_reg[5] lfsr1_inst_lfsr_out_reg_5_
+bist            cell    lfsr1_inst/lfsr_out_reg[6] lfsr1_inst_lfsr_out_reg_6_
+bist            cell    lfsr1_inst/lfsr_out_reg[7] lfsr1_inst_lfsr_out_reg_7_
+bist            cell    lfsr1_inst/lfsr_out_reg[8] lfsr1_inst_lfsr_out_reg_8_
+bist            cell    lfsr1_inst/lfsr_out_reg[9] lfsr1_inst_lfsr_out_reg_9_
+bist            cell    lfsr1_inst/lfsr_out_reg[10] lfsr1_inst_lfsr_out_reg_10_
+bist            cell    lfsr1_inst/lfsr_out_reg[11] lfsr1_inst_lfsr_out_reg_11_
+bist            cell    lfsr1_inst/lfsr_out_reg[12] lfsr1_inst_lfsr_out_reg_12_
+bist            cell    lfsr1_inst/lfsr_out_reg[13] lfsr1_inst_lfsr_out_reg_13_
+bist            cell    lfsr1_inst/lfsr_out_reg[14] lfsr1_inst_lfsr_out_reg_14_
+bist            cell    lfsr1_inst/lfsr_out_reg[15] lfsr1_inst_lfsr_out_reg_15_
+bist            cell    mult_inst/out_reg_reg[1] mult_inst_out_reg_reg_1_
+bist            cell    sign_inst/sign_reg[2]   sign_inst_sign_reg_2_
+bist            cell    sign_inst/sign_reg[4]   sign_inst_sign_reg_4_
+bist            cell    sign_inst/sign_reg[5]   sign_inst_sign_reg_5_
+bist            cell    sign_inst/sign_reg[13]  sign_inst_sign_reg_13_
+bist            cell    sign_inst/sign_reg[14]  sign_inst_sign_reg_14_
+bist            cell    sign_inst/sign_reg[15]  sign_inst_sign_reg_15_
+bist            cell    sign_inst/sign_reg[3]   sign_inst_sign_reg_3_
+bist            cell    sign_inst/sign_reg[6]   sign_inst_sign_reg_6_
+bist            cell    sign_inst/sign_reg[7]   sign_inst_sign_reg_7_
+bist            cell    sign_inst/sign_reg[8]   sign_inst_sign_reg_8_
+bist            cell    sign_inst/sign_reg[9]   sign_inst_sign_reg_9_
+bist            cell    sign_inst/sign_reg[10]  sign_inst_sign_reg_10_
+bist            cell    sign_inst/sign_reg[11]  sign_inst_sign_reg_11_
+bist            cell    sign_inst/sign_reg[12]  sign_inst_sign_reg_12_
+bist            cell    mult_inst/out_reg_reg[0] mult_inst_out_reg_reg_0_
+bist            net     mult_inst/N33           mult_inst_N33
+bist            net     mult_inst/N20           mult_inst_N20
+bist            net     mult_inst/N19           mult_inst_N19
+bist            net     sign_inst/N17           sign_inst_N17
+bist            net     sign_inst/N16           sign_inst_N16
+bist            net     sign_inst/N15           sign_inst_N15
+bist            net     sign_inst/N14           sign_inst_N14
+bist            net     sign_inst/N13           sign_inst_N13
+bist            net     sign_inst/N12           sign_inst_N12
+bist            net     sign_inst/N11           sign_inst_N11
+bist            net     sign_inst/N10           sign_inst_N10
+bist            net     sign_inst/N9            sign_inst_N9
+bist            net     sign_inst/N8            sign_inst_N8
+bist            net     sign_inst/N7            sign_inst_N7
+bist            net     sign_inst/N6            sign_inst_N6
+bist            net     sign_inst/N5            sign_inst_N5
+bist            net     sign_inst/N4            sign_inst_N4
+bist            net     mult_x_2/n144           mult_x_2_n144
+bist            net     mult_x_2/n142           mult_x_2_n142
+bist            net     mult_x_2/n137           mult_x_2_n137
+bist            net     mult_x_2/n136           mult_x_2_n136
+bist            net     mult_x_2/n135           mult_x_2_n135
+bist            net     mult_x_2/n134           mult_x_2_n134
+bist            net     mult_x_2/n130           mult_x_2_n130
+bist            net     mult_x_2/n128           mult_x_2_n128
+bist            net     mult_x_2/n127           mult_x_2_n127
+bist            net     mult_x_2/n121           mult_x_2_n121
+bist            net     mult_x_2/n120           mult_x_2_n120
+bist            net     mult_x_2/n119           mult_x_2_n119
+bist            net     mult_x_2/n118           mult_x_2_n118
+bist            net     mult_x_2/n117           mult_x_2_n117
+bist            net     mult_x_2/n114           mult_x_2_n114
+bist            net     mult_x_2/n111           mult_x_2_n111
+bist            net     mult_x_2/n110           mult_x_2_n110
+bist            net     mult_x_2/n105           mult_x_2_n105
+bist            net     mult_x_2/n104           mult_x_2_n104
+bist            net     mult_x_2/n103           mult_x_2_n103
+bist            net     mult_x_2/n101           mult_x_2_n101
+bist            net     mult_x_2/n96            mult_x_2_n96
+bist            net     mult_x_2/n95            mult_x_2_n95
+bist            net     mult_x_2/n94            mult_x_2_n94
+bist            net     mult_x_2/n89            mult_x_2_n89
+bist            net     mult_x_2/n87            mult_x_2_n87
+bist            net     mult_x_2/n81            mult_x_2_n81
+bist            net     mult_x_2/n78            mult_x_2_n78
+bist            net     mult_x_2/n77            mult_x_2_n77
+bist            net     mult_x_2/n76            mult_x_2_n76
+bist            net     mult_x_2/n75            mult_x_2_n75
+bist            net     mult_x_2/n74            mult_x_2_n74
+bist            net     mult_x_2/n73            mult_x_2_n73
+bist            net     mult_x_2/n72            mult_x_2_n72
+bist            net     mult_x_2/n71            mult_x_2_n71
+bist            net     mult_x_2/n70            mult_x_2_n70
+bist            net     mult_x_2/n69            mult_x_2_n69
+bist            net     mult_x_2/n68            mult_x_2_n68
+bist            net     mult_x_2/n67            mult_x_2_n67
+bist            net     mult_x_2/n66            mult_x_2_n66
+bist            net     mult_x_2/n65            mult_x_2_n65
+bist            net     mult_x_2/n64            mult_x_2_n64
+bist            net     mult_x_2/n63            mult_x_2_n63
+bist            net     mult_x_2/n62            mult_x_2_n62
+bist            net     mult_x_2/n61            mult_x_2_n61
+bist            net     mult_x_2/n60            mult_x_2_n60
+bist            net     mult_x_2/n59            mult_x_2_n59
+bist            net     mult_x_2/n58            mult_x_2_n58
+bist            net     mult_x_2/n57            mult_x_2_n57
+bist            net     mult_x_2/n56            mult_x_2_n56
+bist            net     mult_x_2/n55            mult_x_2_n55
+bist            net     mult_x_2/n54            mult_x_2_n54
+bist            net     mult_x_2/n53            mult_x_2_n53
+bist            net     mult_x_2/n52            mult_x_2_n52
+bist            net     mult_x_2/n51            mult_x_2_n51
+bist            net     mult_x_2/n50            mult_x_2_n50
+bist            net     mult_x_2/n49            mult_x_2_n49
+bist            net     mult_x_2/n48            mult_x_2_n48
+bist            net     mult_x_2/n47            mult_x_2_n47
+bist            net     mult_x_2/n46            mult_x_2_n46
+bist            net     mult_x_2/n45            mult_x_2_n45
+bist            net     mult_x_2/n44            mult_x_2_n44
+bist            net     mult_x_2/n43            mult_x_2_n43
+bist            net     mult_x_2/n42            mult_x_2_n42
+bist            net     mult_x_2/n41            mult_x_2_n41
+bist            net     mult_x_2/n40            mult_x_2_n40
+bist            net     mult_x_2/n39            mult_x_2_n39
+bist            net     mult_x_2/n38            mult_x_2_n38
+bist            net     mult_x_2/n37            mult_x_2_n37
+bist            net     mult_x_2/n36            mult_x_2_n36
+bist            net     mult_x_2/n35            mult_x_2_n35
+bist            net     mult_x_2/n34            mult_x_2_n34
+bist            net     mult_x_2/n33            mult_x_2_n33
+bist            net     mult_x_2/n32            mult_x_2_n32
+bist            net     mult_x_2/n31            mult_x_2_n31
+bist            net     mult_x_2/n30            mult_x_2_n30
+bist            net     mult_x_2/n29            mult_x_2_n29
+bist            net     mult_x_2/n28            mult_x_2_n28
+bist            net     mult_x_2/n27            mult_x_2_n27
+bist            net     mult_x_2/n26            mult_x_2_n26
+bist            net     mult_x_2/n25            mult_x_2_n25
+bist            net     mult_x_2/n24            mult_x_2_n24
+bist            net     mult_x_2/n23            mult_x_2_n23
+bist            net     mult_x_2/n22            mult_x_2_n22
+bist            net     mult_x_2/n21            mult_x_2_n21
+bist            net     mult_x_2/n20            mult_x_2_n20
+bist            net     mult_x_2/n19            mult_x_2_n19
+bist            net     mult_x_2/n18            mult_x_2_n18
+bist            net     mult_x_2/n17            mult_x_2_n17
+bist            net     intadd_0/A[1]           intadd_0_A_1_
+bist            net     intadd_0/A[0]           intadd_0_A_0_
+bist            net     intadd_0/B[11]          intadd_0_B_11_
+bist            net     intadd_0/B[2]           intadd_0_B_2_
+bist            net     intadd_0/B[1]           intadd_0_B_1_
+bist            net     intadd_0/B[0]           intadd_0_B_0_
+bist            net     intadd_0/CI             intadd_0_CI
+bist            net     intadd_0/SUM[11]        intadd_0_SUM_11_
+bist            net     intadd_0/SUM[10]        intadd_0_SUM_10_
+bist            net     intadd_0/SUM[9]         intadd_0_SUM_9_
+bist            net     intadd_0/SUM[8]         intadd_0_SUM_8_
+bist            net     intadd_0/SUM[7]         intadd_0_SUM_7_
+bist            net     intadd_0/SUM[6]         intadd_0_SUM_6_
+bist            net     intadd_0/SUM[5]         intadd_0_SUM_5_
+bist            net     intadd_0/SUM[4]         intadd_0_SUM_4_
+bist            net     intadd_0/SUM[3]         intadd_0_SUM_3_
+bist            net     intadd_0/SUM[2]         intadd_0_SUM_2_
+bist            net     intadd_0/SUM[1]         intadd_0_SUM_1_
+bist            net     intadd_0/SUM[0]         intadd_0_SUM_0_
+bist            net     intadd_0/n12            intadd_0_n12
+bist            net     intadd_0/n11            intadd_0_n11
+bist            net     intadd_0/n10            intadd_0_n10
+bist            net     intadd_0/n9             intadd_0_n9
+bist            net     intadd_0/n8             intadd_0_n8
+bist            net     intadd_0/n7             intadd_0_n7
+bist            net     intadd_0/n6             intadd_0_n6
+bist            net     intadd_0/n5             intadd_0_n5
+bist            net     intadd_0/n4             intadd_0_n4
+bist            net     intadd_0/n3             intadd_0_n3
+bist            net     intadd_0/n2             intadd_0_n2
+bist            net     intadd_0/n1             intadd_0_n1
+1
+1
+# Generate a report file
+set rpt_file "${top_level}.dc.rpt"
+bist.dc.rpt
+set maxpaths 20
+20
+check_design >> ${rpt_file}
+report_area  >> ${rpt_file}
+report_power -hier -analysis_effort medium >> ${rpt_file}
+report_design >> ${rpt_file}
+report_cell >> ${rpt_file}
+report_port -verbose >> ${rpt_file}
+report_compile_options >> ${rpt_file}
+report_constraint -all_violators -verbose >> ${rpt_file}
+report_timing -path full -delay max -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_timing -path full -delay min -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_timing_requirements >> ${rpt_file} 
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs
+report_timing -delay max -nworst 1 -max_paths 10000 -path full -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs.full
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_outputs] > ${top_level}.syn.critical_regs.output
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_registers -data_pins] > ${top_level}.syn.critical_regs.regs
+report_timing -delay min -nworst 1 -max_paths 10000 -path short -nosplit -unique -sort_by slack > ${top_level}.syn.fast_path
+##################################################
+# Save the design database 
+##################################################
+# Generate structural verilog netlist
+write -hierarchy -format verilog -output "${top_level}.nl.v"
+Writing verilog file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_5/dc/bist/bist.nl.v'.
+1
+# Write a Standard Delay Format (SDF) file
+# Note : SDF is an IEEE standard for the representation and interpretation of timing data
+#        The SDF file includes delays (module path, device, interconnect, and port), timing checks (setup, hold, recovery, skew, width, and period),
+#        timing constraints (path and skew), incremental and absolute delays, and so on
+write_sdf "${top_level}.syn.sdf"
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/tutorial_5/dc/bist/bist.syn.sdf'. (WT-3)
+1
+# Write a SDC file
+# Note : SDC is a format used to specify the design intent, including the timing, power and area constraints for a design
+write_sdc "${top_level}.syn.sdc" -version 1.7
+1
+# Finish synthesis
+quit
+
+Memory usage for this session 1150 Mbytes.
+Memory usage for this session including child processes 1150 Mbytes.
+CPU usage for this session 60 seconds ( 0.02 hours ).
+Elapsed time for this session 67 seconds ( 0.02 hours ).
+
+Thank you...

@@ -1,0 +1,89 @@
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.107.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do runsim.do
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:46:15 on Mar 06,2026
+# vlog -reportprogress 300 "+acc" -incr tb_sram_wrapper.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 21:46:15 on Mar 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:46:15 on Mar 06,2026
+# vlog -reportprogress 300 "+acc" -incr dc_stubs.v 
+# -- Compiling module DEL01
+# -- Compiling module DEL005
+# -- Compiling module CKBD1
+# -- Compiling module CKND0
+# -- Compiling module TIEH
+# -- Compiling module TIEL
+# 
+# Top level modules:
+# 	DEL01
+# 	DEL005
+# 	CKBD1
+# 	CKND0
+# 	TIEH
+# 	TIEL
+# End time: 21:46:15 on Mar 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:46:15 on Mar 06,2026
+# vlog -reportprogress 300 "+acc" -incr ../../dc/sram_wrapper/sram_wrapper.nl.v 
+# -- Compiling module sram_wrapper
+# 
+# Top level modules:
+# 	sram_wrapper
+# End time: 21:46:15 on Mar 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:46:15 on Mar 06,2026
+# vlog -reportprogress 300 "+acc" -incr ../../memory_compiler/single_port_sram/sram00.v 
+# -- Compiling module sram00
+# 
+# Top level modules:
+# 	sram00
+# End time: 21:46:15 on Mar 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -t ps -lib work -sdftyp "testbench.sram_wrapper_inst=../../dc/sram_wrapper/sram_wrapper.syn.sdf" testbench 
+# Start time: 21:46:15 on Mar 06,2026
+# Loading work.testbench
+# Loading work.sram_wrapper
+# Loading work.sram00
+# Loading work.DEL01
+# Loading work.DEL005
+# Loading work.CKBD1
+# Loading work.CKND0
+# Loading work.TIEH
+# Loading work.TIEL
+# Loading instances from ../../dc/sram_wrapper/sram_wrapper.syn.sdf
+# Loading timing data from ../../dc/sram_wrapper/sram_wrapper.syn.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: tb_sram_wrapper.v
+# ** Error: $setup( negedge CEN:363198 ps, posedge CLK &&& CEN_flag:363300 ps, 135 ps );
+#    Time: 363300 ps  Iteration: 1  Process: /testbench/sram_wrapper_inst/sram00_inst/#Setuphold# File: ../../memory_compiler/single_port_sram/sram00.v Line: 2358
+# ** Error: $setup( negedge A[8]:363194 ps, posedge CLK &&& flag:363300 ps, 216 ps );
+#    Time: 363300 ps  Iteration: 1  Process: /testbench/sram_wrapper_inst/sram00_inst/#Setuphold# File: ../../memory_compiler/single_port_sram/sram00.v Line: 2394
+# ** Note: $finish    : tb_sram_wrapper.v(85)
+#    Time: 723100 ps  Iteration: 1  Instance: /testbench
+# 1
+# Break in Module testbench at tb_sram_wrapper.v line 85
+# End time: 21:46:38 on Mar 06,2026, Elapsed time: 0:00:23
+# Errors: 2, Warnings: 0
