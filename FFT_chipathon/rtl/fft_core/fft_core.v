@@ -25,7 +25,7 @@
 
 module fft_core #(
 
-    parameter DATA_WIDTH = 8,
+    parameter DATA_WIDTH = 32,
     localparam COMP_WIDTH = DATA_WIDTH/2
     
 

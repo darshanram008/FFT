@@ -27,7 +27,7 @@
 `timescale 1ns/1ps
 
 module fft_address_gen #(
-    parameter FFT_POINT = 12,
+    parameter FFT_POINT = 512,
     localparam STAGES = $clog2(FFT_POINT),
     localparam STAGE_WIDTH = $clog2(STAGES),
     localparam HALF_WIDTH = $clog2(FFT_POINT/2),

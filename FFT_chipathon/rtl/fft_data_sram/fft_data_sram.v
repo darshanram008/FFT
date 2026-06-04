@@ -16,9 +16,9 @@
 `timescale 1ns/1ps
 
 module fft_data_sram #(
-    parameter FFT_POINT = 12,
+    parameter FFT_POINT = 512,
     localparam WORD_WIDTH = $clog2(FFT_POINT),
-parameter DATA_WIDTH = 8
+    parameter DATA_WIDTH = 32
 )(
     input              clk,
 

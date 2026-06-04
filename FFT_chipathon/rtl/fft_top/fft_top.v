@@ -23,8 +23,8 @@
 `timescale 1ns/1ps
 
 module fft_top #(
-    parameter DATA_WIDTH = 8,
-    parameter FFT_POINT = 12,
+    parameter DATA_WIDTH = 32,
+    parameter FFT_POINT = 512,
     localparam NUMBER_OF_STAGES = $clog2(FFT_POINT),
     localparam WORD_WIDTH = $clog2(FFT_POINT),
     localparam NUMBER_OF_TW = FFT_POINT/2,

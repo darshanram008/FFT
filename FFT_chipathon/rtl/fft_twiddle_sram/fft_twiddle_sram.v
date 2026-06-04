@@ -13,10 +13,10 @@
 `timescale 1ns/1ps
 
 module fft_twiddle_sram #( 
-    parameter FFT_POINT = 12,
+    parameter FFT_POINT = 512,
     localparam NUMBER_OF_TW = FFT_POINT/2,
     localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW),
-    parameter DATA_WIDTH = 8
+    parameter DATA_WIDTH =32
      )(
     input              clk,
 

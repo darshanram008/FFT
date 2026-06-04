@@ -30,7 +30,7 @@
 module sram_wrapper #(
     parameter WORDS = 512,
     localparam WORD_WIDTH = $clog2(WORDS),
-    parameter DATA_WIDTH = 8
+    parameter DATA_WIDTH = 32
 ) (
     input              clk,
     input              cen,    // 1 = access enabled, 0 = idle (active-HIGH to user)
