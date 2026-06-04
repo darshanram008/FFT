@@ -18,7 +18,7 @@
 module fft_data_sram #(
     parameter FFT_POINT = 12,
     localparam WORD_WIDTH = $clog2(FFT_POINT),
-    parameter DATA_WIDTH = 8
+parameter DATA_WIDTH = 8
 )(
     input              clk,
 
@@ -29,7 +29,7 @@ module fft_data_sram #(
     input              tb_cen,
     input              tb_wen,
     input      [WORD_WIDTH-1:0]   tb_addr,
-    input      [DATA_WIDTH:0]  tb_din,
+    input      [DATA_WIDTH-1:0]  tb_din,
 
     // FFT-core port
     input              core_cen,
@@ -55,7 +55,10 @@ module fft_data_sram #(
     // --------------------------------------------------------------------
     // Instantiate sram_wrapper
     // --------------------------------------------------------------------
-    sram_wrapper u_sram (
+    sram_wrapper  #(
+        .DATA_WIDTH(8),
+        .WORDS(512)
+    )u_sram(
         .clk  (clk),
         .cen  (cen_mux),
         .wen  (wen_mux),

@@ -24,7 +24,7 @@
 
 module fft_top #(
     parameter DATA_WIDTH = 8,
-    parameter FFT_POINT = 1024,
+    parameter FFT_POINT = 12,
     localparam NUMBER_OF_STAGES = $clog2(FFT_POINT),
     localparam WORD_WIDTH = $clog2(FFT_POINT),
     localparam NUMBER_OF_TW = FFT_POINT/2,
@@ -33,11 +33,10 @@ module fft_top #(
     localparam STAGE_WIDTH = $clog2(STAGES),
     localparam HALF_WIDTH = $clog2(FFT_POINT/2),
     localparam FULL_WIDTH = $clog2(FFT_POINT),
-    localparam [WORD_WIDTH:0] DEPTH_CONST = 1024
+    localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT
 )(
     input              clk,
     input              rstn,
-
     // Control
     input              start,            // pulse to begin compute
     output             busy,
@@ -101,7 +100,9 @@ module fft_top #(
     // During compute, linear_addr input is unused (the bitrev helper is only
     // for the testbench's tb_linear_addr lookup). We route tb_linear_addr
     // through the address_gen to produce tb_bitrev_addr.
-    fft_address_gen u_addr (
+    fft_address_gen  #(
+    .FFT_POINT(12)
+)u_addr(
         .stage        (stage),
         .group        (group),
         .bfly         (bfly),
@@ -115,7 +116,11 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Butterfly core
     // --------------------------------------------------------------------
-    fft_core u_core (
+    fft_core  #(
+	
+    	.DATA_WIDTH(8)
+
+)u_core(
         .clk      (clk),
         .rstn     (rstn),
         .start    (core_start),
@@ -130,7 +135,11 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Controller
     // --------------------------------------------------------------------
-    fft_controller u_ctrl (
+    fft_controller  #(
+
+    .DATA_WIDTH(8),
+    .FFT_POINT(12)
+)u_ctrl(
         .clk          (clk),
         .rstn         (rstn),
         .start        (start),
@@ -170,7 +179,11 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Data SRAM
     // --------------------------------------------------------------------
-    fft_data_sram u_data_sram (
+    fft_data_sram  #(
+
+	.FFT_POINT(12),
+	.DATA_WIDTH(8)	
+) u_data_sram(
         .clk       (clk),
         .tb_sel    (sram_tb_sel),
 
@@ -191,7 +204,12 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Twiddle SRAM
     // --------------------------------------------------------------------
-    fft_twiddle_sram u_tw_sram (
+    fft_twiddle_sram  #(
+
+	.FFT_POINT(12),
+	.DATA_WIDTH(8)	
+
+) u_tw_sram(
         .clk       (clk),
         .tb_sel    (sram_tb_sel),
 

@@ -1,0 +1,39 @@
+10:01:20 PM - 
+10:01:20 PM - *** Warning *** An instance name ("sram_sp_hdc_svt_rvt_hvt") of more than 16 characters may create cellnames 
+10:01:20 PM - *** Warning *** that exceed the number of characters supported by some tools.10:01:20 PM - 
+10:01:22 PM - ARM Physical IP, Inc.
+10:01:22 PM - Linux cadpc38 4.18.0-553.107.1.el8_10.x86_64 #1 SMP Tue Feb 17 05:52:05 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+10:01:22 PM - Version r0p0-00eac0
+10:01:22 PM - GUI version 7.0.10
+10:01:22 PM - 
+10:01:22 PM - CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+10:01:22 PM - 
+10:01:22 PM - Copyright (c) 1993 - 2026 ARM Physical IP, Inc.  All Rights Reserved.
+10:01:22 PM - 
+10:01:22 PM - Use of this Software is subject to the terms and conditions of the
+10:01:22 PM - applicable license agreement with ARM Physical IP, Inc. 
+10:01:22 PM - In addition, this Software is protected by patents, copyright law 
+10:01:22 PM - and international treaties.
+10:01:22 PM - 
+10:01:22 PM - The copyright notice(s) in this Software does not indicate actual or
+10:01:22 PM - intended publication of this Software.
+10:01:22 PM - 
+10:01:22 PM - sram_sp_hdc_svt_rvt_hvt Compiler, TSMC cln65gplus 65nm Process, 0.525um2 Bitcell
+10:01:22 PM - 
+10:01:22 PM - Log file is ACI.log
+10:01:22 PM - 
+
+10:01:42 PM - *** Warning *** An instance name ("sram_sp_hdc_svt_rvt_hvt") of more than 16 characters may create cellnames 
+10:01:42 PM - *** Warning *** that exceed the number of characters supported by some tools.10:01:42 PM - 
+10:01:45 PM - ASCII Datatable updated
+
+10:01:48 PM - *** Warning *** An instance name ("sram_sp_hdc_svt_rvt_hvt") of more than 16 characters may create cellnames 
+10:01:48 PM - *** Warning *** that exceed the number of characters supported by some tools.10:01:48 PM - 
+10:01:48 PM - command: /tools/misc/EE6321/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/sram_sp_hdc_svt_rvt_hvt ascii -instname "sram_sp_hdc_svt_rvt_hvt" -words 512 -bits 128 -frequency 100 -mux 4 -pipeline off -write_mask off -wp_size 8 -write_thru on -top_layer "m5-m9" -power_type otc -redundancy off -rcols 2 -rrows 2 -bmux off -ser none -back_biasing off -power_gating off -retention on -ema on -atf off -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDDPE:VDDPE,VDDCE:VDDCE,VSSE:VSSE" -prefix "" -name_case upper -check_instname off -diodes on -drive 6 -dnw off -asvm on -corners tt_1p00v_1p00v_25c,ss_0p90v_0p90v_m40c,ss_0p90v_0p90v_125c,ff_1p10v_1p10v_m40c,ff_1p10v_1p10v_125c,ff_1p10v_1p10v_0c
+10:01:52 PM - ASCII Datatable generator succeeded, created:
+10:01:52 PM -    sram_sp_hdc_svt_rvt_hvt_tt_1p00v_1p00v_25c.dat
+10:01:52 PM -    sram_sp_hdc_svt_rvt_hvt_ss_0p90v_0p90v_m40c.dat
+10:01:52 PM -    sram_sp_hdc_svt_rvt_hvt_ss_0p90v_0p90v_125c.dat
+10:01:52 PM -    sram_sp_hdc_svt_rvt_hvt_ff_1p10v_1p10v_m40c.dat
+10:01:52 PM -    sram_sp_hdc_svt_rvt_hvt_ff_1p10v_1p10v_125c.dat
+10:01:52 PM -    sram_sp_hdc_svt_rvt_hvt_ff_1p10v_1p10v_0c.dat

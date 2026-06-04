@@ -28,7 +28,17 @@
 `timescale 1ns/1ps
 
 module testbench;
-
+    parameter DATA_WIDTH = 8;
+    parameter FFT_POINT= 12;
+    localparam NUMBER_OF_STAGES = $clog2(FFT_POINT);
+    localparam WORD_WIDTH = $clog2(FFT_POINT);
+    localparam NUMBER_OF_TW = FFT_POINT/2;
+    localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW);
+    localparam STAGES = $clog2(FFT_POINT);
+    localparam STAGE_WIDTH = $clog2(STAGES);
+    localparam HALF_WIDTH = $clog2(FFT_POINT/2);
+    localparam FULL_WIDTH = $clog2(FFT_POINT);
+    localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT;
     // --------------------------------------------------------------------
     // Clock / reset
     // --------------------------------------------------------------------
@@ -45,20 +55,23 @@ module testbench;
 
     reg         tb_data_cen;
     reg         tb_data_wen;
-    reg  [9:0]  tb_data_addr;
-    reg  [31:0] tb_data_din;
-    wire [31:0] tb_data_dout;
+    reg  [WORD_WIDTH-1:0]  tb_data_addr;
+    reg  [DATA_WIDTH-1:0] tb_data_din;
+    wire [DATA_WIDTH-1:0] tb_data_dout;
 
     reg         tb_tw_cen;
     reg         tb_tw_wen;
-    reg  [8:0]  tb_tw_addr;
-    reg  [31:0] tb_tw_din;
-    wire [31:0] tb_tw_dout;
+    reg  [WORD_WIDTH_TW-1:0]  tb_tw_addr;
+    reg  [DATA_WIDTH-1:0] tb_tw_din;
+    wire [DATA_WIDTH-1:0] tb_tw_dout;
 
-    reg  [9:0]  tb_linear_addr;
-    wire [9:0]  tb_bitrev_addr;
+    reg  [NUMBER_OF_STAGES-1:0]  tb_linear_addr;
+    wire [NUMBER_OF_STAGES-1:0]  tb_bitrev_addr;
 
-    fft_top fft_top_inst (
+    fft_top  #(
+    	.DATA_WIDTH(8),
+	.FFT_POINT(12)
+    )fft_top_inst(
         .clk             (clk),
         .rstn            (rstn),
         .start           (start),
@@ -84,13 +97,15 @@ module testbench;
     // --------------------------------------------------------------------
     // Input / twiddle data buffers
     // --------------------------------------------------------------------
-    reg [15:0] input_mem   [0:10239];  // Q1.15 real samples
-    reg [31:0] twiddle_mem [0:511];    // Q1.15 complex twiddles
-
+    // reg [15:0] input_mem   [0:1023];  // Q1.15 real samples
+    //reg [31:0] twiddle_mem [0:511];    // Q1.15 complex twiddles
+    reg [DATA_WIDTH/2-1:0] input_mem   [0:FFT_POINT-1];  // Q1.15 real samples
+    reg [DATA_WIDTH-1:0] twiddle_mem [0:NUMBER_OF_TW-1];
     // Per-batch output buffers
-    reg [15:0] out_re [0:1023];
-    reg [15:0] out_im [0:1023];
-
+    //reg [15:0] out_re [0:1023];
+    //reg [15:0] out_im [0:1023];
+    reg [DATA_WIDTH/2-1:0] out_re [0:FFT_POINT-1];
+    reg [DATA_WIDTH/2-1:0] out_im [0:FFT_POINT-1];
     integer batch;
     integer i;
     integer fd;
@@ -98,10 +113,14 @@ module testbench;
     // --------------------------------------------------------------------
     // Utility: 10-bit bit-reverse (redundant with DUT, used for load)
     // --------------------------------------------------------------------
-    function [9:0] bitrev10;
-        input [9:0] a;
+    function [NUMBER_OF_STAGES-1:0] bitrev10;
+        input [NUMBER_OF_STAGES-1:0] a;
         begin
-            bitrev10 = { a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9] };
+		
+        		for (i = 0; i < FULL_WIDTH; i = i + 1) begin : BITREV
+            		 bitrev10[i] = a[FULL_WIDTH-1-i];
+        		end
+    		
         end
     endfunction
 
@@ -114,7 +133,7 @@ module testbench;
     // We output SIGNED 16-bit Q9.7 (but magnitude is always non-negative, so
     // the sign bit will always be 0).
     // --------------------------------------------------------------------
-    function [15:0] to_q9_7;
+   /* function [15:0] to_q9_7;
         input signed [15:0] re;
         input signed [15:0] im;
         real re_f, im_f, mag_f;
@@ -130,7 +149,7 @@ module testbench;
             if (q > 16'hFFFF) q = 16'hFFFF;
             to_q9_7 = q[15:0];
         end
-    endfunction
+    endfunction */
 
     // --------------------------------------------------------------------
     // Main test sequence
@@ -144,13 +163,13 @@ module testbench;
         start        = 1'b0;
         tb_data_cen  = 1'b0;
         tb_data_wen  = 1'b0;
-        tb_data_addr = 10'd0;
-        tb_data_din  = 32'd0;
+        tb_data_addr = 0;//10'd0;
+        tb_data_din  = 0;//32'd0;
         tb_tw_cen    = 1'b0;
         tb_tw_wen    = 1'b0;
-        tb_tw_addr   = 9'd0;
-        tb_tw_din    = 32'd0;
-        tb_linear_addr = 10'd0;
+        tb_tw_addr   = 0; //9'd0
+        tb_tw_din    = 0;//32'd0;
+        tb_linear_addr = 0;//10'd0;
 
         // Read input and twiddle hex files
         $readmemh("input.hex",   input_mem);
@@ -167,11 +186,11 @@ module testbench;
         // LOAD TWIDDLES  (done once; they stay resident for all batches)
         // ----------------------------------------------------------------
         $display("[TB] Loading 512 twiddle factors...");
-        for (i = 0; i < 512; i = i + 1) begin
+        for (i = 0; i < NUMBER_OF_TW; i = i + 1) begin
             @(negedge clk);
             tb_tw_cen  = 1'b1;
             tb_tw_wen  = 1'b1;
-            tb_tw_addr = i[8:0];
+            tb_tw_addr = i[WORD_WIDTH_TW-1:0];
             tb_tw_din  = twiddle_mem[i];
         end
         @(negedge clk);
@@ -190,12 +209,12 @@ module testbench;
             //     addresses.  Input is real-valued Q1.15; pack as
             //     { sample, 16'h0000 } giving imag=0.
             // ------------------------------------------------------------
-            for (i = 0; i < 1024; i = i + 1) begin
+            for (i = 0; i < FFT_POINT; i = i + 1) begin
                 @(negedge clk);
                 tb_data_cen  = 1'b1;
                 tb_data_wen  = 1'b1;
-                tb_data_addr = bitrev10(i[9:0]);
-                tb_data_din  = { input_mem[batch*1024 + i], 16'h0000 };
+                tb_data_addr = bitrev10(i[NUMBER_OF_STAGES-1:0]);
+                tb_data_din  = { input_mem[batch*FFT_POINT + i], 'd0};
             end
             @(negedge clk);
             tb_data_cen = 1'b0;
@@ -225,20 +244,19 @@ module testbench;
             @(negedge clk);
             tb_data_cen  = 1'b1;
             tb_data_wen  = 1'b0;
-            tb_data_addr = 10'd0;
+            tb_data_addr = 0;
             // Issue addresses 1..1023 while capturing Q[i-1]
-            for (i = 1; i < 1024; i = i + 1) begin
+            for (i = 1; i < FFT_POINT; i = i + 1) begin
                 @(negedge clk);
-                tb_data_addr = i[9:0];
+                tb_data_addr = i[WORD_WIDTH-1:0];
                 // Previous cycle's Q (from address i-1) is now on tb_data_dout
-                out_re[i-1] = tb_data_dout[31:16];
-                out_im[i-1] = tb_data_dout[15:0];
+                out_re[i-1] = tb_data_dout[DATA_WIDTH-1:DATA_WIDTH/2];
+                out_im[i-1] = tb_data_dout[DATA_WIDTH/2-1:0];
             end
             // One more cycle to capture Q for address 1023
             @(negedge clk);
-            out_re[1023] = tb_data_dout[31:16];
-            out_im[1023] = tb_data_dout[15:0];
-
+            out_re[FFT_POINT-1] = tb_data_dout[DATA_WIDTH-1:DATA_WIDTH/2];
+            out_im[FFT_POINT-1] = tb_data_dout[DATA_WIDTH/2-1:0];
             tb_data_cen = 1'b0;
 
             // ------------------------------------------------------------
@@ -262,9 +280,9 @@ module testbench;
                 $finish;
             end
 
-            for (i = 0; i < 1024; i = i + 1) begin
+            for (i = 0; i < FFT_POINT; i = i + 1) begin
                 // 16-bit Q9.7 magnitude, one per line, 4 hex digits
-                $fwrite(fd, "%04h\n", to_q9_7($signed(out_re[i]), $signed(out_im[i])));
+                $fwrite(fd, "%04h\n", $signed(out_re[i]), $signed(out_im[i])); // remove to_q9_7
             end
             $fclose(fd);
             $display("[TB] Batch %0d output written.", batch);

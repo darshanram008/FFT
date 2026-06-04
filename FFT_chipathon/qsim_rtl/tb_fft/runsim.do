@@ -17,7 +17,7 @@ vlog +acc -incr ../../rtl/fft_data_sram/fft_data_sram.v
 vlog +acc -incr ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v
 vlog +acc -incr ../../rtl/fft_top/fft_top.v 
 vlog +acc -incr ../../rtl/sram_wrapper/sram_wrapper.v 
-vlog -reportprogress 300 +acc +define+ARM_UD_MODEL -incr ../../memory_compiler/single_port_sram/sram00.v
+vlog -reportprogress 300 +acc +define+ARM_UD_MODEL -incr ../../memory_compiler/fft_sram/sram00.v
 
 
 

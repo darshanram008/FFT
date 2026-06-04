@@ -28,17 +28,17 @@
 
 module fft_controller #(
 
-        parameter DATA_WIDTH = 8,
-         parameter FFT_POINT = 1024,
-         localparam NUMBER_OF_STAGES = $clog2(FFT_POINT),
-         localparam WORD_WIDTH = $clog2(FFT_POINT),
-          localparam NUMBER_OF_TW = FFT_POINT/2,
+    parameter DATA_WIDTH = 8,
+    parameter FFT_POINT = 12,
+    localparam NUMBER_OF_STAGES = $clog2(FFT_POINT),
+    localparam WORD_WIDTH = $clog2(FFT_POINT),
+    localparam NUMBER_OF_TW = FFT_POINT/2,
     localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW),
     localparam STAGES = $clog2(FFT_POINT),
     localparam STAGE_WIDTH = $clog2(STAGES),
     localparam HALF_WIDTH = $clog2(FFT_POINT/2),
     localparam FULL_WIDTH = $clog2(FFT_POINT),
-    localparam [WORD_WIDTH:0] DEPTH_CONST = 1024
+    localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT
 
 
 )(
@@ -118,11 +118,11 @@ module fft_controller #(
     // distance   = 1 << stage          (1..512, needs 10 bits)
     // num_groups = 1024 >> (stage+1)    (512..1, needs 10 bits)
     // Use 11-bit literal 11'd1024 so the value isn't truncated.
-    wire [WORD_WIDTH-1:0]  distance_w   ={(WORD_WIDTH-1){1'b0},{1'b1}} << stage; //10'd1 << stage
-    wire [WORD_WIDTH:0] num_groups_w = DEPTH_CONST >> (stage + {(STAGE_WIDTH-1){1'b0},1'b1}); //11'd1024 >> (stage + 4'd1)
+    wire [WORD_WIDTH-1:0]  distance_w   = 1 << stage; //10'd1 << stage
+    wire [WORD_WIDTH:0] num_groups_w = DEPTH_CONST >> (stage + 1); //11'd1024 >> (stage + 4'd1)
 
-    wire last_bfly_in_group  = ({1'b0, bfly}   +  {(NUMBER_OF_STAGES-1){1'b0},{1'b1}} == distance_w); //({1'b0, bfly}   + 10'd1 == distance_w);
-    wire last_group_in_stage = ({2'b00, group} + {(NUMBER_OF_STAGES){1'b0},{1'b1}} == num_groups_w); //({2'b00, group} + 11'd1 == num_groups_w);
+    wire last_bfly_in_group  = ({1'b0, bfly}   +  1 == distance_w); //({1'b0, bfly}   + 10'd1 == distance_w);
+    wire last_group_in_stage = ({2'b00, group} + 1 == num_groups_w); //({2'b00, group} + 11'd1 == num_groups_w);
     wire last_stage          = (stage == (NUMBER_OF_STAGES-1)); //(stage == 4'd9);
     wire last_butterfly      = last_bfly_in_group & last_group_in_stage & last_stage; //last_bfly_in_group & last_group_in_stage & last_stage;
 
@@ -158,56 +158,51 @@ module fft_controller #(
     // --------------------------------------------------------------------
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
-            stage      <= {(STAGE_WIDTH){1'b0}}; //4'd0
-            group      <=  {(NUMBER_OF_STAGES-1){1'b0}};//9'd0;
-            bfly       <= {(NUMBER_OF_STAGES-1){1'b0}};// 9'd0;
-            x0_latched <= {(DATA_WIDTH){1'b0}};// 32'd0;
-            x0_addr_l  <= {(WORD_WIDTH){1'b0}};//10'd0;
-            x1_addr_l  <= {(WORD_WIDTH){1'b0}}; //10'd0;
+            stage      <= 0;
+            group      <=  0;
+            bfly       <= 0;
+            x0_latched <= 0;
+            x0_addr_l  <= 0;
+            x1_addr_l  <= 0;
         end else begin
             case (state)
                 S_IDLE, S_DONE: begin
                     if (start) begin
-                        stage <={(STAGE_WIDTH){1'b0}};// 4'd0;
-                        group <= {(NUMBER_OF_STAGES-1){1'b0}};//9'd0;
-                        bfly  <= {(NUMBER_OF_STAGES-1){1'b0}};//9'd0;
+                        stage <= 0;
+                        group <= 0;
+                        bfly  <= 0;
                     end
                 end
-
                 S_READ_X0: begin
                     // Latch the butterfly addresses so later WB states use the
                     // right locations even after (bfly, group, stage) advance.
                     x0_addr_l <= x0_addr;
                     x1_addr_l <= x1_addr;
                 end
-
                 S_READ_X1: begin
                     // Data-SRAM Q holds x0 this cycle (from S_READ_X0's read)
                     x0_latched <= data_dout;
                 end
-
                 S_WB1: begin
                     // Advance (bfly, group, stage). Order matters: innermost
                     // first, then group, then stage.
                     if (last_bfly_in_group) begin
-                        bfly <= {(NUMBER_OF_STAGES-1){1'b0}}; //9'd0;
+                        bfly <= 0; //9'd0;
                         if (last_group_in_stage) begin
-                            group <= {(NUMBER_OF_STAGES-1){1'b0}};//9'd0;
+                            group <= 0;//9'd0;
                             if (!last_stage)
-                                stage <= stage + {(STAGE_WIDTH-1){1'b0},{1'b1}} ; //4'd1
+                                stage <= stage + 1; //4'd1
                         end else begin
-                            group <= group + {(NUMBER_OF_STAGES-2){1'b0},{1'b1}} ;//9'd1;
+                            group <= group + 1;//9'd1;
                         end
                     end else begin
-                        bfly <= bfly + {(NUMBER_OF_STAGES-2){1'b0},{1'b1}};//9'd1;
+                        bfly <= bfly + 1;//9'd1;
                     end
                 end
-
                 default: ;
             endcase
         end
     end
-
     // --------------------------------------------------------------------
     // Combinational outputs
     // --------------------------------------------------------------------
@@ -215,21 +210,17 @@ module fft_controller #(
         // Safe defaults
         data_cen    = 1'b0;
         data_wen    = 1'b0;
-        data_addr   = {(WORD_WIDTH){1'b0}};//10'd0;
-        data_din    = {(DATA_WIDTH){1'b0}};// 32'd0;
-
+        data_addr   = 0;//10'd0;
+        data_din    = 0;// 32'd0;
         tw_cen      = 1'b0;
-        tw_addr     {(WORD_WIDTH_TW){1'b0}}=    //9'd0;
-
+        tw_addr     = 0; //9'd0;
         core_start  = 1'b0;
         core_x0     = x0_latched;
-        core_x1     = {(DATA_WIDTH){1'b0}};// 32'd0;
-        core_w      = {(DATA_WIDTH){1'b0}};// 32'd0;
-
+        core_x1     = 0;// 32'd0;
+        core_w      = 0;// 32'd0;
         sram_tb_sel = 1'b1;   // tb owns by default
         busy        = 1'b0;
         done        = 1'b0;
-
         case (state)
             S_IDLE: begin
                 sram_tb_sel = 1'b1;

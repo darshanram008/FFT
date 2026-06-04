@@ -1,0 +1,130 @@
+# do runsim.do
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:52 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr tb_fft.v 
+# -- Compiling module testbench
+# ** Warning: tb_fft.v(217): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# 
+# Top level modules:
+# 	testbench
+# End time: 03:00:52 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:52 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_address_gen/fft_address_gen.v 
+# -- Compiling module fft_address_gen
+# 
+# Top level modules:
+# 	fft_address_gen
+# End time: 03:00:52 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:52 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_core/fft_core.v 
+# -- Compiling module fft_core
+# 
+# Top level modules:
+# 	fft_core
+# End time: 03:00:52 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:52 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_controller/fft_controller.v 
+# -- Compiling module fft_controller
+# 
+# Top level modules:
+# 	fft_controller
+# End time: 03:00:53 on Jun 04,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:53 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_data_sram/fft_data_sram.v 
+# -- Compiling module fft_data_sram
+# 
+# Top level modules:
+# 	fft_data_sram
+# End time: 03:00:53 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:53 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v 
+# -- Compiling module fft_twiddle_sram
+# 
+# Top level modules:
+# 	fft_twiddle_sram
+# End time: 03:00:53 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:53 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_top/fft_top.v 
+# -- Compiling module fft_top
+# 
+# Top level modules:
+# 	fft_top
+# End time: 03:00:53 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:53 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/sram_wrapper/sram_wrapper.v 
+# -- Compiling module sram_wrapper
+# 
+# Top level modules:
+# 	sram_wrapper
+# End time: 03:00:53 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 03:00:53 on Jun 04,2026
+# vlog -reportprogress 300 "+acc" "+define+ARM_UD_MODEL" -incr ../../memory_compiler/fft_sram/sram00.v 
+# -- Compiling module sram00
+# 
+# Top level modules:
+# 	sram00
+# End time: 03:00:53 on Jun 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -t ps -lib work testbench 
+# Start time: 03:00:54 on Jun 04,2026
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.126.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.testbench
+# Loading work.fft_top
+# Loading work.fft_address_gen
+# Loading work.fft_core
+# Loading work.fft_controller
+# Loading work.fft_data_sram
+# Loading work.sram_wrapper
+# Loading work.sram00
+# Loading work.fft_twiddle_sram
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (4) for port 'addr'. The port definition is at: ../../rtl/sram_wrapper/sram_wrapper.v(38).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/fft_top_inst/u_data_sram/u_sram File: ../../rtl/fft_data_sram/fft_data_sram.v Line: 61
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (4) for port 'addr'. The port definition is at: ../../rtl/sram_wrapper/sram_wrapper.v(38).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/fft_top_inst/u_tw_sram/u_sram File: ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v Line: 60
+# ** Warning: (vsim-PLI-3406) Too many digits (4) in data on line 1 of file "input.hex". (Max is 1.)    : tb_fft.v(175)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench
+# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 1 of file "twiddle.hex". (Max is 2.)    : tb_fft.v(176)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench
+# [TB] input.hex and twiddle.hex loaded
+# [TB] Loading 512 twiddle factors...
+# [TB] Twiddles loaded.
+# [TB] ===== Batch 0 =====
+# [TB] TIMEOUT
+# ** Note: $finish    : tb_fft.v(300)
+#    Time: 50 ms  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at tb_fft.v line 300
+# End time: 03:02:15 on Jun 04,2026, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 4

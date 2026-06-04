@@ -27,7 +27,7 @@
 `timescale 1ns/1ps
 
 module fft_address_gen #(
-    parameter FFT_POINT = 1024,
+    parameter FFT_POINT = 12,
     localparam STAGES = $clog2(FFT_POINT),
     localparam STAGE_WIDTH = $clog2(STAGES),
     localparam HALF_WIDTH = $clog2(FFT_POINT/2),
@@ -47,7 +47,7 @@ module fft_address_gen #(
 );
 
     // distance = 1 << stage  (1..512, needs 10 bits)
-    wire [FULL_WIDTH-1:0] distance =  {{(FULL_WIDTH-1){1'b0}},1'd1} << stage;
+    wire [FULL_WIDTH-1:0] distance =  {{(FULL_WIDTH-1){1'b0}},1'd1} << stage; //can do 1
 
     // group_base = group * 2^(stage+1)
     // Extend group to 10 bits before shifting so the shift result stays in 10 bits

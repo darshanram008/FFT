@@ -1,0 +1,219 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall25/dr3412/EECS6321_Adv_dig/fft_git/FFT_chipathon/qsim_rtl/tb_fft
+vfft_address_gen
+2../../rtl/fft_address_gen/fft_address_gen.v
+Z1 !s110 1780556452
+!i10b 1
+!s100 XIJcm5@DC:J2Yg]>1PGj53
+I[3GCnM]c>=R6Q4aNk1I`h0
+R0
+w1780553502
+8../../rtl/fft_address_gen/fft_address_gen.v
+F../../rtl/fft_address_gen/fft_address_gen.v
+!i122 1
+L0 29 43
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OP;L;2024.2;79
+r1
+!s85 0
+31
+Z4 !s108 1780556452.000000
+!s107 ../../rtl/fft_address_gen/fft_address_gen.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/fft_address_gen/fft_address_gen.v|
+!i113 1
+Z5 o+acc
+Z6 tCvgOpt 0
+vfft_controller
+2../../rtl/fft_controller/fft_controller.v
+Z7 !s110 1780556453
+!i10b 1
+!s100 ;>ONd4?Y9AFQng8_^@XNM2
+I@:Yma=AhkbJD@O9DUVH=H1
+R0
+w1780556256
+8../../rtl/fft_controller/fft_controller.v
+F../../rtl/fft_controller/fft_controller.v
+!i122 3
+L0 29 261
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 ../../rtl/fft_controller/fft_controller.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/fft_controller/fft_controller.v|
+!i113 1
+R5
+R6
+vfft_core
+2../../rtl/fft_core/fft_core.v
+R1
+!i10b 1
+!s100 816mWzA;n9H;MP2DHU3TV2
+I3WY`amzK2o7=ZNZlE@cY92
+R0
+w1780553500
+8../../rtl/fft_core/fft_core.v
+F../../rtl/fft_core/fft_core.v
+!i122 2
+L0 26 94
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 ../../rtl/fft_core/fft_core.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/fft_core/fft_core.v|
+!i113 1
+R5
+R6
+vfft_data_sram
+2../../rtl/fft_data_sram/fft_data_sram.v
+R7
+!i10b 1
+!s100 W^iVSNKIJn;O@?^TQ2on52
+Ij;BMC3W[9c29fQ[zAgYDk3
+R0
+w1780556159
+8../../rtl/fft_data_sram/fft_data_sram.v
+F../../rtl/fft_data_sram/fft_data_sram.v
+!i122 4
+L0 18 53
+R2
+R3
+r1
+!s85 0
+31
+Z8 !s108 1780556453.000000
+!s107 ../../rtl/fft_data_sram/fft_data_sram.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/fft_data_sram/fft_data_sram.v|
+!i113 1
+R5
+R6
+vfft_top
+2../../rtl/fft_top/fft_top.v
+R7
+!i10b 1
+!s100 TGJdNM2CIN:V2L^k6fA9I3
+IgM752@oHL7K3CVI^EU;iH0
+R0
+w1780556227
+8../../rtl/fft_top/fft_top.v
+F../../rtl/fft_top/fft_top.v
+!i122 6
+L0 25 204
+R2
+R3
+r1
+!s85 0
+31
+R8
+!s107 ../../rtl/fft_top/fft_top.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/fft_top/fft_top.v|
+!i113 1
+R5
+R6
+vfft_twiddle_sram
+2../../rtl/fft_twiddle_sram/fft_twiddle_sram.v
+R7
+!i10b 1
+!s100 ]_aT?5Y7U:QKmRVE[L[cb2
+IZlLSl>MIC8mKn<C^9Tga<3
+R0
+w1780556230
+8../../rtl/fft_twiddle_sram/fft_twiddle_sram.v
+F../../rtl/fft_twiddle_sram/fft_twiddle_sram.v
+!i122 5
+L0 15 55
+R2
+R3
+r1
+!s85 0
+31
+R8
+!s107 ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/fft_twiddle_sram/fft_twiddle_sram.v|
+!i113 1
+R5
+R6
+vsram00
+2../../memory_compiler/fft_sram/sram00.v
+R7
+!i10b 1
+!s100 ^Hk9YdlV>L^gGGbT2>MYY3
+IH8DDNgh<V@b3aNBkb<dAn2
+R0
+w1780423216
+8../../memory_compiler/fft_sram/sram00.v
+F../../memory_compiler/fft_sram/sram00.v
+!i122 8
+L0 67 220
+R2
+R3
+r1
+!s85 0
+31
+R8
+!s107 ../../memory_compiler/fft_sram/sram00.v|
+!s90 -reportprogress|300|+acc|+define+ARM_UD_MODEL|-incr|../../memory_compiler/fft_sram/sram00.v|
+!i113 1
+R5
+!s92 +acc +define+ARM_UD_MODEL
+R6
+vsram_wrapper
+2../../rtl/sram_wrapper/sram_wrapper.v
+R7
+!i10b 1
+!s100 fCT1loLP2H:_Ol=m`6cm40
+IY:JE3174UR3P=oj?<ja=U2
+R0
+w1780553467
+8../../rtl/sram_wrapper/sram_wrapper.v
+F../../rtl/sram_wrapper/sram_wrapper.v
+!i122 7
+L0 30 37
+R2
+R3
+r1
+!s85 0
+31
+R8
+!s107 ../../rtl/sram_wrapper/sram_wrapper.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/sram_wrapper/sram_wrapper.v|
+!i113 1
+R5
+R6
+vtestbench
+2tb_fft.v
+R1
+!i10b 1
+!s100 82LG4R[?OEJ1L;E=>1_9T3
+InU`hW:ZFLcb=jW9JFXQb<1
+R0
+w1780555885
+8tb_fft.v
+Ftb_fft.v
+!i122 0
+L0 30 274
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 tb_fft.v|
+!s90 -reportprogress|300|+acc|-incr|tb_fft.v|
+!i113 1
+R5
+R6

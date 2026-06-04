@@ -1,0 +1,71 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.16-s078_1, built Wed Dec 7 12:07:06 PST 2022
+Options:	
+Date:		Thu Apr 23 11:15:50 2026
+Host:		cadpc15 (x86_64 w/Linux 4.18.0-553.120.1.el8_10.x86_64) (8cores*16cpus*11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz 16384KB)
+OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+License:
+		[11:15:50.022377] Configured Lic search path (21.01-s002): 5280@bioeelincad.ee.columbia.edu
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (127 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+couldn't read file "./config.globals": no such file or directory
+<CMD> set_message -no_limit
+<CMD> set_message -id TECHLIB-1467 -limit 10
+<CMD> setMultiCpuUsage -localCpu max -acquireLicense 8
+<CMD> init_design
+**ERROR: (IMPIMEX-3):	There is no verilog netlist found in init_verilog. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+
+<CMD> floorPlan -s 468 468.0 4.5 4.5 4.5 4.5
+**ERROR: Design must be in memory before running "floorPlan"
+Design must be in memory before running "floorPlan"
+<CMD> redraw
+<CMD> fit
+<CMD> zoomBox -0.04100 -0.02300 0.13600 0.14700
+<CMD> zoomBox -0.06300 -0.03800 0.14600 0.16300
+<CMD> zoomBox -0.08900 -0.05500 0.15800 0.18200
+<CMD> zoomBox -0.00700 -0.00300 0.12200 0.12100
+<CMD> placeInstance sram00_inst 4.4 17.8 R0 -fixed
+**ERROR: (IMPTCM-162):	"sram00_inst" does not match any object in design for specified type "inst " object in command "placeInstance".
+
+Usage: placeInstance [-help] <inst> <location> [{R0 R90 R180 R270 MX MX90 MY MY90}] [{ -fixed  | -placed  | -softFixed  }]
+
+**ERROR: (IMPTCM-3):	"sram00_inst" is not a valid object value for the 1th argument.
+
+<CMD> placeInstance u_sram 4.4 17.8 R0 -fixed
+**ERROR: (IMPTCM-162):	"u_sram" does not match any object in design for specified type "inst " object in command "placeInstance".
+
+Usage: placeInstance [-help] <inst> <location> [{R0 R90 R180 R270 MX MX90 MY MY90}] [{ -fixed  | -placed  | -softFixed  }]
+
+**ERROR: (IMPTCM-3):	"u_sram" is not a valid object value for the 1th argument.
+
+couldn't read file "./config.globals": no such file or directory
+<CMD> set_message -no_limit
+<CMD> set_message -id TECHLIB-1467 -limit 10
+<CMD> setMultiCpuUsage -localCpu max -acquireLicense 8
+<CMD> init_design
+**ERROR: (IMPIMEX-3):	There is no verilog netlist found in init_verilog. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+
+<CMD> set init_verilog ../../dc/sram_wrapper/sram_wrapper.nl.PG.v
+couldn't read file "./config.globals": no such file or directory
+couldn't read file "./config.globals": no such file or directory
+<CMD> set_message -no_limit
+<CMD> set_message -id TECHLIB-1467 -limit 10
+<CMD> setMultiCpuUsage -localCpu max -acquireLicense 8
+couldn't read file "config.globals": no such file or directory
+
+*** Memory Usage v#1 (Current mem = 1044.297M, initial mem = 484.914M) ***
+*** Message Summary: 0 warning(s), 6 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:34.3, real=0:11:06, mem=1044.3M) ---

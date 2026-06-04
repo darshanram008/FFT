@@ -26,7 +26,8 @@
 module fft_core #(
 
     parameter DATA_WIDTH = 8,
-    parameter COMP_WIDTH = DATA_WIDTH/2
+    localparam COMP_WIDTH = DATA_WIDTH/2
+    
 
 
 )(
@@ -36,11 +37,11 @@ module fft_core #(
     input              start,         // fire the butterfly this cycle
 
     input      [DATA_WIDTH-1:0]  x0,            // {re, im}, Q1.3
-    input      [DATA_WIDTH:0]  x1,            // {re, im}, Q1.15
-    input      [DATA_WIDTH:0]  w,             // twiddle {re, im}, Q1.15
+    input      [DATA_WIDTH-1:0]  x1,            // {re, im}, Q1.15
+    input      [DATA_WIDTH-1:0]  w,             // twiddle {re, im}, Q1.15
 
-    output reg [DATA_WIDTH:0]  x0_out,        // butterfly result  x0' = (x0 + W*x1)/2
-    output reg [DATA_WIDTH:0]  x1_out,        // butterfly result  x1' = (x0 - W*x1)/2
+    output reg [DATA_WIDTH-1:0]  x0_out,        // butterfly result  x0' = (x0 + W*x1)/2
+    output reg [DATA_WIDTH-1:0]  x1_out,        // butterfly result  x1' = (x0 - W*x1)/2
     output reg         done
 );
 
@@ -101,8 +102,8 @@ module fft_core #(
     // --------------------------------------------------------------------
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
-            x0_out <= {DATA_WIDTH{1'b0}}; //32'd0
-            x1_out <= {DATA_WIDTH{1'b0}};
+            x0_out <= 0; //32'd0
+            x1_out <= 0;
             done   <= 1'b0;
         end else begin
             if (start) begin
