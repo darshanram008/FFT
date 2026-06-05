@@ -118,7 +118,7 @@ module fft_top #(
     // --------------------------------------------------------------------
     fft_core  #(
 	
-    	.DATA_WIDTH(32)
+    	.DATA_WIDTH(DATA_WIDTH)
 
 )u_core(
         .clk      (clk),

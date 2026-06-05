@@ -69,8 +69,8 @@ module testbench;
     wire [NUMBER_OF_STAGES-1:0]  tb_bitrev_addr;
 
     fft_top  #(
-    	.DATA_WIDTH(8),
-	.FFT_POINT(12)
+    	.DATA_WIDTH(DATA_WIDTH),
+	.FFT_POINT(FFT_POINT)
     )fft_top_inst(
         .clk             (clk),
         .rstn            (rstn),
@@ -113,12 +113,13 @@ module testbench;
     // --------------------------------------------------------------------
     // Utility: 10-bit bit-reverse (redundant with DUT, used for load)
     // --------------------------------------------------------------------
+integer k;
     function [NUMBER_OF_STAGES-1:0] bitrev10;
         input [NUMBER_OF_STAGES-1:0] a;
         begin
 		
-        		for (i = 0; i < FULL_WIDTH; i = i + 1) begin : BITREV
-            		 bitrev10[i] = a[FULL_WIDTH-1-i];
+        		for (k = 0; i < FULL_WIDTH; k = k + 1) begin : BITREV
+            		 bitrev10[k] = a[FULL_WIDTH-1-k];
         		end
     		
         end
