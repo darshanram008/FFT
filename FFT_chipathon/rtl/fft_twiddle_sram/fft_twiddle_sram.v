@@ -56,7 +56,7 @@ module fft_twiddle_sram #(
     sram_wrapper  #(
 
         .DATA_WIDTH(DATA_WIDTH),
-        .WORDS(NUMBER_OF_TW)
+        .WORDS(FFT_POINT)
 
     )u_sram(
         .clk  (clk),
