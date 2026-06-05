@@ -29,19 +29,12 @@
 module fft_controller #(
 
     parameter DATA_WIDTH = 32,
-    parameter FFT_POINT = 512,
-    localparam NUMBER_OF_STAGES = $clog2(FFT_POINT),
-    localparam WORD_WIDTH = $clog2(FFT_POINT),
-    localparam NUMBER_OF_TW = FFT_POINT/2,
-    localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW),
-    localparam STAGES = $clog2(FFT_POINT),
-    localparam STAGE_WIDTH = $clog2(STAGES),
-    localparam HALF_WIDTH = $clog2(FFT_POINT/2),
-    localparam FULL_WIDTH = $clog2(FFT_POINT),
-    localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT
+    parameter FFT_POINT = 512
+   
 
 
 )(
+    
     input              clk,
     input              rstn,
 
@@ -85,7 +78,15 @@ module fft_controller #(
     output reg         busy,
     output reg         done
 );
-
+    localparam NUMBER_OF_STAGES = $clog2(FFT_POINT);
+    localparam WORD_WIDTH = $clog2(FFT_POINT);
+    localparam NUMBER_OF_TW = FFT_POINT/2;
+    localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW);
+    localparam STAGES = $clog2(FFT_POINT);
+    localparam STAGE_WIDTH = $clog2(STAGES);
+    localparam HALF_WIDTH = $clog2(FFT_POINT/2);
+    localparam FULL_WIDTH = $clog2(FFT_POINT);
+    localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT;
     // --------------------------------------------------------------------
     // FSM states
     // --------------------------------------------------------------------
