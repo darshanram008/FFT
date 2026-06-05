@@ -45,7 +45,7 @@ module sram_wrapper #(
     // --------------------------------------------------------------------
     wire CEN_n  = ~cen;        // active-LOW chip-enable
     wire GWEN_n = ~wen;        // active-LOW global-write-enable
-    wire [1:0] WEN_n = 2'b00; // all 4 bytes enabled for writes;
+    wire [4:0] WEN_n = 5'b0000; // all 4 bytes enabled for writes;
                                 // GWEN_n gates whether write actually happens
 
     // --------------------------------------------------------------------

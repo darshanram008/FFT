@@ -99,7 +99,7 @@ module testbench;
     // --------------------------------------------------------------------
     // reg [15:0] input_mem   [0:1023];  // Q1.15 real samples
     //reg [31:0] twiddle_mem [0:511];    // Q1.15 complex twiddles
-    reg [DATA_WIDTH/2-1:0] input_mem   [0:FFT_POINT-1];  // Q1.15 real samples
+    reg [DATA_WIDTH/2-1:0] input_mem   [0:10239];  // Q1.15 real samples
     reg [DATA_WIDTH-1:0] twiddle_mem [0:NUMBER_OF_TW-1];
     // Per-batch output buffers
     //reg [15:0] out_re [0:1023];

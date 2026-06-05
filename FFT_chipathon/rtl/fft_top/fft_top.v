@@ -101,7 +101,7 @@ module fft_top #(
     // for the testbench's tb_linear_addr lookup). We route tb_linear_addr
     // through the address_gen to produce tb_bitrev_addr.
     fft_address_gen  #(
-    .FFT_POINT(12)
+    .FFT_POINT(FFT_POINT)
 )u_addr(
         .stage        (stage),
         .group        (group),
@@ -118,7 +118,7 @@ module fft_top #(
     // --------------------------------------------------------------------
     fft_core  #(
 	
-    	.DATA_WIDTH(8)
+    	.DATA_WIDTH(32)
 
 )u_core(
         .clk      (clk),
@@ -137,8 +137,8 @@ module fft_top #(
     // --------------------------------------------------------------------
     fft_controller  #(
 
-    .DATA_WIDTH(8),
-    .FFT_POINT(12)
+    .DATA_WIDTH(DATA_WIDTH),
+    .FFT_POINT(FFT_POINT)
 )u_ctrl(
         .clk          (clk),
         .rstn         (rstn),
@@ -181,8 +181,8 @@ module fft_top #(
     // --------------------------------------------------------------------
     fft_data_sram  #(
 
-	.FFT_POINT(12),
-	.DATA_WIDTH(8)	
+	.FFT_POINT(FFT_POINT),
+	.DATA_WIDTH(DATA_WIDTH)	
 ) u_data_sram(
         .clk       (clk),
         .tb_sel    (sram_tb_sel),
@@ -206,8 +206,8 @@ module fft_top #(
     // --------------------------------------------------------------------
     fft_twiddle_sram  #(
 
-	.FFT_POINT(12),
-	.DATA_WIDTH(8)	
+	.FFT_POINT(FFT_POINT),
+	.DATA_WIDTH(DATA_WIDTH)	
 
 ) u_tw_sram(
         .clk       (clk),
