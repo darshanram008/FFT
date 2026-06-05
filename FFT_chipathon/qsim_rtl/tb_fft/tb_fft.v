@@ -118,7 +118,7 @@ integer k;
         input [NUMBER_OF_STAGES-1:0] a;
         begin
 		
-        		for (k = 0; i < FULL_WIDTH; k = k + 1) begin : BITREV
+        		for (k = 0; k < FULL_WIDTH; k = k + 1) begin : BITREV
             		 bitrev10[k] = a[FULL_WIDTH-1-k];
         		end
     		
