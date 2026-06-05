@@ -4,89 +4,88 @@
 # Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:46 on Jun 05,2026
+# Start time: 15:40:24 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr tb_fft.v 
 # -- Compiling module testbench
-# ** Warning: tb_fft.v(218): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 # 
 # Top level modules:
 # 	testbench
-# End time: 13:23:46 on Jun 05,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:46 on Jun 05,2026
+# Start time: 15:40:25 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_address_gen/fft_address_gen.v 
 # -- Compiling module fft_address_gen
 # 
 # Top level modules:
 # 	fft_address_gen
-# End time: 13:23:46 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:46 on Jun 05,2026
+# Start time: 15:40:25 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_core/fft_core.v 
 # -- Compiling module fft_core
 # 
 # Top level modules:
 # 	fft_core
-# End time: 13:23:46 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:46 on Jun 05,2026
+# Start time: 15:40:25 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_controller/fft_controller.v 
 # -- Compiling module fft_controller
 # 
 # Top level modules:
 # 	fft_controller
-# End time: 13:23:47 on Jun 05,2026, Elapsed time: 0:00:01
+# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:47 on Jun 05,2026
+# Start time: 15:40:25 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_data_sram/fft_data_sram.v 
 # -- Compiling module fft_data_sram
 # 
 # Top level modules:
 # 	fft_data_sram
-# End time: 13:23:47 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:47 on Jun 05,2026
+# Start time: 15:40:25 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v 
 # -- Compiling module fft_twiddle_sram
 # 
 # Top level modules:
 # 	fft_twiddle_sram
-# End time: 13:23:47 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:47 on Jun 05,2026
+# Start time: 15:40:26 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_top/fft_top.v 
 # -- Compiling module fft_top
 # 
 # Top level modules:
 # 	fft_top
-# End time: 13:23:47 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:47 on Jun 05,2026
+# Start time: 15:40:26 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/sram_wrapper/sram_wrapper.v 
 # -- Compiling module sram_wrapper
 # 
 # Top level modules:
 # 	sram_wrapper
-# End time: 13:23:47 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 13:23:47 on Jun 05,2026
+# Start time: 15:40:26 on Jun 05,2026
 # vlog -reportprogress 300 "+acc" "+define+ARM_UD_MODEL" -incr ../../memory_compiler/fft_sram/sram00.v 
 # -- Compiling module sram00
 # 
 # Top level modules:
 # 	sram00
-# End time: 13:23:47 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" -t ps -lib work testbench 
-# Start time: 13:23:47 on Jun 05,2026
+# Start time: 15:40:26 on Jun 05,2026
 # //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.126.1.el8_10.x86_64
 # //
 # // Unpublished work. Copyright 2024 Siemens
@@ -109,17 +108,43 @@
 # Loading work.sram_wrapper
 # Loading work.sram00
 # Loading work.fft_twiddle_sram
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'addr'. The port definition is at: ../../rtl/sram_wrapper/sram_wrapper.v(38).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/fft_top_inst/u_tw_sram/u_sram File: ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v Line: 60
-# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (8) for port 'A'. The port definition is at: ../../memory_compiler/fft_sram/sram00.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/fft_top_inst/u_tw_sram/u_sram/u_sram File: ../../rtl/sram_wrapper/sram_wrapper.v Line: 54
-# ** Warning: (vsim-PLI-3407) Too many data words read on line 257 of file "twiddle.hex". (Current address [256], address range [0:255])    : tb_fft.v(177)
-#    Time: 0 ps  Iteration: 0  Instance: /testbench
 # [TB] input.hex and twiddle.hex loaded
 # [TB] Loading 512 twiddle factors...
 # [TB] Twiddles loaded.
 # [TB] ===== Batch 0 =====
-# Break key hit
-# Break in Function bitrev10 at tb_fft.v line 121
-# End time: 13:24:32 on Jun 05,2026, Elapsed time: 0:00:45
-# Errors: 0, Warnings: 3
+# [TB] Batch 0 compute done.
+# [TB] Batch 0 output written.
+# [TB] ===== Batch 1 =====
+# [TB] Batch 1 compute done.
+# [TB] Batch 1 output written.
+# [TB] ===== Batch 2 =====
+# [TB] Batch 2 compute done.
+# [TB] Batch 2 output written.
+# [TB] ===== Batch 3 =====
+# [TB] Batch 3 compute done.
+# [TB] Batch 3 output written.
+# [TB] ===== Batch 4 =====
+# [TB] Batch 4 compute done.
+# [TB] Batch 4 output written.
+# [TB] ===== Batch 5 =====
+# [TB] Batch 5 compute done.
+# [TB] Batch 5 output written.
+# [TB] ===== Batch 6 =====
+# [TB] Batch 6 compute done.
+# [TB] Batch 6 output written.
+# [TB] ===== Batch 7 =====
+# [TB] Batch 7 compute done.
+# [TB] Batch 7 output written.
+# [TB] ===== Batch 8 =====
+# [TB] Batch 8 compute done.
+# [TB] Batch 8 output written.
+# [TB] ===== Batch 9 =====
+# [TB] Batch 9 compute done.
+# [TB] Batch 9 output written.
+# [TB] All 10 batches processed.  10 output files generated.
+# ** Note: $finish    : tb_fft.v(312)
+#    Time: 1257420 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at tb_fft.v line 312
+# End time: 15:41:09 on Jun 05,2026, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 0

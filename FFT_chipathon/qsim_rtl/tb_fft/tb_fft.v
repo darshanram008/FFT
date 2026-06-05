@@ -24,7 +24,9 @@
 //   - Magnitude is computed as sqrt(re^2 + im^2) in real arithmetic. If a
 //     pure-hardware magnitude is needed the $sqrt in simulation is an
 //     acceptable golden model for the mid-report.
-//==============================================================================
+////==============================================================================
+//to chage to 512 point change the FFT point, and then change the twiddle inputs and then change the SRAM dir
+
 `timescale 1ns/1ps
 
 module testbench;
@@ -113,9 +115,10 @@ module testbench;
     // --------------------------------------------------------------------
     // Utility: 10-bit bit-reverse (redundant with DUT, used for load)
     // --------------------------------------------------------------------
-integer k;
+
     function [NUMBER_OF_STAGES-1:0] bitrev10;
         input [NUMBER_OF_STAGES-1:0] a;
+	integer k;
         begin
 		
         		for (k = 0; k < FULL_WIDTH; k = k + 1) begin : BITREV
@@ -151,6 +154,21 @@ integer k;
             to_q9_7 = q[15:0];
         end
     endfunction */
+function [15:0] to_q9_7;
+    input signed [DATA_WIDTH/2-1:0] re;
+    input signed [DATA_WIDTH/2-1:0] im;
+    real re_f, im_f, mag_f;
+    integer q;
+    begin
+        re_f  = $itor(re) / 32768.0;
+        im_f  = $itor(im) / 32768.0;
+        mag_f = $itor(FFT_POINT) * $sqrt(re_f*re_f + im_f*im_f); // FFT_POINT not hardcoded 1024
+        q = $rtoi(mag_f * 128.0 + 0.5);
+        if (q < 0)         q = 0;
+        if (q > 65535)     q = 65535;
+        to_q9_7 = q[15:0];
+    end
+endfunction
 
     // --------------------------------------------------------------------
     // Main test sequence
@@ -215,7 +233,7 @@ integer k;
                 tb_data_cen  = 1'b1;
                 tb_data_wen  = 1'b1;
                 tb_data_addr = bitrev10(i[NUMBER_OF_STAGES-1:0]);
-                tb_data_din  = { input_mem[batch*FFT_POINT + i], 'd0};
+                tb_data_din  = { input_mem[batch*FFT_POINT + i], {(DATA_WIDTH/2){1'b0}}};
             end
             @(negedge clk);
             tb_data_cen = 1'b0;
@@ -283,7 +301,7 @@ integer k;
 
             for (i = 0; i < FFT_POINT; i = i + 1) begin
                 // 16-bit Q9.7 magnitude, one per line, 4 hex digits
-                $fwrite(fd, "%04h\n", $signed(out_re[i]), $signed(out_im[i])); // remove to_q9_7
+                $fwrite(fd, "%04h%04h\n", $signed(out_re[i]), $signed(out_im[i])); // remove to_q9_7
             end
             $fclose(fd);
             $display("[TB] Batch %0d output written.", batch);
