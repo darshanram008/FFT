@@ -1,5 +1,5 @@
 /tools/misc/EE6321/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/sram_sp_hdc_svt_rvt_hvt verilog \
-    -instname sram00 -words 512 -bits 8 -frequency 100 -mux 16 \
+    -instname sram00 -words 512 -bits 32 -frequency 100 -mux 16 \
     -drive 6 -write_mask on -write_thru on -wp_size 7 \
     -top_layer m5-m9 -redundancy off -bmux off -ser none \
     -back_biasing off -power_gating off -atf off \
@@ -9,7 +9,7 @@
     -pwr_gnd_rename VDDPE:VDD,VDDCE:VDD,VSSE:VSS
 
 /tools/misc/EE6321/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/sram_sp_hdc_svt_rvt_hvt synopsys \
-    -instname sram00 -words 512 -bits 8 -frequency 100 -mux 16 \
+    -instname sram00 -words 512 -bits 32 -frequency 100 -mux 16 \
     -drive 6 -write_mask on -write_thru on -wp_size 7 \
     -top_layer m5-m9 -redundancy off -bmux off -ser none \
     -back_biasing off -power_gating off -atf off \
@@ -19,7 +19,7 @@
     -pwr_gnd_rename VDDPE:VDD,VDDCE:VDD,VSSE:VSS
 
 /tools/misc/EE6321/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/sram_sp_hdc_svt_rvt_hvt lvs \
-    -instname sram00 -words 512 -bits 8 -frequency 100 -mux 16 \
+    -instname sram00 -words 512 -bits 32 -frequency 100 -mux 16 \
     -drive 6 -write_mask on -write_thru on -wp_size 7 \
     -top_layer m5-m9 -redundancy off -bmux off -ser none \
     -back_biasing off -power_gating off -atf off \
@@ -29,7 +29,7 @@
     -pwr_gnd_rename VDDPE:VDD,VDDCE:VDD,VSSE:VSS
 
 /tools/misc/EE6321/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/sram_sp_hdc_svt_rvt_hvt vclef-fp  \
-    -instname sram00 -words 512 -bits 8 -frequency 100 -mux 16 \
+    -instname sram00 -words 512 -bits 32 -frequency 100 -mux 16 \
     -drive 6 -write_mask on -write_thru on -wp_size 7 \
     -top_layer m5-m9 -redundancy off -bmux off -ser none \
     -back_biasing off -power_gating off -atf off \
@@ -39,7 +39,7 @@
     -pwr_gnd_rename VDDPE:VDD,VDDCE:VDD,VSSE:VSS
 
 /tools/misc/EE6321/arm/tsmc/cln65gplus/sram_sp_hdc_svt_rvt_hvt/r0p0-00eac0/bin/sram_sp_hdc_svt_rvt_hvt gds2 \
-    -instname sram00 -words 512 -bits 8 -frequency 100 -mux 16 \
+    -instname sram00 -words 512 -bits 32 -frequency 100 -mux 16 \
     -drive 6 -write_mask on -write_thru on -wp_size 7 \
     -top_layer m5-m9 -redundancy off -bmux off -ser none \
     -back_biasing off -power_gating off -atf off \
