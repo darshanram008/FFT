@@ -29,7 +29,7 @@
 
 module sram_wrapper #(
     parameter WORDS = 512,
-    
+    parameter WORD_WIDTH = $clog2(WORDS),
     parameter DATA_WIDTH = 32
 ) (
     
@@ -40,7 +40,7 @@ module sram_wrapper #(
     input      [DATA_WIDTH-1:0]  din,
     output     [DATA_WIDTH-1:0]  dout
 );
-    localparam WORD_WIDTH = $clog2(WORDS);
+    
     // --------------------------------------------------------------------
     // Convert active-HIGH user signals to active-LOW sram00 signals
     // --------------------------------------------------------------------

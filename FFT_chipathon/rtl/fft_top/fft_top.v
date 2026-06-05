@@ -25,6 +25,16 @@
 module fft_top #(
     parameter DATA_WIDTH = 32,
     parameter FFT_POINT = 512,
+    parameter NUMBER_OF_STAGES = $clog2(FFT_POINT),
+    parameter WORD_WIDTH = $clog2(FFT_POINT),
+    parameter NUMBER_OF_TW = FFT_POINT/2,
+    parameter WORD_WIDTH_TW = $clog2(NUMBER_OF_TW),
+    parameter STAGES = $clog2(FFT_POINT),
+    parameter STAGE_WIDTH = $clog2(STAGES),
+    parameter HALF_WIDTH = $clog2(FFT_POINT/2),
+    parameter FULL_WIDTH = $clog2(FFT_POINT),
+    parameter [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT
+
 )(
     
     input              clk,
@@ -53,15 +63,7 @@ module fft_top #(
     output     [WORD_WIDTH-1:0]   tb_bitrev_addr    // its 10-bit bit-reverse
 );  
 
-    localparam NUMBER_OF_STAGES = $clog2(FFT_POINT);
-    localparam WORD_WIDTH = $clog2(FFT_POINT);
-    localparam NUMBER_OF_TW = FFT_POINT/2;
-    localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW);
-    localparam STAGES = $clog2(FFT_POINT);
-    localparam STAGE_WIDTH = $clog2(STAGES);
-    localparam HALF_WIDTH = $clog2(FFT_POINT/2);
-    localparam FULL_WIDTH = $clog2(FFT_POINT);
-    localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT;
+
 
     // --------------------------------------------------------------------
     // Inter-module wires

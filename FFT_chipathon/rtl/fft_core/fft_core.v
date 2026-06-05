@@ -25,7 +25,8 @@
 
 module fft_core #(
 
-    parameter DATA_WIDTH = 32
+    parameter DATA_WIDTH = 32,
+    parameter COMP_WIDTH = DATA_WIDTH/2
     
 )(  
     input              clk,
@@ -41,7 +42,7 @@ module fft_core #(
     output reg [DATA_WIDTH-1:0]  x1_out,        // butterfly result  x1' = (x0 - W*x1)/2
     output reg         done
 );
-    localparam COMP_WIDTH = DATA_WIDTH/2;
+    
     // --------------------------------------------------------------------
     // Unpack inputs (signed Q1.7)
     // --------------------------------------------------------------------

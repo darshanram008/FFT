@@ -14,6 +14,8 @@
 
 module fft_twiddle_sram #( 
     parameter FFT_POINT = 512,
+    parameter NUMBER_OF_TW = FFT_POINT/2,
+    parameter WORD_WIDTH_TW = $clog2(NUMBER_OF_TW),
     parameter DATA_WIDTH =32
      )(
     
@@ -35,8 +37,7 @@ module fft_twiddle_sram #(
     // Shared data-out (registered one cycle after address)
     output     [DATA_WIDTH-1:0]  dout
 );
-    localparam NUMBER_OF_TW = FFT_POINT/2;
-    localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW);
+    
     // --------------------------------------------------------------------
     // Mux the two ports
     // --------------------------------------------------------------------

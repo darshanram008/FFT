@@ -27,7 +27,11 @@
 `timescale 1ns/1ps
 
 module fft_address_gen #(
-    parameter FFT_POINT = 512
+    parameter FFT_POINT = 512,
+    parameter STAGES = $clog2(FFT_POINT),
+    parameter STAGE_WIDTH = $clog2(STAGES),
+    parameter HALF_WIDTH = $clog2(FFT_POINT/2),
+    parameter FULL_WIDTH = $clog2(FFT_POINT)
     
     )(
    
@@ -42,10 +46,7 @@ module fft_address_gen #(
     output     [HALF_WIDTH-1:0]   w_addr,
     output     [FULL_WIDTH-1:0]   bitrev_addr
 );
-    localparam STAGES = $clog2(FFT_POINT);
-    localparam STAGE_WIDTH = $clog2(STAGES);
-    localparam HALF_WIDTH = $clog2(FFT_POINT/2);
-    localparam FULL_WIDTH = $clog2(FFT_POINT);
+    
 
     // distance = 1 << stage  (1..512, needs 10 bits)
     wire [FULL_WIDTH-1:0] distance =  {{(FULL_WIDTH-1){1'b0}},1'd1} << stage; //can do 1

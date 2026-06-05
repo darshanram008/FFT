@@ -17,6 +17,7 @@
 
 module fft_data_sram #(
     parameter FFT_POINT = 512,
+    parameter WORD_WIDTH = $clog2(FFT_POINT),
     parameter DATA_WIDTH = 32
 )(
     
@@ -40,7 +41,7 @@ module fft_data_sram #(
     // Shared data-out (registered one cycle after address)
     output     [DATA_WIDTH-1:0]  dout
 );
-    localparam WORD_WIDTH = $clog2(FFT_POINT);
+   
     // --------------------------------------------------------------------
     // Mux the two ports
     // --------------------------------------------------------------------
