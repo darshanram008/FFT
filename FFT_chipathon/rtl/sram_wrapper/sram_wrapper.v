@@ -28,17 +28,17 @@
 `timescale 1ns/1ps
 
 module sram_wrapper #(
-    parameter WORDS = 512,
-    parameter WORD_WIDTH = $clog2(WORDS),
-    parameter DATA_WIDTH = 32
+    parameter SRAM_WORDS = 512,
+    parameter SRAM_WORD_WIDTH = $clog2(SRAM_WORDS),
+    parameter SRAM_DATA_WIDTH = 32
 ) (
     
     input              clk,
     input              cen,    // 1 = access enabled, 0 = idle (active-HIGH to user)
     input              wen,    // 1 = write, 0 = read (active-HIGH to user)
-    input      [WORD_WIDTH-1:0]  addr,
-    input      [DATA_WIDTH-1:0]  din,
-    output     [DATA_WIDTH-1:0]  dout
+    input      [SRAM_WORD_WIDTH-1:0]  addr,
+    input      [SRAM_DATA_WIDTH-1:0]  din,
+    output     [SRAM_DATA_WIDTH-1:0]  dout
 );
     
     // --------------------------------------------------------------------

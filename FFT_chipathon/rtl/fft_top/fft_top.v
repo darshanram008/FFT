@@ -34,7 +34,6 @@ module fft_top #(
     parameter HALF_WIDTH = $clog2(FFT_POINT/2),
     parameter FULL_WIDTH = $clog2(FFT_POINT),
     parameter [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT
-
 )(
     
     input              clk,

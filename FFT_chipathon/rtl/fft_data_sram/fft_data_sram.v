@@ -18,7 +18,11 @@
 module fft_data_sram #(
     parameter FFT_POINT = 512,
     parameter WORD_WIDTH = $clog2(FFT_POINT),
-    parameter DATA_WIDTH = 32
+    parameter DATA_WIDTH = 32,
+    parameter SRAM_WORDS = 512,
+    parameter SRAM_WORD_WIDTH = $clog2(SRAM_WORDS),
+    parameter SRAM_DATA_WIDTH = 32
+    
 )(
     
     input              clk,
@@ -51,20 +55,19 @@ module fft_data_sram #(
     wire [DATA_WIDTH-1:0] din_mux  = tb_sel ? tb_din  : core_din;
 
     // Zero-extend 10-bit logical address to 13-bit physical SRAM address
-    wire [WORD_WIDTH-1:0] sram_addr =  addr_mux;
+     wire [SRAM_DATA_WIDTH-1:0] din_wrapper = {{(SRAM_DATA_WIDTH - DATA_WIDTH){1'b0}},din_mux};
+
+    wire [SRAM_WORD_WIDTH-1:0] sram_addr =  {{(SRAM_WORD_WIDTH - WORD_WIDTH){1'b0}},addr_mux};
 
     // --------------------------------------------------------------------
     // Instantiate sram_wrapper
     // --------------------------------------------------------------------
-    sram_wrapper  #(
-        .DATA_WIDTH(DATA_WIDTH),
-        .WORDS(FFT_POINT)
-    )u_sram(
+    sram_wrapper u_sram(
         .clk  (clk),
         .cen  (cen_mux),
         .wen  (wen_mux),
         .addr (sram_addr),
-        .din  (din_mux),
+        .din  (din_wrapper),
         .dout (dout)
     );
 
