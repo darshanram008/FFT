@@ -1,0 +1,1379 @@
+1
+ 
+****************************************
+Report : area
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:06 2026
+****************************************
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+    USERLIB_nldm_tt_1p00v_1p00v_25c (File: /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db)
+
+Number of ports:                           76
+Number of nets:                           142
+Number of cells:                           67
+Number of combinational cells:             66
+Number of sequential cells:                 0
+Number of macros/black boxes:               1
+Number of buf/inv:                         64
+Number of references:                       8
+
+Combinational area:                170.280003
+Buf/Inv area:                      168.120003
+Noncombinational area:               0.000000
+Macro/Black Box area:            31150.861328
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 31321.141331
+Total area:                 undefined
+1
+Loading db file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db'
+Loading db file '/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db'
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+        -verbose
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+    USERLIB_nldm_tt_1p00v_1p00v_25c (File: /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+sram_wrapper           ZeroWireload      tcbn65gplustc_ccs
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+sram_wrapper                           7.12e-03    5.205 1.27e+05    5.339 100.0
+1
+ 
+****************************************
+Report : design
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+    USERLIB_nldm_tt_1p00v_1p00v_25c (File: /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db)
+
+Local Link Library:
+
+    {tcbn65gplustc_ccs.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : NCCOM
+    Library : tcbn65gplustc_ccs
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected automatically from the total cell area.
+
+Name           :   ZeroWireload
+Location       :   tcbn65gplustc_ccs
+Resistance     :   1e-05
+Capacitance    :   1
+Area           :   0
+Slope          :   0
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.00
+     2     0.00
+     3     0.00
+     4     0.00
+     5     0.00
+     6     0.00
+     7     0.00
+     8     0.00
+     9     0.00
+    10     0.00
+    11     0.00
+    12     0.00
+    13     0.00
+    14     0.00
+    15     0.00
+    16     0.00
+    17     0.00
+    18     0.00
+    19     0.00
+    20     0.00
+
+
+
+Wire Loading Model Mode: segmented.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : cell
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U5                        CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U6                        CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U7                        CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U8                        CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U9                        CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U10                       CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U11                       CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U12                       CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U13                       CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U14                       CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U15                       CKBD0           tcbn65gplustc_ccs
+                                                          1.440000  
+U16                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U17                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U18                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U19                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U20                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U21                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U22                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U23                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U24                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U25                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U26                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U27                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U28                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U29                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U30                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U31                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U32                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U33                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U34                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U35                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U36                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U37                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U38                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U39                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U40                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U41                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U42                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U43                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U44                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U45                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U46                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U47                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U48                       DEL01           tcbn65gplustc_ccs
+                                                          3.960000  
+U49                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U50                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U51                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U52                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U53                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U54                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U55                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U56                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U57                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U58                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U59                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U60                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U61                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U62                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U63                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U64                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U65                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U66                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U67                       CKND0           tcbn65gplustc_ccs
+                                                          1.080000  
+U68                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U69                       TIEH            tcbn65gplustc_ccs
+                                                          1.080000  
+U70                       TIEL            tcbn65gplustc_ccs
+                                                          1.080000  
+u_sram                    sram00          USERLIB_nldm_tt_1p00v_1p00v_25c
+                                                          31150.861328
+                                                                    b, d
+--------------------------------------------------------------------------------
+Total 67 cells                                            31321.141331
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+    i - ideal_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+addr[0]        in      0.0000   0.0000    0.39    0.00   --         
+addr[1]        in      0.0000   0.0000    0.39    0.00   --         
+addr[2]        in      0.0000   0.0000    0.39    0.00   --         
+addr[3]        in      0.0000   0.0000    0.39    0.00   --         
+addr[4]        in      0.0000   0.0000    0.39    0.00   --         
+addr[5]        in      0.0000   0.0000    0.39    0.00   --         
+addr[6]        in      0.0000   0.0000    0.39    0.00   --         
+addr[7]        in      0.0000   0.0000    0.39    0.00   --         
+addr[8]        in      0.0000   0.0000    0.39    0.00   --         
+cen            in      0.0000   0.0000    0.39    0.00   --         
+clk            in      0.0000   0.0000    0.39    0.00   --         d, i
+din[0]         in      0.0000   0.0000    0.39    0.00   --         
+din[1]         in      0.0000   0.0000    0.39    0.00   --         
+din[2]         in      0.0000   0.0000    0.39    0.00   --         
+din[3]         in      0.0000   0.0000    0.39    0.00   --         
+din[4]         in      0.0000   0.0000    0.39    0.00   --         
+din[5]         in      0.0000   0.0000    0.39    0.00   --         
+din[6]         in      0.0000   0.0000    0.39    0.00   --         
+din[7]         in      0.0000   0.0000    0.39    0.00   --         
+din[8]         in      0.0000   0.0000    0.39    0.00   --         
+din[9]         in      0.0000   0.0000    0.39    0.00   --         
+din[10]        in      0.0000   0.0000    0.39    0.00   --         
+din[11]        in      0.0000   0.0000    0.39    0.00   --         
+din[12]        in      0.0000   0.0000    0.39    0.00   --         
+din[13]        in      0.0000   0.0000    0.39    0.00   --         
+din[14]        in      0.0000   0.0000    0.39    0.00   --         
+din[15]        in      0.0000   0.0000    0.39    0.00   --         
+din[16]        in      0.0000   0.0000    0.39    0.00   --         
+din[17]        in      0.0000   0.0000    0.39    0.00   --         
+din[18]        in      0.0000   0.0000    0.39    0.00   --         
+din[19]        in      0.0000   0.0000    0.39    0.00   --         
+din[20]        in      0.0000   0.0000    0.39    0.00   --         
+din[21]        in      0.0000   0.0000    0.39    0.00   --         
+din[22]        in      0.0000   0.0000    0.39    0.00   --         
+din[23]        in      0.0000   0.0000    0.39    0.00   --         
+din[24]        in      0.0000   0.0000    0.39    0.00   --         
+din[25]        in      0.0000   0.0000    0.39    0.00   --         
+din[26]        in      0.0000   0.0000    0.39    0.00   --         
+din[27]        in      0.0000   0.0000    0.39    0.00   --         
+din[28]        in      0.0000   0.0000    0.39    0.00   --         
+din[29]        in      0.0000   0.0000    0.39    0.00   --         
+din[30]        in      0.0000   0.0000    0.39    0.00   --         
+din[31]        in      0.0000   0.0000    0.39    0.00   --         
+wen            in      0.0000   0.0000    0.39    0.00   --         
+dout[0]        out     0.0050   0.0000   --      --      --         
+dout[1]        out     0.0050   0.0000   --      --      --         
+dout[2]        out     0.0050   0.0000   --      --      --         
+dout[3]        out     0.0050   0.0000   --      --      --         
+dout[4]        out     0.0050   0.0000   --      --      --         
+dout[5]        out     0.0050   0.0000   --      --      --         
+dout[6]        out     0.0050   0.0000   --      --      --         
+dout[7]        out     0.0050   0.0000   --      --      --         
+dout[8]        out     0.0050   0.0000   --      --      --         
+dout[9]        out     0.0050   0.0000   --      --      --         
+dout[10]       out     0.0050   0.0000   --      --      --         
+dout[11]       out     0.0050   0.0000   --      --      --         
+dout[12]       out     0.0050   0.0000   --      --      --         
+dout[13]       out     0.0050   0.0000   --      --      --         
+dout[14]       out     0.0050   0.0000   --      --      --         
+dout[15]       out     0.0050   0.0000   --      --      --         
+dout[16]       out     0.0050   0.0000   --      --      --         
+dout[17]       out     0.0050   0.0000   --      --      --         
+dout[18]       out     0.0050   0.0000   --      --      --         
+dout[19]       out     0.0050   0.0000   --      --      --         
+dout[20]       out     0.0050   0.0000   --      --      --         
+dout[21]       out     0.0050   0.0000   --      --      --         
+dout[22]       out     0.0050   0.0000   --      --      --         
+dout[23]       out     0.0050   0.0000   --      --      --         
+dout[24]       out     0.0050   0.0000   --      --      --         
+dout[25]       out     0.0050   0.0000   --      --      --         
+dout[26]       out     0.0050   0.0000   --      --      --         
+dout[27]       out     0.0050   0.0000   --      --      --         
+dout[28]       out     0.0050   0.0000   --      --      --         
+dout[29]       out     0.0050   0.0000   --      --      --         
+dout[30]       out     0.0050   0.0000   --      --      --         
+dout[31]       out     0.0050   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+addr[0]            1      --              --              --        -- 
+addr[1]            1      --              --              --        -- 
+addr[2]            1      --              --              --        -- 
+addr[3]            1      --              --              --        -- 
+addr[4]            1      --              --              --        -- 
+addr[5]            1      --              --              --        -- 
+addr[6]            1      --              --              --        -- 
+addr[7]            1      --              --              --        -- 
+addr[8]            1      --              --              --        -- 
+cen                1      --              --              --        -- 
+clk                1      --              --              --        -- 
+din[0]             1      --              --              --        -- 
+din[1]             1      --              --              --        -- 
+din[2]             1      --              --              --        -- 
+din[3]             1      --              --              --        -- 
+din[4]             1      --              --              --        -- 
+din[5]             1      --              --              --        -- 
+din[6]             1      --              --              --        -- 
+din[7]             1      --              --              --        -- 
+din[8]             1      --              --              --        -- 
+din[9]             1      --              --              --        -- 
+din[10]            1      --              --              --        -- 
+din[11]            1      --              --              --        -- 
+din[12]            1      --              --              --        -- 
+din[13]            1      --              --              --        -- 
+din[14]            1      --              --              --        -- 
+din[15]            1      --              --              --        -- 
+din[16]            1      --              --              --        -- 
+din[17]            1      --              --              --        -- 
+din[18]            1      --              --              --        -- 
+din[19]            1      --              --              --        -- 
+din[20]            1      --              --              --        -- 
+din[21]            1      --              --              --        -- 
+din[22]            1      --              --              --        -- 
+din[23]            1      --              --              --        -- 
+din[24]            1      --              --              --        -- 
+din[25]            1      --              --              --        -- 
+din[26]            1      --              --              --        -- 
+din[27]            1      --              --              --        -- 
+din[28]            1      --              --              --        -- 
+din[29]            1      --              --              --        -- 
+din[30]            1      --              --              --        -- 
+din[31]            1      --              --              --        -- 
+wen                1      --              --              --        -- 
+dout[0]            1      --              --              --        -- 
+dout[1]            1      --              --              --        -- 
+dout[2]            1      --              --              --        -- 
+dout[3]            1      --              --              --        -- 
+dout[4]            1      --              --              --        -- 
+dout[5]            1      --              --              --        -- 
+dout[6]            1      --              --              --        -- 
+dout[7]            1      --              --              --        -- 
+dout[8]            1      --              --              --        -- 
+dout[9]            1      --              --              --        -- 
+dout[10]           1      --              --              --        -- 
+dout[11]           1      --              --              --        -- 
+dout[12]           1      --              --              --        -- 
+dout[13]           1      --              --              --        -- 
+dout[14]           1      --              --              --        -- 
+dout[15]           1      --              --              --        -- 
+dout[16]           1      --              --              --        -- 
+dout[17]           1      --              --              --        -- 
+dout[18]           1      --              --              --        -- 
+dout[19]           1      --              --              --        -- 
+dout[20]           1      --              --              --        -- 
+dout[21]           1      --              --              --        -- 
+dout[22]           1      --              --              --        -- 
+dout[23]           1      --              --              --        -- 
+dout[24]           1      --              --              --        -- 
+dout[25]           1      --              --              --        -- 
+dout[26]           1      --              --              --        -- 
+dout[27]           1      --              --              --        -- 
+dout[28]           1      --              --              --        -- 
+dout[29]           1      --              --              --        -- 
+dout[30]           1      --              --              --        -- 
+dout[31]           1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+addr[0]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[1]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[2]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[3]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[4]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[5]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[6]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[7]       0.05    0.05    0.05    0.05  clk       4.00  
+addr[8]       0.05    0.05    0.05    0.05  clk       4.00  
+cen           0.05    0.05    0.05    0.05  clk       4.00  
+clk           --      --      --      --      --      4.00
+din[0]        0.05    0.05    0.05    0.05  clk       4.00  
+din[1]        0.05    0.05    0.05    0.05  clk       4.00  
+din[2]        0.05    0.05    0.05    0.05  clk       4.00  
+din[3]        0.05    0.05    0.05    0.05  clk       4.00  
+din[4]        0.05    0.05    0.05    0.05  clk       4.00  
+din[5]        0.05    0.05    0.05    0.05  clk       4.00  
+din[6]        0.05    0.05    0.05    0.05  clk       4.00  
+din[7]        0.05    0.05    0.05    0.05  clk       4.00  
+din[8]        0.05    0.05    0.05    0.05  clk       4.00  
+din[9]        0.05    0.05    0.05    0.05  clk       4.00  
+din[10]       0.05    0.05    0.05    0.05  clk       4.00  
+din[11]       0.05    0.05    0.05    0.05  clk       4.00  
+din[12]       0.05    0.05    0.05    0.05  clk       4.00  
+din[13]       0.05    0.05    0.05    0.05  clk       4.00  
+din[14]       0.05    0.05    0.05    0.05  clk       4.00  
+din[15]       0.05    0.05    0.05    0.05  clk       4.00  
+din[16]       0.05    0.05    0.05    0.05  clk       4.00  
+din[17]       0.05    0.05    0.05    0.05  clk       4.00  
+din[18]       0.05    0.05    0.05    0.05  clk       4.00  
+din[19]       0.05    0.05    0.05    0.05  clk       4.00  
+din[20]       0.05    0.05    0.05    0.05  clk       4.00  
+din[21]       0.05    0.05    0.05    0.05  clk       4.00  
+din[22]       0.05    0.05    0.05    0.05  clk       4.00  
+din[23]       0.05    0.05    0.05    0.05  clk       4.00  
+din[24]       0.05    0.05    0.05    0.05  clk       4.00  
+din[25]       0.05    0.05    0.05    0.05  clk       4.00  
+din[26]       0.05    0.05    0.05    0.05  clk       4.00  
+din[27]       0.05    0.05    0.05    0.05  clk       4.00  
+din[28]       0.05    0.05    0.05    0.05  clk       4.00  
+din[29]       0.05    0.05    0.05    0.05  clk       4.00  
+din[30]       0.05    0.05    0.05    0.05  clk       4.00  
+din[31]       0.05    0.05    0.05    0.05  clk       4.00  
+wen           0.05    0.05    0.05    0.05  clk       4.00  
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+addr[0]      INVD0              INVD0                -- /  --     
+addr[1]      INVD0              INVD0                -- /  --     
+addr[2]      INVD0              INVD0                -- /  --     
+addr[3]      INVD0              INVD0                -- /  --     
+addr[4]      INVD0              INVD0                -- /  --     
+addr[5]      INVD0              INVD0                -- /  --     
+addr[6]      INVD0              INVD0                -- /  --     
+addr[7]      INVD0              INVD0                -- /  --     
+addr[8]      INVD0              INVD0                -- /  --     
+cen          INVD0              INVD0                -- /  --     
+clk          INVD0              INVD0                -- /  --     
+din[0]       INVD0              INVD0                -- /  --     
+din[1]       INVD0              INVD0                -- /  --     
+din[2]       INVD0              INVD0                -- /  --     
+din[3]       INVD0              INVD0                -- /  --     
+din[4]       INVD0              INVD0                -- /  --     
+din[5]       INVD0              INVD0                -- /  --     
+din[6]       INVD0              INVD0                -- /  --     
+din[7]       INVD0              INVD0                -- /  --     
+din[8]       INVD0              INVD0                -- /  --     
+din[9]       INVD0              INVD0                -- /  --     
+din[10]      INVD0              INVD0                -- /  --     
+din[11]      INVD0              INVD0                -- /  --     
+din[12]      INVD0              INVD0                -- /  --     
+din[13]      INVD0              INVD0                -- /  --     
+din[14]      INVD0              INVD0                -- /  --     
+din[15]      INVD0              INVD0                -- /  --     
+din[16]      INVD0              INVD0                -- /  --     
+din[17]      INVD0              INVD0                -- /  --     
+din[18]      INVD0              INVD0                -- /  --     
+din[19]      INVD0              INVD0                -- /  --     
+din[20]      INVD0              INVD0                -- /  --     
+din[21]      INVD0              INVD0                -- /  --     
+din[22]      INVD0              INVD0                -- /  --     
+din[23]      INVD0              INVD0                -- /  --     
+din[24]      INVD0              INVD0                -- /  --     
+din[25]      INVD0              INVD0                -- /  --     
+din[26]      INVD0              INVD0                -- /  --     
+din[27]      INVD0              INVD0                -- /  --     
+din[28]      INVD0              INVD0                -- /  --     
+din[29]      INVD0              INVD0                -- /  --     
+din[30]      INVD0              INVD0                -- /  --     
+din[31]      INVD0              INVD0                -- /  --     
+wen          INVD0              INVD0                -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+addr[0]       --      --     --      --     --      --     --     --        -- 
+addr[1]       --      --     --      --     --      --     --     --        -- 
+addr[2]       --      --     --      --     --      --     --     --        -- 
+addr[3]       --      --     --      --     --      --     --     --        -- 
+addr[4]       --      --     --      --     --      --     --     --        -- 
+addr[5]       --      --     --      --     --      --     --     --        -- 
+addr[6]       --      --     --      --     --      --     --     --        -- 
+addr[7]       --      --     --      --     --      --     --     --        -- 
+addr[8]       --      --     --      --     --      --     --     --        -- 
+cen           --      --     --      --     --      --     --     --        -- 
+clk           --      --     --      --     --      --     --     --        -- 
+din[0]        --      --     --      --     --      --     --     --        -- 
+din[1]        --      --     --      --     --      --     --     --        -- 
+din[2]        --      --     --      --     --      --     --     --        -- 
+din[3]        --      --     --      --     --      --     --     --        -- 
+din[4]        --      --     --      --     --      --     --     --        -- 
+din[5]        --      --     --      --     --      --     --     --        -- 
+din[6]        --      --     --      --     --      --     --     --        -- 
+din[7]        --      --     --      --     --      --     --     --        -- 
+din[8]        --      --     --      --     --      --     --     --        -- 
+din[9]        --      --     --      --     --      --     --     --        -- 
+din[10]       --      --     --      --     --      --     --     --        -- 
+din[11]       --      --     --      --     --      --     --     --        -- 
+din[12]       --      --     --      --     --      --     --     --        -- 
+din[13]       --      --     --      --     --      --     --     --        -- 
+din[14]       --      --     --      --     --      --     --     --        -- 
+din[15]       --      --     --      --     --      --     --     --        -- 
+din[16]       --      --     --      --     --      --     --     --        -- 
+din[17]       --      --     --      --     --      --     --     --        -- 
+din[18]       --      --     --      --     --      --     --     --        -- 
+din[19]       --      --     --      --     --      --     --     --        -- 
+din[20]       --      --     --      --     --      --     --     --        -- 
+din[21]       --      --     --      --     --      --     --     --        -- 
+din[22]       --      --     --      --     --      --     --     --        -- 
+din[23]       --      --     --      --     --      --     --     --        -- 
+din[24]       --      --     --      --     --      --     --     --        -- 
+din[25]       --      --     --      --     --      --     --     --        -- 
+din[26]       --      --     --      --     --      --     --     --        -- 
+din[27]       --      --     --      --     --      --     --     --        -- 
+din[28]       --      --     --      --     --      --     --     --        -- 
+din[29]       --      --     --      --     --      --     --     --        -- 
+din[30]       --      --     --      --     --      --     --     --        -- 
+din[31]       --      --     --      --     --      --     --     --        -- 
+wen           --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+addr[0]       --      --      --      -- 
+addr[1]       --      --      --      -- 
+addr[2]       --      --      --      -- 
+addr[3]       --      --      --      -- 
+addr[4]       --      --      --      -- 
+addr[5]       --      --      --      -- 
+addr[6]       --      --      --      -- 
+addr[7]       --      --      --      -- 
+addr[8]       --      --      --      -- 
+cen           --      --      --      -- 
+clk           --      --      --      -- 
+din[0]        --      --      --      -- 
+din[1]        --      --      --      -- 
+din[2]        --      --      --      -- 
+din[3]        --      --      --      -- 
+din[4]        --      --      --      -- 
+din[5]        --      --      --      -- 
+din[6]        --      --      --      -- 
+din[7]        --      --      --      -- 
+din[8]        --      --      --      -- 
+din[9]        --      --      --      -- 
+din[10]       --      --      --      -- 
+din[11]       --      --      --      -- 
+din[12]       --      --      --      -- 
+din[13]       --      --      --      -- 
+din[14]       --      --      --      -- 
+din[15]       --      --      --      -- 
+din[16]       --      --      --      -- 
+din[17]       --      --      --      -- 
+din[18]       --      --      --      -- 
+din[19]       --      --      --      -- 
+din[20]       --      --      --      -- 
+din[21]       --      --      --      -- 
+din[22]       --      --      --      -- 
+din[23]       --      --      --      -- 
+din[24]       --      --      --      -- 
+din[25]       --      --      --      -- 
+din[26]       --      --      --      -- 
+din[27]       --      --      --      -- 
+din[28]       --      --      --      -- 
+din[29]       --      --      --      -- 
+din[30]       --      --      --      -- 
+din[31]       --      --      --      -- 
+wen           --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+dout[0]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[1]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[2]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[3]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[4]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[5]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[6]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[7]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[8]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[9]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[10]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[11]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[12]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[13]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[14]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[15]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[16]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[17]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[18]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[19]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[20]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[21]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[22]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[23]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[24]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[25]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[26]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[27]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[28]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[29]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[30]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[31]      0.05    0.05    0.05    0.05  clk       0.00  
+
+1
+ 
+****************************************
+Report : compile_options
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+sram_wrapper                             flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+This design has no violated constraints.
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[19] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[19] (sram00)                    0.76       0.76 r
+  dout[19] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[18] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[18] (sram00)                    0.76       0.76 r
+  dout[18] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[17] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[17] (sram00)                    0.76       0.76 r
+  dout[17] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[16] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[16] (sram00)                    0.76       0.76 r
+  dout[16] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[15] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[15] (sram00)                    0.76       0.76 r
+  dout[15] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[14] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[14] (sram00)                    0.76       0.76 r
+  dout[14] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[13] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[13] (sram00)                    0.76       0.76 r
+  dout[13] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[12] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[12] (sram00)                    0.76       0.76 r
+  dout[12] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[11] (sram00)                    0.76       0.76 r
+  dout[11] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[10] (sram00)                    0.76       0.76 r
+  dout[10] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[9] (sram00)                     0.76       0.76 r
+  dout[9] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[8] (sram00)                     0.76       0.76 r
+  dout[8] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[7] (sram00)                     0.76       0.76 r
+  dout[7] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[6] (sram00)                     0.76       0.76 r
+  dout[6] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[5] (sram00)                     0.76       0.76 r
+  dout[5] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[4] (sram00)                     0.76       0.76 r
+  dout[4] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[3] (sram00)                     0.76       0.76 r
+  dout[3] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[2] (sram00)                     0.76       0.76 r
+  dout[2] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[1] (sram00)                     0.76       0.76 r
+  dout[1] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: u_sram (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/CLK (sram00)                      0.00       0.00 r
+  u_sram/Q[0] (sram00)                     0.76       0.76 r
+  dout[0] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+1

@@ -1,0 +1,664 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version U-2022.12-SP7 for linux64 - Oct 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Sat Jun 27 18:01:20 2026
+Hostname:           cadpc06
+CPU Model:          11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
+CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 3.50 GHz
+OS:                 Linux 4.18.0-553.137.1.el8_10.x86_64
+RAM:                 62 GB (Free  50 GB)
+Swap:                31 GB (Free  31 GB)
+Work Filesystem:    /homes mounted to auto.homes
+Tmp Filesystem:     /tmp mounted to tmpfs
+Work Disk:          16773 GB (Free 5743 GB)
+Tmp Disk:            31 GB (Free  31 GB)
+
+CPU Load: 53%, Ram Free: 50 GB, Swap Free: 31 GB, Work Disk Free: 5743 GB, Tmp Disk Free: 31 GB
+#########################################
+# TCL script for Design Compiler        #
+# MS 2015                               #
+#########################################
+##################################################
+# Read design and library
+##################################################
+## Set top_level name
+#set top_level dut
+#
+## Read system verilog files
+#analyze -format verilog "../../rtl/dut/dut.v"
+#
+#elaborate ${top_level}
+#
+## List the names of the designs
+#list_designs
+#
+## Check error
+#if { [check_error -v] == 1 } { exit 1 }
+#
+## Set current design
+#current_design $top_level
+#
+## Link the design
+#link
+#
+## Generate structural verilog netlist
+#write -hierarchy -format verilog -output "${top_level}.nl.v"
+#
+## Finish synthesis
+#quit
+#########################################
+# READ Design and Library               #
+#########################################
+# Set top level module name
+set top_level fft_twiddle_sram
+fft_twiddle_sram
+#source -verbose "../common_scripts/common.tcl"
+# Read libraries
+set search_path [list "." "/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a" "/tools/synopsys/syn/U-2022.12-SP7/libraries/syn" "../../memory_compiler/fft_sram/sram00_libs"]
+. /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a /tools/synopsys/syn/U-2022.12-SP7/libraries/syn ../../memory_compiler/fft_sram/sram00_libs
+set synthetic_library [list "dw_foundation.sldb"]
+dw_foundation.sldb
+set link_library [list "*" "tcbn65gplustc_ccs.db" "dw_foundation.sldb" "sram00_nldm_tt_1p00v_1p00v_25c_syn.db"]
+* tcbn65gplustc_ccs.db dw_foundation.sldb sram00_nldm_tt_1p00v_1p00v_25c_syn.db
+set target_library [list "tcbn65gplustc_ccs.db"]
+tcbn65gplustc_ccs.db
+# Read verilog files and elaborate
+analyze -format verilog  "../../rtl/$top_level/$top_level.v"
+Running PRESTO HDLC
+Compiling source file ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v
+Presto compilation completed successfully.
+Loading db file '/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb'
+Loading db file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db'
+1
+analyze -format verilog "../../dc/sram_wrapper/sram_wrapper.nl.v"
+Running PRESTO HDLC
+Compiling source file ../../dc/sram_wrapper/sram_wrapper.nl.v
+Presto compilation completed successfully.
+1
+elaborate $top_level -parameters "FFT_POINT=128,DATA_WIDTH=16"
+Loading db file '/tools/synopsys/syn/current/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys/syn/current/libraries/syn/standard.sldb'
+  Loading link library 'tcbn65gplustc_ccs'
+  Loading link library 'USERLIB_nldm_tt_1p00v_1p00v_25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16)
+Elaborated 1 design.
+Current design is now 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'.
+Information: Building the design 'sram_wrapper'. (HDL-193)
+Presto compilation completed successfully. (sram_wrapper)
+1
+# List the names of the designs
+list_designs
+fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16 (*)
+sram_wrapper
+1
+# Check error
+if { [check_error -v] == 1 } { exit 1 }
+# Link the design
+link
+
+  Linking design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/dc/fft_twiddle_sram/fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16.db, etc
+  tcbn65gplustc_ccs (library) /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db
+  dw_foundation.sldb (library) /tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb
+  USERLIB_nldm_tt_1p00v_1p00v_25c (library) /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db
+
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Sat Jun 27 18:01:32 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              20
+    Connected to power or ground (LINT-32)                         19
+    Nets connected to multiple pins on same cell (LINT-33)          1
+
+Nets                                                               16
+    Unloaded nets (LINT-2)                                         16
+--------------------------------------------------------------------------------
+
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[16]' driven by pin 'u_sram/dout[16]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[17]' driven by pin 'u_sram/dout[17]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[18]' driven by pin 'u_sram/dout[18]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[19]' driven by pin 'u_sram/dout[19]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[20]' driven by pin 'u_sram/dout[20]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[21]' driven by pin 'u_sram/dout[21]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[22]' driven by pin 'u_sram/dout[22]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[23]' driven by pin 'u_sram/dout[23]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[24]' driven by pin 'u_sram/dout[24]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[25]' driven by pin 'u_sram/dout[25]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[26]' driven by pin 'u_sram/dout[26]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[27]' driven by pin 'u_sram/dout[27]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[28]' driven by pin 'u_sram/dout[28]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[29]' driven by pin 'u_sram/dout[29]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[30]' driven by pin 'u_sram/dout[30]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[31]' driven by pin 'u_sram/dout[31]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[8]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[7]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[6]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[31]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[30]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[29]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[28]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[27]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[26]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[25]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[24]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[23]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[22]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[21]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[20]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[19]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[18]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[17]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[16]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', the same net is connected to more than one pin on submodule 'u_sram'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'addr[8]', 'addr[7]'', 'addr[6]', 'din[31]', 'din[30]', 'din[29]', 'din[28]', 'din[27]', 'din[26]', 'din[25]', 'din[24]', 'din[23]', 'din[22]', 'din[21]', 'din[20]', 'din[19]', 'din[18]', 'din[17]', 'din[16]'.
+1
+# Set current design
+set current_top [current_design]
+Current design is 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'.
+{fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16}
+current_design $current_top
+Current design is 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'.
+{fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16}
+check_design
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Sat Jun 27 18:01:32 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              20
+    Connected to power or ground (LINT-32)                         19
+    Nets connected to multiple pins on same cell (LINT-33)          1
+
+Nets                                                               16
+    Unloaded nets (LINT-2)                                         16
+--------------------------------------------------------------------------------
+
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[16]' driven by pin 'u_sram/dout[16]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[17]' driven by pin 'u_sram/dout[17]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[18]' driven by pin 'u_sram/dout[18]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[19]' driven by pin 'u_sram/dout[19]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[20]' driven by pin 'u_sram/dout[20]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[21]' driven by pin 'u_sram/dout[21]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[22]' driven by pin 'u_sram/dout[22]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[23]' driven by pin 'u_sram/dout[23]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[24]' driven by pin 'u_sram/dout[24]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[25]' driven by pin 'u_sram/dout[25]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[26]' driven by pin 'u_sram/dout[26]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[27]' driven by pin 'u_sram/dout[27]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[28]' driven by pin 'u_sram/dout[28]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[29]' driven by pin 'u_sram/dout[29]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[30]' driven by pin 'u_sram/dout[30]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[31]' driven by pin 'u_sram/dout[31]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[8]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[7]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[6]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[31]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[30]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[29]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[28]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[27]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[26]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[25]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[24]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[23]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[22]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[21]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[20]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[19]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[18]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[17]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[16]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', the same net is connected to more than one pin on submodule 'u_sram'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'addr[8]', 'addr[7]'', 'addr[6]', 'din[31]', 'din[30]', 'din[29]', 'din[28]', 'din[27]', 'din[26]', 'din[25]', 'din[24]', 'din[23]', 'din[22]', 'din[21]', 'din[20]', 'din[19]', 'din[18]', 'din[17]', 'din[16]'.
+1
+#########################################
+# Design Constraints                    #
+#########################################
+set_max_capacitance 0.005 [all_inputs]
+1
+set_max_fanout 4 [all_inputs]
+1
+set_max_fanout 4 $current_top
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Sat Jun 27 18:01:32 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              20
+    Connected to power or ground (LINT-32)                         19
+    Nets connected to multiple pins on same cell (LINT-33)          1
+
+Nets                                                               16
+    Unloaded nets (LINT-2)                                         16
+--------------------------------------------------------------------------------
+
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[16]' driven by pin 'u_sram/dout[16]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[17]' driven by pin 'u_sram/dout[17]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[18]' driven by pin 'u_sram/dout[18]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[19]' driven by pin 'u_sram/dout[19]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[20]' driven by pin 'u_sram/dout[20]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[21]' driven by pin 'u_sram/dout[21]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[22]' driven by pin 'u_sram/dout[22]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[23]' driven by pin 'u_sram/dout[23]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[24]' driven by pin 'u_sram/dout[24]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[25]' driven by pin 'u_sram/dout[25]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[26]' driven by pin 'u_sram/dout[26]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[27]' driven by pin 'u_sram/dout[27]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[28]' driven by pin 'u_sram/dout[28]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[29]' driven by pin 'u_sram/dout[29]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[30]' driven by pin 'u_sram/dout[30]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', net 'sram_dout[31]' driven by pin 'u_sram/dout[31]' has no loads. (LINT-2)
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[8]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[7]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'addr[6]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[31]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[30]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[29]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[28]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[27]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[26]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[25]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[24]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[23]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[22]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[21]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[20]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[19]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[18]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[17]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', a pin on submodule 'u_sram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'din[16]' is connected to logic 0. 
+Warning: In design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16', the same net is connected to more than one pin on submodule 'u_sram'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'addr[8]', 'addr[7]'', 'addr[6]', 'din[31]', 'din[30]', 'din[29]', 'din[28]', 'din[27]', 'din[26]', 'din[25]', 'din[24]', 'din[23]', 'din[22]', 'din[21]', 'din[20]', 'din[19]', 'din[18]', 'din[17]', 'din[16]'.
+1
+# Timing constraints
+source -verbose "./timing.tcl"
+0.015
+1.5
+0
+0.050
+0.15
+0.05
+0.005
+clk
+clk
+rstn
+rstn
+1
+1
+1
+1
+Warning: Design rule attributes from the driving cell will be set on the port 'clk'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_sel'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_cen'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_wen'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_addr[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_addr[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_addr[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_addr[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_addr[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_addr[0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[15]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[14]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[13]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[12]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[11]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[10]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[9]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[8]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[7]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[6]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'tb_din[0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'core_cen'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'core_addr[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'core_addr[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'core_addr[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'core_addr[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'core_addr[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'core_addr[0]'. (UID-401)
+1
+1
+1
+1
+1
+1
+#########################################
+# Don't touch synthesized submodules    #
+#########################################
+#set_dont_touch down_counter_inst
+#set_dont_touch sram_controller_inst
+#set_dont_touch sram_wrapper_inst
+#########################################
+# Compile                               #
+#########################################
+current_design $current_top
+Current design is 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'.
+{fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16}
+link
+
+  Linking design 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/dc/fft_twiddle_sram/fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16.db, etc
+  tcbn65gplustc_ccs (library) /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db
+  dw_foundation.sldb (library)
+                              /tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb
+  USERLIB_nldm_tt_1p00v_1p00v_25c (library)
+                              /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db
+
+1
+compile
+CPU Load: 56%, Ram Free: 49 GB, Swap Free: 31 GB, Work Disk Free: 5743 GB, Tmp Disk Free: 31 GB
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.5 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.5 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 74                                     |
+| Number of User Hierarchies                              | 1                                      |
+| Sequential Cell Count                                   | 1                                      |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 3                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 36 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'sram_wrapper'
+  Processing 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:04   31331.9      0.00       0.0       1.4                                0.00  
+    0:00:04   31331.9      0.00       0.0       1.4                                0.00  
+    0:00:04   31331.9      0.00       0.0       1.4                                0.00  
+    0:00:04   31331.9      0.00       0.0       1.4                                0.00  
+    0:00:04   31331.9      0.00       0.0       1.4                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31229.0      0.00       0.0       0.0                                0.00  
+    0:00:04   31227.9      0.00       0.0       0.0                                0.00  
+    0:00:04   31226.5      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+    0:00:04   31225.4      0.00       0.0       0.0                                0.00  
+Loading db file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+CPU Load: 56%, Ram Free: 49 GB, Swap Free: 31 GB, Work Disk Free: 5743 GB, Tmp Disk Free: 31 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+current_design $current_top
+Current design is 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'.
+{fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16}
+rename_design [current_design] $top_level
+Current design is 'fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16'.
+Information: Renaming design /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/dc/fft_twiddle_sram/fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16.db:fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16 to /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/dc/fft_twiddle_sram/fft_twiddle_sram_FFT_POINT128_DATA_WIDTH16.db:fft_twiddle_sram. (UIMG-45)
+Current design is 'fft_twiddle_sram'.
+1
+#########################################
+# Write outputs                         #
+#########################################
+source -verbose "../common_scripts/namingrules.tcl"
+1
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+fft_twiddle_sram net    *Logic0*                n_Logic0_
+1
+1
+#write -hierarchy -format verilog -output "${top_level}.nl.v" #will print all seeperate modules
+write -format verilog -output "${top_level}.nl.v"
+Writing verilog file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/dc/fft_twiddle_sram/fft_twiddle_sram.nl.v'.
+Warning: Verilog writer has added 16 nets to module fft_twiddle_sram using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+write_sdf -context verilog "${top_level}.temp.sdf"
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/dc/fft_twiddle_sram/fft_twiddle_sram.temp.sdf'. (WT-3)
+Warning: The trip points for the library named USERLIB_nldm_tt_1p00v_1p00v_25c differ from those in the library named tcbn65gplustc_ccs. (TIM-164)
+Information: Updating design information... (UID-85)
+1
+write_sdf "${top_level}.syn.sdf"
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/dc/fft_twiddle_sram/fft_twiddle_sram.syn.sdf'. (WT-3)
+1
+write_sdc "${top_level}.syn.sdc" -version 2.1
+1
+# Generate report file
+set maxpaths 20
+20
+set rpt_file "${top_level}.dc.rpt"
+fft_twiddle_sram.dc.rpt
+check_design > $rpt_file
+report_area  >> ${rpt_file}
+report_power -verbose -hier -analysis_effort medium >> ${rpt_file}
+report_design >> ${rpt_file}
+report_cell >> ${rpt_file}
+report_port -verbose >> ${rpt_file}
+report_compile_options >> ${rpt_file}
+report_constraint -all_violators -verbose >> ${rpt_file}
+report_timing -path full -delay max -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs
+report_timing -delay max -nworst 1 -max_paths 10000 -path full -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs.full
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_outputs] > ${top_level}.syn.critical_regs.output
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_registers -data_pins] > ${top_level}.syn.critical_regs.regs
+report_timing -delay min -nworst 1 -max_paths 10000 -path short -nosplit -unique -sort_by slack > ${top_level}.syn.fast_path
+quit
+
+Memory usage for this session 1150 Mbytes.
+Memory usage for this session including child processes 1150 Mbytes.
+CPU usage for this session 24 seconds ( 0.01 hours ).
+Elapsed time for this session 28 seconds ( 0.01 hours ).
+
+Thank you...

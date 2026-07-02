@@ -1,0 +1,94 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : sram_wrapper
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 17:50:12 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+dout[31] (out)                      0.76 r            1.95         1.19
+dout[30] (out)                      0.76 r            1.95         1.19
+dout[29] (out)                      0.76 r            1.95         1.19
+dout[28] (out)                      0.76 r            1.95         1.19
+dout[27] (out)                      0.76 r            1.95         1.19
+dout[26] (out)                      0.76 r            1.95         1.19
+dout[25] (out)                      0.76 r            1.95         1.19
+dout[24] (out)                      0.76 r            1.95         1.19
+dout[23] (out)                      0.76 r            1.95         1.19
+dout[22] (out)                      0.76 r            1.95         1.19
+dout[21] (out)                      0.76 r            1.95         1.19
+dout[20] (out)                      0.76 r            1.95         1.19
+dout[19] (out)                      0.76 r            1.95         1.19
+dout[18] (out)                      0.76 r            1.95         1.19
+dout[17] (out)                      0.76 r            1.95         1.19
+dout[16] (out)                      0.76 r            1.95         1.19
+dout[15] (out)                      0.76 r            1.95         1.19
+dout[14] (out)                      0.76 r            1.95         1.19
+dout[13] (out)                      0.76 r            1.95         1.19
+dout[12] (out)                      0.76 r            1.95         1.19
+dout[11] (out)                      0.76 r            1.95         1.19
+dout[10] (out)                      0.76 r            1.95         1.19
+dout[9] (out)                       0.76 r            1.95         1.19
+dout[8] (out)                       0.76 r            1.95         1.19
+dout[7] (out)                       0.76 r            1.95         1.19
+dout[6] (out)                       0.76 r            1.95         1.19
+dout[5] (out)                       0.76 r            1.95         1.19
+dout[4] (out)                       0.76 r            1.95         1.19
+dout[3] (out)                       0.76 r            1.95         1.19
+dout[2] (out)                       0.76 r            1.95         1.19
+dout[1] (out)                       0.76 r            1.95         1.19
+dout[0] (out)                       0.76 r            1.95         1.19
+u_sram/A[0] (sram00)                0.13 f            1.79         1.66
+u_sram/A[1] (sram00)                0.13 f            1.79         1.66
+u_sram/A[2] (sram00)                0.13 f            1.79         1.66
+u_sram/A[3] (sram00)                0.13 f            1.79         1.66
+u_sram/A[4] (sram00)                0.13 f            1.79         1.66
+u_sram/A[5] (sram00)                0.13 f            1.79         1.66
+u_sram/A[6] (sram00)                0.13 f            1.79         1.66
+u_sram/A[7] (sram00)                0.13 f            1.79         1.66
+u_sram/A[8] (sram00)                0.13 f            1.79         1.66
+u_sram/CEN (sram00)                 0.12 f            1.86         1.74
+u_sram/GWEN (sram00)                0.18 r            1.93         1.74
+u_sram/D[0] (sram00)                0.15 f            1.95         1.80
+u_sram/D[10] (sram00)               0.15 f            1.95         1.80
+u_sram/D[11] (sram00)               0.15 f            1.95         1.80
+u_sram/D[12] (sram00)               0.15 f            1.95         1.80
+u_sram/D[13] (sram00)               0.15 f            1.95         1.80
+u_sram/D[14] (sram00)               0.15 f            1.95         1.80
+u_sram/D[15] (sram00)               0.15 f            1.95         1.80
+u_sram/D[16] (sram00)               0.15 f            1.95         1.80
+u_sram/D[17] (sram00)               0.15 f            1.95         1.80
+u_sram/D[18] (sram00)               0.15 f            1.95         1.80
+u_sram/D[19] (sram00)               0.15 f            1.95         1.80
+u_sram/D[1] (sram00)                0.15 f            1.95         1.80
+u_sram/D[20] (sram00)               0.15 f            1.95         1.80
+u_sram/D[21] (sram00)               0.15 f            1.95         1.80
+u_sram/D[22] (sram00)               0.15 f            1.95         1.80
+u_sram/D[23] (sram00)               0.15 f            1.95         1.80
+u_sram/D[24] (sram00)               0.15 f            1.95         1.80
+u_sram/D[25] (sram00)               0.15 f            1.95         1.80
+u_sram/D[26] (sram00)               0.15 f            1.95         1.80
+u_sram/D[27] (sram00)               0.15 f            1.95         1.80
+u_sram/D[28] (sram00)               0.15 f            1.95         1.80
+u_sram/D[29] (sram00)               0.15 f            1.95         1.80
+u_sram/D[2] (sram00)                0.15 f            1.95         1.80
+u_sram/D[30] (sram00)               0.15 f            1.95         1.80
+u_sram/D[31] (sram00)               0.15 f            1.95         1.80
+u_sram/D[3] (sram00)                0.15 f            1.95         1.80
+u_sram/D[4] (sram00)                0.15 f            1.95         1.80
+u_sram/D[5] (sram00)                0.15 f            1.95         1.80
+u_sram/D[6] (sram00)                0.15 f            1.95         1.80
+u_sram/D[7] (sram00)                0.15 f            1.95         1.80
+u_sram/D[8] (sram00)                0.15 f            1.95         1.80
+u_sram/D[9] (sram00)                0.15 f            1.95         1.80
+
+1

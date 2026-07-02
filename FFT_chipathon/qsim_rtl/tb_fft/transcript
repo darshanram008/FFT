@@ -4,89 +4,89 @@
 # Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:24 on Jun 05,2026
+# Start time: 19:51:41 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr tb_fft.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:01
+# End time: 19:51:42 on Jun 26,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:25 on Jun 05,2026
+# Start time: 19:51:42 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_address_gen/fft_address_gen.v 
 # -- Compiling module fft_address_gen
 # 
 # Top level modules:
 # 	fft_address_gen
-# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 19:51:42 on Jun 26,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:25 on Jun 05,2026
+# Start time: 19:51:42 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_core/fft_core.v 
 # -- Compiling module fft_core
 # 
 # Top level modules:
 # 	fft_core
-# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 19:51:42 on Jun 26,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:25 on Jun 05,2026
+# Start time: 19:51:42 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_controller/fft_controller.v 
 # -- Compiling module fft_controller
 # 
 # Top level modules:
 # 	fft_controller
-# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 19:51:42 on Jun 26,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:25 on Jun 05,2026
+# Start time: 19:51:42 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_data_sram/fft_data_sram.v 
 # -- Compiling module fft_data_sram
 # 
 # Top level modules:
 # 	fft_data_sram
-# End time: 15:40:25 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 19:51:42 on Jun 26,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:25 on Jun 05,2026
+# Start time: 19:51:42 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v 
 # -- Compiling module fft_twiddle_sram
 # 
 # Top level modules:
 # 	fft_twiddle_sram
-# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:01
+# End time: 19:51:42 on Jun 26,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:26 on Jun 05,2026
+# Start time: 19:51:42 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/fft_top/fft_top.v 
 # -- Compiling module fft_top
 # 
 # Top level modules:
 # 	fft_top
-# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 19:51:43 on Jun 26,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:26 on Jun 05,2026
+# Start time: 19:51:43 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/sram_wrapper/sram_wrapper.v 
 # -- Compiling module sram_wrapper
 # 
 # Top level modules:
 # 	sram_wrapper
-# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 19:51:43 on Jun 26,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 15:40:26 on Jun 05,2026
+# Start time: 19:51:43 on Jun 26,2026
 # vlog -reportprogress 300 "+acc" "+define+ARM_UD_MODEL" -incr ../../memory_compiler/fft_sram/sram00.v 
 # -- Compiling module sram00
 # 
 # Top level modules:
 # 	sram00
-# End time: 15:40:26 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 19:51:43 on Jun 26,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" -t ps -lib work testbench 
-# Start time: 15:40:26 on Jun 05,2026
-# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.126.1.el8_10.x86_64
+# Start time: 19:51:43 on Jun 26,2026
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.129.1.el8_10.x86_64
 # //
 # // Unpublished work. Copyright 2024 Siemens
 # //
@@ -108,8 +108,14 @@
 # Loading work.sram_wrapper
 # Loading work.sram00
 # Loading work.fft_twiddle_sram
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'din'. The port definition is at: ../../rtl/sram_wrapper/sram_wrapper.v(40).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/fft_top_inst/u_data_sram/u_sram File: ../../rtl/fft_data_sram/fft_data_sram.v Line: 65
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'dout'. The port definition is at: ../../rtl/sram_wrapper/sram_wrapper.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/fft_top_inst/u_data_sram/u_sram File: ../../rtl/fft_data_sram/fft_data_sram.v Line: 65
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'dout'. The port definition is at: ../../rtl/sram_wrapper/sram_wrapper.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/fft_top_inst/u_tw_sram/u_sram File: ../../rtl/fft_twiddle_sram/fft_twiddle_sram.v Line: 59
 # [TB] input.hex and twiddle.hex loaded
-# [TB] Loading 512 twiddle factors...
+# [TB] Loading          64 twiddle factors...
 # [TB] Twiddles loaded.
 # [TB] ===== Batch 0 =====
 # [TB] Batch 0 compute done.
@@ -143,8 +149,8 @@
 # [TB] Batch 9 output written.
 # [TB] All 10 batches processed.  10 output files generated.
 # ** Note: $finish    : tb_fft.v(312)
-#    Time: 1257420 ns  Iteration: 0  Instance: /testbench
+#    Time: 250700 ns  Iteration: 0  Instance: /testbench
 # 1
 # Break in Module testbench at tb_fft.v line 312
-# End time: 15:41:09 on Jun 05,2026, Elapsed time: 0:00:43
-# Errors: 0, Warnings: 0
+# End time: 19:56:20 on Jun 26,2026, Elapsed time: 0:04:37
+# Errors: 0, Warnings: 3

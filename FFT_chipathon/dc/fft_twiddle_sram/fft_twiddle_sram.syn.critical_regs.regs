@@ -1,0 +1,42 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+u_sram/u_sram/A[4] (sram00)         0.36 f            1.29         0.93
+u_sram/u_sram/A[5] (sram00)         0.36 f            1.29         0.93
+u_sram/u_sram/A[0] (sram00)         0.36 f            1.29         0.93
+u_sram/u_sram/A[1] (sram00)         0.36 f            1.29         0.93
+u_sram/u_sram/A[2] (sram00)         0.36 f            1.29         0.93
+u_sram/u_sram/A[3] (sram00)         0.36 f            1.29         0.93
+u_sram/u_sram/GWEN (sram00)         0.35 f            1.42         1.07
+u_sram/u_sram/D[10] (sram00)        0.33 r            1.46         1.13
+u_sram/u_sram/D[11] (sram00)        0.33 r            1.46         1.13
+u_sram/u_sram/D[12] (sram00)        0.33 r            1.46         1.13
+u_sram/u_sram/D[13] (sram00)        0.33 r            1.46         1.13
+u_sram/u_sram/D[14] (sram00)        0.33 r            1.46         1.13
+u_sram/u_sram/D[15] (sram00)        0.33 r            1.46         1.13
+u_sram/u_sram/D[1] (sram00)         0.33 r            1.46         1.13
+u_sram/u_sram/D[2] (sram00)         0.33 r            1.46         1.13
+u_sram/u_sram/D[7] (sram00)         0.33 r            1.46         1.13
+u_sram/u_sram/D[8] (sram00)         0.33 r            1.46         1.13
+u_sram/u_sram/D[9] (sram00)         0.33 r            1.46         1.13
+u_sram/u_sram/D[0] (sram00)         0.33 r            1.46         1.14
+u_sram/u_sram/D[3] (sram00)         0.25 r            1.46         1.22
+u_sram/u_sram/D[6] (sram00)         0.25 r            1.46         1.22
+u_sram/u_sram/D[4] (sram00)         0.21 r            1.46         1.25
+u_sram/u_sram/D[5] (sram00)         0.21 r            1.46         1.25
+
+1

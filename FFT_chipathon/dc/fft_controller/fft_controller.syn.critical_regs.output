@@ -1,0 +1,118 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+done (out)                          0.70 r            1.95         1.25
+data_addr[4] (out)                  0.48 r            1.95         1.47
+data_addr[2] (out)                  0.48 r            1.95         1.47
+data_addr[6] (out)                  0.48 r            1.95         1.47
+data_addr[3] (out)                  0.48 r            1.95         1.47
+data_addr[1] (out)                  0.48 r            1.95         1.47
+data_addr[5] (out)                  0.48 r            1.95         1.47
+data_addr[0] (out)                  0.48 r            1.95         1.47
+data_din[15] (out)                  0.46 r            1.95         1.49
+data_din[14] (out)                  0.46 r            1.95         1.49
+data_din[12] (out)                  0.46 r            1.95         1.49
+data_din[8] (out)                   0.46 r            1.95         1.49
+data_din[4] (out)                   0.46 r            1.95         1.49
+data_din[3] (out)                   0.46 r            1.95         1.49
+data_din[2] (out)                   0.46 r            1.95         1.49
+data_din[1] (out)                   0.46 r            1.95         1.49
+data_din[13] (out)                  0.46 r            1.95         1.49
+data_din[10] (out)                  0.46 r            1.95         1.49
+tw_addr[5] (out)                    0.44 r            1.95         1.51
+tw_addr[2] (out)                    0.44 r            1.95         1.51
+tw_addr[1] (out)                    0.44 r            1.95         1.51
+tw_addr[4] (out)                    0.44 r            1.95         1.51
+tw_addr[3] (out)                    0.44 r            1.95         1.51
+tw_addr[0] (out)                    0.44 r            1.95         1.51
+data_din[11] (out)                  0.42 r            1.95         1.53
+data_din[9] (out)                   0.42 r            1.95         1.53
+data_din[7] (out)                   0.42 r            1.95         1.53
+data_din[6] (out)                   0.42 r            1.95         1.53
+data_din[5] (out)                   0.42 r            1.95         1.53
+data_din[0] (out)                   0.42 r            1.95         1.53
+data_cen (out)                      0.42 r            1.95         1.53
+busy (out)                          0.39 f            1.95         1.56
+core_x1[6] (out)                    0.38 r            1.95         1.57
+core_x1[2] (out)                    0.38 r            1.95         1.57
+core_x1[1] (out)                    0.38 r            1.95         1.57
+core_x1[0] (out)                    0.38 r            1.95         1.57
+core_w[7] (out)                     0.38 r            1.95         1.57
+core_w[6] (out)                     0.38 r            1.95         1.57
+core_w[5] (out)                     0.38 r            1.95         1.57
+core_w[4] (out)                     0.38 r            1.95         1.57
+core_w[3] (out)                     0.38 r            1.95         1.57
+core_w[2] (out)                     0.38 r            1.95         1.57
+core_w[1] (out)                     0.38 r            1.95         1.57
+core_w[0] (out)                     0.38 r            1.95         1.57
+core_x1[15] (out)                   0.37 r            1.95         1.58
+core_x1[14] (out)                   0.37 r            1.95         1.58
+core_x1[13] (out)                   0.37 r            1.95         1.58
+core_x1[11] (out)                   0.37 r            1.95         1.58
+core_w[15] (out)                    0.35 r            1.95         1.60
+core_w[14] (out)                    0.35 r            1.95         1.60
+core_w[13] (out)                    0.35 r            1.95         1.60
+core_w[12] (out)                    0.35 r            1.95         1.60
+core_w[11] (out)                    0.35 r            1.95         1.60
+core_w[10] (out)                    0.35 r            1.95         1.60
+core_w[9] (out)                     0.35 r            1.95         1.60
+core_w[8] (out)                     0.35 r            1.95         1.60
+sram_tb_sel (out)                   0.33 r            1.95         1.62
+core_x1[12] (out)                   0.31 r            1.95         1.64
+core_x1[10] (out)                   0.31 r            1.95         1.64
+core_x1[9] (out)                    0.31 r            1.95         1.64
+core_x1[8] (out)                    0.31 r            1.95         1.64
+core_x1[7] (out)                    0.31 r            1.95         1.64
+core_x1[5] (out)                    0.31 r            1.95         1.64
+core_x1[4] (out)                    0.31 r            1.95         1.64
+core_x1[3] (out)                    0.31 r            1.95         1.64
+core_start (out)                    0.30 r            1.95         1.65
+tw_cen (out)                        0.29 r            1.95         1.66
+data_wen (out)                      0.23 r            1.95         1.72
+stage[0] (out)                      0.17 f            1.95         1.78
+stage[2] (out)                      0.15 f            1.95         1.80
+stage[1] (out)                      0.12 f            1.95         1.83
+group[0] (out)                      0.12 f            1.95         1.83
+group[4] (out)                      0.12 f            1.95         1.83
+group[3] (out)                      0.12 f            1.95         1.83
+bfly[4] (out)                       0.12 f            1.95         1.83
+bfly[2] (out)                       0.12 f            1.95         1.83
+bfly[5] (out)                       0.12 f            1.95         1.83
+group[1] (out)                      0.12 f            1.95         1.83
+group[5] (out)                      0.12 f            1.95         1.83
+bfly[3] (out)                       0.12 f            1.95         1.83
+bfly[0] (out)                       0.12 f            1.95         1.83
+core_x0[15] (out)                   0.12 r            1.95         1.83
+core_x0[14] (out)                   0.12 r            1.95         1.83
+core_x0[13] (out)                   0.12 r            1.95         1.83
+core_x0[12] (out)                   0.12 r            1.95         1.83
+core_x0[11] (out)                   0.12 r            1.95         1.83
+core_x0[10] (out)                   0.12 r            1.95         1.83
+core_x0[9] (out)                    0.12 r            1.95         1.83
+core_x0[8] (out)                    0.12 r            1.95         1.83
+core_x0[7] (out)                    0.12 r            1.95         1.83
+core_x0[6] (out)                    0.12 r            1.95         1.83
+core_x0[5] (out)                    0.12 r            1.95         1.83
+core_x0[4] (out)                    0.12 r            1.95         1.83
+core_x0[3] (out)                    0.12 r            1.95         1.83
+core_x0[2] (out)                    0.12 r            1.95         1.83
+core_x0[1] (out)                    0.12 r            1.95         1.83
+core_x0[0] (out)                    0.12 r            1.95         1.83
+group[2] (out)                      0.11 f            1.95         1.84
+bfly[1] (out)                       0.11 f            1.95         1.84
+
+1

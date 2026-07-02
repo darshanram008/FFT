@@ -103,9 +103,13 @@ module fft_top #(
     // During compute, linear_addr input is unused (the bitrev helper is only
     // for the testbench's tb_linear_addr lookup). We route tb_linear_addr
     // through the address_gen to produce tb_bitrev_addr.
-    fft_address_gen  #(
+     fft_address_gen
+     `ifndef SYNTH  
+     #(
     .FFT_POINT(FFT_POINT)
-)u_addr(
+)
+`endif
+u_addr(
         .stage        (stage),
         .group        (group),
         .bfly         (bfly),
@@ -119,11 +123,15 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Butterfly core
     // --------------------------------------------------------------------
-    fft_core  #(
+    fft_core
+    `ifndef SYNTH  
+     #(
 	
     	.DATA_WIDTH(DATA_WIDTH)
 
-)u_core(
+)
+`endif
+u_core(
         .clk      (clk),
         .rstn     (rstn),
         .start    (core_start),
@@ -138,11 +146,15 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Controller
     // --------------------------------------------------------------------
-    fft_controller  #(
+    fft_controller
+    `ifndef SYNTH  
+     #(
 
     .DATA_WIDTH(DATA_WIDTH),
     .FFT_POINT(FFT_POINT)
-)u_ctrl(
+)
+`endif
+u_ctrl(
         .clk          (clk),
         .rstn         (rstn),
         .start        (start),
@@ -182,11 +194,15 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Data SRAM
     // --------------------------------------------------------------------
-    fft_data_sram  #(
+    fft_data_sram 
+    `ifndef SYNTH 
+     #(
 
 	.FFT_POINT(FFT_POINT),
 	.DATA_WIDTH(DATA_WIDTH)	
-) u_data_sram(
+)
+`endif 
+u_data_sram(
         .clk       (clk),
         .tb_sel    (sram_tb_sel),
 
@@ -207,12 +223,17 @@ module fft_top #(
     // --------------------------------------------------------------------
     // Twiddle SRAM
     // --------------------------------------------------------------------
-    fft_twiddle_sram  #(
+    
+    fft_twiddle_sram
+    `ifndef SYNTH 
+    #(
 
 	.FFT_POINT(FFT_POINT),
 	.DATA_WIDTH(DATA_WIDTH)	
 
-) u_tw_sram(
+)
+`endif  
+u_tw_sram(
         .clk       (clk),
         .tb_sel    (sram_tb_sel),
 

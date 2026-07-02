@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fft_core
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:14:50 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+x0_out[15] (out)                    0.11 f            3.95         3.84
+x0_out[7] (out)                     0.11 f            3.95         3.84
+x0_out[13] (out)                    0.11 f            3.95         3.84
+x0_out[12] (out)                    0.11 f            3.95         3.84
+x0_out[11] (out)                    0.11 f            3.95         3.84
+x0_out[10] (out)                    0.11 f            3.95         3.84
+x0_out[9] (out)                     0.11 f            3.95         3.84
+x0_out[8] (out)                     0.11 f            3.95         3.84
+x0_out[5] (out)                     0.11 f            3.95         3.84
+x0_out[4] (out)                     0.11 f            3.95         3.84
+x0_out[3] (out)                     0.11 f            3.95         3.84
+x0_out[2] (out)                     0.11 f            3.95         3.84
+x0_out[1] (out)                     0.11 f            3.95         3.84
+x0_out[0] (out)                     0.11 f            3.95         3.84
+x1_out[13] (out)                    0.11 f            3.95         3.84
+x1_out[12] (out)                    0.11 f            3.95         3.84
+x1_out[11] (out)                    0.11 f            3.95         3.84
+x1_out[10] (out)                    0.11 f            3.95         3.84
+x1_out[9] (out)                     0.11 f            3.95         3.84
+x1_out[8] (out)                     0.11 f            3.95         3.84
+x1_out[5] (out)                     0.11 f            3.95         3.84
+x1_out[4] (out)                     0.11 f            3.95         3.84
+x1_out[3] (out)                     0.11 f            3.95         3.84
+x1_out[2] (out)                     0.11 f            3.95         3.84
+x1_out[1] (out)                     0.11 f            3.95         3.84
+x1_out[0] (out)                     0.11 f            3.95         3.84
+x0_out[14] (out)                    0.11 f            3.95         3.84
+x0_out[6] (out)                     0.11 f            3.95         3.84
+x1_out[14] (out)                    0.11 f            3.95         3.84
+x1_out[6] (out)                     0.11 f            3.95         3.84
+x1_out[15] (out)                    0.11 f            3.95         3.84
+x1_out[7] (out)                     0.11 f            3.95         3.84
+done (out)                          0.11 f            3.95         3.84
+
+1

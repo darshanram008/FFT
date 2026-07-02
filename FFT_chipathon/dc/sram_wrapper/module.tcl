@@ -13,7 +13,7 @@ set top_level sram_wrapper
 set sram_flavor single_port_sram
 
 # Read libraries
-set search_path [list "." "/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a" "/tools/synopsys/syn/U-2022.12-SP7/libraries/syn" "../../memory_compiler/single_port_sram/sram00_libs"]
+set search_path [list "." "/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a" "/tools/synopsys/syn/U-2022.12-SP7/libraries/syn" "../../memory_compiler/fft_sram/sram00_libs"]
 set synthetic_library [list "dw_foundation.sldb"]
 set link_library [list "*" "tcbn65gplustc_ccs.db" "dw_foundation.sldb" "sram00_nldm_tt_1p00v_1p00v_25c_syn.db"]
 set target_library [list "tcbn65gplustc_ccs.db"]
@@ -36,7 +36,8 @@ link
 check_design
 
 # Set current design
-current_design $top_level
+set current_top [current_design]
+current_design $current_top
 check_design
 
 #########################################
@@ -45,7 +46,7 @@ check_design
 
 set_max_capacitance 0.005 [all_inputs]
 set_max_fanout 4 [all_inputs]
-set_max_fanout 4 $top_level
+set_max_fanout 4 $current_top
 
 set_fix_multiple_port_nets -all -buffer_constants
 
@@ -58,16 +59,19 @@ source -verbose "./timing.tcl"
 # Compile                               #
 #########################################
 
-current_design $top_level
+current_design $current_top
 link
 
 compile
-
+current_design $current_top
+#rename_design [current_design] $top_level
+puts "Current design after rename: [current_design]"
 #########################################
 # Write outputs                         #
 #########################################
 source -verbose "../common_scripts/namingrules.tcl"
-write -hierarchy -format verilog -output "${top_level}.nl.v"
+
+write  -hierarchy -format verilog -output "${top_level}.nl.v"
 write_sdf -context verilog "${top_level}.temp.sdf"
 write_sdf "${top_level}.syn.sdf"
 write_sdc "${top_level}.syn.sdc" -version 2.1

@@ -7,127 +7,134 @@
 # Read design and library
 ##################################################
 
-## Set top_level name
-#set top_level dut
-#
-## Read system verilog files
-#analyze -format verilog "../../rtl/dut/dut.v"
-#
-#elaborate ${top_level}
-#
-## List the names of the designs
-#list_designs
-#
-## Check error
-#if { [check_error -v] == 1 } { exit 1 }
-#
-## Set current design
-#current_design $top_level
-#
-## Link the design
-#link
-#
-## Generate structural verilog netlist
-#write -hierarchy -format verilog -output "${top_level}.nl.v"
-#
-## Finish synthesis
-#quit
-
-
-#########################################
-# READ Design and Library               #
-#########################################
-
-# Set top level module name
+# Set the top_level name
 set top_level fft_top
 
-#source -verbose "../common_scripts/common.tcl"
+
+# In this file, libray path and libraries which are used are defined
+#source -verbose "../common_scripts/common.tcl" 
 # Read libraries
-set search_path [list "." "/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a" "/tools/synopsys/syn/U-2022.12-SP7/libraries/syn" "../../memory_compiler/single_port_sram/sram00_libs"]
+set search_path [list "." "/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a" "/tools/synopsys/syn/U-2022.12-SP7/libraries/syn" "../../memory_compiler/fft_sram/sram00_libs"]
 set synthetic_library [list "dw_foundation.sldb"]
 set link_library [list "*" "tcbn65gplustc_ccs.db" "dw_foundation.sldb" "sram00_nldm_tt_1p00v_1p00v_25c_syn.db"]
 set target_library [list "tcbn65gplustc_ccs.db"]
 
-# Read verilog files and elaborate
-analyze -format verilog "../../rtl/$top_level/$top_level.v"
+
+# Read verilog files
+#read_verilog {../../rtl/$top_level/$top_level.v}
+
+analyze -format verilog -define {SYNTH} "../../rtl/$top_level/$top_level.v"
 analyze -format verilog "../../dc/fft_data_sram/fft_data_sram.nl.v"
 analyze -format verilog "../../dc/fft_core/fft_core.nl.v"
 analyze -format verilog "../../dc/fft_address_gen/fft_address_gen.nl.v"
 analyze -format verilog "../../dc/fft_twiddle_sram/fft_twiddle_sram.nl.v"
 analyze -format verilog "../../dc/fft_controller/fft_controller.nl.v"
 analyze -format verilog "../../dc/sram_wrapper/sram_wrapper.nl.v"
-analyze -format verilog "../../dc/sram_wrapper/sram_wrapper.nl.v"
 
-elaborate $top_level
 
-# List the names of the designs
+
+
+elaborate $top_level -parameters "DATA_WIDTH=16,FFT_POINT=128"
+
+
+# List the names of the designs loaded in memory
+# Note: This command don't have any functionality for synthesis
+#       This is for debugging
 list_designs
 
-# Check error
+# Check errors
 if { [check_error -v] == 1 } { exit 1 }
+
+# Set the current design
+# Note: The active design is called the current design
+#       Most commands are specific to the current design
+set current_top [current_design]
+current_design $current_top
+
+
+# Link the design
+# Note: The design must be connected to all the library components and designs if references
+#       For each subdesign, a reference and a link must exist between the subdesign and a design or component
+#       in the link libraries
+link
+
+
+##################################################
+# Define design rule constraints                    
+##################################################
+
+# Set maximum fanout of gates
+# Note: This command sets the maximum allowable fanout load for the listed input ports
+#       The object lists specifies a list of input ports and/or designs on which the max_fanout attribute is to be set
+set_max_fanout 4 $current_top
+set_max_fanout 4 [all_inputs]
+
+# Set a maximum capacitance for the nets attached to named ports or to all the nets in a design
+set_max_capacitance 0.01 [all_inputs]
+
+# Verify the design consistency
+# Note: This command reports an error that DC cannot resolve or a warning
+check_design
+
+
+##################################################
+# Define design optimization constraints
+##################################################
+
+# Set timing environment through another .tcl file
+source -verbose "./timing.tcl"
+
+# Set the fix_multiple_port_nets attribute to a specified value on the current design or a list of designs
+# Note: '-all' option inserts buffers to the ports
+#       '-buffer_constants' option inserts buffers to logic constants instead of duplicating them
+set_fix_multiple_port_nets -all -buffer_constants
+set_wire_load_mode top
+
+##################################################
+# Optimize the design
+##################################################
+
+# Verify the design consistency
+check_design
+
+# Set the current design
+current_design $current_top
 
 # Link the design
 link
+
+# Synthesize the design
+# Note : This command performs a high-effort compile on the current design for better quality of results (QoR)
+compile_ultra
+
+current_design $current_top
+rename_design [current_design] $top_level
+##################################################
+# Analyze and resolve design problems
+##################################################
+
+# Verify the design consistency
 check_design
 
-# Set current design
-current_design $top_level
-check_design
-
-#########################################
-# Design Constraints                    #
-#########################################
-
-set_max_capacitance 0.005 [all_inputs]
-set_max_fanout 4 [all_inputs]
-set_max_fanout 4 $top_level
-
-set_fix_multiple_port_nets -all -buffer_constants
-
-check_design
-
-# Timing constraints
-source -verbose "./timing.tcl"
-
-#########################################
-# Don't touch synthesized submodules    #
-#########################################
-
-set_dont_touch down_counter_inst
-set_dont_touch sram_controller_inst
-set_dont_touch sram_wrapper_inst
-
-#########################################
-# Compile                               #
-#########################################
-
-current_design $top_level
-link
-
-compile
-
-#########################################
-# Write outputs                         #
-#########################################
+# Rename modules, signals according to the naming rules
 source -verbose "../common_scripts/namingrules.tcl"
-#write -hierarchy -format verilog -output "${top_level}.nl.v"
-write -format verilog -output "${top_level}.nl.v"
-write_sdf -context verilog "${top_level}.temp.sdf"
-write_sdf "${top_level}.syn.sdf"
-write_sdc "${top_level}.syn.sdc" -version 2.1
 
-# Generate report file
-set maxpaths 20
+# Generate a report file
 set rpt_file "${top_level}.dc.rpt"
-check_design > $rpt_file
+set maxpaths 20
+
+check_design >> ${rpt_file}
+
 report_area  >> ${rpt_file}
-report_power -verbose -hier -analysis_effort medium >> ${rpt_file}
+report_power -hier -analysis_effort medium >> ${rpt_file}
 report_design >> ${rpt_file}
 report_cell >> ${rpt_file}
 report_port -verbose >> ${rpt_file}
 report_compile_options >> ${rpt_file}
 report_constraint -all_violators -verbose >> ${rpt_file}
 report_timing -path full -delay max -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_timing -path full -delay min -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_timing_requirements >> ${rpt_file} 
 
 report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs
 report_timing -delay max -nworst 1 -max_paths 10000 -path full -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs.full
@@ -135,4 +142,23 @@ report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -
 report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_registers -data_pins] > ${top_level}.syn.critical_regs.regs
 report_timing -delay min -nworst 1 -max_paths 10000 -path short -nosplit -unique -sort_by slack > ${top_level}.syn.fast_path
 
+
+##################################################
+# Save the design database 
+##################################################
+
+# Generate structural verilog netlist
+write -hierarchy -format verilog -output "${top_level}.nl.v"
+
+# Write a Standard Delay Format (SDF) file
+# Note : SDF is an IEEE standard for the representation and interpretation of timing data
+#        The SDF file includes delays (module path, device, interconnect, and port), timing checks (setup, hold, recovery, skew, width, and period),
+#        timing constraints (path and skew), incremental and absolute delays, and so on
+write_sdf "${top_level}.syn.sdf"
+
+# Write a SDC file
+# Note : SDC is a format used to specify the design intent, including the timing, power and area constraints for a design
+write_sdc "${top_level}.syn.sdc" -version 1.7
+
+# Finish synthesis
 quit

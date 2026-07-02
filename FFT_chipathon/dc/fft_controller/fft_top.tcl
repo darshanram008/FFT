@@ -23,18 +23,12 @@ set target_library [list "tcbn65gplustc_ccs.db"]
 # Read verilog files
 #read_verilog {../../rtl/$top_level/$top_level.v}
 
-analyze -format verilog "../../rtl/fft_address_gen/fft_address_gen.v"
-analyze -format verilog "../../rtl/fft_controller/fft_controller.v"
-analyze -format verilog "../../rtl/fft_core/fft_core.v"
-analyze -format verilog "../../rtl/fft_data_sram/fft_data_sram.v"
-analyze -format verilog "../../rtl/fft_twiddle_sram/fft_twiddle_sram.v"
-analyze -format verilog "../../rtl/sram_wrapper/sram_wrapper.v"
 analyze -format verilog "../../rtl/$top_level/$top_level.v"
 
 
 
 
-elaborate $top_level
+elaborate $top_level -parameters "DATA_WIDTH=16,FFT_POINT=128"
 
 
 # List the names of the designs loaded in memory
@@ -48,7 +42,9 @@ if { [check_error -v] == 1 } { exit 1 }
 # Set the current design
 # Note: The active design is called the current design
 #       Most commands are specific to the current design
-current_design $top_level
+set current_top [current_design]
+current_design $current_top
+
 
 # Link the design
 # Note: The design must be connected to all the library components and designs if references
@@ -64,7 +60,7 @@ link
 # Set maximum fanout of gates
 # Note: This command sets the maximum allowable fanout load for the listed input ports
 #       The object lists specifies a list of input ports and/or designs on which the max_fanout attribute is to be set
-set_max_fanout 4 $top_level
+set_max_fanout 4 $current_top
 set_max_fanout 4 [all_inputs]
 
 # Set a maximum capacitance for the nets attached to named ports or to all the nets in a design
@@ -96,7 +92,7 @@ set_wire_load_mode top
 check_design
 
 # Set the current design
-current_design $top_level
+current_design $current_top
 
 # Link the design
 link
@@ -105,7 +101,8 @@ link
 # Note : This command performs a high-effort compile on the current design for better quality of results (QoR)
 compile_ultra
 
-
+current_design $current_top
+rename_design [current_design] $top_level
 ##################################################
 # Analyze and resolve design problems
 ##################################################

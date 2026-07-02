@@ -1,0 +1,1297 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Sat Jun 27 18:01:37 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               1
+    Nets connected to multiple pins on same cell (LINT-33)          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'fft_twiddle_sram', the same net is connected to more than one pin on submodule 'u_sram'. (LINT-33)
+   Net 'n_Logic0_' is connected to pins 'addr[8]', 'addr[7]'', 'addr[6]', 'din[31]', 'din[30]', 'din[29]', 'din[28]', 'din[27]', 'din[26]', 'din[25]', 'din[24]', 'din[23]', 'din[22]', 'din[21]', 'din[20]', 'din[19]', 'din[18]', 'din[17]', 'din[16]'.
+1
+ 
+****************************************
+Report : area
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:37 2026
+****************************************
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+    USERLIB_nldm_tt_1p00v_1p00v_25c (File: /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db)
+
+Number of ports:                          125
+Number of nets:                           164
+Number of cells:                           41
+Number of combinational cells:             39
+Number of sequential cells:                 0
+Number of macros/black boxes:               1
+Number of buf/inv:                         12
+Number of references:                       6
+
+Combinational area:                 74.520003
+Buf/Inv area:                       14.400001
+Noncombinational area:               0.000000
+Macro/Black Box area:            31150.861328
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 31225.381331
+Total area:                 undefined
+1
+Loading db file '/courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db'
+Loading db file '/homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db'
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+        -verbose
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+    USERLIB_nldm_tt_1p00v_1p00v_25c (File: /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fft_twiddle_sram       ZeroWireload      tcbn65gplustc_ccs
+sram_wrapper           ZeroWireload      tcbn65gplustc_ccs
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+fft_twiddle_sram                       6.98e-03    7.166 1.26e+05    7.300 100.0
+  u_sram (sram_wrapper)                2.95e-03    7.162 1.26e+05    7.290  99.9
+1
+ 
+****************************************
+Report : design
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+    USERLIB_nldm_tt_1p00v_1p00v_25c (File: /homes/user/stud/fall25/dr3412/EECS6321_Adv_dig/FFT/FFT_chipathon/memory_compiler/fft_sram/sram00_libs/sram00_nldm_tt_1p00v_1p00v_25c_syn.db)
+
+Local Link Library:
+
+    {tcbn65gplustc_ccs.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : NCCOM
+    Library : tcbn65gplustc_ccs
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected automatically from the total cell area.
+
+Name           :   ZeroWireload
+Location       :   tcbn65gplustc_ccs
+Resistance     :   1e-05
+Capacitance    :   1
+Area           :   0
+Slope          :   0
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.00
+     2     0.00
+     3     0.00
+     4     0.00
+     5     0.00
+     6     0.00
+     7     0.00
+     8     0.00
+     9     0.00
+    10     0.00
+    11     0.00
+    12     0.00
+    13     0.00
+    14     0.00
+    15     0.00
+    16     0.00
+    17     0.00
+    18     0.00
+    19     0.00
+    20     0.00
+
+
+
+Wire Loading Model Mode: segmented.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    FFT_POINT => 128
+    DATA_WIDTH => 16
+1
+ 
+****************************************
+Report : cell
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U2                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U3                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U4                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U5                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U6                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U7                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U8                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U9                        AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U10                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U11                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U12                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U13                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U14                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U15                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U16                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U17                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U18                       AN2XD1          tcbn65gplustc_ccs
+                                                          2.160000  
+U27                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U28                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U29                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U30                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U31                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U32                       CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U33                       CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U34                       CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U35                       INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U36                       AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U37                       AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U38                       CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U39                       AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U40                       AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U41                       AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U42                       AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U43                       AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U44                       TIEL            tcbn65gplustc_ccs
+                                                          1.080000  
+u_sram                    sram_wrapper                    31155.181328
+                                                                    b, h
+--------------------------------------------------------------------------------
+Total 36 cells                                            31225.381331
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000    0.39    0.00   --         
+core_addr[0]   in      0.0000   0.0000    0.39    0.00   --         
+core_addr[1]   in      0.0000   0.0000    0.39    0.00   --         
+core_addr[2]   in      0.0000   0.0000    0.39    0.00   --         
+core_addr[3]   in      0.0000   0.0000    0.39    0.00   --         
+core_addr[4]   in      0.0000   0.0000    0.39    0.00   --         
+core_addr[5]   in      0.0000   0.0000    0.39    0.00   --         
+core_cen       in      0.0000   0.0000    0.39    0.00   --         
+tb_addr[0]     in      0.0000   0.0000    0.39    0.00   --         
+tb_addr[1]     in      0.0000   0.0000    0.39    0.00   --         
+tb_addr[2]     in      0.0000   0.0000    0.39    0.00   --         
+tb_addr[3]     in      0.0000   0.0000    0.39    0.00   --         
+tb_addr[4]     in      0.0000   0.0000    0.39    0.00   --         
+tb_addr[5]     in      0.0000   0.0000    0.39    0.00   --         
+tb_cen         in      0.0000   0.0000    0.39    0.00   --         
+tb_din[0]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[1]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[2]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[3]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[4]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[5]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[6]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[7]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[8]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[9]      in      0.0000   0.0000    0.39    0.00   --         
+tb_din[10]     in      0.0000   0.0000    0.39    0.00   --         
+tb_din[11]     in      0.0000   0.0000    0.39    0.00   --         
+tb_din[12]     in      0.0000   0.0000    0.39    0.00   --         
+tb_din[13]     in      0.0000   0.0000    0.39    0.00   --         
+tb_din[14]     in      0.0000   0.0000    0.39    0.00   --         
+tb_din[15]     in      0.0000   0.0000    0.39    0.00   --         
+tb_sel         in      0.0000   0.0000    0.39    0.00   --         
+tb_wen         in      0.0000   0.0000    0.39    0.00   --         
+dout[0]        out     0.0050   0.0000   --      --      --         
+dout[1]        out     0.0050   0.0000   --      --      --         
+dout[2]        out     0.0050   0.0000   --      --      --         
+dout[3]        out     0.0050   0.0000   --      --      --         
+dout[4]        out     0.0050   0.0000   --      --      --         
+dout[5]        out     0.0050   0.0000   --      --      --         
+dout[6]        out     0.0050   0.0000   --      --      --         
+dout[7]        out     0.0050   0.0000   --      --      --         
+dout[8]        out     0.0050   0.0000   --      --      --         
+dout[9]        out     0.0050   0.0000   --      --      --         
+dout[10]       out     0.0050   0.0000   --      --      --         
+dout[11]       out     0.0050   0.0000   --      --      --         
+dout[12]       out     0.0050   0.0000   --      --      --         
+dout[13]       out     0.0050   0.0000   --      --      --         
+dout[14]       out     0.0050   0.0000   --      --      --         
+dout[15]       out     0.0050   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+clk                1      --              --              --        -- 
+core_addr[0]       1      --              --              --        -- 
+core_addr[1]       1      --              --              --        -- 
+core_addr[2]       1      --              --              --        -- 
+core_addr[3]       1      --              --              --        -- 
+core_addr[4]       1      --              --              --        -- 
+core_addr[5]       1      --              --              --        -- 
+core_cen           1      --              --              --        -- 
+tb_addr[0]         1      --              --              --        -- 
+tb_addr[1]         1      --              --              --        -- 
+tb_addr[2]         1      --              --              --        -- 
+tb_addr[3]         1      --              --              --        -- 
+tb_addr[4]         1      --              --              --        -- 
+tb_addr[5]         1      --              --              --        -- 
+tb_cen             1      --              --              --        -- 
+tb_din[0]          1      --              --              --        -- 
+tb_din[1]          1      --              --              --        -- 
+tb_din[2]          1      --              --              --        -- 
+tb_din[3]          1      --              --              --        -- 
+tb_din[4]          1      --              --              --        -- 
+tb_din[5]          1      --              --              --        -- 
+tb_din[6]          1      --              --              --        -- 
+tb_din[7]          1      --              --              --        -- 
+tb_din[8]          1      --              --              --        -- 
+tb_din[9]          1      --              --              --        -- 
+tb_din[10]         1      --              --              --        -- 
+tb_din[11]         1      --              --              --        -- 
+tb_din[12]         1      --              --              --        -- 
+tb_din[13]         1      --              --              --        -- 
+tb_din[14]         1      --              --              --        -- 
+tb_din[15]         1      --              --              --        -- 
+tb_sel             1      --              --              --        -- 
+tb_wen             1      --              --              --        -- 
+dout[0]            1      --              --              --        -- 
+dout[1]            1      --              --              --        -- 
+dout[2]            1      --              --              --        -- 
+dout[3]            1      --              --              --        -- 
+dout[4]            1      --              --              --        -- 
+dout[5]            1      --              --              --        -- 
+dout[6]            1      --              --              --        -- 
+dout[7]            1      --              --              --        -- 
+dout[8]            1      --              --              --        -- 
+dout[9]            1      --              --              --        -- 
+dout[10]           1      --              --              --        -- 
+dout[11]           1      --              --              --        -- 
+dout[12]           1      --              --              --        -- 
+dout[13]           1      --              --              --        -- 
+dout[14]           1      --              --              --        -- 
+dout[15]           1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+clk           --      --      --      --      --      4.00
+core_addr[0]
+              0.15    0.15    0.15    0.15  clk       4.00  
+core_addr[1]
+              0.15    0.15    0.15    0.15  clk       4.00  
+core_addr[2]
+              0.15    0.15    0.15    0.15  clk       4.00  
+core_addr[3]
+              0.15    0.15    0.15    0.15  clk       4.00  
+core_addr[4]
+              0.15    0.15    0.15    0.15  clk       4.00  
+core_addr[5]
+              0.15    0.15    0.15    0.15  clk       4.00  
+core_cen      0.15    0.15    0.15    0.15  clk       4.00  
+tb_addr[0]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_addr[1]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_addr[2]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_addr[3]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_addr[4]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_addr[5]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_cen        0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[0]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[1]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[2]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[3]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[4]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[5]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[6]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[7]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[8]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[9]     0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[10]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[11]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[12]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[13]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[14]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_din[15]    0.15    0.15    0.15    0.15  clk       4.00  
+tb_sel        0.15    0.15    0.15    0.15  clk       4.00  
+tb_wen        0.15    0.15    0.15    0.15  clk       4.00  
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+clk          INVD0              INVD0                -- /  --     
+core_addr[0] INVD0              INVD0                -- /  --     
+core_addr[1] INVD0              INVD0                -- /  --     
+core_addr[2] INVD0              INVD0                -- /  --     
+core_addr[3] INVD0              INVD0                -- /  --     
+core_addr[4] INVD0              INVD0                -- /  --     
+core_addr[5] INVD0              INVD0                -- /  --     
+core_cen     INVD0              INVD0                -- /  --     
+tb_addr[0]   INVD0              INVD0                -- /  --     
+tb_addr[1]   INVD0              INVD0                -- /  --     
+tb_addr[2]   INVD0              INVD0                -- /  --     
+tb_addr[3]   INVD0              INVD0                -- /  --     
+tb_addr[4]   INVD0              INVD0                -- /  --     
+tb_addr[5]   INVD0              INVD0                -- /  --     
+tb_cen       INVD0              INVD0                -- /  --     
+tb_din[0]    INVD0              INVD0                -- /  --     
+tb_din[1]    INVD0              INVD0                -- /  --     
+tb_din[2]    INVD0              INVD0                -- /  --     
+tb_din[3]    INVD0              INVD0                -- /  --     
+tb_din[4]    INVD0              INVD0                -- /  --     
+tb_din[5]    INVD0              INVD0                -- /  --     
+tb_din[6]    INVD0              INVD0                -- /  --     
+tb_din[7]    INVD0              INVD0                -- /  --     
+tb_din[8]    INVD0              INVD0                -- /  --     
+tb_din[9]    INVD0              INVD0                -- /  --     
+tb_din[10]   INVD0              INVD0                -- /  --     
+tb_din[11]   INVD0              INVD0                -- /  --     
+tb_din[12]   INVD0              INVD0                -- /  --     
+tb_din[13]   INVD0              INVD0                -- /  --     
+tb_din[14]   INVD0              INVD0                -- /  --     
+tb_din[15]   INVD0              INVD0                -- /  --     
+tb_sel       INVD0              INVD0                -- /  --     
+tb_wen       INVD0              INVD0                -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+clk           --      --     --      --     --      --     --     --        -- 
+core_addr[0]
+              --      --     --      --     --      --     --     --        -- 
+core_addr[1]
+              --      --     --      --     --      --     --     --        -- 
+core_addr[2]
+              --      --     --      --     --      --     --     --        -- 
+core_addr[3]
+              --      --     --      --     --      --     --     --        -- 
+core_addr[4]
+              --      --     --      --     --      --     --     --        -- 
+core_addr[5]
+              --      --     --      --     --      --     --     --        -- 
+core_cen      --      --     --      --     --      --     --     --        -- 
+tb_addr[0]    --      --     --      --     --      --     --     --        -- 
+tb_addr[1]    --      --     --      --     --      --     --     --        -- 
+tb_addr[2]    --      --     --      --     --      --     --     --        -- 
+tb_addr[3]    --      --     --      --     --      --     --     --        -- 
+tb_addr[4]    --      --     --      --     --      --     --     --        -- 
+tb_addr[5]    --      --     --      --     --      --     --     --        -- 
+tb_cen        --      --     --      --     --      --     --     --        -- 
+tb_din[0]     --      --     --      --     --      --     --     --        -- 
+tb_din[1]     --      --     --      --     --      --     --     --        -- 
+tb_din[2]     --      --     --      --     --      --     --     --        -- 
+tb_din[3]     --      --     --      --     --      --     --     --        -- 
+tb_din[4]     --      --     --      --     --      --     --     --        -- 
+tb_din[5]     --      --     --      --     --      --     --     --        -- 
+tb_din[6]     --      --     --      --     --      --     --     --        -- 
+tb_din[7]     --      --     --      --     --      --     --     --        -- 
+tb_din[8]     --      --     --      --     --      --     --     --        -- 
+tb_din[9]     --      --     --      --     --      --     --     --        -- 
+tb_din[10]    --      --     --      --     --      --     --     --        -- 
+tb_din[11]    --      --     --      --     --      --     --     --        -- 
+tb_din[12]    --      --     --      --     --      --     --     --        -- 
+tb_din[13]    --      --     --      --     --      --     --     --        -- 
+tb_din[14]    --      --     --      --     --      --     --     --        -- 
+tb_din[15]    --      --     --      --     --      --     --     --        -- 
+tb_sel        --      --     --      --     --      --     --     --        -- 
+tb_wen        --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+clk           --      --      --      -- 
+core_addr[0]
+              --      --      --      -- 
+core_addr[1]
+              --      --      --      -- 
+core_addr[2]
+              --      --      --      -- 
+core_addr[3]
+              --      --      --      -- 
+core_addr[4]
+              --      --      --      -- 
+core_addr[5]
+              --      --      --      -- 
+core_cen      --      --      --      -- 
+tb_addr[0]    --      --      --      -- 
+tb_addr[1]    --      --      --      -- 
+tb_addr[2]    --      --      --      -- 
+tb_addr[3]    --      --      --      -- 
+tb_addr[4]    --      --      --      -- 
+tb_addr[5]    --      --      --      -- 
+tb_cen        --      --      --      -- 
+tb_din[0]     --      --      --      -- 
+tb_din[1]     --      --      --      -- 
+tb_din[2]     --      --      --      -- 
+tb_din[3]     --      --      --      -- 
+tb_din[4]     --      --      --      -- 
+tb_din[5]     --      --      --      -- 
+tb_din[6]     --      --      --      -- 
+tb_din[7]     --      --      --      -- 
+tb_din[8]     --      --      --      -- 
+tb_din[9]     --      --      --      -- 
+tb_din[10]    --      --      --      -- 
+tb_din[11]    --      --      --      -- 
+tb_din[12]    --      --      --      -- 
+tb_din[13]    --      --      --      -- 
+tb_din[14]    --      --      --      -- 
+tb_din[15]    --      --      --      -- 
+tb_sel        --      --      --      -- 
+tb_wen        --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+dout[0]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[1]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[2]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[3]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[4]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[5]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[6]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[7]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[8]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[9]       0.05    0.05    0.05    0.05  clk       0.00  
+dout[10]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[11]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[12]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[13]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[14]      0.05    0.05    0.05    0.05  clk       0.00  
+dout[15]      0.05    0.05    0.05    0.05  clk       0.00  
+
+1
+ 
+****************************************
+Report : compile_options
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+fft_twiddle_sram                         flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+
+sram_wrapper                             flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+This design has no violated constraints.
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : fft_twiddle_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 18:01:43 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[15] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[15] (sram00)             0.76       0.76 r
+  u_sram/dout[15] (sram_wrapper)           0.00       0.76 r
+  dout[15] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[14] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[14] (sram00)             0.76       0.76 r
+  u_sram/dout[14] (sram_wrapper)           0.00       0.76 r
+  dout[14] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[13] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[13] (sram00)             0.76       0.76 r
+  u_sram/dout[13] (sram_wrapper)           0.00       0.76 r
+  dout[13] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[12] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[12] (sram00)             0.76       0.76 r
+  u_sram/dout[12] (sram_wrapper)           0.00       0.76 r
+  dout[12] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[11] (sram00)             0.76       0.76 r
+  u_sram/dout[11] (sram_wrapper)           0.00       0.76 r
+  dout[11] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[10] (sram00)             0.76       0.76 r
+  u_sram/dout[10] (sram_wrapper)           0.00       0.76 r
+  dout[10] (out)                           0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[9] (sram00)              0.76       0.76 r
+  u_sram/dout[9] (sram_wrapper)            0.00       0.76 r
+  dout[9] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[8] (sram00)              0.76       0.76 r
+  u_sram/dout[8] (sram_wrapper)            0.00       0.76 r
+  dout[8] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[7] (sram00)              0.76       0.76 r
+  u_sram/dout[7] (sram_wrapper)            0.00       0.76 r
+  dout[7] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[6] (sram00)              0.76       0.76 r
+  u_sram/dout[6] (sram_wrapper)            0.00       0.76 r
+  dout[6] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[5] (sram00)              0.76       0.76 r
+  u_sram/dout[5] (sram_wrapper)            0.00       0.76 r
+  dout[5] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[4] (sram00)              0.76       0.76 r
+  u_sram/dout[4] (sram_wrapper)            0.00       0.76 r
+  dout[4] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[3] (sram00)              0.76       0.76 r
+  u_sram/dout[3] (sram_wrapper)            0.00       0.76 r
+  dout[3] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[2] (sram00)              0.76       0.76 r
+  u_sram/dout[2] (sram_wrapper)            0.00       0.76 r
+  dout[2] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[1] (sram00)              0.76       0.76 r
+  u_sram/dout[1] (sram_wrapper)            0.00       0.76 r
+  dout[1] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[0] (sram00)              0.76       0.76 r
+  u_sram/dout[0] (sram_wrapper)            0.00       0.76 r
+  dout[0] (out)                            0.00       0.76 r
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[12] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[12] (sram00)             0.75       0.75 f
+  u_sram/dout[12] (sram_wrapper)           0.00       0.75 f
+  dout[12] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.70
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[11] (sram00)             0.75       0.75 f
+  u_sram/dout[11] (sram_wrapper)           0.00       0.75 f
+  dout[11] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.70
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[10] (sram00)             0.75       0.75 f
+  u_sram/dout[10] (sram_wrapper)           0.00       0.75 f
+  dout[10] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.70
+
+
+  Startpoint: u_sram/u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_twiddle_sram   ZeroWireload          tcbn65gplustc_ccs
+  sram_wrapper       ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram/u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram/u_sram/Q[0] (sram00)              0.75       0.75 f
+  u_sram/dout[0] (sram_wrapper)            0.00       0.75 f
+  dout[0] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    1.50       1.50
+  clock network delay (ideal)              0.00       1.50
+  output external delay                   -0.05       1.45
+  data required time                                  1.45
+  -----------------------------------------------------------
+  data required time                                  1.45
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.70
+
+
+1

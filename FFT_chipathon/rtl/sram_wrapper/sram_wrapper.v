@@ -49,19 +49,22 @@ module sram_wrapper #(
     wire [4:0] WEN_n = 5'b0000; // all 4 bytes enabled for writes;
                                 // GWEN_n gates whether write actually happens
 
+
+    //  size mapping
+  
     // --------------------------------------------------------------------
     // Instantiate sram00
     // --------------------------------------------------------------------
     sram00 u_sram (
-        .CLK  (clk),
-        .CEN  (CEN_n),
-        .GWEN (GWEN_n),
-        .WEN  (WEN_n),
-        .A    (addr),
-        .D    (din),
-        .EMA  (3'b000),
-        .RETN (1'b1),
-        .Q    (dout)
+        .CLK  (clk), // 1 bit 
+        .CEN  (CEN_n), // 1 bit
+        .GWEN (GWEN_n), // 1 bit 
+        .WEN  (WEN_n), // 5 bits 
+        .A    (addr), //9 bits
+        .D    (din), // 32 bits
+        .EMA  (3'b000), // 3 bits
+        .RETN (1'b1), // 1 bit
+        .Q    (dout) //32 bits
     );
 
 endmodule

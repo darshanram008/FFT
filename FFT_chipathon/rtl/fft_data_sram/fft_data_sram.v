@@ -55,9 +55,12 @@ module fft_data_sram #(
     wire [DATA_WIDTH-1:0] din_mux  = tb_sel ? tb_din  : core_din;
 
     // Zero-extend 10-bit logical address to 13-bit physical SRAM address
-     wire [SRAM_DATA_WIDTH-1:0] din_wrapper = {{(SRAM_DATA_WIDTH - DATA_WIDTH){1'b0}},din_mux};
+    // wire [SRAM_DATA_WIDTH-1:0] din_wrapper = {{(SRAM_DATA_WIDTH - DATA_WIDTH){1'b0}},din_mux};
 
-    wire [SRAM_WORD_WIDTH-1:0] sram_addr =  {{(SRAM_WORD_WIDTH - WORD_WIDTH){1'b0}},addr_mux};
+     wire [SRAM_WORD_WIDTH-1:0] sram_addr ={{(SRAM_WORD_WIDTH-WORD_WIDTH){1'b0}}, addr_mux};
+    wire [SRAM_DATA_WIDTH-1:0] sram_din ={{(SRAM_DATA_WIDTH-DATA_WIDTH){1'b0}}, din_mux};
+    wire [SRAM_DATA_WIDTH-1:0] sram_dout;
+    assign dout = sram_dout[DATA_WIDTH-1:0];
 
     // --------------------------------------------------------------------
     // Instantiate sram_wrapper
@@ -67,8 +70,8 @@ module fft_data_sram #(
         .cen  (cen_mux),
         .wen  (wen_mux),
         .addr (sram_addr),
-        .din  (din_wrapper),
-        .dout (dout)
+        .din  (sram_din),
+        .dout (sram_dout)
     );
 
 endmodule

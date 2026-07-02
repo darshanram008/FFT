@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+x1_addr[6] (out)                    0.87 f            1.95         1.08
+x1_addr[5] (out)                    0.81 r            1.95         1.14
+x1_addr[4] (out)                    0.74 r            1.95         1.21
+x0_addr[6] (out)                    0.73 r            1.95         1.22
+x0_addr[5] (out)                    0.70 r            1.95         1.25
+x1_addr[3] (out)                    0.68 f            1.95         1.27
+x0_addr[4] (out)                    0.65 r            1.95         1.30
+x1_addr[2] (out)                    0.63 f            1.95         1.32
+x0_addr[3] (out)                    0.59 r            1.95         1.36
+x0_addr[2] (out)                    0.54 r            1.95         1.41
+w_addr[2] (out)                     0.50 r            1.95         1.45
+x1_addr[1] (out)                    0.49 r            1.95         1.46
+w_addr[5] (out)                     0.48 f            1.95         1.47
+w_addr[4] (out)                     0.47 f            1.95         1.48
+w_addr[3] (out)                     0.46 r            1.95         1.49
+w_addr[0] (out)                     0.41 r            1.95         1.54
+w_addr[1] (out)                     0.40 r            1.95         1.55
+x0_addr[1] (out)                    0.39 f            1.95         1.56
+x1_addr[0] (out)                    0.38 r            1.95         1.57
+x0_addr[0] (out)                    0.18 r            1.95         1.77
+bitrev_addr[6] (out)                0.16 r            1.95         1.79
+bitrev_addr[5] (out)                0.16 r            1.95         1.79
+bitrev_addr[4] (out)                0.16 r            1.95         1.79
+bitrev_addr[3] (out)                0.16 r            1.95         1.79
+bitrev_addr[2] (out)                0.16 r            1.95         1.79
+bitrev_addr[1] (out)                0.16 r            1.95         1.79
+bitrev_addr[0] (out)                0.16 r            1.95         1.79
+
+1

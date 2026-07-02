@@ -1,0 +1,3542 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Sat Jun 27 21:38:32 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Unconnected ports (LINT-28)                                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'fft_controller', port 'core_done' is not connected to any nets. (LINT-28)
+1
+ 
+****************************************
+Report : area
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+Number of ports:                          187
+Number of nets:                           406
+Number of cells:                          319
+Number of combinational cells:            271
+Number of sequential cells:                48
+Number of macros/black boxes:               0
+Number of buf/inv:                        109
+Number of references:                      40
+
+Combinational area:                499.320014
+Buf/Inv area:                      133.200005
+Noncombinational area:             446.400006
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   945.720020
+Total area:                 undefined
+1
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fft_controller         ZeroWireload      tcbn65gplustc_ccs
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+fft_controller                         2.50e-02    0.324 3.54e+03    0.353 100.0
+1
+ 
+****************************************
+Report : design
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+Local Link Library:
+
+    {tcbn65gplustc_ccs.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : NCCOM
+    Library : tcbn65gplustc_ccs
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected automatically from the total cell area.
+
+Name           :   ZeroWireload
+Location       :   tcbn65gplustc_ccs
+Resistance     :   1e-05
+Capacitance    :   1
+Area           :   0
+Slope          :   0
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.00
+     2     0.00
+     3     0.00
+     4     0.00
+     5     0.00
+     6     0.00
+     7     0.00
+     8     0.00
+     9     0.00
+    10     0.00
+    11     0.00
+    12     0.00
+    13     0.00
+    14     0.00
+    15     0.00
+    16     0.00
+    17     0.00
+    18     0.00
+    19     0.00
+    20     0.00
+
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    DATA_WIDTH => 16
+    FFT_POINT => 128
+1
+ 
+****************************************
+Report : cell
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U184                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U185                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U186                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U187                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U188                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U189                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U190                      OR2D0           tcbn65gplustc_ccs
+                                                          2.160000  
+U191                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U192                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U193                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U194                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U195                      OR2D0           tcbn65gplustc_ccs
+                                                          2.160000  
+U196                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U197                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U198                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U199                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U200                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U201                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U202                      AN3D0           tcbn65gplustc_ccs
+                                                          2.520000  
+U203                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U204                      CKAN2D1         tcbn65gplustc_ccs
+                                                          2.160000  
+U205                      CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U206                      OR2D1           tcbn65gplustc_ccs
+                                                          2.160000  
+U207                      NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U208                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U209                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U210                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U211                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U212                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U213                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U214                      ND2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U215                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U216                      ND2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U217                      OAI32D0         tcbn65gplustc_ccs
+                                                          2.880000  
+U218                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U219                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U220                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U221                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U222                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U223                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U224                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U225                      MOAI22D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U226                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U227                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U228                      MOAI22D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U229                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U230                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U231                      MOAI22D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U232                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U233                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U234                      IND2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U235                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U236                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U237                      AOI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U238                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U239                      AOI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U240                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U241                      INR2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U242                      INR2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U243                      INR2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U244                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U245                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U246                      INR2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U247                      CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U248                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U249                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U250                      INR2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U251                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U252                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U253                      INR2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U254                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U255                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U256                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U257                      OAI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U258                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U259                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U260                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U261                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U262                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U263                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U264                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U265                      IND2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U266                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U267                      OAI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U268                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U269                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U270                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U271                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U272                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U273                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U274                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U275                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U276                      AO21D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U277                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U278                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U279                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U280                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U281                      OAI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U282                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U283                      ND3D0           tcbn65gplustc_ccs
+                                                          2.160000  
+U284                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U285                      OAI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U286                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U287                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U288                      OAI31D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U289                      ND3D0           tcbn65gplustc_ccs
+                                                          2.160000  
+U290                      NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U291                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U292                      CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U293                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U294                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U295                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U296                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U297                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U298                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U299                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U300                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U301                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U302                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U303                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U304                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U305                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U306                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U307                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U308                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U309                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U310                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U311                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U312                      OR3D1           tcbn65gplustc_ccs
+                                                          2.520000  
+U313                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U314                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U315                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U316                      NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U317                      NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U318                      CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U319                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U320                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U321                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U322                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U323                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U324                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U325                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U326                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U327                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U328                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U329                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U330                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U331                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U332                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U333                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U334                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U335                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U336                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U337                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U338                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U339                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U340                      OAI32D0         tcbn65gplustc_ccs
+                                                          2.880000  
+U341                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U342                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U343                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U344                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U345                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U346                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U347                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U348                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U349                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U350                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U351                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U352                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U353                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U354                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U355                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U356                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U357                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U358                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U359                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U360                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U361                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U362                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U363                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U364                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U365                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U366                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U367                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U368                      AOI211XD0       tcbn65gplustc_ccs
+                                                          2.520000  
+U369                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U370                      AO21D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U371                      MUX2ND0         tcbn65gplustc_ccs
+                                                          2.880000  
+U372                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U373                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U374                      MUX2ND0         tcbn65gplustc_ccs
+                                                          2.880000  
+U375                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U376                      MUX2ND0         tcbn65gplustc_ccs
+                                                          2.880000  
+U377                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U378                      IND4D1          tcbn65gplustc_ccs
+                                                          2.880000  
+U379                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U380                      CKBD1           tcbn65gplustc_ccs
+                                                          1.440000  
+U381                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U382                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U383                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U384                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U385                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U386                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U387                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U388                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U389                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U390                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U391                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U392                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U393                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U394                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U395                      CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U396                      NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U397                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U398                      MUX2ND0         tcbn65gplustc_ccs
+                                                          2.880000  
+U399                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U400                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U401                      OAI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U402                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U403                      MUX2ND0         tcbn65gplustc_ccs
+                                                          2.880000  
+U404                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U405                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U406                      AOI211XD0       tcbn65gplustc_ccs
+                                                          2.520000  
+U407                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U408                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U409                      INR3D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U410                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U411                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U412                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U413                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U414                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U415                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U416                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U417                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U418                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U419                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U420                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U421                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U422                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U423                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U424                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U425                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U426                      OAI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U427                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U428                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U429                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U430                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U431                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U432                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U433                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U434                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U435                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U436                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U437                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U438                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U439                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U440                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U441                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U442                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U443                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U444                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U445                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U446                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U447                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U448                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U449                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U450                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U451                      BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U452                      OAI222D0        tcbn65gplustc_ccs
+                                                          3.240000  
+U453                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U454                      OAI31D0         tcbn65gplustc_ccs
+                                                          2.520000  
+bfly_reg_0_               DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+bfly_reg_1_               DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+bfly_reg_2_               DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+bfly_reg_3_               DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+bfly_reg_4_               DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+bfly_reg_5_               DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+group_reg_0_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+group_reg_1_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+group_reg_2_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+group_reg_3_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+group_reg_4_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+group_reg_5_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+stage_reg_0_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+stage_reg_1_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+stage_reg_2_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+state_reg_0_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+state_reg_1_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+state_reg_2_              DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_addr_l_reg_0_          DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_addr_l_reg_1_          DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_addr_l_reg_2_          DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_addr_l_reg_3_          DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_addr_l_reg_4_          DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_addr_l_reg_5_          DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_addr_l_reg_6_          DFCNQD1         tcbn65gplustc_ccs
+                                                          7.920000  n
+x0_latched_reg_0_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_1_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_2_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_3_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_4_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_5_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_6_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_7_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_8_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_9_         EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_10_        EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_11_        EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_12_        EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_13_        EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_14_        EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x0_latched_reg_15_        EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x1_addr_l_reg_0_          EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x1_addr_l_reg_1_          EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x1_addr_l_reg_2_          EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x1_addr_l_reg_3_          EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x1_addr_l_reg_4_          EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x1_addr_l_reg_5_          EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+x1_addr_l_reg_6_          EDFCNQD1        tcbn65gplustc_ccs
+                                                          10.800000 n
+--------------------------------------------------------------------------------
+Total 319 cells                                           945.720020
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000    0.39    0.01   --         
+core_done      in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[0] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[1] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[2] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[3] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[4] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[5] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[6] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[7] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[8] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[9] in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[10]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[11]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[12]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[13]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[14]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x0_out[15]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[0] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[1] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[2] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[3] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[4] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[5] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[6] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[7] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[8] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[9] in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[10]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[11]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[12]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[13]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[14]
+               in      0.0000   0.0000    0.39    0.01   --         
+core_x1_out[15]
+               in      0.0000   0.0000    0.39    0.01   --         
+data_dout[0]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[1]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[2]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[3]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[4]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[5]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[6]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[7]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[8]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[9]   in      0.0000   0.0000    0.39    0.01   --         
+data_dout[10]  in      0.0000   0.0000    0.39    0.01   --         
+data_dout[11]  in      0.0000   0.0000    0.39    0.01   --         
+data_dout[12]  in      0.0000   0.0000    0.39    0.01   --         
+data_dout[13]  in      0.0000   0.0000    0.39    0.01   --         
+data_dout[14]  in      0.0000   0.0000    0.39    0.01   --         
+data_dout[15]  in      0.0000   0.0000    0.39    0.01   --         
+rstn           in      0.0000   0.0000    0.39    0.01   --         
+start          in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[0]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[1]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[2]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[3]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[4]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[5]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[6]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[7]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[8]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[9]     in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[10]    in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[11]    in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[12]    in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[13]    in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[14]    in      0.0000   0.0000    0.39    0.01   --         
+tw_dout[15]    in      0.0000   0.0000    0.39    0.01   --         
+w_addr[0]      in      0.0000   0.0000    0.39    0.01   --         
+w_addr[1]      in      0.0000   0.0000    0.39    0.01   --         
+w_addr[2]      in      0.0000   0.0000    0.39    0.01   --         
+w_addr[3]      in      0.0000   0.0000    0.39    0.01   --         
+w_addr[4]      in      0.0000   0.0000    0.39    0.01   --         
+w_addr[5]      in      0.0000   0.0000    0.39    0.01   --         
+x0_addr[0]     in      0.0000   0.0000    0.39    0.01   --         
+x0_addr[1]     in      0.0000   0.0000    0.39    0.01   --         
+x0_addr[2]     in      0.0000   0.0000    0.39    0.01   --         
+x0_addr[3]     in      0.0000   0.0000    0.39    0.01   --         
+x0_addr[4]     in      0.0000   0.0000    0.39    0.01   --         
+x0_addr[5]     in      0.0000   0.0000    0.39    0.01   --         
+x0_addr[6]     in      0.0000   0.0000    0.39    0.01   --         
+x1_addr[0]     in      0.0000   0.0000    0.39    0.01   --         
+x1_addr[1]     in      0.0000   0.0000    0.39    0.01   --         
+x1_addr[2]     in      0.0000   0.0000    0.39    0.01   --         
+x1_addr[3]     in      0.0000   0.0000    0.39    0.01   --         
+x1_addr[4]     in      0.0000   0.0000    0.39    0.01   --         
+x1_addr[5]     in      0.0000   0.0000    0.39    0.01   --         
+x1_addr[6]     in      0.0000   0.0000    0.39    0.01   --         
+bfly[0]        out     0.0050   0.0000   --      --      --         
+bfly[1]        out     0.0050   0.0000   --      --      --         
+bfly[2]        out     0.0050   0.0000   --      --      --         
+bfly[3]        out     0.0050   0.0000   --      --      --         
+bfly[4]        out     0.0050   0.0000   --      --      --         
+bfly[5]        out     0.0050   0.0000   --      --      --         
+busy           out     0.0050   0.0000   --      --      --         
+core_start     out     0.0050   0.0000   --      --      --         
+core_w[0]      out     0.0050   0.0000   --      --      --         
+core_w[1]      out     0.0050   0.0000   --      --      --         
+core_w[2]      out     0.0050   0.0000   --      --      --         
+core_w[3]      out     0.0050   0.0000   --      --      --         
+core_w[4]      out     0.0050   0.0000   --      --      --         
+core_w[5]      out     0.0050   0.0000   --      --      --         
+core_w[6]      out     0.0050   0.0000   --      --      --         
+core_w[7]      out     0.0050   0.0000   --      --      --         
+core_w[8]      out     0.0050   0.0000   --      --      --         
+core_w[9]      out     0.0050   0.0000   --      --      --         
+core_w[10]     out     0.0050   0.0000   --      --      --         
+core_w[11]     out     0.0050   0.0000   --      --      --         
+core_w[12]     out     0.0050   0.0000   --      --      --         
+core_w[13]     out     0.0050   0.0000   --      --      --         
+core_w[14]     out     0.0050   0.0000   --      --      --         
+core_w[15]     out     0.0050   0.0000   --      --      --         
+core_x0[0]     out     0.0050   0.0000   --      --      --         
+core_x0[1]     out     0.0050   0.0000   --      --      --         
+core_x0[2]     out     0.0050   0.0000   --      --      --         
+core_x0[3]     out     0.0050   0.0000   --      --      --         
+core_x0[4]     out     0.0050   0.0000   --      --      --         
+core_x0[5]     out     0.0050   0.0000   --      --      --         
+core_x0[6]     out     0.0050   0.0000   --      --      --         
+core_x0[7]     out     0.0050   0.0000   --      --      --         
+core_x0[8]     out     0.0050   0.0000   --      --      --         
+core_x0[9]     out     0.0050   0.0000   --      --      --         
+core_x0[10]    out     0.0050   0.0000   --      --      --         
+core_x0[11]    out     0.0050   0.0000   --      --      --         
+core_x0[12]    out     0.0050   0.0000   --      --      --         
+core_x0[13]    out     0.0050   0.0000   --      --      --         
+core_x0[14]    out     0.0050   0.0000   --      --      --         
+core_x0[15]    out     0.0050   0.0000   --      --      --         
+core_x1[0]     out     0.0050   0.0000   --      --      --         
+core_x1[1]     out     0.0050   0.0000   --      --      --         
+core_x1[2]     out     0.0050   0.0000   --      --      --         
+core_x1[3]     out     0.0050   0.0000   --      --      --         
+core_x1[4]     out     0.0050   0.0000   --      --      --         
+core_x1[5]     out     0.0050   0.0000   --      --      --         
+core_x1[6]     out     0.0050   0.0000   --      --      --         
+core_x1[7]     out     0.0050   0.0000   --      --      --         
+core_x1[8]     out     0.0050   0.0000   --      --      --         
+core_x1[9]     out     0.0050   0.0000   --      --      --         
+core_x1[10]    out     0.0050   0.0000   --      --      --         
+core_x1[11]    out     0.0050   0.0000   --      --      --         
+core_x1[12]    out     0.0050   0.0000   --      --      --         
+core_x1[13]    out     0.0050   0.0000   --      --      --         
+core_x1[14]    out     0.0050   0.0000   --      --      --         
+core_x1[15]    out     0.0050   0.0000   --      --      --         
+data_addr[0]   out     0.0050   0.0000   --      --      --         
+data_addr[1]   out     0.0050   0.0000   --      --      --         
+data_addr[2]   out     0.0050   0.0000   --      --      --         
+data_addr[3]   out     0.0050   0.0000   --      --      --         
+data_addr[4]   out     0.0050   0.0000   --      --      --         
+data_addr[5]   out     0.0050   0.0000   --      --      --         
+data_addr[6]   out     0.0050   0.0000   --      --      --         
+data_cen       out     0.0050   0.0000   --      --      --         
+data_din[0]    out     0.0050   0.0000   --      --      --         
+data_din[1]    out     0.0050   0.0000   --      --      --         
+data_din[2]    out     0.0050   0.0000   --      --      --         
+data_din[3]    out     0.0050   0.0000   --      --      --         
+data_din[4]    out     0.0050   0.0000   --      --      --         
+data_din[5]    out     0.0050   0.0000   --      --      --         
+data_din[6]    out     0.0050   0.0000   --      --      --         
+data_din[7]    out     0.0050   0.0000   --      --      --         
+data_din[8]    out     0.0050   0.0000   --      --      --         
+data_din[9]    out     0.0050   0.0000   --      --      --         
+data_din[10]   out     0.0050   0.0000   --      --      --         
+data_din[11]   out     0.0050   0.0000   --      --      --         
+data_din[12]   out     0.0050   0.0000   --      --      --         
+data_din[13]   out     0.0050   0.0000   --      --      --         
+data_din[14]   out     0.0050   0.0000   --      --      --         
+data_din[15]   out     0.0050   0.0000   --      --      --         
+data_wen       out     0.0050   0.0000   --      --      --         
+done           out     0.0050   0.0000   --      --      --         
+group[0]       out     0.0050   0.0000   --      --      --         
+group[1]       out     0.0050   0.0000   --      --      --         
+group[2]       out     0.0050   0.0000   --      --      --         
+group[3]       out     0.0050   0.0000   --      --      --         
+group[4]       out     0.0050   0.0000   --      --      --         
+group[5]       out     0.0050   0.0000   --      --      --         
+sram_tb_sel    out     0.0050   0.0000   --      --      --         
+stage[0]       out     0.0050   0.0000   --      --      --         
+stage[1]       out     0.0050   0.0000   --      --      --         
+stage[2]       out     0.0050   0.0000   --      --      --         
+tw_addr[0]     out     0.0050   0.0000   --      --      --         
+tw_addr[1]     out     0.0050   0.0000   --      --      --         
+tw_addr[2]     out     0.0050   0.0000   --      --      --         
+tw_addr[3]     out     0.0050   0.0000   --      --      --         
+tw_addr[4]     out     0.0050   0.0000   --      --      --         
+tw_addr[5]     out     0.0050   0.0000   --      --      --         
+tw_cen         out     0.0050   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+clk                1      --              --              --        -- 
+core_done          1      --              --              --        -- 
+core_x0_out[0]
+                   1      --              --              --        -- 
+core_x0_out[1]
+                   1      --              --              --        -- 
+core_x0_out[2]
+                   1      --              --              --        -- 
+core_x0_out[3]
+                   1      --              --              --        -- 
+core_x0_out[4]
+                   1      --              --              --        -- 
+core_x0_out[5]
+                   1      --              --              --        -- 
+core_x0_out[6]
+                   1      --              --              --        -- 
+core_x0_out[7]
+                   1      --              --              --        -- 
+core_x0_out[8]
+                   1      --              --              --        -- 
+core_x0_out[9]
+                   1      --              --              --        -- 
+core_x0_out[10]
+                   1      --              --              --        -- 
+core_x0_out[11]
+                   1      --              --              --        -- 
+core_x0_out[12]
+                   1      --              --              --        -- 
+core_x0_out[13]
+                   1      --              --              --        -- 
+core_x0_out[14]
+                   1      --              --              --        -- 
+core_x0_out[15]
+                   1      --              --              --        -- 
+core_x1_out[0]
+                   1      --              --              --        -- 
+core_x1_out[1]
+                   1      --              --              --        -- 
+core_x1_out[2]
+                   1      --              --              --        -- 
+core_x1_out[3]
+                   1      --              --              --        -- 
+core_x1_out[4]
+                   1      --              --              --        -- 
+core_x1_out[5]
+                   1      --              --              --        -- 
+core_x1_out[6]
+                   1      --              --              --        -- 
+core_x1_out[7]
+                   1      --              --              --        -- 
+core_x1_out[8]
+                   1      --              --              --        -- 
+core_x1_out[9]
+                   1      --              --              --        -- 
+core_x1_out[10]
+                   1      --              --              --        -- 
+core_x1_out[11]
+                   1      --              --              --        -- 
+core_x1_out[12]
+                   1      --              --              --        -- 
+core_x1_out[13]
+                   1      --              --              --        -- 
+core_x1_out[14]
+                   1      --              --              --        -- 
+core_x1_out[15]
+                   1      --              --              --        -- 
+data_dout[0]       1      --              --              --        -- 
+data_dout[1]       1      --              --              --        -- 
+data_dout[2]       1      --              --              --        -- 
+data_dout[3]       1      --              --              --        -- 
+data_dout[4]       1      --              --              --        -- 
+data_dout[5]       1      --              --              --        -- 
+data_dout[6]       1      --              --              --        -- 
+data_dout[7]       1      --              --              --        -- 
+data_dout[8]       1      --              --              --        -- 
+data_dout[9]       1      --              --              --        -- 
+data_dout[10]      1      --              --              --        -- 
+data_dout[11]      1      --              --              --        -- 
+data_dout[12]      1      --              --              --        -- 
+data_dout[13]      1      --              --              --        -- 
+data_dout[14]      1      --              --              --        -- 
+data_dout[15]      1      --              --              --        -- 
+rstn               1      --              --              --        -- 
+start              1      --              --              --        -- 
+tw_dout[0]         1      --              --              --        -- 
+tw_dout[1]         1      --              --              --        -- 
+tw_dout[2]         1      --              --              --        -- 
+tw_dout[3]         1      --              --              --        -- 
+tw_dout[4]         1      --              --              --        -- 
+tw_dout[5]         1      --              --              --        -- 
+tw_dout[6]         1      --              --              --        -- 
+tw_dout[7]         1      --              --              --        -- 
+tw_dout[8]         1      --              --              --        -- 
+tw_dout[9]         1      --              --              --        -- 
+tw_dout[10]        1      --              --              --        -- 
+tw_dout[11]        1      --              --              --        -- 
+tw_dout[12]        1      --              --              --        -- 
+tw_dout[13]        1      --              --              --        -- 
+tw_dout[14]        1      --              --              --        -- 
+tw_dout[15]        1      --              --              --        -- 
+w_addr[0]          1      --              --              --        -- 
+w_addr[1]          1      --              --              --        -- 
+w_addr[2]          1      --              --              --        -- 
+w_addr[3]          1      --              --              --        -- 
+w_addr[4]          1      --              --              --        -- 
+w_addr[5]          1      --              --              --        -- 
+x0_addr[0]         1      --              --              --        -- 
+x0_addr[1]         1      --              --              --        -- 
+x0_addr[2]         1      --              --              --        -- 
+x0_addr[3]         1      --              --              --        -- 
+x0_addr[4]         1      --              --              --        -- 
+x0_addr[5]         1      --              --              --        -- 
+x0_addr[6]         1      --              --              --        -- 
+x1_addr[0]         1      --              --              --        -- 
+x1_addr[1]         1      --              --              --        -- 
+x1_addr[2]         1      --              --              --        -- 
+x1_addr[3]         1      --              --              --        -- 
+x1_addr[4]         1      --              --              --        -- 
+x1_addr[5]         1      --              --              --        -- 
+x1_addr[6]         1      --              --              --        -- 
+bfly[0]            1      --              --              --        -- 
+bfly[1]            1      --              --              --        -- 
+bfly[2]            1      --              --              --        -- 
+bfly[3]            1      --              --              --        -- 
+bfly[4]            1      --              --              --        -- 
+bfly[5]            1      --              --              --        -- 
+busy               1      --              --              --        -- 
+core_start         1      --              --              --        -- 
+core_w[0]          1      --              --              --        -- 
+core_w[1]          1      --              --              --        -- 
+core_w[2]          1      --              --              --        -- 
+core_w[3]          1      --              --              --        -- 
+core_w[4]          1      --              --              --        -- 
+core_w[5]          1      --              --              --        -- 
+core_w[6]          1      --              --              --        -- 
+core_w[7]          1      --              --              --        -- 
+core_w[8]          1      --              --              --        -- 
+core_w[9]          1      --              --              --        -- 
+core_w[10]         1      --              --              --        -- 
+core_w[11]         1      --              --              --        -- 
+core_w[12]         1      --              --              --        -- 
+core_w[13]         1      --              --              --        -- 
+core_w[14]         1      --              --              --        -- 
+core_w[15]         1      --              --              --        -- 
+core_x0[0]         1      --              --              --        -- 
+core_x0[1]         1      --              --              --        -- 
+core_x0[2]         1      --              --              --        -- 
+core_x0[3]         1      --              --              --        -- 
+core_x0[4]         1      --              --              --        -- 
+core_x0[5]         1      --              --              --        -- 
+core_x0[6]         1      --              --              --        -- 
+core_x0[7]         1      --              --              --        -- 
+core_x0[8]         1      --              --              --        -- 
+core_x0[9]         1      --              --              --        -- 
+core_x0[10]        1      --              --              --        -- 
+core_x0[11]        1      --              --              --        -- 
+core_x0[12]        1      --              --              --        -- 
+core_x0[13]        1      --              --              --        -- 
+core_x0[14]        1      --              --              --        -- 
+core_x0[15]        1      --              --              --        -- 
+core_x1[0]         1      --              --              --        -- 
+core_x1[1]         1      --              --              --        -- 
+core_x1[2]         1      --              --              --        -- 
+core_x1[3]         1      --              --              --        -- 
+core_x1[4]         1      --              --              --        -- 
+core_x1[5]         1      --              --              --        -- 
+core_x1[6]         1      --              --              --        -- 
+core_x1[7]         1      --              --              --        -- 
+core_x1[8]         1      --              --              --        -- 
+core_x1[9]         1      --              --              --        -- 
+core_x1[10]        1      --              --              --        -- 
+core_x1[11]        1      --              --              --        -- 
+core_x1[12]        1      --              --              --        -- 
+core_x1[13]        1      --              --              --        -- 
+core_x1[14]        1      --              --              --        -- 
+core_x1[15]        1      --              --              --        -- 
+data_addr[0]       1      --              --              --        -- 
+data_addr[1]       1      --              --              --        -- 
+data_addr[2]       1      --              --              --        -- 
+data_addr[3]       1      --              --              --        -- 
+data_addr[4]       1      --              --              --        -- 
+data_addr[5]       1      --              --              --        -- 
+data_addr[6]       1      --              --              --        -- 
+data_cen           1      --              --              --        -- 
+data_din[0]        1      --              --              --        -- 
+data_din[1]        1      --              --              --        -- 
+data_din[2]        1      --              --              --        -- 
+data_din[3]        1      --              --              --        -- 
+data_din[4]        1      --              --              --        -- 
+data_din[5]        1      --              --              --        -- 
+data_din[6]        1      --              --              --        -- 
+data_din[7]        1      --              --              --        -- 
+data_din[8]        1      --              --              --        -- 
+data_din[9]        1      --              --              --        -- 
+data_din[10]       1      --              --              --        -- 
+data_din[11]       1      --              --              --        -- 
+data_din[12]       1      --              --              --        -- 
+data_din[13]       1      --              --              --        -- 
+data_din[14]       1      --              --              --        -- 
+data_din[15]       1      --              --              --        -- 
+data_wen           1      --              --              --        -- 
+done               1      --              --              --        -- 
+group[0]           1      --              --              --        -- 
+group[1]           1      --              --              --        -- 
+group[2]           1      --              --              --        -- 
+group[3]           1      --              --              --        -- 
+group[4]           1      --              --              --        -- 
+group[5]           1      --              --              --        -- 
+sram_tb_sel        1      --              --              --        -- 
+stage[0]           1      --              --              --        -- 
+stage[1]           1      --              --              --        -- 
+stage[2]           1      --              --              --        -- 
+tw_addr[0]         1      --              --              --        -- 
+tw_addr[1]         1      --              --              --        -- 
+tw_addr[2]         1      --              --              --        -- 
+tw_addr[3]         1      --              --              --        -- 
+tw_addr[4]         1      --              --              --        -- 
+tw_addr[5]         1      --              --              --        -- 
+tw_cen             1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+clk           --      --      --      --      --      4.00
+core_done     0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[0]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[1]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[2]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[3]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[4]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[5]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[6]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[7]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[8]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[9]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[10]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[11]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[12]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[13]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[14]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x0_out[15]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[0]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[1]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[2]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[3]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[4]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[5]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[6]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[7]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[8]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[9]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[10]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[11]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[12]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[13]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[14]
+              0.10    0.10    0.10    0.10  clk       4.00  
+core_x1_out[15]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[0]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[1]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[2]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[3]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[4]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[5]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[6]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[7]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[8]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[9]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[10]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[11]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[12]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[13]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[14]
+              0.10    0.10    0.10    0.10  clk       4.00  
+data_dout[15]
+              0.10    0.10    0.10    0.10  clk       4.00  
+rstn          0.10    0.10    0.10    0.10  clk       4.00  
+start         0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[0]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[1]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[2]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[3]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[4]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[5]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[6]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[7]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[8]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[9]    0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[10]   0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[11]   0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[12]   0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[13]   0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[14]   0.10    0.10    0.10    0.10  clk       4.00  
+tw_dout[15]   0.10    0.10    0.10    0.10  clk       4.00  
+w_addr[0]     0.10    0.10    0.10    0.10  clk       4.00  
+w_addr[1]     0.10    0.10    0.10    0.10  clk       4.00  
+w_addr[2]     0.10    0.10    0.10    0.10  clk       4.00  
+w_addr[3]     0.10    0.10    0.10    0.10  clk       4.00  
+w_addr[4]     0.10    0.10    0.10    0.10  clk       4.00  
+w_addr[5]     0.10    0.10    0.10    0.10  clk       4.00  
+x0_addr[0]    0.10    0.10    0.10    0.10  clk       4.00  
+x0_addr[1]    0.10    0.10    0.10    0.10  clk       4.00  
+x0_addr[2]    0.10    0.10    0.10    0.10  clk       4.00  
+x0_addr[3]    0.10    0.10    0.10    0.10  clk       4.00  
+x0_addr[4]    0.10    0.10    0.10    0.10  clk       4.00  
+x0_addr[5]    0.10    0.10    0.10    0.10  clk       4.00  
+x0_addr[6]    0.10    0.10    0.10    0.10  clk       4.00  
+x1_addr[0]    0.10    0.10    0.10    0.10  clk       4.00  
+x1_addr[1]    0.10    0.10    0.10    0.10  clk       4.00  
+x1_addr[2]    0.10    0.10    0.10    0.10  clk       4.00  
+x1_addr[3]    0.10    0.10    0.10    0.10  clk       4.00  
+x1_addr[4]    0.10    0.10    0.10    0.10  clk       4.00  
+x1_addr[5]    0.10    0.10    0.10    0.10  clk       4.00  
+x1_addr[6]    0.10    0.10    0.10    0.10  clk       4.00  
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+clk          INVD0              INVD0                -- /  --     
+core_done    INVD0              INVD0                -- /  --     
+core_x0_out[0]
+             INVD0              INVD0                -- /  --     
+core_x0_out[1]
+             INVD0              INVD0                -- /  --     
+core_x0_out[2]
+             INVD0              INVD0                -- /  --     
+core_x0_out[3]
+             INVD0              INVD0                -- /  --     
+core_x0_out[4]
+             INVD0              INVD0                -- /  --     
+core_x0_out[5]
+             INVD0              INVD0                -- /  --     
+core_x0_out[6]
+             INVD0              INVD0                -- /  --     
+core_x0_out[7]
+             INVD0              INVD0                -- /  --     
+core_x0_out[8]
+             INVD0              INVD0                -- /  --     
+core_x0_out[9]
+             INVD0              INVD0                -- /  --     
+core_x0_out[10]
+             INVD0              INVD0                -- /  --     
+core_x0_out[11]
+             INVD0              INVD0                -- /  --     
+core_x0_out[12]
+             INVD0              INVD0                -- /  --     
+core_x0_out[13]
+             INVD0              INVD0                -- /  --     
+core_x0_out[14]
+             INVD0              INVD0                -- /  --     
+core_x0_out[15]
+             INVD0              INVD0                -- /  --     
+core_x1_out[0]
+             INVD0              INVD0                -- /  --     
+core_x1_out[1]
+             INVD0              INVD0                -- /  --     
+core_x1_out[2]
+             INVD0              INVD0                -- /  --     
+core_x1_out[3]
+             INVD0              INVD0                -- /  --     
+core_x1_out[4]
+             INVD0              INVD0                -- /  --     
+core_x1_out[5]
+             INVD0              INVD0                -- /  --     
+core_x1_out[6]
+             INVD0              INVD0                -- /  --     
+core_x1_out[7]
+             INVD0              INVD0                -- /  --     
+core_x1_out[8]
+             INVD0              INVD0                -- /  --     
+core_x1_out[9]
+             INVD0              INVD0                -- /  --     
+core_x1_out[10]
+             INVD0              INVD0                -- /  --     
+core_x1_out[11]
+             INVD0              INVD0                -- /  --     
+core_x1_out[12]
+             INVD0              INVD0                -- /  --     
+core_x1_out[13]
+             INVD0              INVD0                -- /  --     
+core_x1_out[14]
+             INVD0              INVD0                -- /  --     
+core_x1_out[15]
+             INVD0              INVD0                -- /  --     
+data_dout[0] INVD0              INVD0                -- /  --     
+data_dout[1] INVD0              INVD0                -- /  --     
+data_dout[2] INVD0              INVD0                -- /  --     
+data_dout[3] INVD0              INVD0                -- /  --     
+data_dout[4] INVD0              INVD0                -- /  --     
+data_dout[5] INVD0              INVD0                -- /  --     
+data_dout[6] INVD0              INVD0                -- /  --     
+data_dout[7] INVD0              INVD0                -- /  --     
+data_dout[8] INVD0              INVD0                -- /  --     
+data_dout[9] INVD0              INVD0                -- /  --     
+data_dout[10]
+             INVD0              INVD0                -- /  --     
+data_dout[11]
+             INVD0              INVD0                -- /  --     
+data_dout[12]
+             INVD0              INVD0                -- /  --     
+data_dout[13]
+             INVD0              INVD0                -- /  --     
+data_dout[14]
+             INVD0              INVD0                -- /  --     
+data_dout[15]
+             INVD0              INVD0                -- /  --     
+rstn         INVD0              INVD0                -- /  --     
+start        INVD0              INVD0                -- /  --     
+tw_dout[0]   INVD0              INVD0                -- /  --     
+tw_dout[1]   INVD0              INVD0                -- /  --     
+tw_dout[2]   INVD0              INVD0                -- /  --     
+tw_dout[3]   INVD0              INVD0                -- /  --     
+tw_dout[4]   INVD0              INVD0                -- /  --     
+tw_dout[5]   INVD0              INVD0                -- /  --     
+tw_dout[6]   INVD0              INVD0                -- /  --     
+tw_dout[7]   INVD0              INVD0                -- /  --     
+tw_dout[8]   INVD0              INVD0                -- /  --     
+tw_dout[9]   INVD0              INVD0                -- /  --     
+tw_dout[10]  INVD0              INVD0                -- /  --     
+tw_dout[11]  INVD0              INVD0                -- /  --     
+tw_dout[12]  INVD0              INVD0                -- /  --     
+tw_dout[13]  INVD0              INVD0                -- /  --     
+tw_dout[14]  INVD0              INVD0                -- /  --     
+tw_dout[15]  INVD0              INVD0                -- /  --     
+w_addr[0]    INVD0              INVD0                -- /  --     
+w_addr[1]    INVD0              INVD0                -- /  --     
+w_addr[2]    INVD0              INVD0                -- /  --     
+w_addr[3]    INVD0              INVD0                -- /  --     
+w_addr[4]    INVD0              INVD0                -- /  --     
+w_addr[5]    INVD0              INVD0                -- /  --     
+x0_addr[0]   INVD0              INVD0                -- /  --     
+x0_addr[1]   INVD0              INVD0                -- /  --     
+x0_addr[2]   INVD0              INVD0                -- /  --     
+x0_addr[3]   INVD0              INVD0                -- /  --     
+x0_addr[4]   INVD0              INVD0                -- /  --     
+x0_addr[5]   INVD0              INVD0                -- /  --     
+x0_addr[6]   INVD0              INVD0                -- /  --     
+x1_addr[0]   INVD0              INVD0                -- /  --     
+x1_addr[1]   INVD0              INVD0                -- /  --     
+x1_addr[2]   INVD0              INVD0                -- /  --     
+x1_addr[3]   INVD0              INVD0                -- /  --     
+x1_addr[4]   INVD0              INVD0                -- /  --     
+x1_addr[5]   INVD0              INVD0                -- /  --     
+x1_addr[6]   INVD0              INVD0                -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+clk           --      --     --      --     --      --     --     --        -- 
+core_done     --      --     --      --     --      --     --     --        -- 
+core_x0_out[0]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[1]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[2]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[3]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[4]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[5]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[6]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[7]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[8]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[9]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[10]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[11]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[12]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[13]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[14]
+              --      --     --      --     --      --     --     --        -- 
+core_x0_out[15]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[0]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[1]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[2]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[3]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[4]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[5]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[6]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[7]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[8]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[9]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[10]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[11]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[12]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[13]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[14]
+              --      --     --      --     --      --     --     --        -- 
+core_x1_out[15]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[0]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[1]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[2]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[3]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[4]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[5]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[6]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[7]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[8]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[9]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[10]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[11]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[12]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[13]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[14]
+              --      --     --      --     --      --     --     --        -- 
+data_dout[15]
+              --      --     --      --     --      --     --     --        -- 
+rstn          --      --     --      --     --      --     --     --        -- 
+start         --      --     --      --     --      --     --     --        -- 
+tw_dout[0]    --      --     --      --     --      --     --     --        -- 
+tw_dout[1]    --      --     --      --     --      --     --     --        -- 
+tw_dout[2]    --      --     --      --     --      --     --     --        -- 
+tw_dout[3]    --      --     --      --     --      --     --     --        -- 
+tw_dout[4]    --      --     --      --     --      --     --     --        -- 
+tw_dout[5]    --      --     --      --     --      --     --     --        -- 
+tw_dout[6]    --      --     --      --     --      --     --     --        -- 
+tw_dout[7]    --      --     --      --     --      --     --     --        -- 
+tw_dout[8]    --      --     --      --     --      --     --     --        -- 
+tw_dout[9]    --      --     --      --     --      --     --     --        -- 
+tw_dout[10]   --      --     --      --     --      --     --     --        -- 
+tw_dout[11]   --      --     --      --     --      --     --     --        -- 
+tw_dout[12]   --      --     --      --     --      --     --     --        -- 
+tw_dout[13]   --      --     --      --     --      --     --     --        -- 
+tw_dout[14]   --      --     --      --     --      --     --     --        -- 
+tw_dout[15]   --      --     --      --     --      --     --     --        -- 
+w_addr[0]     --      --     --      --     --      --     --     --        -- 
+w_addr[1]     --      --     --      --     --      --     --     --        -- 
+w_addr[2]     --      --     --      --     --      --     --     --        -- 
+w_addr[3]     --      --     --      --     --      --     --     --        -- 
+w_addr[4]     --      --     --      --     --      --     --     --        -- 
+w_addr[5]     --      --     --      --     --      --     --     --        -- 
+x0_addr[0]    --      --     --      --     --      --     --     --        -- 
+x0_addr[1]    --      --     --      --     --      --     --     --        -- 
+x0_addr[2]    --      --     --      --     --      --     --     --        -- 
+x0_addr[3]    --      --     --      --     --      --     --     --        -- 
+x0_addr[4]    --      --     --      --     --      --     --     --        -- 
+x0_addr[5]    --      --     --      --     --      --     --     --        -- 
+x0_addr[6]    --      --     --      --     --      --     --     --        -- 
+x1_addr[0]    --      --     --      --     --      --     --     --        -- 
+x1_addr[1]    --      --     --      --     --      --     --     --        -- 
+x1_addr[2]    --      --     --      --     --      --     --     --        -- 
+x1_addr[3]    --      --     --      --     --      --     --     --        -- 
+x1_addr[4]    --      --     --      --     --      --     --     --        -- 
+x1_addr[5]    --      --     --      --     --      --     --     --        -- 
+x1_addr[6]    --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+clk           --      --      --      -- 
+core_done     --      --      --      -- 
+core_x0_out[0]
+              --      --      --      -- 
+core_x0_out[1]
+              --      --      --      -- 
+core_x0_out[2]
+              --      --      --      -- 
+core_x0_out[3]
+              --      --      --      -- 
+core_x0_out[4]
+              --      --      --      -- 
+core_x0_out[5]
+              --      --      --      -- 
+core_x0_out[6]
+              --      --      --      -- 
+core_x0_out[7]
+              --      --      --      -- 
+core_x0_out[8]
+              --      --      --      -- 
+core_x0_out[9]
+              --      --      --      -- 
+core_x0_out[10]
+              --      --      --      -- 
+core_x0_out[11]
+              --      --      --      -- 
+core_x0_out[12]
+              --      --      --      -- 
+core_x0_out[13]
+              --      --      --      -- 
+core_x0_out[14]
+              --      --      --      -- 
+core_x0_out[15]
+              --      --      --      -- 
+core_x1_out[0]
+              --      --      --      -- 
+core_x1_out[1]
+              --      --      --      -- 
+core_x1_out[2]
+              --      --      --      -- 
+core_x1_out[3]
+              --      --      --      -- 
+core_x1_out[4]
+              --      --      --      -- 
+core_x1_out[5]
+              --      --      --      -- 
+core_x1_out[6]
+              --      --      --      -- 
+core_x1_out[7]
+              --      --      --      -- 
+core_x1_out[8]
+              --      --      --      -- 
+core_x1_out[9]
+              --      --      --      -- 
+core_x1_out[10]
+              --      --      --      -- 
+core_x1_out[11]
+              --      --      --      -- 
+core_x1_out[12]
+              --      --      --      -- 
+core_x1_out[13]
+              --      --      --      -- 
+core_x1_out[14]
+              --      --      --      -- 
+core_x1_out[15]
+              --      --      --      -- 
+data_dout[0]
+              --      --      --      -- 
+data_dout[1]
+              --      --      --      -- 
+data_dout[2]
+              --      --      --      -- 
+data_dout[3]
+              --      --      --      -- 
+data_dout[4]
+              --      --      --      -- 
+data_dout[5]
+              --      --      --      -- 
+data_dout[6]
+              --      --      --      -- 
+data_dout[7]
+              --      --      --      -- 
+data_dout[8]
+              --      --      --      -- 
+data_dout[9]
+              --      --      --      -- 
+data_dout[10]
+              --      --      --      -- 
+data_dout[11]
+              --      --      --      -- 
+data_dout[12]
+              --      --      --      -- 
+data_dout[13]
+              --      --      --      -- 
+data_dout[14]
+              --      --      --      -- 
+data_dout[15]
+              --      --      --      -- 
+rstn          --      --      --      -- 
+start         --      --      --      -- 
+tw_dout[0]    --      --      --      -- 
+tw_dout[1]    --      --      --      -- 
+tw_dout[2]    --      --      --      -- 
+tw_dout[3]    --      --      --      -- 
+tw_dout[4]    --      --      --      -- 
+tw_dout[5]    --      --      --      -- 
+tw_dout[6]    --      --      --      -- 
+tw_dout[7]    --      --      --      -- 
+tw_dout[8]    --      --      --      -- 
+tw_dout[9]    --      --      --      -- 
+tw_dout[10]   --      --      --      -- 
+tw_dout[11]   --      --      --      -- 
+tw_dout[12]   --      --      --      -- 
+tw_dout[13]   --      --      --      -- 
+tw_dout[14]   --      --      --      -- 
+tw_dout[15]   --      --      --      -- 
+w_addr[0]     --      --      --      -- 
+w_addr[1]     --      --      --      -- 
+w_addr[2]     --      --      --      -- 
+w_addr[3]     --      --      --      -- 
+w_addr[4]     --      --      --      -- 
+w_addr[5]     --      --      --      -- 
+x0_addr[0]    --      --      --      -- 
+x0_addr[1]    --      --      --      -- 
+x0_addr[2]    --      --      --      -- 
+x0_addr[3]    --      --      --      -- 
+x0_addr[4]    --      --      --      -- 
+x0_addr[5]    --      --      --      -- 
+x0_addr[6]    --      --      --      -- 
+x1_addr[0]    --      --      --      -- 
+x1_addr[1]    --      --      --      -- 
+x1_addr[2]    --      --      --      -- 
+x1_addr[3]    --      --      --      -- 
+x1_addr[4]    --      --      --      -- 
+x1_addr[5]    --      --      --      -- 
+x1_addr[6]    --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+bfly[0]       0.05    0.05    0.05    0.05  clk       0.00  
+bfly[1]       0.05    0.05    0.05    0.05  clk       0.00  
+bfly[2]       0.05    0.05    0.05    0.05  clk       0.00  
+bfly[3]       0.05    0.05    0.05    0.05  clk       0.00  
+bfly[4]       0.05    0.05    0.05    0.05  clk       0.00  
+bfly[5]       0.05    0.05    0.05    0.05  clk       0.00  
+busy          0.05    0.05    0.05    0.05  clk       0.00  
+core_start    0.05    0.05    0.05    0.05  clk       0.00  
+core_w[0]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[1]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[2]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[3]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[4]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[5]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[6]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[7]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[8]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[9]     0.05    0.05    0.05    0.05  clk       0.00  
+core_w[10]    0.05    0.05    0.05    0.05  clk       0.00  
+core_w[11]    0.05    0.05    0.05    0.05  clk       0.00  
+core_w[12]    0.05    0.05    0.05    0.05  clk       0.00  
+core_w[13]    0.05    0.05    0.05    0.05  clk       0.00  
+core_w[14]    0.05    0.05    0.05    0.05  clk       0.00  
+core_w[15]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[0]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[1]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[2]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[3]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[4]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[5]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[6]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[7]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[8]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[9]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[10]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[11]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[12]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[13]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[14]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x0[15]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[0]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[1]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[2]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[3]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[4]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[5]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[6]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[7]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[8]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[9]    0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[10]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[11]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[12]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[13]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[14]   0.05    0.05    0.05    0.05  clk       0.00  
+core_x1[15]   0.05    0.05    0.05    0.05  clk       0.00  
+data_addr[0]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_addr[1]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_addr[2]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_addr[3]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_addr[4]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_addr[5]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_addr[6]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_cen      0.05    0.05    0.05    0.05  clk       0.00  
+data_din[0]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[1]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[2]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[3]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[4]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[5]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[6]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[7]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[8]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[9]   0.05    0.05    0.05    0.05  clk       0.00  
+data_din[10]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_din[11]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_din[12]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_din[13]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_din[14]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_din[15]
+              0.05    0.05    0.05    0.05  clk       0.00  
+data_wen      0.05    0.05    0.05    0.05  clk       0.00  
+done          0.05    0.05    0.05    0.05  clk       0.00  
+group[0]      0.05    0.05    0.05    0.05  clk       0.00  
+group[1]      0.05    0.05    0.05    0.05  clk       0.00  
+group[2]      0.05    0.05    0.05    0.05  clk       0.00  
+group[3]      0.05    0.05    0.05    0.05  clk       0.00  
+group[4]      0.05    0.05    0.05    0.05  clk       0.00  
+group[5]      0.05    0.05    0.05    0.05  clk       0.00  
+sram_tb_sel   0.05    0.05    0.05    0.05  clk       0.00  
+stage[0]      0.05    0.05    0.05    0.05  clk       0.00  
+stage[1]      0.05    0.05    0.05    0.05  clk       0.00  
+stage[2]      0.05    0.05    0.05    0.05  clk       0.00  
+tw_addr[0]    0.05    0.05    0.05    0.05  clk       0.00  
+tw_addr[1]    0.05    0.05    0.05    0.05  clk       0.00  
+tw_addr[2]    0.05    0.05    0.05    0.05  clk       0.00  
+tw_addr[3]    0.05    0.05    0.05    0.05  clk       0.00  
+tw_addr[4]    0.05    0.05    0.05    0.05  clk       0.00  
+tw_addr[5]    0.05    0.05    0.05    0.05  clk       0.00  
+tw_cen        0.05    0.05    0.05    0.05  clk       0.00  
+
+1
+ 
+****************************************
+Report : compile_options
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+fft_controller                           flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+This design has no violated constraints.
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.07       0.55 r
+  U409/ZN (INR3D0)                         0.07       0.62 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.70 r
+  done (out)                               0.00       0.70 r
+  data arrival time                                   0.70
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.70
+  -----------------------------------------------------------
+  slack (MET)                                         1.25
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.07       0.55 r
+  U409/ZN (INR3D0)                         0.07       0.62 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.70 r
+  done (out)                               0.00       0.70 r
+  data arrival time                                   0.70
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.70
+  -----------------------------------------------------------
+  slack (MET)                                         1.25
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.06       0.55 r
+  U409/ZN (INR3D0)                         0.07       0.62 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.70 r
+  done (out)                               0.00       0.70 r
+  data arrival time                                   0.70
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.70
+  -----------------------------------------------------------
+  slack (MET)                                         1.25
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.70 r
+  done (out)                               0.00       0.70 r
+  data arrival time                                   0.70
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.70
+  -----------------------------------------------------------
+  slack (MET)                                         1.25
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 r
+  U291/ZN (INVD0)                          0.03       0.15 f
+  U311/ZN (INVD0)                          0.02       0.17 r
+  U214/ZN (ND2D0)                          0.03       0.20 f
+  U280/ZN (NR2XD0)                         0.04       0.24 r
+  U277/ZN (CKND2D1)                        0.03       0.27 f
+  U403/ZN (MUX2ND0)                        0.04       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.03       0.48 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.03       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.06       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.08       0.43 r
+  U257/ZN (OAI21D0)                        0.04       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.65 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.06       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.08       0.43 r
+  U257/ZN (OAI21D0)                        0.04       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 r
+  U291/ZN (INVD0)                          0.03       0.15 f
+  U311/ZN (INVD0)                          0.02       0.17 r
+  U214/ZN (ND2D0)                          0.03       0.20 f
+  U280/ZN (NR2XD0)                         0.04       0.24 r
+  U277/ZN (CKND2D1)                        0.03       0.27 f
+  U403/ZN (MUX2ND0)                        0.04       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.43 r
+  U257/ZN (OAI21D0)                        0.04       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 r
+  U291/ZN (INVD0)                          0.03       0.15 f
+  U311/ZN (INVD0)                          0.02       0.17 r
+  U214/ZN (ND2D0)                          0.03       0.20 f
+  U280/ZN (NR2XD0)                         0.04       0.24 r
+  U277/ZN (CKND2D1)                        0.03       0.27 f
+  U403/ZN (MUX2ND0)                        0.04       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.06       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.03       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 r
+  U291/ZN (INVD0)                          0.03       0.15 f
+  U311/ZN (INVD0)                          0.02       0.17 r
+  U214/ZN (ND2D0)                          0.03       0.20 f
+  U280/ZN (NR2XD0)                         0.04       0.24 r
+  U277/ZN (CKND2D1)                        0.03       0.27 f
+  U403/ZN (MUX2ND0)                        0.04       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.48 f
+  U406/ZN (AOI211XD0)                      0.06       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.04       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.03       0.48 f
+  U406/ZN (AOI211XD0)                      0.06       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 r
+  U291/ZN (INVD0)                          0.03       0.15 f
+  U311/ZN (INVD0)                          0.02       0.17 r
+  U214/ZN (ND2D0)                          0.03       0.20 f
+  U280/ZN (NR2XD0)                         0.04       0.24 r
+  U276/Z (AO21D0)                          0.05       0.28 r
+  U268/ZN (OAI22D0)                        0.03       0.32 f
+  U400/ZN (AOI221D0)                       0.09       0.41 r
+  U401/ZN (OAI221D0)                       0.06       0.47 f
+  U406/ZN (AOI211XD0)                      0.07       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+  Startpoint: group_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  group_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  group_reg_0_/Q (DFCNQD1)                 0.12       0.12 f
+  U291/ZN (INVD0)                          0.03       0.15 r
+  U311/ZN (INVD0)                          0.02       0.17 f
+  U214/ZN (ND2D0)                          0.03       0.20 r
+  U280/ZN (NR2XD0)                         0.03       0.23 f
+  U277/ZN (CKND2D1)                        0.03       0.26 r
+  U403/ZN (MUX2ND0)                        0.05       0.31 r
+  U258/ZN (OAI22D0)                        0.03       0.35 f
+  U405/ZN (AOI221D0)                       0.09       0.44 r
+  U257/ZN (OAI21D0)                        0.04       0.47 f
+  U406/ZN (AOI211XD0)                      0.06       0.54 r
+  U409/ZN (INR3D0)                         0.07       0.61 r
+  U188/ZN (CKND2D0)                        0.03       0.64 f
+  U235/ZN (INVD0)                          0.05       0.69 r
+  done (out)                               0.00       0.69 r
+  data arrival time                                   0.69
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.26
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 100
+        -max_paths 20
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+  Startpoint: stage_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  stage_reg_0_/Q (DFCNQD1)                 0.10       0.10 r
+  U217/ZN (OAI32D0)                        0.03       0.13 f
+  stage_reg_0_/D (DFCNQD1)                 0.00       0.13 f
+  data arrival time                                   0.13
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.10
+
+
+  Startpoint: stage_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  stage_reg_0_/Q (DFCNQD1)                 0.10       0.10 r
+  U217/ZN (OAI32D0)                        0.03       0.13 f
+  stage_reg_0_/D (DFCNQD1)                 0.00       0.13 f
+  data arrival time                                   0.13
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.10
+
+
+  Startpoint: stage_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  stage_reg_0_/Q (DFCNQD1)                 0.10       0.10 r
+  U217/ZN (OAI32D0)                        0.03       0.13 f
+  stage_reg_0_/D (DFCNQD1)                 0.00       0.13 f
+  data arrival time                                   0.13
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.10
+
+
+  Startpoint: stage_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  stage_reg_0_/Q (DFCNQD1)                 0.10       0.10 r
+  U217/ZN (OAI32D0)                        0.03       0.13 f
+  stage_reg_0_/D (DFCNQD1)                 0.00       0.13 f
+  data arrival time                                   0.13
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.10
+
+
+  Startpoint: stage_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  stage_reg_0_/Q (DFCNQD1)                 0.10       0.10 r
+  U217/ZN (OAI32D0)                        0.03       0.13 f
+  stage_reg_0_/D (DFCNQD1)                 0.00       0.13 f
+  data arrival time                                   0.13
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.10
+
+
+  Startpoint: stage_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  stage_reg_0_/Q (DFCNQD1)                 0.10       0.10 r
+  U217/ZN (OAI32D0)                        0.04       0.14 f
+  stage_reg_0_/D (DFCNQD1)                 0.00       0.14 f
+  data arrival time                                   0.14
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: stage_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  stage_reg_0_/Q (DFCNQD1)                 0.10       0.10 r
+  U217/ZN (OAI32D0)                        0.04       0.14 f
+  stage_reg_0_/D (DFCNQD1)                 0.00       0.14 f
+  data arrival time                                   0.14
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  stage_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: state_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg_0_/CP (DFCNQD1)                0.00       0.00 r
+  state_reg_0_/Q (DFCNQD1)                 0.11       0.11 r
+  U454/ZN (OAI31D0)                        0.03       0.14 f
+  state_reg_2_/D (DFCNQD1)                 0.00       0.14 f
+  data arrival time                                   0.14
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg_2_/CP (DFCNQD1)                0.00       0.00 r
+  library hold time                        0.03       0.03
+  data required time                                  0.03
+  -----------------------------------------------------------
+  data required time                                  0.03
+  data arrival time                                  -0.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[3]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[3] (in)                        0.01       0.11 f
+  x0_latched_reg_3_/D (EDFCNQD1)           0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_3_/CP (EDFCNQD1)          0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[4]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[4] (in)                        0.01       0.11 f
+  x0_latched_reg_4_/D (EDFCNQD1)           0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_4_/CP (EDFCNQD1)          0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[2]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[2] (in)                        0.01       0.11 f
+  x0_latched_reg_2_/D (EDFCNQD1)           0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_2_/CP (EDFCNQD1)          0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[1]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[1] (in)                        0.01       0.11 f
+  x0_latched_reg_1_/D (EDFCNQD1)           0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_1_/CP (EDFCNQD1)          0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[15]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[15] (in)                       0.01       0.11 f
+  x0_latched_reg_15_/D (EDFCNQD1)          0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_15_/CP (EDFCNQD1)         0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[14]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[14] (in)                       0.01       0.11 f
+  x0_latched_reg_14_/D (EDFCNQD1)          0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_14_/CP (EDFCNQD1)         0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[13]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[13] (in)                       0.01       0.11 f
+  x0_latched_reg_13_/D (EDFCNQD1)          0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_13_/CP (EDFCNQD1)         0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[12]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[12] (in)                       0.01       0.11 f
+  x0_latched_reg_12_/D (EDFCNQD1)          0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_12_/CP (EDFCNQD1)         0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[11]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[11] (in)                       0.01       0.11 f
+  x0_latched_reg_11_/D (EDFCNQD1)          0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_11_/CP (EDFCNQD1)         0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[10]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[10] (in)                       0.01       0.11 f
+  x0_latched_reg_10_/D (EDFCNQD1)          0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_10_/CP (EDFCNQD1)         0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[0]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[0] (in)                        0.01       0.11 f
+  x0_latched_reg_0_/D (EDFCNQD1)           0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_0_/CP (EDFCNQD1)          0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: data_dout[5]
+              (input port clocked by clk)
+  Endpoint: x0_latched_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_controller     ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  data_dout[5] (in)                        0.01       0.11 f
+  x0_latched_reg_5_/D (EDFCNQD1)           0.00       0.11 f
+  data arrival time                                   0.11
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  x0_latched_reg_5_/CP (EDFCNQD1)          0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+1
+ 
+****************************************
+Report : timing_requirements
+        -attributes
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+1

@@ -1,0 +1,60 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fft_top
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 22:09:11 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+tb_data_dout[0] (out)               0.90 r            3.90         3.00
+tb_data_dout[8] (out)               0.89 r            3.90         3.01
+tb_data_dout[9] (out)               0.87 r            3.90         3.03
+tb_tw_dout[3] (out)                 0.86 r            3.90         3.04
+tb_data_dout[3] (out)               0.85 r            3.90         3.05
+tb_tw_dout[13] (out)                0.84 r            3.90         3.06
+tb_data_dout[13] (out)              0.84 r            3.90         3.06
+tb_data_dout[12] (out)              0.84 r            3.90         3.06
+tb_data_dout[4] (out)               0.84 r            3.90         3.06
+tb_data_dout[6] (out)               0.84 r            3.90         3.06
+tb_data_dout[2] (out)               0.84 r            3.90         3.06
+tb_data_dout[5] (out)               0.84 r            3.90         3.06
+tb_data_dout[15] (out)              0.84 r            3.90         3.06
+tb_data_dout[7] (out)               0.84 r            3.90         3.06
+tb_data_dout[1] (out)               0.83 r            3.90         3.07
+tb_data_dout[14] (out)              0.83 r            3.90         3.07
+tb_data_dout[11] (out)              0.83 r            3.90         3.07
+tb_tw_dout[1] (out)                 0.83 r            3.90         3.07
+tb_tw_dout[5] (out)                 0.83 r            3.90         3.07
+tb_tw_dout[7] (out)                 0.83 r            3.90         3.07
+tb_tw_dout[11] (out)                0.83 r            3.90         3.07
+tb_tw_dout[9] (out)                 0.82 r            3.90         3.08
+tb_data_dout[10] (out)              0.81 r            3.90         3.09
+tb_tw_dout[2] (out)                 0.81 r            3.90         3.09
+tb_tw_dout[8] (out)                 0.77 r            3.90         3.13
+tb_tw_dout[0] (out)                 0.77 r            3.90         3.13
+tb_tw_dout[14] (out)                0.77 r            3.90         3.13
+tb_tw_dout[6] (out)                 0.77 r            3.90         3.13
+tb_tw_dout[15] (out)                0.77 r            3.90         3.13
+tb_tw_dout[4] (out)                 0.77 r            3.90         3.13
+tb_tw_dout[12] (out)                0.77 r            3.90         3.13
+tb_tw_dout[10] (out)                0.77 r            3.90         3.13
+done (out)                          0.76 r            3.90         3.14
+tb_bitrev_addr[6] (out)             0.56 r            3.90         3.34
+tb_bitrev_addr[5] (out)             0.56 r            3.90         3.34
+tb_bitrev_addr[4] (out)             0.56 r            3.90         3.34
+tb_bitrev_addr[3] (out)             0.56 r            3.90         3.34
+tb_bitrev_addr[2] (out)             0.56 r            3.90         3.34
+tb_bitrev_addr[1] (out)             0.56 r            3.90         3.34
+tb_bitrev_addr[0] (out)             0.56 r            3.90         3.34
+busy (out)                          0.37 r            3.90         3.53
+
+1

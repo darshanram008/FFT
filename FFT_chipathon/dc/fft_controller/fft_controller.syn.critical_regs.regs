@@ -1,0 +1,90 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fft_controller
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:38:32 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+stage_reg_1_/D (DFCNQD1)            0.72 f            2.00         1.28
+stage_reg_0_/D (DFCNQD1)            0.70 r            1.98         1.29
+state_reg_0_/D (DFCNQD1)            0.72 f            2.00         1.29
+state_reg_2_/D (DFCNQD1)            0.69 r            1.98         1.30
+state_reg_1_/D (DFCNQD1)            0.69 r            1.99         1.30
+stage_reg_2_/D (DFCNQD1)            0.68 r            1.98         1.30
+group_reg_3_/D (DFCNQD1)            0.68 f            2.00         1.32
+group_reg_1_/D (DFCNQD1)            0.68 f            2.00         1.32
+group_reg_4_/D (DFCNQD1)            0.68 f            2.01         1.32
+group_reg_0_/D (DFCNQD1)            0.68 f            2.00         1.32
+group_reg_5_/D (DFCNQD1)            0.64 f            2.01         1.37
+group_reg_2_/D (DFCNQD1)            0.64 f            2.01         1.37
+bfly_reg_3_/D (DFCNQD1)             0.58 f            2.01         1.42
+bfly_reg_5_/D (DFCNQD1)             0.58 f            2.01         1.42
+bfly_reg_4_/D (DFCNQD1)             0.58 f            2.01         1.42
+bfly_reg_1_/D (DFCNQD1)             0.54 f            2.01         1.46
+bfly_reg_2_/D (DFCNQD1)             0.54 f            2.01         1.46
+bfly_reg_0_/D (DFCNQD1)             0.54 f            2.00         1.46
+x0_addr_l_reg_0_/D (DFCNQD1)        0.40 f            2.01         1.60
+x0_addr_l_reg_5_/D (DFCNQD1)        0.40 f            2.01         1.60
+x0_addr_l_reg_4_/D (DFCNQD1)        0.40 f            2.01         1.60
+x0_addr_l_reg_2_/D (DFCNQD1)        0.40 f            2.01         1.60
+x0_addr_l_reg_3_/D (DFCNQD1)        0.40 f            2.01         1.61
+x0_addr_l_reg_6_/D (DFCNQD1)        0.40 f            2.01         1.61
+x0_addr_l_reg_1_/D (DFCNQD1)        0.40 f            2.01         1.61
+x0_latched_reg_8_/E (EDFCNQD1)      0.33 r            1.95         1.61
+x0_latched_reg_7_/E (EDFCNQD1)      0.33 r            1.95         1.61
+x0_latched_reg_6_/E (EDFCNQD1)      0.33 r            1.95         1.61
+x0_latched_reg_5_/E (EDFCNQD1)      0.33 r            1.95         1.61
+x0_latched_reg_11_/E (EDFCNQD1)     0.33 r            1.95         1.62
+x0_latched_reg_10_/E (EDFCNQD1)     0.33 r            1.95         1.62
+x0_latched_reg_9_/E (EDFCNQD1)      0.33 r            1.95         1.62
+x0_latched_reg_0_/E (EDFCNQD1)      0.33 r            1.95         1.62
+x1_addr_l_reg_3_/E (EDFCNQD1)       0.29 r            1.94         1.65
+x0_latched_reg_15_/E (EDFCNQD1)     0.28 r            1.95         1.66
+x0_latched_reg_14_/E (EDFCNQD1)     0.28 r            1.95         1.66
+x0_latched_reg_13_/E (EDFCNQD1)     0.28 r            1.95         1.66
+x0_latched_reg_12_/E (EDFCNQD1)     0.28 r            1.95         1.66
+x0_latched_reg_2_/E (EDFCNQD1)      0.28 r            1.95         1.67
+x0_latched_reg_1_/E (EDFCNQD1)      0.28 r            1.95         1.67
+x0_latched_reg_4_/E (EDFCNQD1)      0.28 r            1.95         1.67
+x1_addr_l_reg_6_/E (EDFCNQD1)       0.24 r            1.95         1.70
+x1_addr_l_reg_5_/E (EDFCNQD1)       0.24 r            1.95         1.70
+x1_addr_l_reg_4_/E (EDFCNQD1)       0.24 r            1.95         1.70
+x1_addr_l_reg_2_/E (EDFCNQD1)       0.24 r            1.95         1.70
+x1_addr_l_reg_1_/E (EDFCNQD1)       0.24 r            1.95         1.70
+x1_addr_l_reg_0_/E (EDFCNQD1)       0.24 r            1.95         1.70
+x0_latched_reg_3_/E (EDFCNQD1)      0.23 r            1.94         1.72
+x1_addr_l_reg_6_/D (EDFCNQD1)       0.11 r            1.94         1.83
+x1_addr_l_reg_5_/D (EDFCNQD1)       0.11 r            1.94         1.83
+x1_addr_l_reg_4_/D (EDFCNQD1)       0.11 r            1.94         1.83
+x1_addr_l_reg_3_/D (EDFCNQD1)       0.11 r            1.94         1.83
+x1_addr_l_reg_2_/D (EDFCNQD1)       0.11 r            1.94         1.83
+x1_addr_l_reg_1_/D (EDFCNQD1)       0.11 r            1.94         1.83
+x1_addr_l_reg_0_/D (EDFCNQD1)       0.11 r            1.94         1.83
+x0_latched_reg_3_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_4_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_2_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_1_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_15_/D (EDFCNQD1)     0.11 r            1.94         1.83
+x0_latched_reg_14_/D (EDFCNQD1)     0.11 r            1.94         1.83
+x0_latched_reg_13_/D (EDFCNQD1)     0.11 r            1.94         1.83
+x0_latched_reg_12_/D (EDFCNQD1)     0.11 r            1.94         1.83
+x0_latched_reg_11_/D (EDFCNQD1)     0.11 r            1.94         1.83
+x0_latched_reg_10_/D (EDFCNQD1)     0.11 r            1.94         1.83
+x0_latched_reg_9_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_0_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_8_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_7_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_6_/D (EDFCNQD1)      0.11 r            1.94         1.83
+x0_latched_reg_5_/D (EDFCNQD1)      0.11 r            1.94         1.83
+
+1

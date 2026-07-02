@@ -1,0 +1,2384 @@
+1
+ 
+****************************************
+Report : area
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+Number of ports:                           49
+Number of nets:                           131
+Number of cells:                          105
+Number of combinational cells:            105
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                         39
+Number of references:                      34
+
+Combinational area:                218.520005
+Buf/Inv area:                       45.360002
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   218.520005
+Total area:                 undefined
+1
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fft_address_gen        ZeroWireload      tcbn65gplustc_ccs
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+fft_address_gen                        1.33e-02 1.37e-02  895.297 2.78e-02 100.0
+1
+ 
+****************************************
+Report : design
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    tcbn65gplustc_ccs (File: /courses/ee6350/pdk2025/tcbn65gplus/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65gplus_200a/tcbn65gplustc_ccs.db)
+
+Local Link Library:
+
+    {tcbn65gplustc_ccs.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : NCCOM
+    Library : tcbn65gplustc_ccs
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected automatically from the total cell area.
+
+Name           :   ZeroWireload
+Location       :   tcbn65gplustc_ccs
+Resistance     :   1e-05
+Capacitance    :   1
+Area           :   0
+Slope          :   0
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.00
+     2     0.00
+     3     0.00
+     4     0.00
+     5     0.00
+     6     0.00
+     7     0.00
+     8     0.00
+     9     0.00
+    10     0.00
+    11     0.00
+    12     0.00
+    13     0.00
+    14     0.00
+    15     0.00
+    16     0.00
+    17     0.00
+    18     0.00
+    19     0.00
+    20     0.00
+
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    FFT_POINT => 128
+1
+ 
+****************************************
+Report : cell
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+   mo - map_only
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U62                       CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U63                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U64                       AOI32D0         tcbn65gplustc_ccs
+                                                          2.880000  
+U65                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U66                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U67                       CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U68                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U69                       CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U70                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U71                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U72                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U73                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U74                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U75                       XNR2D1          tcbn65gplustc_ccs
+                                                          3.600000  
+U76                       NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U77                       INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U78                       CKAN2D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U79                       BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U80                       NR2XD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U81                       CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U82                       OA21D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U83                       OR2D1           tcbn65gplustc_ccs
+                                                          2.160000  
+U84                       ND2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U85                       AOI211D0        tcbn65gplustc_ccs
+                                                          2.520000  
+U86                       BUFFD1          tcbn65gplustc_ccs
+                                                          1.440000  
+U87                       OAI31D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U88                       CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U89                       OAI31D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U90                       CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U91                       OAI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U92                       CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U93                       CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U94                       CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U95                       OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U96                       NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U97                       OAI31D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U98                       OAI31D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U99                       OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U100                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U101                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U102                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U103                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U104                      CKND2D1         tcbn65gplustc_ccs
+                                                          1.440000  
+U105                      OAI21D0         tcbn65gplustc_ccs
+                                                          2.160000  
+U106                      MAOI22D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U107                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U108                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U109                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U110                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U111                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U112                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U113                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U114                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U115                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U116                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U117                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U118                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U119                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U120                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U121                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U122                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U123                      INVD0           tcbn65gplustc_ccs
+                                                          1.080000  
+U124                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U125                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U126                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U127                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U128                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U129                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U130                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U131                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U132                      BUFFD0          tcbn65gplustc_ccs
+                                                          1.440000  
+U133                      AOI21D1         tcbn65gplustc_ccs
+                                                          2.160000  
+U134                      NR2D0           tcbn65gplustc_ccs
+                                                          1.440000  
+U135                      ND2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U136                      OAI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U137                      OA22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U138                      IND2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U139                      OAI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U140                      MUX2D0          tcbn65gplustc_ccs
+                                                          3.240000  
+U141                      MUX2ND0         tcbn65gplustc_ccs
+                                                          2.880000  
+U142                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U143                      AO22D0          tcbn65gplustc_ccs
+                                                          2.880000  
+U144                      MAOI22D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U145                      AOI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U146                      IND2D0          tcbn65gplustc_ccs
+                                                          2.160000  
+U147                      AOI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U148                      IOA21D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U149                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U150                      NR2D1           tcbn65gplustc_ccs
+                                                          1.440000  
+U151                      AOI21D1         tcbn65gplustc_ccs
+                                                          2.160000  
+U152                      OA21D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U153                      OA21D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U154                      OA21D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U155                      OA21D0          tcbn65gplustc_ccs
+                                                          2.520000  
+U156                      OAI22D0         tcbn65gplustc_ccs
+                                                          2.520000  
+U157                      INVD1           tcbn65gplustc_ccs
+                                                          1.080000  
+U158                      OAI221D0        tcbn65gplustc_ccs
+                                                          2.880000  
+U159                      CKND2D0         tcbn65gplustc_ccs
+                                                          1.440000  
+U160                      OAI211D1        tcbn65gplustc_ccs
+                                                          2.520000  
+U161                      OAI22D1         tcbn65gplustc_ccs
+                                                          2.520000  
+U162                      MUX2ND0         tcbn65gplustc_ccs
+                                                          2.880000  
+intadd_0_U2               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U3               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U4               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+intadd_0_U5               FA1D0           tcbn65gplustc_ccs
+                                                          9.000000  mo, r
+--------------------------------------------------------------------------------
+Total 105 cells                                           218.520005
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+bfly[0]        in      0.0000   0.0000    0.39    0.01   --         
+bfly[1]        in      0.0000   0.0000    0.39    0.01   --         
+bfly[2]        in      0.0000   0.0000    0.39    0.01   --         
+bfly[3]        in      0.0000   0.0000    0.39    0.01   --         
+bfly[4]        in      0.0000   0.0000    0.39    0.01   --         
+bfly[5]        in      0.0000   0.0000    0.39    0.01   --         
+group[0]       in      0.0000   0.0000    0.39    0.01   --         
+group[1]       in      0.0000   0.0000    0.39    0.01   --         
+group[2]       in      0.0000   0.0000    0.39    0.01   --         
+group[3]       in      0.0000   0.0000    0.39    0.01   --         
+group[4]       in      0.0000   0.0000    0.39    0.01   --         
+group[5]       in      0.0000   0.0000    0.39    0.01   --         
+linear_addr[0] in      0.0000   0.0000    0.39    0.01   --         
+linear_addr[1] in      0.0000   0.0000    0.39    0.01   --         
+linear_addr[2] in      0.0000   0.0000    0.39    0.01   --         
+linear_addr[3] in      0.0000   0.0000    0.39    0.01   --         
+linear_addr[4] in      0.0000   0.0000    0.39    0.01   --         
+linear_addr[5] in      0.0000   0.0000    0.39    0.01   --         
+linear_addr[6] in      0.0000   0.0000    0.39    0.01   --         
+stage[0]       in      0.0000   0.0000    0.39    0.01   --         
+stage[1]       in      0.0000   0.0000    0.39    0.01   --         
+stage[2]       in      0.0000   0.0000    0.39    0.01   --         
+bitrev_addr[0] out     0.0050   0.0000   --      --      --         
+bitrev_addr[1] out     0.0050   0.0000   --      --      --         
+bitrev_addr[2] out     0.0050   0.0000   --      --      --         
+bitrev_addr[3] out     0.0050   0.0000   --      --      --         
+bitrev_addr[4] out     0.0050   0.0000   --      --      --         
+bitrev_addr[5] out     0.0050   0.0000   --      --      --         
+bitrev_addr[6] out     0.0050   0.0000   --      --      --         
+w_addr[0]      out     0.0050   0.0000   --      --      --         
+w_addr[1]      out     0.0050   0.0000   --      --      --         
+w_addr[2]      out     0.0050   0.0000   --      --      --         
+w_addr[3]      out     0.0050   0.0000   --      --      --         
+w_addr[4]      out     0.0050   0.0000   --      --      --         
+w_addr[5]      out     0.0050   0.0000   --      --      --         
+x0_addr[0]     out     0.0050   0.0000   --      --      --         
+x0_addr[1]     out     0.0050   0.0000   --      --      --         
+x0_addr[2]     out     0.0050   0.0000   --      --      --         
+x0_addr[3]     out     0.0050   0.0000   --      --      --         
+x0_addr[4]     out     0.0050   0.0000   --      --      --         
+x0_addr[5]     out     0.0050   0.0000   --      --      --         
+x0_addr[6]     out     0.0050   0.0000   --      --      --         
+x1_addr[0]     out     0.0050   0.0000   --      --      --         
+x1_addr[1]     out     0.0050   0.0000   --      --      --         
+x1_addr[2]     out     0.0050   0.0000   --      --      --         
+x1_addr[3]     out     0.0050   0.0000   --      --      --         
+x1_addr[4]     out     0.0050   0.0000   --      --      --         
+x1_addr[5]     out     0.0050   0.0000   --      --      --         
+x1_addr[6]     out     0.0050   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+bfly[0]            1      --              --              --        -- 
+bfly[1]            1      --              --              --        -- 
+bfly[2]            1      --              --              --        -- 
+bfly[3]            1      --              --              --        -- 
+bfly[4]            1      --              --              --        -- 
+bfly[5]            1      --              --              --        -- 
+group[0]           1      --              --              --        -- 
+group[1]           1      --              --              --        -- 
+group[2]           1      --              --              --        -- 
+group[3]           1      --              --              --        -- 
+group[4]           1      --              --              --        -- 
+group[5]           1      --              --              --        -- 
+linear_addr[0]
+                   1      --              --              --        -- 
+linear_addr[1]
+                   1      --              --              --        -- 
+linear_addr[2]
+                   1      --              --              --        -- 
+linear_addr[3]
+                   1      --              --              --        -- 
+linear_addr[4]
+                   1      --              --              --        -- 
+linear_addr[5]
+                   1      --              --              --        -- 
+linear_addr[6]
+                   1      --              --              --        -- 
+stage[0]           1      --              --              --        -- 
+stage[1]           1      --              --              --        -- 
+stage[2]           1      --              --              --        -- 
+bitrev_addr[0]
+                   1      --              --              --        -- 
+bitrev_addr[1]
+                   1      --              --              --        -- 
+bitrev_addr[2]
+                   1      --              --              --        -- 
+bitrev_addr[3]
+                   1      --              --              --        -- 
+bitrev_addr[4]
+                   1      --              --              --        -- 
+bitrev_addr[5]
+                   1      --              --              --        -- 
+bitrev_addr[6]
+                   1      --              --              --        -- 
+w_addr[0]          1      --              --              --        -- 
+w_addr[1]          1      --              --              --        -- 
+w_addr[2]          1      --              --              --        -- 
+w_addr[3]          1      --              --              --        -- 
+w_addr[4]          1      --              --              --        -- 
+w_addr[5]          1      --              --              --        -- 
+x0_addr[0]         1      --              --              --        -- 
+x0_addr[1]         1      --              --              --        -- 
+x0_addr[2]         1      --              --              --        -- 
+x0_addr[3]         1      --              --              --        -- 
+x0_addr[4]         1      --              --              --        -- 
+x0_addr[5]         1      --              --              --        -- 
+x0_addr[6]         1      --              --              --        -- 
+x1_addr[0]         1      --              --              --        -- 
+x1_addr[1]         1      --              --              --        -- 
+x1_addr[2]         1      --              --              --        -- 
+x1_addr[3]         1      --              --              --        -- 
+x1_addr[4]         1      --              --              --        -- 
+x1_addr[5]         1      --              --              --        -- 
+x1_addr[6]         1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+bfly[0]       0.10    0.10    0.10    0.10  vclk      4.00  
+bfly[1]       0.10    0.10    0.10    0.10  vclk      4.00  
+bfly[2]       0.10    0.10    0.10    0.10  vclk      4.00  
+bfly[3]       0.10    0.10    0.10    0.10  vclk      4.00  
+bfly[4]       0.10    0.10    0.10    0.10  vclk      4.00  
+bfly[5]       0.10    0.10    0.10    0.10  vclk      4.00  
+group[0]      0.10    0.10    0.10    0.10  vclk      4.00  
+group[1]      0.10    0.10    0.10    0.10  vclk      4.00  
+group[2]      0.10    0.10    0.10    0.10  vclk      4.00  
+group[3]      0.10    0.10    0.10    0.10  vclk      4.00  
+group[4]      0.10    0.10    0.10    0.10  vclk      4.00  
+group[5]      0.10    0.10    0.10    0.10  vclk      4.00  
+linear_addr[0]
+              0.10    0.10    0.10    0.10  vclk      4.00  
+linear_addr[1]
+              0.10    0.10    0.10    0.10  vclk      4.00  
+linear_addr[2]
+              0.10    0.10    0.10    0.10  vclk      4.00  
+linear_addr[3]
+              0.10    0.10    0.10    0.10  vclk      4.00  
+linear_addr[4]
+              0.10    0.10    0.10    0.10  vclk      4.00  
+linear_addr[5]
+              0.10    0.10    0.10    0.10  vclk      4.00  
+linear_addr[6]
+              0.10    0.10    0.10    0.10  vclk      4.00  
+stage[0]      0.10    0.10    0.10    0.10  vclk      4.00  
+stage[1]      0.10    0.10    0.10    0.10  vclk      4.00  
+stage[2]      0.10    0.10    0.10    0.10  vclk      4.00  
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+bfly[0]      INVD0              INVD0                -- /  --     
+bfly[1]      INVD0              INVD0                -- /  --     
+bfly[2]      INVD0              INVD0                -- /  --     
+bfly[3]      INVD0              INVD0                -- /  --     
+bfly[4]      INVD0              INVD0                -- /  --     
+bfly[5]      INVD0              INVD0                -- /  --     
+group[0]     INVD0              INVD0                -- /  --     
+group[1]     INVD0              INVD0                -- /  --     
+group[2]     INVD0              INVD0                -- /  --     
+group[3]     INVD0              INVD0                -- /  --     
+group[4]     INVD0              INVD0                -- /  --     
+group[5]     INVD0              INVD0                -- /  --     
+linear_addr[0]
+             INVD0              INVD0                -- /  --     
+linear_addr[1]
+             INVD0              INVD0                -- /  --     
+linear_addr[2]
+             INVD0              INVD0                -- /  --     
+linear_addr[3]
+             INVD0              INVD0                -- /  --     
+linear_addr[4]
+             INVD0              INVD0                -- /  --     
+linear_addr[5]
+             INVD0              INVD0                -- /  --     
+linear_addr[6]
+             INVD0              INVD0                -- /  --     
+stage[0]     INVD0              INVD0                -- /  --     
+stage[1]     INVD0              INVD0                -- /  --     
+stage[2]     INVD0              INVD0                -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+bfly[0]       --      --     --      --     --      --     --     --        -- 
+bfly[1]       --      --     --      --     --      --     --     --        -- 
+bfly[2]       --      --     --      --     --      --     --     --        -- 
+bfly[3]       --      --     --      --     --      --     --     --        -- 
+bfly[4]       --      --     --      --     --      --     --     --        -- 
+bfly[5]       --      --     --      --     --      --     --     --        -- 
+group[0]      --      --     --      --     --      --     --     --        -- 
+group[1]      --      --     --      --     --      --     --     --        -- 
+group[2]      --      --     --      --     --      --     --     --        -- 
+group[3]      --      --     --      --     --      --     --     --        -- 
+group[4]      --      --     --      --     --      --     --     --        -- 
+group[5]      --      --     --      --     --      --     --     --        -- 
+linear_addr[0]
+              --      --     --      --     --      --     --     --        -- 
+linear_addr[1]
+              --      --     --      --     --      --     --     --        -- 
+linear_addr[2]
+              --      --     --      --     --      --     --     --        -- 
+linear_addr[3]
+              --      --     --      --     --      --     --     --        -- 
+linear_addr[4]
+              --      --     --      --     --      --     --     --        -- 
+linear_addr[5]
+              --      --     --      --     --      --     --     --        -- 
+linear_addr[6]
+              --      --     --      --     --      --     --     --        -- 
+stage[0]      --      --     --      --     --      --     --     --        -- 
+stage[1]      --      --     --      --     --      --     --     --        -- 
+stage[2]      --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+bfly[0]       --      --      --      -- 
+bfly[1]       --      --      --      -- 
+bfly[2]       --      --      --      -- 
+bfly[3]       --      --      --      -- 
+bfly[4]       --      --      --      -- 
+bfly[5]       --      --      --      -- 
+group[0]      --      --      --      -- 
+group[1]      --      --      --      -- 
+group[2]      --      --      --      -- 
+group[3]      --      --      --      -- 
+group[4]      --      --      --      -- 
+group[5]      --      --      --      -- 
+linear_addr[0]
+              --      --      --      -- 
+linear_addr[1]
+              --      --      --      -- 
+linear_addr[2]
+              --      --      --      -- 
+linear_addr[3]
+              --      --      --      -- 
+linear_addr[4]
+              --      --      --      -- 
+linear_addr[5]
+              --      --      --      -- 
+linear_addr[6]
+              --      --      --      -- 
+stage[0]      --      --      --      -- 
+stage[1]      --      --      --      -- 
+stage[2]      --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+bitrev_addr[0]
+              0.05    0.05    0.05    0.05  vclk      0.00  
+bitrev_addr[1]
+              0.05    0.05    0.05    0.05  vclk      0.00  
+bitrev_addr[2]
+              0.05    0.05    0.05    0.05  vclk      0.00  
+bitrev_addr[3]
+              0.05    0.05    0.05    0.05  vclk      0.00  
+bitrev_addr[4]
+              0.05    0.05    0.05    0.05  vclk      0.00  
+bitrev_addr[5]
+              0.05    0.05    0.05    0.05  vclk      0.00  
+bitrev_addr[6]
+              0.05    0.05    0.05    0.05  vclk      0.00  
+w_addr[0]     0.05    0.05    0.05    0.05  vclk      0.00  
+w_addr[1]     0.05    0.05    0.05    0.05  vclk      0.00  
+w_addr[2]     0.05    0.05    0.05    0.05  vclk      0.00  
+w_addr[3]     0.05    0.05    0.05    0.05  vclk      0.00  
+w_addr[4]     0.05    0.05    0.05    0.05  vclk      0.00  
+w_addr[5]     0.05    0.05    0.05    0.05  vclk      0.00  
+x0_addr[0]    0.05    0.05    0.05    0.05  vclk      0.00  
+x0_addr[1]    0.05    0.05    0.05    0.05  vclk      0.00  
+x0_addr[2]    0.05    0.05    0.05    0.05  vclk      0.00  
+x0_addr[3]    0.05    0.05    0.05    0.05  vclk      0.00  
+x0_addr[4]    0.05    0.05    0.05    0.05  vclk      0.00  
+x0_addr[5]    0.05    0.05    0.05    0.05  vclk      0.00  
+x0_addr[6]    0.05    0.05    0.05    0.05  vclk      0.00  
+x1_addr[0]    0.05    0.05    0.05    0.05  vclk      0.00  
+x1_addr[1]    0.05    0.05    0.05    0.05  vclk      0.00  
+x1_addr[2]    0.05    0.05    0.05    0.05  vclk      0.00  
+x1_addr[3]    0.05    0.05    0.05    0.05  vclk      0.00  
+x1_addr[4]    0.05    0.05    0.05    0.05  vclk      0.00  
+x1_addr[5]    0.05    0.05    0.05    0.05  vclk      0.00  
+x1_addr[6]    0.05    0.05    0.05    0.05  vclk      0.00  
+
+1
+ 
+****************************************
+Report : compile_options
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+fft_address_gen                          flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+This design has no violated constraints.
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.66 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.65 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+  Startpoint: stage[0] (input port clocked by vclk)
+  Endpoint: x1_addr[6] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  stage[0] (in)                            0.00       0.10 f
+  U63/ZN (INVD0)                           0.03       0.13 r
+  U74/ZN (INVD0)                           0.03       0.16 f
+  U124/ZN (INVD1)                          0.03       0.19 r
+  U135/ZN (ND2D1)                          0.03       0.22 f
+  U81/ZN (CKND2D1)                         0.03       0.25 r
+  U79/Z (BUFFD0)                           0.04       0.29 r
+  U108/ZN (INVD0)                          0.02       0.31 f
+  U106/ZN (MAOI22D0)                       0.04       0.35 r
+  U64/ZN (AOI32D0)                         0.05       0.40 f
+  U76/ZN (NR2D1)                           0.03       0.44 r
+  intadd_0_U5/CO (FA1D0)                   0.05       0.49 r
+  intadd_0_U4/S (FA1D0)                    0.10       0.59 r
+  U92/ZN (CKND2D1)                         0.03       0.62 f
+  U91/ZN (OAI21D0)                         0.03       0.65 r
+  U90/ZN (CKND2D1)                         0.03       0.68 f
+  U89/ZN (OAI31D0)                         0.04       0.72 r
+  U88/ZN (CKND2D1)                         0.03       0.75 f
+  U87/ZN (OAI31D0)                         0.04       0.79 r
+  U162/ZN (MUX2ND0)                        0.08       0.87 f
+  x1_addr[6] (out)                         0.00       0.87 f
+  data arrival time                                   0.87
+
+  clock vclk (rise edge)                   2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  output external delay                   -0.05       1.95
+  data required time                                  1.95
+  -----------------------------------------------------------
+  data required time                                  1.95
+  data arrival time                                  -0.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.08
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 100
+        -max_paths 20
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: top
+
+  Startpoint: linear_addr[0]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[6]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  linear_addr[0] (in)                      0.00       0.10 f
+  U126/Z (BUFFD0)                          0.04       0.15 f
+  bitrev_addr[6] (out)                     0.00       0.15 f
+  data arrival time                                   0.15
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.20
+
+
+  Startpoint: linear_addr[1]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  linear_addr[1] (in)                      0.00       0.10 f
+  U127/Z (BUFFD0)                          0.04       0.15 f
+  bitrev_addr[5] (out)                     0.00       0.15 f
+  data arrival time                                   0.15
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.20
+
+
+  Startpoint: linear_addr[2]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[4]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  linear_addr[2] (in)                      0.00       0.10 f
+  U128/Z (BUFFD0)                          0.04       0.15 f
+  bitrev_addr[4] (out)                     0.00       0.15 f
+  data arrival time                                   0.15
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.20
+
+
+  Startpoint: linear_addr[3]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[3]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  linear_addr[3] (in)                      0.00       0.10 f
+  U129/Z (BUFFD0)                          0.04       0.15 f
+  bitrev_addr[3] (out)                     0.00       0.15 f
+  data arrival time                                   0.15
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.20
+
+
+  Startpoint: linear_addr[4]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[2]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  linear_addr[4] (in)                      0.00       0.10 f
+  U130/Z (BUFFD0)                          0.04       0.15 f
+  bitrev_addr[2] (out)                     0.00       0.15 f
+  data arrival time                                   0.15
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.20
+
+
+  Startpoint: linear_addr[5]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[1]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  linear_addr[5] (in)                      0.00       0.10 f
+  U131/Z (BUFFD0)                          0.04       0.15 f
+  bitrev_addr[1] (out)                     0.00       0.15 f
+  data arrival time                                   0.15
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.20
+
+
+  Startpoint: linear_addr[6]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[0]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  linear_addr[6] (in)                      0.00       0.10 f
+  U132/Z (BUFFD0)                          0.04       0.15 f
+  bitrev_addr[0] (out)                     0.00       0.15 f
+  data arrival time                                   0.15
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.20
+
+
+  Startpoint: linear_addr[0]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[6]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  linear_addr[0] (in)                      0.01       0.11 r
+  U126/Z (BUFFD0)                          0.05       0.16 r
+  bitrev_addr[6] (out)                     0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: linear_addr[1]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  linear_addr[1] (in)                      0.01       0.11 r
+  U127/Z (BUFFD0)                          0.05       0.16 r
+  bitrev_addr[5] (out)                     0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: linear_addr[2]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[4]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  linear_addr[2] (in)                      0.01       0.11 r
+  U128/Z (BUFFD0)                          0.05       0.16 r
+  bitrev_addr[4] (out)                     0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: linear_addr[3]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[3]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  linear_addr[3] (in)                      0.01       0.11 r
+  U129/Z (BUFFD0)                          0.05       0.16 r
+  bitrev_addr[3] (out)                     0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: linear_addr[4]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[2]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  linear_addr[4] (in)                      0.01       0.11 r
+  U130/Z (BUFFD0)                          0.05       0.16 r
+  bitrev_addr[2] (out)                     0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: linear_addr[5]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[1]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  linear_addr[5] (in)                      0.01       0.11 r
+  U131/Z (BUFFD0)                          0.05       0.16 r
+  bitrev_addr[1] (out)                     0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: linear_addr[6]
+              (input port clocked by vclk)
+  Endpoint: bitrev_addr[0]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  linear_addr[6] (in)                      0.01       0.11 r
+  U132/Z (BUFFD0)                          0.05       0.16 r
+  bitrev_addr[0] (out)                     0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: bfly[1] (input port clocked by vclk)
+  Endpoint: x0_addr[1] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  bfly[1] (in)                             0.01       0.11 f
+  U149/ZN (INVD1)                          0.02       0.13 r
+  U151/ZN (AOI21D1)                        0.04       0.17 f
+  x0_addr[1] (out)                         0.00       0.17 f
+  data arrival time                                   0.17
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.22
+
+
+  Startpoint: bfly[0] (input port clocked by vclk)
+  Endpoint: x0_addr[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  bfly[0] (in)                             0.00       0.10 f
+  U123/ZN (INVD0)                          0.02       0.13 r
+  U70/ZN (INVD0)                           0.05       0.17 f
+  x0_addr[0] (out)                         0.00       0.17 f
+  data arrival time                                   0.17
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.22
+
+
+  Startpoint: bfly[0] (input port clocked by vclk)
+  Endpoint: w_addr[2] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  bfly[0] (in)                             0.00       0.10 f
+  U123/ZN (INVD0)                          0.02       0.13 r
+  U98/ZN (OAI31D0)                         0.06       0.18 f
+  w_addr[2] (out)                          0.00       0.18 f
+  data arrival time                                   0.18
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.23
+
+
+  Startpoint: bfly[0] (input port clocked by vclk)
+  Endpoint: x0_addr[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  bfly[0] (in)                             0.00       0.10 r
+  U123/ZN (INVD0)                          0.02       0.12 f
+  U70/ZN (INVD0)                           0.06       0.18 r
+  x0_addr[0] (out)                         0.00       0.18 r
+  data arrival time                                   0.18
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.23
+
+
+  Startpoint: bfly[1] (input port clocked by vclk)
+  Endpoint: x0_addr[1] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  bfly[1] (in)                             0.02       0.12 r
+  U149/ZN (INVD1)                          0.02       0.13 f
+  U151/ZN (AOI21D1)                        0.06       0.19 r
+  x0_addr[1] (out)                         0.00       0.19 r
+  data arrival time                                   0.19
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.19
+  -----------------------------------------------------------
+  slack (MET)                                         0.24
+
+
+  Startpoint: bfly[2] (input port clocked by vclk)
+  Endpoint: w_addr[3] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_address_gen    ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  bfly[2] (in)                             0.01       0.11 f
+  U145/ZN (AOI22D0)                        0.04       0.15 r
+  U99/ZN (OAI22D0)                         0.05       0.19 f
+  w_addr[3] (out)                          0.00       0.19 f
+  data arrival time                                   0.19
+
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.19
+  -----------------------------------------------------------
+  slack (MET)                                         0.24
+
+
+1
+ 
+****************************************
+Report : timing_requirements
+        -attributes
+Design : fft_address_gen
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:49:43 2026
+****************************************
+
+1

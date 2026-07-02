@@ -25,12 +25,12 @@
 //     pure-hardware magnitude is needed the $sqrt in simulation is an
 //     acceptable golden model for the mid-report.
 ////==============================================================================
-//to chage to 512 point change the FFT point, and then change the twiddle inputs and then change the SRAM dir
+//to change to 512 point change the FFT point, and then change the twiddle inputs and then change the SRAM dir
 
 `timescale 1ns/1ps
 
 module testbench;
-    parameter DATA_WIDTH = 32;
+    parameter DATA_WIDTH = 16;
     parameter FFT_POINT= 128;
     localparam NUMBER_OF_STAGES = $clog2(FFT_POINT);
     localparam WORD_WIDTH = $clog2(FFT_POINT);
@@ -101,7 +101,7 @@ module testbench;
     // --------------------------------------------------------------------
     // reg [15:0] input_mem   [0:1023];  // Q1.15 real samples
     //reg [31:0] twiddle_mem [0:511];    // Q1.15 complex twiddles
-    reg [DATA_WIDTH/2-1:0] input_mem   [0:10239];  // Q1.15 real samples
+    reg [DATA_WIDTH-1:0] input_mem   [0:10239];  // Q1.15 real samples
     reg [DATA_WIDTH-1:0] twiddle_mem [0:NUMBER_OF_TW-1];
     // Per-batch output buffers
     //reg [15:0] out_re [0:1023];
@@ -192,7 +192,7 @@ endfunction
 
         // Read input and twiddle hex files
         $readmemh("input.hex",   input_mem);
-        $readmemh("twiddle.hex", twiddle_mem);
+        $readmemh("twiddle128.hex", twiddle_mem);
         $display("[TB] input.hex and twiddle.hex loaded");
 
         // Release reset
@@ -204,7 +204,7 @@ endfunction
         // ----------------------------------------------------------------
         // LOAD TWIDDLES  (done once; they stay resident for all batches)
         // ----------------------------------------------------------------
-        $display("[TB] Loading 512 twiddle factors...");
+        $display("[TB] Loading %d twiddle factors...",NUMBER_OF_TW);
         for (i = 0; i < NUMBER_OF_TW; i = i + 1) begin
             @(negedge clk);
             tb_tw_cen  = 1'b1;
@@ -233,7 +233,7 @@ endfunction
                 tb_data_cen  = 1'b1;
                 tb_data_wen  = 1'b1;
                 tb_data_addr = bitrev10(i[NUMBER_OF_STAGES-1:0]);
-                tb_data_din  = { input_mem[batch*FFT_POINT + i], {(DATA_WIDTH/2){1'b0}}};
+                tb_data_din  = {input_mem[batch*FFT_POINT + i]};
             end
             @(negedge clk);
             tb_data_cen = 1'b0;
@@ -301,7 +301,7 @@ endfunction
 
             for (i = 0; i < FFT_POINT; i = i + 1) begin
                 // 16-bit Q9.7 magnitude, one per line, 4 hex digits
-                $fwrite(fd, "%04h%04h\n", $signed(out_re[i]), $signed(out_im[i])); // remove to_q9_7
+                $fwrite(fd, "%04h\n", $signed({out_re[i], out_im[i]})); // remove to_q9_7
             end
             $fclose(fd);
             $display("[TB] Batch %0d output written.", batch);

@@ -1,0 +1,1319 @@
+ 
+****************************************
+Report : timing
+        -path short
+        -delay min
+        -max_paths 10000
+        -sort_by slack
+Design : fft_data_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:31:24 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: tb_wen (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  tb_wen (in)                              0.00       0.10 r
+  ...
+  u_sram_u_sram/GWEN (sram00)              0.06       0.16 f
+  data arrival time                                   0.16
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.16       0.16
+  data required time                                  0.16
+  -----------------------------------------------------------
+  data required time                                  0.16
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: tb_cen (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  tb_cen (in)                              0.00       0.10 r
+  ...
+  u_sram_u_sram/CEN (sram00)               0.03       0.13 f
+  data arrival time                                   0.13
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.12       0.12
+  data required time                                  0.12
+  -----------------------------------------------------------
+  data required time                                  0.12
+  data arrival time                                  -0.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: core_din[0]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[0] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[0] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[10]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[10] (in)                        0.00       0.10 r
+  ...
+  u_sram_u_sram/D[10] (sram00)             0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[11]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[11] (in)                        0.00       0.10 r
+  ...
+  u_sram_u_sram/D[11] (sram00)             0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[12]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[12] (in)                        0.00       0.10 r
+  ...
+  u_sram_u_sram/D[12] (sram00)             0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[13]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[13] (in)                        0.00       0.10 r
+  ...
+  u_sram_u_sram/D[13] (sram00)             0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[14]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[14] (in)                        0.00       0.10 r
+  ...
+  u_sram_u_sram/D[14] (sram00)             0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[15]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[15] (in)                        0.00       0.10 r
+  ...
+  u_sram_u_sram/D[15] (sram00)             0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[1]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[1] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[1] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[2]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[2] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[2] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[3]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[3] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[3] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[4]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[4] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[4] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[5]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[5] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[5] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[6]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[6] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[6] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[7]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[7] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[7] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[8]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[8] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[8] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_din[9]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  core_din[9] (in)                         0.00       0.10 r
+  ...
+  u_sram_u_sram/D[9] (sram00)              0.05       0.15 r
+  data arrival time                                   0.15
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: core_addr[0]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  core_addr[0] (in)                        0.00       0.10 f
+  ...
+  u_sram_u_sram/A[0] (sram00)              0.07       0.17 f
+  data arrival time                                   0.17
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: core_addr[1]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  core_addr[1] (in)                        0.00       0.10 f
+  ...
+  u_sram_u_sram/A[1] (sram00)              0.07       0.17 f
+  data arrival time                                   0.17
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: core_addr[2]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  core_addr[2] (in)                        0.00       0.10 f
+  ...
+  u_sram_u_sram/A[2] (sram00)              0.07       0.17 f
+  data arrival time                                   0.17
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: core_addr[3]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  core_addr[3] (in)                        0.00       0.10 f
+  ...
+  u_sram_u_sram/A[3] (sram00)              0.07       0.17 f
+  data arrival time                                   0.17
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: core_addr[4]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  core_addr[4] (in)                        0.00       0.10 f
+  ...
+  u_sram_u_sram/A[4] (sram00)              0.07       0.17 f
+  data arrival time                                   0.17
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: core_addr[5]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  core_addr[5] (in)                        0.00       0.10 f
+  ...
+  u_sram_u_sram/A[5] (sram00)              0.07       0.17 f
+  data arrival time                                   0.17
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: core_addr[6]
+              (input port clocked by clk)
+  Endpoint: u_sram_u_sram
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  core_addr[6] (in)                        0.00       0.10 f
+  ...
+  u_sram_u_sram/A[6] (sram00)              0.07       0.17 f
+  data arrival time                                   0.17
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  library hold time                        0.13       0.13
+  data required time                                  0.13
+  -----------------------------------------------------------
+  data required time                                  0.13
+  data arrival time                                  -0.17
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[15] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[15] (sram00)             0.75       0.75 f
+  dout[15] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[14] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[14] (sram00)             0.75       0.75 f
+  dout[14] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[13] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[13] (sram00)             0.75       0.75 f
+  dout[13] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[12] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[12] (sram00)             0.75       0.75 f
+  dout[12] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[11] (sram00)             0.75       0.75 f
+  dout[11] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[10] (sram00)             0.75       0.75 f
+  dout[10] (out)                           0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[9] (sram00)              0.75       0.75 f
+  dout[9] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[8] (sram00)              0.75       0.75 f
+  dout[8] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[7] (sram00)              0.75       0.75 f
+  dout[7] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[6] (sram00)              0.75       0.75 f
+  dout[6] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[5] (sram00)              0.75       0.75 f
+  dout[5] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[4] (sram00)              0.75       0.75 f
+  dout[4] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[3] (sram00)              0.75       0.75 f
+  dout[3] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[2] (sram00)              0.75       0.75 f
+  dout[2] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[1] (sram00)              0.75       0.75 f
+  dout[1] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+  Startpoint: u_sram_u_sram
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fft_data_sram      ZeroWireload          tcbn65gplustc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_sram_u_sram/CLK (sram00)               0.00       0.00 r
+  u_sram_u_sram/Q[0] (sram00)              0.75       0.75 f
+  dout[0] (out)                            0.00       0.75 f
+  data arrival time                                   0.75
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.05      -0.05
+  data required time                                 -0.05
+  -----------------------------------------------------------
+  data required time                                 -0.05
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.80
+
+
+1

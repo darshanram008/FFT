@@ -1,0 +1,35 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fft_data_sram
+Version: U-2022.12-SP7
+Date   : Sat Jun 27 21:31:24 2026
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn65gplustc_ccs
+Wire Load Model Mode: segmented
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+dout[15] (out)                      0.76 r            1.95         1.19
+dout[14] (out)                      0.76 r            1.95         1.19
+dout[13] (out)                      0.76 r            1.95         1.19
+dout[12] (out)                      0.76 r            1.95         1.19
+dout[11] (out)                      0.76 r            1.95         1.19
+dout[10] (out)                      0.76 r            1.95         1.19
+dout[9] (out)                       0.76 r            1.95         1.19
+dout[8] (out)                       0.76 r            1.95         1.19
+dout[7] (out)                       0.76 r            1.95         1.19
+dout[6] (out)                       0.76 r            1.95         1.19
+dout[5] (out)                       0.76 r            1.95         1.19
+dout[4] (out)                       0.76 r            1.95         1.19
+dout[3] (out)                       0.76 r            1.95         1.19
+dout[2] (out)                       0.76 r            1.95         1.19
+dout[1] (out)                       0.76 r            1.95         1.19
+dout[0] (out)                       0.76 r            1.95         1.19
+
+1
