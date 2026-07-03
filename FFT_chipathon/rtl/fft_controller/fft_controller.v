@@ -39,11 +39,11 @@ module fft_controller #(
     parameter HALF_WIDTH = $clog2(FFT_POINT/2),
     parameter FULL_WIDTH = $clog2(FFT_POINT),
     parameter [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT
-   
+
 
 
 )(
-    
+
     input              clk,
     input              rstn,
 
@@ -87,7 +87,7 @@ module fft_controller #(
     output reg         busy,
     output reg         done
 );
-    
+
     // --------------------------------------------------------------------
     // FSM states
     // --------------------------------------------------------------------

@@ -120,11 +120,11 @@ module testbench;
         input [NUMBER_OF_STAGES-1:0] a;
 	integer k;
         begin
-		
+
         		for (k = 0; k < FULL_WIDTH; k = k + 1) begin : BITREV
             		 bitrev10[k] = a[FULL_WIDTH-1-k];
         		end
-    		
+
         end
     endfunction
 
@@ -232,7 +232,7 @@ endfunction
                 @(negedge clk);
                 tb_data_cen  = 1'b1;
                 tb_data_wen  = 1'b1;
-                tb_data_addr = bitrev10(i[NUMBER_OF_STAGES-1:0]);
+                tb_data_addr = bitrev10(i[NUMBER_OF_STAGES-1:0]); // removed bitrev function to store data in sram in normal order ?
                 tb_data_din  = {input_mem[batch*FFT_POINT + i]};
             end
             @(negedge clk);
