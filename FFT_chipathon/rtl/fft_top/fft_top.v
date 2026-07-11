@@ -66,7 +66,7 @@ module fft_top #(
      output data_sram_cen,
       output data_sram_wen,
     output [WORD_WIDTH-1:0] data_sram_addr,
-    output [DATA_WIDTH-1:0] data_sram_din
+    output [SRAM_DATA_WIDTH-1:0] data_sram_din
 
 );
 
