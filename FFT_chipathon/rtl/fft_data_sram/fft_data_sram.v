@@ -47,7 +47,7 @@ module fft_data_sram #(
     output                  cen_mux,
     output                  wen_mux,
     output [WORD_WIDTH-1:0] data_sram_addr,
-    output [DATA_WIDTH-1:0] data_sram_din,
+    output [SRAM_DATA_WIDTH-1:0] data_sram_din,
     output [DATA_WIDTH-1:0] data_sram_dout
 );
 
@@ -64,7 +64,7 @@ module fft_data_sram #(
 
     assign data_sram_addr = {{(SRAM_WORD_WIDTH - WORD_WIDTH) {1'b0}}, addr_mux};
     assign data_sram_din  = {{(SRAM_DATA_WIDTH - DATA_WIDTH) {1'b0}}, din_mux};
-    assign data_sram_dout = {{(SRAM_DATA_WIDTH - DATA_WIDTH) {1'b0}}, sram_dout};
+    assign data_sram_dout =  sram_dout[DATA_WIDTH-1:0];
 
     // // --------------------------------------------------------------------
     // // Instantiate sram_wrapper

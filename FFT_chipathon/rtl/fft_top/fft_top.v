@@ -49,7 +49,7 @@ module fft_top #(
     input              tb_data_wen,
     input      [WORD_WIDTH-1:0]   tb_data_addr,     // linear 10-bit address
     input      [DATA_WIDTH-1:0]  tb_data_din,
-    output     [DATA_WIDTH-1:0]  tb_data_dout,
+    output     [SRAM_DATA_WIDTH-1:0]  tb_data_dout,
 
     // Testbench twiddle-SRAM port
     input              tb_tw_cen,

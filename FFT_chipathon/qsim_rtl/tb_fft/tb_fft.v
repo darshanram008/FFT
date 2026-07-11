@@ -27,14 +27,14 @@
 ////==============================================================================
 //to change to 512 point change the FFT point, and then change the twiddle inputs and then change the SRAM dir
 
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 
 module testbench;
     parameter DATA_WIDTH = 16;
-    parameter FFT_POINT= 128;
+    parameter FFT_POINT = 128;
     localparam NUMBER_OF_STAGES = $clog2(FFT_POINT);
     localparam WORD_WIDTH = $clog2(FFT_POINT);
-    localparam NUMBER_OF_TW = FFT_POINT/2;
+    localparam NUMBER_OF_TW = FFT_POINT / 2;
     localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW);
     //localparam STAGES = $clog2(FFT_POINT);
     //localparam STAGE_WIDTH = $clog2(STAGES);
@@ -42,87 +42,87 @@ module testbench;
     localparam FULL_WIDTH = $clog2(FFT_POINT);
     localparam SRAM_WORDS = 512;
     localparam SRAM_DATA_WIDTH = 32;
-   // localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT;
+    // localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT;
     // --------------------------------------------------------------------
     // Clock / reset
     // --------------------------------------------------------------------
     reg clk;
     reg rstn;
-    always #5 clk = ~clk;      // 100 MHz
+    always #5 clk = ~clk;  // 100 MHz
 
     // --------------------------------------------------------------------
     // DUT ports
     // --------------------------------------------------------------------
-    reg         start;
-    wire        busy;
-    wire        done;
+    reg                         start;
+    wire                        busy;
+    wire                        done;
 
-    reg         tb_data_cen;
-    reg         tb_data_wen;
-    reg  [WORD_WIDTH-1:0]  tb_data_addr;
-    reg  [DATA_WIDTH-1:0] tb_data_din;
-    wire [DATA_WIDTH-1:0] tb_data_dout;
+    reg                         tb_data_cen;
+    reg                         tb_data_wen;
+    reg  [      WORD_WIDTH-1:0] tb_data_addr;
+    reg  [      DATA_WIDTH-1:0] tb_data_din;
+    wire [      DATA_WIDTH-1:0] tb_data_dout;
 
-    reg         tb_tw_cen;
-    reg         tb_tw_wen;
-    reg  [WORD_WIDTH_TW-1:0]  tb_tw_addr;
-    reg  [DATA_WIDTH-1:0] tb_tw_din;
-    wire [DATA_WIDTH-1:0] tb_tw_dout;
+    reg                         tb_tw_cen;
+    reg                         tb_tw_wen;
+    reg  [   WORD_WIDTH_TW-1:0] tb_tw_addr;
+    reg  [      DATA_WIDTH-1:0] tb_tw_din;
+    wire [      DATA_WIDTH-1:0] tb_tw_dout;
 
-    reg  [NUMBER_OF_STAGES-1:0]  tb_linear_addr;
-    wire [NUMBER_OF_STAGES-1:0]  tb_bitrev_addr;
+    reg  [NUMBER_OF_STAGES-1:0] tb_linear_addr;
+    wire [NUMBER_OF_STAGES-1:0] tb_bitrev_addr;
     // FFT <-> SRAM connection wires
-wire [SRAM_DATA_WIDTH-1:0] sram_dout;
-wire data_sram_cen;
-wire data_sram_wen;
-wire [WORD_WIDTH-1:0] data_sram_addr;
-wire [SRAM_DATA_WIDTH-1:0] data_sram_din;
+    wire [ SRAM_DATA_WIDTH-1:0] sram_dout;
+    wire                        data_sram_cen;
+    wire                        data_sram_wen;
+    wire [      WORD_WIDTH-1:0] data_sram_addr;
+    wire [ SRAM_DATA_WIDTH-1:0] data_sram_din;
 
 
-    fft_top  #(
-    	.DATA_WIDTH(DATA_WIDTH),
-	.FFT_POINT(FFT_POINT)
-    )fft_top_inst(
-        .clk             (clk),
-        .rstn            (rstn),
-        .start           (start),
-        .busy            (busy),
-        .done            (done),
+    fft_top #(
+        .DATA_WIDTH(DATA_WIDTH),
+        .FFT_POINT (FFT_POINT)
+    ) fft_top_inst (
+        .clk  (clk),
+        .rstn (rstn),
+        .start(start),
+        .busy (busy),
+        .done (done),
 
-        .tb_data_cen     (tb_data_cen),
-        .tb_data_wen     (tb_data_wen),
-        .tb_data_addr    (tb_data_addr),
-        .tb_data_din     (tb_data_din),
-        .tb_data_dout    (tb_data_dout),
+        .tb_data_cen (tb_data_cen),
+        .tb_data_wen (tb_data_wen),
+        .tb_data_addr(tb_data_addr),
+        .tb_data_din (tb_data_din),
+        .tb_data_dout(tb_data_dout),
 
-        .tb_tw_cen       (tb_tw_cen),
-        .tb_tw_wen       (tb_tw_wen),
-        .tb_tw_addr      (tb_tw_addr),
-        .tb_tw_din       (tb_tw_din),
-        .tb_tw_dout      (tb_tw_dout),
+        .tb_tw_cen (tb_tw_cen),
+        .tb_tw_wen (tb_tw_wen),
+        .tb_tw_addr(tb_tw_addr),
+        .tb_tw_din (tb_tw_din),
+        .tb_tw_dout(tb_tw_dout),
 
-        .tb_linear_addr  (tb_linear_addr),
-        .tb_bitrev_addr  (tb_bitrev_addr),
-     .sram_dout       (sram_dout),
-    .data_sram_cen   (data_sram_cen),
-    .data_sram_wen   (data_sram_wen),
-    .data_sram_addr  (data_sram_addr),
-    .data_sram_din   (data_sram_din)
+        .tb_linear_addr(tb_linear_addr),
+        .tb_bitrev_addr(tb_bitrev_addr),
+        .sram_dout     (sram_dout),
+        .data_sram_cen (data_sram_cen),
+        .data_sram_wen (data_sram_wen),
+        .data_sram_addr(data_sram_addr),
+        .data_sram_din (data_sram_din)
 
     );
 
     sram_wrapper #(
         .SRAM_WORDS(SRAM_WORDS),
-	.SRAM_DATA_WIDTH(SRAM_DATA_WIDTH)
+        .SRAM_DATA_WIDTH(SRAM_DATA_WIDTH)
 
-    )sram_wrapper_inst(
+    ) sram_wrapper_inst (
 
-    .clk   (clk),
-    .cen   (data_sram_cen),
-    .wen   (data_sram_wen),
-    .addr  (data_sram_addr),
-    .din   (data_sram_din),
-    .dout  (sram_dout)
+        .clk (clk),
+        .cen (data_sram_cen),
+        .wen (data_sram_wen),
+        .addr(data_sram_addr),
+        .din (data_sram_din),
+        .dout(sram_dout)
 
 
     );
@@ -149,12 +149,12 @@ wire [SRAM_DATA_WIDTH-1:0] data_sram_din;
 
     function [NUMBER_OF_STAGES-1:0] bitrev10;
         input [NUMBER_OF_STAGES-1:0] a;
-	integer k;
+        integer k;
         begin
 
-        		for (k = 0; k < FULL_WIDTH; k = k + 1) begin : BITREV
-            		 bitrev10[k] = a[FULL_WIDTH-1-k];
-        		end
+            for (k = 0; k < FULL_WIDTH; k = k + 1) begin : BITREV
+                bitrev10[k] = a[FULL_WIDTH-1-k];
+            end
 
         end
     endfunction
@@ -168,7 +168,7 @@ wire [SRAM_DATA_WIDTH-1:0] data_sram_din;
     // We output SIGNED 16-bit Q9.7 (but magnitude is always non-negative, so
     // the sign bit will always be 0).
     // --------------------------------------------------------------------
-   /* function [15:0] to_q9_7;
+    /* function [15:0] to_q9_7;
         input signed [15:0] re;
         input signed [15:0] im;
         real re_f, im_f, mag_f;
@@ -185,21 +185,22 @@ wire [SRAM_DATA_WIDTH-1:0] data_sram_din;
             to_q9_7 = q[15:0];
         end
     endfunction */
-function [15:0] to_q9_7;
-    input signed [DATA_WIDTH/2-1:0] re;
-    input signed [DATA_WIDTH/2-1:0] im;
-    real re_f, im_f, mag_f;
-    integer q;
-    begin
-        re_f  = $itor(re) / 32768.0;
-        im_f  = $itor(im) / 32768.0;
-        mag_f = $itor(FFT_POINT) * $sqrt(re_f*re_f + im_f*im_f); // FFT_POINT not hardcoded 1024
-        q = $rtoi(mag_f * 128.0 + 0.5);
-        if (q < 0)         q = 0;
-        if (q > 65535)     q = 65535;
-        to_q9_7 = q[15:0];
-    end
-endfunction
+    function [15:0] to_q9_7;
+        input signed [DATA_WIDTH/2-1:0] re;
+        input signed [DATA_WIDTH/2-1:0] im;
+        real re_f, im_f, mag_f;
+        integer q;
+        begin
+            re_f = $itor(re) / 32768.0;
+            im_f = $itor(im) / 32768.0;
+            mag_f = $itor(FFT_POINT) *
+                $sqrt(re_f * re_f + im_f * im_f);  // FFT_POINT not hardcoded 1024
+            q = $rtoi(mag_f * 128.0 + 0.5);
+            if (q < 0) q = 0;
+            if (q > 65535) q = 65535;
+            to_q9_7 = q[15:0];
+        end
+    endfunction
 
     // --------------------------------------------------------------------
     // Main test sequence
@@ -208,21 +209,21 @@ endfunction
         // $dumpfile("tb_fft.vcd"); $dumpvars(0, tb_fft);   // optional waves
 
         // Init
-        clk          = 1'b0;
-        rstn         = 1'b0;
-        start        = 1'b0;
-        tb_data_cen  = 1'b0;
-        tb_data_wen  = 1'b0;
-        tb_data_addr = 0;//10'd0;
-        tb_data_din  = 0;//32'd0;
-        tb_tw_cen    = 1'b0;
-        tb_tw_wen    = 1'b0;
-        tb_tw_addr   = 0; //9'd0
-        tb_tw_din    = 0;//32'd0;
-        tb_linear_addr = 0;//10'd0;
+        clk            = 1'b0;
+        rstn           = 1'b0;
+        start          = 1'b0;
+        tb_data_cen    = 1'b0;
+        tb_data_wen    = 1'b0;
+        tb_data_addr   = 0;  //10'd0;
+        tb_data_din    = 0;  //32'd0;
+        tb_tw_cen      = 1'b0;
+        tb_tw_wen      = 1'b0;
+        tb_tw_addr     = 0;  //9'd0
+        tb_tw_din      = 0;  //32'd0;
+        tb_linear_addr = 0;  //10'd0;
 
         // Read input and twiddle hex files
-        $readmemh("input.hex",   input_mem);
+        $readmemh("input.hex", input_mem);
         $readmemh("twiddle128.hex", twiddle_mem);
         $display("[TB] input.hex and twiddle.hex loaded");
 
@@ -235,7 +236,7 @@ endfunction
         // ----------------------------------------------------------------
         // LOAD TWIDDLES  (done once; they stay resident for all batches)
         // ----------------------------------------------------------------
-        $display("[TB] Loading %d twiddle factors...",NUMBER_OF_TW);
+        $display("[TB] Loading %d twiddle factors...", NUMBER_OF_TW);
         for (i = 0; i < NUMBER_OF_TW; i = i + 1) begin
             @(negedge clk);
             tb_tw_cen  = 1'b1;
@@ -261,10 +262,11 @@ endfunction
             // ------------------------------------------------------------
             for (i = 0; i < FFT_POINT; i = i + 1) begin
                 @(negedge clk);
-                tb_data_cen  = 1'b1;
-                tb_data_wen  = 1'b1;
-                tb_data_addr = bitrev10(i[NUMBER_OF_STAGES-1:0]); // removed bitrev function to store data in sram in normal order ?
-                tb_data_din  = {input_mem[batch*FFT_POINT + i]};
+                tb_data_cen = 1'b1;
+                tb_data_wen = 1'b1;
+                tb_data_addr = bitrev10(i[NUMBER_OF_STAGES-1:0])
+                    ;  // removed bitrev function to store data in sram in normal order ?
+                tb_data_din = {input_mem[batch*FFT_POINT+i]};
             end
             @(negedge clk);
             tb_data_cen = 1'b0;
@@ -300,14 +302,14 @@ endfunction
                 @(negedge clk);
                 tb_data_addr = i[WORD_WIDTH-1:0];
                 // Previous cycle's Q (from address i-1) is now on tb_data_dout
-                out_re[i-1] = tb_data_dout[DATA_WIDTH-1:DATA_WIDTH/2];
-                out_im[i-1] = tb_data_dout[DATA_WIDTH/2-1:0];
+                out_re[i-1]  = tb_data_dout[DATA_WIDTH-1:DATA_WIDTH/2];
+                out_im[i-1]  = tb_data_dout[DATA_WIDTH/2-1:0];
             end
             // One more cycle to capture Q for address 1023
             @(negedge clk);
             out_re[FFT_POINT-1] = tb_data_dout[DATA_WIDTH-1:DATA_WIDTH/2];
             out_im[FFT_POINT-1] = tb_data_dout[DATA_WIDTH/2-1:0];
-            tb_data_cen = 1'b0;
+            tb_data_cen         = 1'b0;
 
             // ------------------------------------------------------------
             // Write output file
@@ -332,7 +334,7 @@ endfunction
 
             for (i = 0; i < FFT_POINT; i = i + 1) begin
                 // 16-bit Q9.7 magnitude, one per line, 4 hex digits
-                $fwrite(fd, "%04h\n", $signed({out_re[i], out_im[i]})); // remove to_q9_7
+                $fwrite(fd, "%04h\n", $signed({out_re[i], out_im[i]}));  // remove to_q9_7
             end
             $fclose(fd);
             $display("[TB] Batch %0d output written.", batch);
