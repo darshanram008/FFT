@@ -36,11 +36,13 @@ module testbench;
     localparam WORD_WIDTH = $clog2(FFT_POINT);
     localparam NUMBER_OF_TW = FFT_POINT/2;
     localparam WORD_WIDTH_TW = $clog2(NUMBER_OF_TW);
-    localparam STAGES = $clog2(FFT_POINT);
-    localparam STAGE_WIDTH = $clog2(STAGES);
-    localparam HALF_WIDTH = $clog2(FFT_POINT/2);
+    //localparam STAGES = $clog2(FFT_POINT);
+    //localparam STAGE_WIDTH = $clog2(STAGES);
+    //localparam HALF_WIDTH = $clog2(FFT_POINT/2);
     localparam FULL_WIDTH = $clog2(FFT_POINT);
-    localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT;
+    localparam SRAM_WORDS = 512;
+    localparam SRAM_DATA_WIDTH = 32;
+   // localparam [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT;
     // --------------------------------------------------------------------
     // Clock / reset
     // --------------------------------------------------------------------
@@ -69,6 +71,13 @@ module testbench;
 
     reg  [NUMBER_OF_STAGES-1:0]  tb_linear_addr;
     wire [NUMBER_OF_STAGES-1:0]  tb_bitrev_addr;
+    // FFT <-> SRAM connection wires
+wire [SRAM_DATA_WIDTH-1:0] sram_dout;
+wire data_sram_cen;
+wire data_sram_wen;
+wire [WORD_WIDTH-1:0] data_sram_addr;
+wire [SRAM_DATA_WIDTH-1:0] data_sram_din;
+
 
     fft_top  #(
     	.DATA_WIDTH(DATA_WIDTH),
@@ -93,7 +102,29 @@ module testbench;
         .tb_tw_dout      (tb_tw_dout),
 
         .tb_linear_addr  (tb_linear_addr),
-        .tb_bitrev_addr  (tb_bitrev_addr)
+        .tb_bitrev_addr  (tb_bitrev_addr),
+     .sram_dout       (sram_dout),
+    .data_sram_cen   (data_sram_cen),
+    .data_sram_wen   (data_sram_wen),
+    .data_sram_addr  (data_sram_addr),
+    .data_sram_din   (data_sram_din)
+
+    );
+
+    sram_wrapper #(
+        .SRAM_WORDS(SRAM_WORDS),
+	.SRAM_DATA_WIDTH(SRAM_DATA_WIDTH)
+
+    )sram_wrapper_inst(
+
+    .clk   (clk),
+    .cen   (data_sram_cen),
+    .wen   (data_sram_wen),
+    .addr  (data_sram_addr),
+    .din   (data_sram_din),
+    .dout  (sram_dout)
+
+
     );
 
     // --------------------------------------------------------------------

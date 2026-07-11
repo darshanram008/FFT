@@ -25,46 +25,46 @@
 //   - Read:   on rising edge of clk, mem[addr] is latched into internal reg
 //             and appears on dout one cycle later (registered-Q SRAM)
 //==============================================================================
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 
 module sram_wrapper #(
     parameter SRAM_WORDS = 512,
     parameter SRAM_WORD_WIDTH = $clog2(SRAM_WORDS),
     parameter SRAM_DATA_WIDTH = 32
 ) (
-    
-    input              clk,
-    input              cen,    // 1 = access enabled, 0 = idle (active-HIGH to user)
-    input              wen,    // 1 = write, 0 = read (active-HIGH to user)
-    input      [SRAM_WORD_WIDTH-1:0]  addr,
-    input      [SRAM_DATA_WIDTH-1:0]  din,
-    output     [SRAM_DATA_WIDTH-1:0]  dout
+
+    input                        clk,
+    input                        cen,   // 1 = access enabled, 0 = idle (active-HIGH to user)
+    input                        wen,   // 1 = write, 0 = read (active-HIGH to user)
+    input  [SRAM_WORD_WIDTH-1:0] addr,
+    input  [SRAM_DATA_WIDTH-1:0] din,
+    output [SRAM_DATA_WIDTH-1:0] dout
 );
-    
+
     // --------------------------------------------------------------------
     // Convert active-HIGH user signals to active-LOW sram00 signals
     // --------------------------------------------------------------------
-    wire CEN_n  = ~cen;        // active-LOW chip-enable
-    wire GWEN_n = ~wen;        // active-LOW global-write-enable
-    wire [4:0] WEN_n = 5'b0000; // all 4 bytes enabled for writes;
-                                // GWEN_n gates whether write actually happens
+    wire       CEN_n = ~cen;  // active-LOW chip-enable
+    wire       GWEN_n = ~wen;  // active-LOW global-write-enable
+    wire [4:0] WEN_n = 5'b0000;  // all 4 bytes enabled for writes;
+                                 // GWEN_n gates whether write actually happens
 
 
     //  size mapping
-  
+
     // --------------------------------------------------------------------
     // Instantiate sram00
     // --------------------------------------------------------------------
     sram00 u_sram (
-        .CLK  (clk), // 1 bit 
-        .CEN  (CEN_n), // 1 bit
-        .GWEN (GWEN_n), // 1 bit 
-        .WEN  (WEN_n), // 5 bits 
-        .A    (addr), //9 bits
-        .D    (din), // 32 bits
-        .EMA  (3'b000), // 3 bits
-        .RETN (1'b1), // 1 bit
-        .Q    (dout) //32 bits
+        .CLK (clk),     // 1 bit
+        .CEN (CEN_n),   // 1 bit
+        .GWEN(GWEN_n),  // 1 bit
+        .WEN (WEN_n),   // 5 bits
+        .A   (addr),    //9 bits
+        .D   (din),     // 32 bits
+        .EMA (3'b000),  // 3 bits
+        .RETN(1'b1),    // 1 bit
+        .Q   (dout)     //32 bits
     );
 
 endmodule

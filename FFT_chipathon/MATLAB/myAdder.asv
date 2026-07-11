@@ -1,0 +1,10 @@
+function y = myAdder(a, b)
+%#codegen
+y = a + b;
+end
+
+
+
+% hdlcfg = coder.config('hdl');
+% hdlcfg.TargetLanguage = 'Verilog';
+% codegen -config hdlcfg myAdder -args {int16(0), int16(0)}

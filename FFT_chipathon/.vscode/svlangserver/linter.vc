@@ -1,5 +1,6 @@
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\dc\common_scripts\backup\dut
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\dc\sram_wrapper
++incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\MATLAB\codegen\myTop\hdlsrc
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\memory_compiler\backup\sram00_cp
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\memory_compiler\fft_sram
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\memory_compiler\single_port_sram
@@ -17,6 +18,7 @@
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\rtl\sram_wrapper
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\dc\common_scripts\backup\dut
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\dc\sram_wrapper
++incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\MATLAB\codegen\myTop\hdlsrc
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\memory_compiler\backup\sram00_cp
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\memory_compiler\fft_sram
 +incdir+c:\Users\darsh\Documents\Columbia PDFs\Textbooks and materials\Adv Digital EECS6321\FFT\FFT_chipathon\memory_compiler\single_port_sram

@@ -25,7 +25,7 @@
 module fft_top #(
     parameter DATA_WIDTH = 32,
     parameter FFT_POINT = 512,
-    parameter NUMBER_OF_STAGES = $clog2(FFT_POINT),
+    //parameter NUMBER_OF_STAGES = $clog2(FFT_POINT),
     parameter WORD_WIDTH = $clog2(FFT_POINT),
     parameter NUMBER_OF_TW = FFT_POINT/2,
     parameter WORD_WIDTH_TW = $clog2(NUMBER_OF_TW),
@@ -33,9 +33,10 @@ module fft_top #(
     parameter STAGE_WIDTH = $clog2(STAGES),
     parameter HALF_WIDTH = $clog2(FFT_POINT/2),
     parameter FULL_WIDTH = $clog2(FFT_POINT),
-    parameter [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT
+   // parameter [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT,
+     parameter SRAM_DATA_WIDTH = 32
 )(
-    
+
     input              clk,
     input              rstn,
     // Control
@@ -59,8 +60,15 @@ module fft_top #(
 
     // Bit-reverse helper (combinational): for testbench to use when loading
     input      [WORD_WIDTH-1:0]   tb_linear_addr,   // testbench-supplied linear index
-    output     [WORD_WIDTH-1:0]   tb_bitrev_addr    // its 10-bit bit-reverse
-);  
+    output     [WORD_WIDTH-1:0]   tb_bitrev_addr ,   // its 10-bit bit-reverse
+    // from new data sram
+     input [SRAM_DATA_WIDTH-1:0] sram_dout,
+     output data_sram_cen,
+      output data_sram_wen,
+    output [WORD_WIDTH-1:0] data_sram_addr,
+    output [DATA_WIDTH-1:0] data_sram_din
+
+);
 
 
 
@@ -104,7 +112,7 @@ module fft_top #(
     // for the testbench's tb_linear_addr lookup). We route tb_linear_addr
     // through the address_gen to produce tb_bitrev_addr.
      fft_address_gen
-     `ifndef SYNTH  
+     `ifndef SYNTH
      #(
     .FFT_POINT(FFT_POINT)
 )
@@ -124,9 +132,9 @@ u_addr(
     // Butterfly core
     // --------------------------------------------------------------------
     fft_core
-    `ifndef SYNTH  
+    `ifndef SYNTH
      #(
-	
+
     	.DATA_WIDTH(DATA_WIDTH)
 
 )
@@ -147,7 +155,7 @@ u_core(
     // Controller
     // --------------------------------------------------------------------
     fft_controller
-    `ifndef SYNTH  
+    `ifndef SYNTH
      #(
 
     .DATA_WIDTH(DATA_WIDTH),
@@ -194,16 +202,16 @@ u_ctrl(
     // --------------------------------------------------------------------
     // Data SRAM
     // --------------------------------------------------------------------
-    fft_data_sram 
-    `ifndef SYNTH 
+    fft_data_sram
+    `ifndef SYNTH
      #(
 
 	.FFT_POINT(FFT_POINT),
-	.DATA_WIDTH(DATA_WIDTH)	
+	.DATA_WIDTH(DATA_WIDTH)
 )
-`endif 
+`endif
 u_data_sram(
-        .clk       (clk),
+
         .tb_sel    (sram_tb_sel),
 
         .tb_cen    (tb_data_cen),
@@ -216,23 +224,33 @@ u_data_sram(
         .core_addr (core_data_addr),
         .core_din  (core_data_din),
 
-        .dout      (data_dout)
+
+
+        // new input
+        .sram_dout(sram_dout),
+        //new outputs
+        .data_sram_dout (data_dout),
+        .cen_mux(data_sram_cen),
+        .wen_mux(data_sram_wen),
+        .data_sram_addr(data_sram_addr),
+        .data_sram_din(data_sram_din)
+
     );
     assign tb_data_dout = data_dout;    // testbench sees the same Q
 
     // --------------------------------------------------------------------
     // Twiddle SRAM
     // --------------------------------------------------------------------
-    
+
     fft_twiddle_sram
-    `ifndef SYNTH 
+    `ifndef SYNTH
     #(
 
 	.FFT_POINT(FFT_POINT),
-	.DATA_WIDTH(DATA_WIDTH)	
+	.DATA_WIDTH(DATA_WIDTH)
 
 )
-`endif  
+`endif
 u_tw_sram(
         .clk       (clk),
         .tb_sel    (sram_tb_sel),
