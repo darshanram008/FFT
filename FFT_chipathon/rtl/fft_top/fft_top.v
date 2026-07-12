@@ -34,7 +34,9 @@ module fft_top #(
     parameter HALF_WIDTH = $clog2(FFT_POINT/2),
     parameter FULL_WIDTH = $clog2(FFT_POINT),
    // parameter [WORD_WIDTH:0] DEPTH_CONST = FFT_POINT,
-     parameter SRAM_DATA_WIDTH = 32
+     parameter SRAM_DATA_WIDTH = 32,
+      parameter SRAM_WORDS = 512,
+    parameter SRAM_WORD_WIDTH = $clog2(SRAM_WORDS)
 )(
 
     input              clk,
@@ -65,7 +67,7 @@ module fft_top #(
      input [SRAM_DATA_WIDTH-1:0] sram_dout,
      output data_sram_cen,
       output data_sram_wen,
-    output [WORD_WIDTH-1:0] data_sram_addr,
+    output [SRAM_WORD_WIDTH-1:0] data_sram_addr,
     output [SRAM_DATA_WIDTH-1:0] data_sram_din
 
 );

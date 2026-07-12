@@ -46,7 +46,7 @@ module fft_data_sram #(
     // Shared data-out (registered one cycle after address)
     output                  cen_mux,
     output                  wen_mux,
-    output [WORD_WIDTH-1:0] data_sram_addr,
+    output [SRAM_WORD_WIDTH-1:0] data_sram_addr,
     output [SRAM_DATA_WIDTH-1:0] data_sram_din,
     output [DATA_WIDTH-1:0] data_sram_dout
 );
