@@ -152,8 +152,8 @@ module testbench;
         integer k;
         begin
 
-            for (k = 0; k < FULL_WIDTH; k = k + 1) begin : BITREV
-                bitrev10[k] = a[FULL_WIDTH-1-k];
+            for (k = 0; k < NUMBER_OF_STAGES; k = k + 1) begin : BITREV
+                bitrev10[k] = a[NUMBER_OF_STAGES-1-k];
             end
 
         end
