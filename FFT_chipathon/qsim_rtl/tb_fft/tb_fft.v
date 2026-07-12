@@ -75,7 +75,7 @@ module testbench;
     wire [ SRAM_DATA_WIDTH-1:0] sram_dout;
     wire                        data_sram_cen;
     wire                        data_sram_wen;
-    wire [      WORD_WIDTH-1:0] data_sram_addr;
+    wire [ SRAM_WORD_WIDTH-1:0] data_sram_addr;
     wire [ SRAM_DATA_WIDTH-1:0] data_sram_din;
 
 
