@@ -27,8 +27,8 @@ module fft_core #(
 
     parameter DATA_WIDTH = 32,
     parameter COMP_WIDTH = DATA_WIDTH/2
-    
-)(  
+
+)(
     input              clk,
     input              rstn,
 
@@ -42,7 +42,7 @@ module fft_core #(
     output reg [DATA_WIDTH-1:0]  x1_out,        // butterfly result  x1' = (x0 - W*x1)/2
     output reg         done
 );
-    
+
     // --------------------------------------------------------------------
     // Unpack inputs (signed Q1.7)
     // --------------------------------------------------------------------
@@ -87,7 +87,7 @@ module fft_core #(
     wire signed [COMP_WIDTH:0] sum_im = {x0_im[COMP_WIDTH-1], x0_im} + {wx1_im[COMP_WIDTH-1], wx1_im};
     wire signed [COMP_WIDTH:0] dif_re = {x0_re[COMP_WIDTH-1], x0_re} - {wx1_re[COMP_WIDTH-1], wx1_re};
     wire signed [COMP_WIDTH:0] dif_im = {x0_im[COMP_WIDTH-1], x0_im} - {wx1_im[COMP_WIDTH-1], wx1_im};
-
+    
     // Scale by 1/2: arithmetic shift right by 1, then truncate to 16 bits.
     //wire signed [15:0] x0p_re = sum_re[16:1];
     wire signed [COMP_WIDTH-1:0] x0p_re = sum_re[COMP_WIDTH:1];

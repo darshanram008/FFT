@@ -12,7 +12,7 @@
 //==============================================================================
 `timescale 1ns/1ps
 
-module fft_twiddle_sram #( 
+module fft_twiddle_sram #(
     parameter FFT_POINT = 128,
     parameter NUMBER_OF_TW = FFT_POINT/2,
     parameter WORD_WIDTH_TW = $clog2(NUMBER_OF_TW),
@@ -21,7 +21,7 @@ module fft_twiddle_sram #(
     parameter SRAM_WORD_WIDTH = $clog2(SRAM_WORDS),
     parameter SRAM_DATA_WIDTH = 32
      )(
-    
+
     input              clk,
 
     // Mux select: 1 = testbench, 0 = FFT core
@@ -40,7 +40,7 @@ module fft_twiddle_sram #(
     // Shared data-out (registered one cycle after address)
     output     [DATA_WIDTH-1:0]  dout
 );
-    
+
     // --------------------------------------------------------------------
     // Mux the two ports
     // --------------------------------------------------------------------
@@ -49,9 +49,9 @@ module fft_twiddle_sram #(
     wire [WORD_WIDTH_TW-1:0]  addr_mux = tb_sel ? tb_addr : core_addr;
     wire [DATA_WIDTH-1:0] din_mux  = tb_sel ? tb_din  : {(DATA_WIDTH){1'b0}};
 
-// size matching
-    wire [SRAM_WORD_WIDTH-1:0] sram_addr ={{(SRAM_WORD_WIDTH-WORD_WIDTH_TW){1'b0}}, addr_mux};
-    wire [SRAM_DATA_WIDTH-1:0] sram_din ={{(SRAM_DATA_WIDTH-DATA_WIDTH){1'b0}}, din_mux};
+    // size matching
+    wire [SRAM_WORD_WIDTH-1:0] sram_addr = {{(SRAM_WORD_WIDTH-WORD_WIDTH_TW){1'b0}}, addr_mux};
+    wire [SRAM_DATA_WIDTH-1:0] sram_din = {{(SRAM_DATA_WIDTH-DATA_WIDTH){1'b0}}, din_mux};
     wire [SRAM_DATA_WIDTH-1:0] sram_dout;
     assign dout = sram_dout[DATA_WIDTH-1:0];
     // --------------------------------------------------------------------

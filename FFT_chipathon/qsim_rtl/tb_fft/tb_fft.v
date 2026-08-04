@@ -40,7 +40,7 @@ module testbench;
     //localparam STAGE_WIDTH = $clog2(STAGES);
     //localparam HALF_WIDTH = $clog2(FFT_POINT/2);
     localparam FULL_WIDTH = $clog2(FFT_POINT);
-    localparam SRAM_WORDS = 512;
+
     localparam SRAM_DATA_WIDTH = 32;
     localparam SRAM_WORDS = 512;
     localparam SRAM_WORD_WIDTH = $clog2(SRAM_WORDS);
